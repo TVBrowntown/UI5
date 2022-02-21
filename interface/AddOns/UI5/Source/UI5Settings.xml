@@ -1,0 +1,148 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+<Scripts>
+	<Script file="Source/UI5Settings.lua" />
+</Scripts>
+
+<Windows>
+	<Window name="UI5 Settings" layer="default" movable="false" popable="false" savesettings="true">
+		<Size>
+			<AbsPoint x="160" y="46"/>
+		</Size>
+		<Windows>
+
+			<DynamicImage name="UF_AB_BtnBG1" savesettings="false" handleinput="false" texture="UF_AB_BtnBG">
+				<TexCoords x="0" y="0" />
+				<TexDims x="66" y="63" />
+				
+				<Size>
+					<AbsPoint x="48" y="44" />
+				</Size>		
+				
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="UI5 Settings">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</DynamicImage>
+
+			<DynamicImage name="UF_AB_BtnBG2" savesettings="false" handleinput="false" texture="UF_AB_BtnBG">
+				<TexCoords x="0" y="0" />
+				<TexDims x="66" y="63" />
+				
+				<Size>
+					<AbsPoint x="48" y="44" />
+				</Size>		
+				
+				<Anchors>
+					<Anchor point="right" relativePoint="left" relativeTo="UF_AB_BtnBG1">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</DynamicImage>
+
+			<DynamicImage name="UF_AB_BtnBG3" savesettings="false" handleinput="false" texture="UF_AB_BtnBG">
+				<TexCoords x="0" y="0" />
+				<TexDims x="66" y="63" />
+				
+				<Size>
+					<AbsPoint x="48" y="44" />
+				</Size>		
+				
+				<Anchors>
+					<Anchor point="right" relativePoint="left" relativeTo="UF_AB_BtnBG2">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</DynamicImage>
+
+			<DynamicImage name="UF_AB_BtnBG4" savesettings="false" handleinput="false" texture="UF_AB_BtnBG">
+				<TexCoords x="0" y="0" />
+				<TexDims x="66" y="63" />
+				
+				<Size>
+					<AbsPoint x="48" y="44" />
+				</Size>		
+				
+				<Anchors>
+					<Anchor point="right" relativePoint="left" relativeTo="UF_AB_BtnBG3">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</DynamicImage>
+			
+			<Button name="UI5ProfileButton" inherits="DefaultButton" backgroundtexture="UF_AB_Profile" layer="default" texturescale="1">
+				<Size>
+					<AbsPoint x="28" y="30"/>
+				</Size>
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="UI5.CallCharacterSheet"/>
+				</EventHandlers>
+				<TexSlices>
+					<Normal id="SquareButton" /> 
+					<NormalHighlit id="SquareButton-Rollover" /> 
+					<Pressed id="SquareButton-Depressed" /> 
+					<PressedHighlit id="SquareButton-Depressed" /> 
+				</TexSlices>
+				<Anchors>
+					<Anchor point="center" relativeTo="UF_AB_BtnBG1" relativePoint="center"/>
+				</Anchors>
+			</Button>
+
+			<Button name="UI5SettingsButton" inherits="DefaultButton" backgroundtexture="UF_AB_Settings" layer="default" texturescale="1">
+				<Size>
+					<AbsPoint x="32" y="32"/>
+				</Size>
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="UI5.CallSettings"/>
+				</EventHandlers>
+				<TexSlices>
+					<Normal id="SquareButton" /> 
+					<NormalHighlit id="SquareButton-Rollover" /> 
+					<Pressed id="SquareButton-Depressed" /> 
+					<PressedHighlit id="SquareButton-Depressed" /> 
+				</TexSlices>
+				<Anchors>
+					<Anchor point="center" relativeTo="UF_AB_BtnBG2" relativePoint="center"/>
+				</Anchors>
+			</Button>
+
+			<Button name="UI5SpellsButton" inherits="DefaultButton" backgroundtexture="UF_AB_Spells" layer="default" texturescale="1">
+				<Size>
+					<AbsPoint x="30" y="38"/>
+				</Size>
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="UI5.CallSpellbook"/>
+				</EventHandlers>
+				<TexSlices>
+					<Normal id="SquareButton" /> 
+					<NormalHighlit id="SquareButton-Rollover" /> 
+					<Pressed id="SquareButton-Depressed" /> 
+					<PressedHighlit id="SquareButton-Depressed" /> 
+				</TexSlices>
+				<Anchors>
+					<Anchor point="center" relativeTo="UF_AB_BtnBG3" relativePoint="center"/>
+				</Anchors>
+			</Button>
+
+			<Button name="UI5TalentsButton" inherits="DefaultButton" backgroundtexture="UF_AB_Talents" layer="default" texturescale="1">
+				<Size>
+					<AbsPoint x="34" y="24"/>
+				</Size>
+				<EventHandlers>
+					<EventHandler event="OnLButtonUp" function="UI5.CallTalents"/>
+				</EventHandlers>
+				<TexSlices>
+					<Normal id="SquareButton" /> 
+					<NormalHighlit id="SquareButton-Rollover" /> 
+					<Pressed id="SquareButton-Depressed" /> 
+					<PressedHighlit id="SquareButton-Depressed" /> 
+				</TexSlices>
+				<Anchors>
+					<Anchor point="center" relativeTo="UF_AB_BtnBG4" relativePoint="center"/>
+				</Anchors>
+			</Button>
+		</Windows>
+	</Window>
+</Windows>
+
+</Interface>

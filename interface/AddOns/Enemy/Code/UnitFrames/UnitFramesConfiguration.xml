@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="EnemyUnitFramesConfiguration">
+			<Windows>
+			
+				<!-- Content -->
+				<ScrollWindow name="$parentContent" childscrollwindow="$parentScrollChild" scrollbar="$parentScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="660" y="410" />
+					</Size>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="24" y="410" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+			            </VerticalScrollbar>
+			            
+			            <Window name="$parentScrollChild">
+			            	<Size>
+								<AbsPoint x="624" y="410" />
+							</Size>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+							<Windows>
+		
+								<!-- Content: enabled -->
+								<Button name="$parentEnabled" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_OnEnabledChanged" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentEnabledLabel" font="font_chat_text">
+									<Size>
+										<AbsPoint x="400" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEnabled">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								
+								<!-- Content: sorting enabled -->
+								<Button name="$parentSortingEnabled" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnabled">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_OnSortingEnabledChanged" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentSortingEnabledLabel" font="font_chat_text">
+									<Size>
+										<AbsPoint x="400" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentSortingEnabled">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="255" b="255" a="255" />
+								</Label>
+								<ComboBox name="$parentSorting1" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSortingEnabled">
+											<AbsPoint x="40" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+				                        <EventHandler event="OnSelChanged" function="Enemy.UnitFramesUI_ConfigDialog_OnSorting1Changed" />
+				                    </EventHandlers>
+								</ComboBox>
+								<ComboBox name="$parentSorting2" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentSorting1">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+				                        <EventHandler event="OnSelChanged" function="Enemy.UnitFramesUI_ConfigDialog_OnSorting2Changed" />
+				                    </EventHandlers>
+								</ComboBox>
+								<ComboBox name="$parentSorting3" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentSorting2">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+				                        <EventHandler event="OnSelChanged" function="Enemy.UnitFramesUI_ConfigDialog_OnSorting3Changed" />
+				                    </EventHandlers>
+								</ComboBox>
+								
+								<Window name="$parentMain">
+									<Size>
+										<AbsPoint x="720" y="450" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSorting1">
+											<AbsPoint x="-40" y="0" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								
+							
+<!----------------------------------------------------------- EFFECTS INDICATORS ----------------------------------------------------------->
+								
+								<!-- Content: effect indicators -->
+								<Label name="$parentEffectsIndicatorsLabel" font="font_default_text_large">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMain">
+											<AbsPoint x="0" y="20" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="204" b="102" />
+								</Label>
+								<FullResizeImage name="$parentEffectsIndicatorsListBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+									<Size>
+										<AbsPoint x="500" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsIndicatorsLabel" />
+									</Anchors>
+								</FullResizeImage>
+								<ListBox name="$parentEffectsIndicatorsList" rowdef="EnemySimpleListRowTemplate" visiblerows="5" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+									<Size>
+										<AbsPoint x="526" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsIndicatorsLabel" />
+									</Anchors>
+
+									<ListData table="Enemy.effectsIndicatorsListData" populationfunction="Enemy.UnitFramesUI_ConfigDialog_OnEffectsIndicatorsListPopulate">
+									</ListData>
+									
+									<EventHandlers>
+						                <EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_OnEffectsIndicatorsListLButtonUp" />
+						            </EventHandlers>
+								</ListBox>
+								<Button name="$parentEffectsIndicatorsAddButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsIndicatorsList">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsAdd" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentEffectsIndicatorsEditButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEffectsIndicatorsAddButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsEdit" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentEffectsIndicatorsDeleteButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEffectsIndicatorsEditButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsDelete" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentEffectsIndicatorsUpButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEffectsIndicatorsDeleteButton">
+											<AbsPoint x="60" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsUp" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentEffectsIndicatorsDownButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEffectsIndicatorsUpButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsDown" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentEffectsIndicatorsEnableButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsIndicatorsAddButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsEnable" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentEffectsIndicatorsResetButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEffectsIndicatorsEnableButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsReset" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentEffectsIndicatorsImportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsIndicatorsUpButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsImport" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentEffectsIndicatorsExportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEffectsIndicatorsImportButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_EffectsIndicatorsExport" />
+									</EventHandlers>
+								</Button>
+								
+<!----------------------------------------------------------- CLICK CASTING ----------------------------------------------------------->
+								
+								<!-- Content: click casting -->
+								<Label name="$parentClickCastingsLabel" font="font_default_text_large">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsIndicatorsAddButton">
+											<AbsPoint x="0" y="80" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="204" b="102" />
+								</Label>
+								<FullResizeImage name="$parentClickCastingsListBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+									<Size>
+										<AbsPoint x="500" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentClickCastingsLabel" />
+									</Anchors>
+								</FullResizeImage>
+								<ListBox name="$parentClickCastingsList" rowdef="EnemySimpleListRowTemplate" visiblerows="5" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+									<Size>
+										<AbsPoint x="526" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentClickCastingsLabel" />
+									</Anchors>
+
+									<ListData table="Enemy.clickCastingsListData" populationfunction="Enemy.UnitFramesUI_ConfigDialog_OnClickCastingsListPopulate">
+									</ListData>
+									
+									<EventHandlers>
+						                <EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_OnClickCastingsListLButtonUp" />
+						            </EventHandlers>
+								</ListBox>
+								<Button name="$parentClickCastingsAddButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentClickCastingsList">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsAdd" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentClickCastingsEditButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentClickCastingsAddButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsEdit" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentClickCastingsDeleteButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentClickCastingsEditButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsDelete" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentClickCastingsUpButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentClickCastingsDeleteButton">
+											<AbsPoint x="60" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsUp" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentClickCastingsDownButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentClickCastingsUpButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsDown" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentClickCastingsEnableButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentClickCastingsAddButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsEnable" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentClickCastingsResetButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentClickCastingsEnableButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsReset" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentClickCastingsImportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentClickCastingsUpButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsImport" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentClickCastingsExportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentClickCastingsImportButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_ClickCastingsExport" />
+									</EventHandlers>
+								</Button>
+								
+<!----------------------------------------------------------- APPEARANCE ----------------------------------------------------------->
+
+								<Window name="$parentApr">
+									<Size>
+										<AbsPoint x="720" y="600" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentClickCastingsEnableButton">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Window>
+
+<!----------------------------------------------------------- PARTS ----------------------------------------------------------->
+																
+								<!-- Content: parts -->
+								<Label name="$parentUnitFramePartsLabel" font="font_default_text_large">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentApr">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+									<Color r="255" g="204" b="102" />
+								</Label>
+								<FullResizeImage name="$parentUnitFramePartsListBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+									<Size>
+										<AbsPoint x="500" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUnitFramePartsLabel" />
+									</Anchors>
+								</FullResizeImage>
+								<ListBox name="$parentUnitFramePartsList" rowdef="EnemySimpleListRowTemplate" visiblerows="5" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+									<Size>
+										<AbsPoint x="526" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUnitFramePartsLabel" />
+									</Anchors>
+
+									<ListData table="Enemy.unitFramesPartsListData" populationfunction="Enemy.UnitFramesUI_ConfigDialog_OnUnitFramePartsListPopulate">
+									</ListData>
+									
+									<EventHandlers>
+						                <EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_OnUnitFramePartsListLButtonUp" />
+						            </EventHandlers>
+								</ListBox>
+								<Button name="$parentUnitFramePartsAddButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUnitFramePartsList">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsAdd" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentUnitFramePartsEditButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentUnitFramePartsAddButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsEdit" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentUnitFramePartsDeleteButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentUnitFramePartsEditButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsDelete" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentUnitFramePartsUpButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentUnitFramePartsDeleteButton">
+											<AbsPoint x="60" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsUp" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentUnitFramePartsDownButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentUnitFramePartsUpButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsDown" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentUnitFramePartsEnableButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUnitFramePartsAddButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsEnable" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentUnitFramePartsResetButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentUnitFramePartsEnableButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsReset" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentUnitFramePartsImportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUnitFramePartsUpButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsImport" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentUnitFramePartsExportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentUnitFramePartsImportButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_ConfigDialog_UnitFramePartsExport" />
+									</EventHandlers>
+								</Button>
+								
+								<Window name="$parentDummy">
+									<Size>
+										<AbsPoint x="50" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUnitFramePartsExportButton">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

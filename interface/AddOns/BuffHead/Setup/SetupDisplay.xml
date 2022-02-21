@@ -1,0 +1,344 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="BuffHeadSetupDisplayWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.Display.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="620" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Display.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentDisplayLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentIndicatorScaleLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDisplayLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentIndicatorScaleSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="260" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorScaleLabel">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Display.OnSlideIndicatorScale" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentIndicatorScaleValue" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIndicatorScaleSlider">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentIndicatorLayerLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorScaleSlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentIndicatorLayer" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorLayerLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Display.OnLayerChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentIndicatorPaddingLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorLayer">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentIndicatorPaddingHorizontalDescriptionLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorPaddingLabel">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentIndicatorPaddingHorizontalSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="160" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorPaddingHorizontalDescriptionLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Display.OnSlidePaddingHorizontal" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentIndicatorPaddingHorizontalValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIndicatorPaddingHorizontalSlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentIndicatorPaddingVerticalDescriptionLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorPaddingLabel">
+							<AbsPoint x="280" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentIndicatorPaddingVerticalSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="160" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorPaddingVerticalDescriptionLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Display.OnSlidePaddingVertical" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentIndicatorPaddingVerticalValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIndicatorPaddingVerticalSlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+
+				<Label name="$parentSortLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorPaddingHorizontalSlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+
+				<Window name="$parentEnableSort" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSortLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Display.OnEnableSortLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentEnableSortCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEnableSort">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentSortByLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnableSort">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentSortByList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortByLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Display.OnSortByChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentSortDirectionLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSortByLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentSortDirectionList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortDirectionLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Display.OnSortDirectionChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentOffsetLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSortDirectionLabel">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentOffsetDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="40" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetDescriptionLabel">
+							<AbsPoint x="10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="6">
+					<Size>
+						<AbsPoint x="120" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnTextChanged" function="BuffHead.Setup.Display.OnOffsetXChanged" />
+					</EventHandlers>
+				</EditBox>
+				
+				<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="40" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="6">
+					<Size>
+						<AbsPoint x="120" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnTextChanged" function="BuffHead.Setup.Display.OnOffsetYChanged" />
+					</EventHandlers>
+				</EditBox>
+
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

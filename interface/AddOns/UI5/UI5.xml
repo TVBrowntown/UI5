@@ -1,0 +1,85 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+<Scripts>
+	<Script file="UI5.lua" />
+</Scripts>
+
+<Assets>
+	<Texture name="Smooth1" file="Textures/Smooth1.tga" />
+	<Texture name="solidBlack" file="Textures/solidBlack.tga" />
+	<Texture name="solid" file="Textures/solid.tga" />
+	<Texture name="Nameplate_Background" file="Textures/Nameplates/Nameplate_Background.tga" />
+
+	<Texture name="UF_MB_BG" file="Textures/Mobile/UnitFrame/MUF_Background.tga" />
+	<Texture name="UF_MB_Border" file="Textures/Mobile/UnitFrame/MUF_Border.tga" />
+	<Texture name="UF_MB_HP_Fill" file="Textures/Mobile/UnitFrame/MUF_Health_Fill.tga" />
+	<Texture name="UF_MB_LvlFrame" file="Textures/Mobile/UnitFrame/MUF_LevelFrame.tga" />
+	<Texture name="UF_MB_PowerFill" file="Textures/Mobile/UnitFrame/MUF_Power_Fill.tga" />
+	<Texture name="UF_MB_Dead" file="Textures/Mobile/UnitFrame/MUF_Skull.tga" />
+
+	<Texture name="Icon_Shitter" file="Textures/ClassIcons/Icon_Shitter.tga" />
+	<Texture name="Icon_Archmage" file="Textures/ClassIcons/Icon_Archmage.tga" />
+	<Texture name="Icon_Blackguard" file="Textures/ClassIcons/Icon_Blackguard.tga" />
+	<Texture name="Icon_Black-Orc" file="Textures/ClassIcons/Icon_Black-Orc.tga" />
+	<Texture name="Icon_Bright-Wizard" file="Textures/ClassIcons/Icon_Bright-Wizard.tga" />
+	<Texture name="Icon_Choppa" file="Textures/ClassIcons/Icon_Choppa.tga" />
+	<Texture name="Icon_Chosen" file="Textures/ClassIcons/Icon_Chosen.tga" />
+	<Texture name="Icon_Disciple-of-Khaine" file="Textures/ClassIcons/Icon_Disciple-of-Khaine.tga" />
+	<Texture name="Icon_Engineer" file="Textures/ClassIcons/Icon_Engineer.tga" />
+	<Texture name="Icon_Ironbreaker" file="Textures/ClassIcons/Icon_Ironbreaker.tga" />
+	<Texture name="Icon_Knight-of-the-Blazing-Sun" file="Textures/ClassIcons/Icon_Knight-of-the-Blazing-Sun.tga" />
+	<Texture name="Icon_Magus" file="Textures/ClassIcons/Icon_Magus.tga" />
+	<Texture name="Icon_Marauder" file="Textures/ClassIcons/Icon_Marauder.tga" />
+	<Texture name="Icon_Runepriest" file="Textures/ClassIcons/Icon_Runepriest.tga" />
+	<Texture name="Icon_ShadowWarrior" file="Textures/ClassIcons/Icon_ShadowWarrior.tga" />
+	<Texture name="Icon_Shaman" file="Textures/ClassIcons/Icon_Shaman.tga" />
+	<Texture name="Icon_Slayer" file="Textures/ClassIcons/Icon_Slayer.tga" />
+	<Texture name="Icon_Sorcerer" file="Textures/ClassIcons/Icon_Sorcerer.tga" />
+	<Texture name="Icon_Squig-Herder" file="Textures/ClassIcons/Icon_Squig-Herder.tga" />
+	<Texture name="Icon_Swordmaster" file="Textures/ClassIcons/Icon_Swordmaster.tga" />
+	<Texture name="Icon_Warrior-Priest" file="Textures/ClassIcons/Icon_Warrior-Priest.tga" />
+	<Texture name="Icon_WhiteLion" file="Textures/ClassIcons/Icon_WhiteLion.tga" />
+	<Texture name="Icon_Witch-Elf" file="Textures/ClassIcons/Icon_Witch-Elf.tga" />
+	<Texture name="Icon_Witch-Hunter" file="Textures/ClassIcons/Icon_Witch-Hunter.tga" />
+	<Texture name="Icon_Zealot" file="Textures/ClassIcons/Icon_Zealot.tga" />
+
+
+	<Texture name="UF_AB_BtnBG" file="Textures/ActionBar/Buttons/ActionBar_Button_Background.tga" />
+	<Texture name="UF_AB_BtnPress" file="Textures/ActionBar/Buttons/ActionBar_Button_Press.tga" />
+	<Texture name="UF_AB_Spells" file="Textures/ActionBar/Buttons/ActionBar_Button_Icon_Spells.tga" />
+	<Texture name="UF_AB_Settings" file="Textures/ActionBar/Buttons/ActionBar_Button_Icon_Settings.tga" />
+	<Texture name="UF_AB_Profile" file="Textures/ActionBar/Buttons/ActionBar_Button_Icon_Profile.tga" />
+	<Texture name="UF_AB_Talents" file="Textures/ActionBar/Buttons/ActionBar_Button_Icon_Talents.tga" />
+	<Texture name="UF_AB_Lock" file="Textures/ActionBar/Buttons/ActionBar_Button_Icon_Lock.tga" />
+	<Texture name="UF_AB_Guild" file="Textures/ActionBar/Buttons/ActionBar_Button_Icon_Guild.tga" />
+
+	<Texture name="UF_EXP_BG" file="Textures/XPBar/XPBar_Background.tga" />
+	<Texture name="UF_EXP_Fill" file="Textures/XPBar/XPBar_Fill.tga" />
+
+	<Texture name="UF_AB_BG" file="Textures/ActionBar/ActionBar_Background.tga" />
+
+	<Texture name="CastBar_BG_UI5" file="Textures/CastBar/CastBar_Background.tga" />
+	<Texture name="CastBar_Fill_UI5" file="Textures/CastBar/CastBar_Fill.tga" />
+	<Texture name="CastBar_IconFrame_UI5" file="Textures/CastBar/CastBar_IconFrame.tga" />
+	<Texture name="CastBar_Spark" file="Textures/CastBar/spark.tga" />
+
+	<Texture name="UF_BG_UI5" file="Textures/UnitFrames/UnitFrame_Background.tga" />
+	<Texture name="UF_Buff_BG_UI5" file="Textures/UnitFrames/UnitFrame_Buff_Background.tga" />
+	<Texture name="UF_Dragon_UI5" file="Textures/UnitFrames/UnitFrame_Dragon.tga" />
+	<Texture name="UF_Name_BG_UI5" file="Textures/UnitFrames/UnitFrame_Name_Background.tga" />
+	
+	<Texture name="UF_Avatar_BG" file="Textures/UnitFrames/Avatar/UnitFrame_Avatar_Background.tga" />
+	<Texture name="UF_Avatar_BG_Red" file="Textures/UnitFrames/Avatar/UnitFrame_Avatar_Background_Red.tga" />
+	<Texture name="UF_Avatar_Example" file="Textures/UnitFrames/Avatar/UnitFrame_Avatar_Example.tga" />
+
+	<Texture name="UF_Bars_MainBar" file="Textures/UnitFrames/Bars/UnitFrame_MainBar_Fill.tga" />
+	<Texture name="UF_Bars_SecondaryBar" file="Textures/UnitFrames/Bars/UnitFrame_SecondaryBar_Fill.tga" />
+
+	<Texture name="UF_Levels_BG.tga" file="Textures/UnitFrames/Level/UnitFrame_Level_Background.tga" />
+	<Texture name="UF_Levels_BG_Red.tga" file="Textures/UnitFrames/Level/UnitFrame_Level_Background_Red.tga" />
+	<Texture name="UF_Levels_Skull" file="Textures/UnitFrames/Level/UnitFrame_Level_Skull.tga" />
+
+	<Texture name="UF_Orb_BG" file="Textures/UnitFrames/Orbs/UnitFrame_Orb_Background.tga" />
+	<Texture name="UF_Orb_FG" file="Textures/UnitFrames/Orbs/UnitFrame_Orb_Foreground.tga" />
+</Assets>
+
+</Interface>

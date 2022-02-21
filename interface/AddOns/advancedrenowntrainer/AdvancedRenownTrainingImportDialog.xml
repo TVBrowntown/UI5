@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="AdvancedRenownTrainingImportWindow" movable="true" layer="popup" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="800" y="230" />
+			</Size>
+			<Anchors>
+				<Anchor point="topleft" relativePoint="topleft">
+					<AbsPoint x="300" y="190" />
+				</Anchor>
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="AdvancedRenownTraining.OnImportHidden" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" layer="background">
+					<Size>
+						<AbsPoint x="800" y="190"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Window>
+				<EditBox name="$parentLinkInputBox" inherits="EA_EditBox_DefaultFrame" layer="secondary" maxchars="76" handleinput="true">
+					<Size>
+						<AbsPoint x="780" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBackground">
+							<AbsPoint x="10" y="30" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<Label name="$parentLinkLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLinkInputBox">
+							<AbsPoint x="0" y="-20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<EditBox name="$parentNameInputBox" inherits="EA_EditBox_DefaultFrame" layer="secondary" maxchars="20" handleinput="true">
+					<Size>
+						<AbsPoint x="780" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBackground">
+							<AbsPoint x="10" y="90" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<Label name="$parentPresetLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentNameInputBox">
+							<AbsPoint x="0" y="-20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentNameInputBox">
+							<AbsPoint x="-70" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ImportOkButtonPressed" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentNameInputBox">
+							<AbsPoint x="70" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ImportCancelButtonPressed" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+		</Window>
+		
+		<Window name="AdvancedRenownTrainingImportNameInputWindow" movable="true" layer="popup" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="800" y="130" />
+			</Size>
+			<Anchors>
+				<Anchor point="topleft" relativePoint="topleft">
+					<AbsPoint x="300" y="190" />
+				</Anchor>
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="AdvancedRenownTraining.OnImportNameInputHidden" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" layer="background">
+					<Size>
+						<AbsPoint x="800" y="130"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Window>
+				<EditBox name="$parentNameInputBox" inherits="EA_EditBox_DefaultFrame" layer="secondary" maxchars="76" handleinput="true">
+					<Size>
+						<AbsPoint x="780" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBackground">
+							<AbsPoint x="10" y="30" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<Label name="$parentNameLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentNameInputBox">
+							<AbsPoint x="0" y="-20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentNameInputBox">
+							<AbsPoint x="-70" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ImportNameInputOkButtonPressed" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentNameInputBox">
+							<AbsPoint x="70" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ImportNameInputCancelButtonPressed" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+		</Window>
+		
+		<Window name="AdvancedRenownTrainingExportWindow" movable="true" layer="popup" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="170" y="200" />
+			</Size>
+			<Anchors>
+				<Anchor point="topleft" relativePoint="topleft" relativeTo="AdvancedRenownTrainingPresetsWindow">
+					<AbsPoint x="10" y="10" />
+				</Anchor>
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="AdvancedRenownTraining.OnExportHidden" />
+				<EventHandler event="OnShown" function="AdvancedRenownTraining.OnExportShown" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" layer="background">
+					<Size>
+						<AbsPoint x="170" y="200"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Button name="$parentHyperLinkButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="top" relativePoint="top" relativeTo="$parentBackground">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ExportToLink" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentWardrobeButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentHyperLinkButton">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ExportToWardrobe" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentWardrobeButton">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ExportCancelButtonPressed" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+		</Window>
+		
+		<Window name="AdvancedRenownTrainingLinkWindow" movable="true" layer="popup" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="800" y="180" />
+			</Size>
+			<Anchors>
+				<Anchor point="topleft" relativePoint="topleft">
+					<AbsPoint x="300" y="190" />
+				</Anchor>
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="AdvancedRenownTraining.OnLinkHidden" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.LinkWindowClose" />
+					</EventHandlers>
+				</Button>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" layer="background">
+					<Size>
+						<AbsPoint x="800" y="130"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Window>
+				<EditBox name="$parentLinkBox" inherits="EA_EditBox_DefaultFrame" layer="secondary" maxchars="76" handleinput="true">
+					<Size>
+						<AbsPoint x="780" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentBackground">
+							<AbsPoint x="10" y="30" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<Button name="$parentCloseButton" inherits="EA_Button_DefaultResizeable" layer="popup">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentLinkBox">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.LinkWindowClose" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

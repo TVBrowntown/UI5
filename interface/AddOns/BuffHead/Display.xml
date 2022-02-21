@@ -1,0 +1,83 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Texture name="BuffHead_Effect_Border" file="Textures/border.dds" />
+		<Texture name="BuffHead_Effect_Border_Frame1" file="Textures/border_frame1.tga" />
+		<Texture name="BuffHead_Effect_Border_Frame2" file="Textures/border_frame2.tga" />
+		<Texture name="BuffHead_Effect_Border_Frame3" file="Textures/border_frame3.tga" />
+		<Texture name="BuffHead_Effect_Border_Frame4" file="Textures/border_frame4.tga" />
+		<Texture name="BuffHead_Effect_Border_Frame5" file="Textures/border_frame5.tga" />
+		<Texture name="BuffHead_Effect_Border_Frame6" file="Textures/border_frame6.tga" />
+		<Texture name="BuffHead_Effect_Border_Frame7" file="Textures/border_frame7.tga" />
+		<Texture name="BuffHead_Effect_Border_Frame8" file="Textures/border_frame8.tga" />
+		
+		<Texture name="BuffHead_Effect_Border_Thick_Frame1" file="Textures/border_thick_frame1.tga" />
+		<Texture name="BuffHead_Effect_Border_Thick_Frame2" file="Textures/border_thick_frame2.tga" />
+		<Texture name="BuffHead_Effect_Border_Thick_Frame3" file="Textures/border_thick_frame3.tga" />
+		<Texture name="BuffHead_Effect_Border_Thick_Frame4" file="Textures/border_thick_frame4.tga" />
+		<Texture name="BuffHead_Effect_Border_Thick_Frame5" file="Textures/border_thick_frame5.tga" />
+		<Texture name="BuffHead_Effect_Border_Thick_Frame6" file="Textures/border_thick_frame6.tga" />
+		<Texture name="BuffHead_Effect_Border_Thick_Frame7" file="Textures/border_thick_frame7.tga" />
+		<Texture name="BuffHead_Effect_Border_Thick_Frame8" file="Textures/border_thick_frame8.tga" />
+	</Assets>
+	
+	<Windows>
+		<Window name="BuffHeadBuffTemplate" movable="false" handleinput="true">
+			
+			<EventHandlers>
+				<EventHandler event="OnRButtonDown" function="FrameManager.OnRButtonDown" />
+				<EventHandler event="OnMouseOver" function="FrameManager.OnMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="FrameManager.OnMouseOverEnd" />
+			</EventHandlers>
+				
+			<Windows>
+				
+				<Window name="$parentIcon" handleinput="false">
+					<Windows>
+						<DynamicImage name="$parentIcon" handleinput="false" layer="background">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+							</Anchors>
+							<TexDims x="64" y="64" />		
+						</DynamicImage>
+						<DynamicImage name="$parentBorder" texture="BuffHead_Effect_Border" handleinput="false" layer="default">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+							</Anchors>
+							<TexDims x="64" y="64" />
+						</DynamicImage>
+						<DynamicImage name="$parentOverlay" texture="" handleinput="false" layer="secondary">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+							</Anchors>
+							<TexDims x="64" y="64" />
+						</DynamicImage>
+					</Windows>
+				</Window>
+				
+				<Label name="$parentStacks" font="font_clear_small_bold" textalign="right" layer="secondary" handleinput="false" />
+				
+				<Window name="$parentStatusBar" handleinput="false">
+					<Windows>
+						<DynamicImage name="$parentBackground" handleinput="false" layer="background">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+							</Anchors>
+						</DynamicImage>				
+						<DynamicImage name="$parentForeground" handleinput="false" layer="default" />
+					</Windows>
+				</Window>
+				
+				<Label name="$parentTime" font="font_clear_small" textalign="center" layer="secondary" handleinput="false" />
+				<Label name="$parentName" font="font_clear_small" textalign="center" layer="secondary" handleinput="false" />
+			</Windows>
+		</Window>
+		
+		<Window name="BuffHeadContainerTemplate" movable="false" handleinput="false">
+		
+		</Window>		
+	</Windows>
+</Interface>

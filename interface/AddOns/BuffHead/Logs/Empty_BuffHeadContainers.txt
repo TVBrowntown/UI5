@@ -1,0 +1,440 @@
+(table) 114 = table: 62C871E8
+   (table) EffectsCache = table: 62C8A108
+      end
+   (number) ActiveFrames = 0
+   (string) TargetName = 
+   (string) m_Name = BuffHead114
+   (number) WorldObjectId = 114
+   (table) RefreshEffects = table: 62C8A0E0
+      end
+   (number) m_Id = 1647
+   (table) RefreshTree = table: 62C89780
+      (table) Root = table: 56742610
+         (number) Color = 2
+         (table) Right = table: 56742610
+         Preventing cycle on table [table: 56742610]
+         (table) Left = table: 56742610
+         Preventing cycle on table [table: 56742610]
+         end
+      (function) Comparer = function: 5671F098
+      (table) __index = table: 62C89780
+      Preventing cycle on table [table: 62C89780]
+      (number) Count = 0
+      end
+   (number) LastUpdate = 46.881062272936
+   (table) Settings = table: 5696CE58
+      (table) Fading = table: 5696C1B0
+         (boolean) Enable = true
+         end
+      (table) Trackers = table: 5696C200
+         (table) Group = table: 5696CA30
+            (boolean) Enabled = false
+            (number) Debuffs = 3
+            (table) AlwaysShow = table: 5695D078
+               end
+            (number) Buffs = 3
+            (table) AlwaysIgnore = table: 5695D0A0
+               end
+            (boolean) Permanent = false
+            end
+         (table) Hostile = table: 5696C0E8
+            (boolean) Enabled = false
+            (number) Debuffs = 3
+            (table) OnTargetChange = table: 56971740
+               (boolean) ClearBuffs = false
+               (boolean) ClearAlwaysShow = false
+               (boolean) ClearDebuffs = false
+               end
+            (table) AlwaysShow = table: 569716F0
+               end
+            (number) Buffs = 3
+            (table) AlwaysIgnore = table: 56971718
+               end
+            (boolean) Permanent = false
+            end
+         (table) Friendly = table: 56971118
+            (boolean) Enabled = true
+            (number) Debuffs = 1
+            (table) OnTargetChange = table: 5696C0C0
+               (boolean) ClearBuffs = false
+               (boolean) ClearAlwaysShow = false
+               (boolean) ClearDebuffs = false
+               end
+            (table) AlwaysShow = table: 5696C028
+               (boolean) Guard = false
+               (boolean) Corrupting Retribution = false
+               end
+            (number) Buffs = 2
+            (table) AlwaysIgnore = table: 5696C098
+               end
+            (boolean) Permanent = false
+            end
+         (table) Self = table: 5695D0C8
+            (boolean) Enabled = true
+            (number) Debuffs = 3
+            (table) AlwaysShow = table: 569710C8
+               end
+            (number) Buffs = 3
+            (table) AlwaysIgnore = table: 569710F0
+               end
+            (boolean) Permanent = true
+            end
+         end
+      (table) Indicators = table: 569717F0
+         (table) Padding = table: 56971860
+            (number) Y = 5
+            (number) X = 0
+            end
+         (number) Compression = 4
+         end
+      (number) Scale = 1
+      (table) PriorityEffects = table: 569718D0
+         (boolean) SortToFront = true
+         (table) Effect = table: 56971980
+            end
+         (number) Animation = 2
+         end
+      (table) AlwaysShow = table: 569719A8
+         (boolean) 412 = true
+         (boolean) 413 = true
+         (boolean) 414 = true
+         (boolean) Immovable = true
+         (boolean) Unstoppable = true
+         (boolean) 402 = true
+         (boolean) 403 = true
+         (boolean) 404 = true
+         (boolean) 405 = true
+         (boolean) 406 = true
+         (boolean) 407 = true
+         (boolean) Guard = true
+         (boolean) 408 = true
+         end
+      (table) AdvancedContainers = table: 5695D0F0
+         end
+      (table) Performance = table: 5695D118
+         (boolean) PriorityUpdate = true
+         (number) PriorityStart = 3
+         (number) GeneralDelay = 1
+         (number) EffectAnchoring = 2
+         (number) PriorityDelay = 0.1
+         (number) MaximumUpdates = 0
+         end
+      (table) Offset = table: 5696CA58
+         (number) Y = -20
+         (number) X = 0
+         end
+      (number) Layer = 1
+      (table) AdvancedCompression = table: 5696CAC8
+         end
+      (table) Layouts = table: 5696CAF0
+         end
+      (number) MaximumThreshold = 60
+      (number) Version = 9
+      (table) Layout = table: 56973150
+         (table) StatusBar = table: 56973280
+            (boolean) Enabled = false
+            (number) Scale = 1
+            (number) Layer = 1
+            (number) Width = 48
+            (number) Y = 48
+            (number) X = 0
+            (boolean) Reverse = false
+            (number) Height = 16
+            (table) Background = table: 569734B0
+               (table) TextureDimensions = table: 56973690
+                  (number) Height = 128
+                  (number) Width = 128
+                  end
+               (table) Color = table: 569735E0
+                  (number) B = 0
+                  (number) G = 0
+                  (number) R = 0
+                  end
+               (boolean) Stretch = true
+               (number) Alpha = 0.8
+               (string) Texture = EA_TintableImage
+               end
+            (number) Orientation = 1
+            (table) Foreground = table: 56973700
+               (number) Type = 1
+               (table) TextureDimensions = table: 569738E0
+                  (number) Height = 128
+                  (number) Width = 128
+                  end
+               (table) Color = table: 56973830
+                  (number) B = 255
+                  (number) G = 255
+                  (number) R = 255
+                  end
+               (boolean) Stretch = true
+               (number) Alpha = 1
+               (string) Texture = EA_TintableImage
+               end
+            end
+         (table) Name = table: 56973950
+            (number) Scale = 1
+            (number) Layer = 2
+            (number) Alpha = 0
+            (number) Width = 48
+            (number) Y = 12
+            (number) X = 50
+            (string) Alignment = leftcenter
+            (number) Height = 16
+            (string) Font = font_clear_small
+            (table) Color = table: 56973B80
+               (number) B = 255
+               (number) G = 255
+               (number) R = 255
+               end
+            end
+         (table) StackCount = table: 56973C30
+            (number) Scale = 1
+            (number) Layer = 2
+            (number) Alpha = 1
+            (number) Width = 48
+            (number) Y = 2
+            (number) X = 0
+            (string) Alignment = rightcenter
+            (number) Height = 16
+            (string) Font = font_clear_small_bold
+            (table) Color = table: 56973E60
+               (number) B = 255
+               (number) G = 255
+               (number) R = 255
+               end
+            end
+         (number) Height = 48
+         (table) Duration = table: 56973F10
+            (number) Scale = 1
+            (number) Layer = 2
+            (number) Alpha = 1
+            (number) Width = 48
+            (number) Y = 30
+            (number) X = 0
+            (string) Alignment = center
+            (number) Height = 16
+            (number) Format = 3
+            (string) Font = font_clear_small_bold
+            (table) Color = table: 56974140
+               (number) B = 255
+               (number) G = 255
+               (number) R = 255
+               end
+            end
+         (table) Icon = table: 569741F0
+            (number) Y = 0
+            (number) X = 0
+            (number) Scale = 1
+            (table) Border = table: 56974320
+               (table) Color = table: 569743D0
+                  (number) B = 0
+                  (number) G = 0
+                  (number) R = 0
+                  end
+               (number) Type = 1
+               (number) Alpha = 1
+               end
+            (number) Height = 48
+            (number) Layer = 1
+            (number) Alpha = 1
+            (number) Width = 48
+            end
+         (number) Width = 48
+         end
+      (table) Sync = table: 5696CB18
+         (boolean) Enable = true
+         (number) ResyncEvery = 10
+         end
+      (table) Containers = table: 56974480
+         (table) AlwaysShow = table: 56974530
+            (number) Anchor = 1
+            (number) Placement = 1
+            (table) Size = table: 569745E0
+               (number) Columns = 10
+               (number) Rows = 1
+               end
+            end
+         (table) Buffs = table: 56974650
+            (number) Anchor = 4
+            (number) Placement = 1
+            (table) Size = table: 56974700
+               (number) Columns = 10
+               (number) Rows = 1
+               end
+            end
+         (table) Padding = table: 56974890
+            (number) Y = 5
+            (number) X = 0
+            end
+         (table) Debuffs = table: 56974770
+            (number) Anchor = 2
+            (number) Placement = 1
+            (table) Size = table: 56974820
+               (number) Columns = 10
+               (number) Rows = 1
+               end
+            end
+         end
+      (table) AlwaysIgnore = table: 56974900
+         end
+      (table) Sorting = table: 56974928
+         (boolean) Enabled = true
+         (number) Type = 1
+         (number) Direction = 2
+         end
+      end
+   (number) TargetType = 1
+   (number) AttachedTo = 114
+   (table) Containers = table: 62C86F80
+      (table) AlwaysShow = table: 62C87DD8
+         (table) SortTree = table: 62C88138
+            (table) Root = table: 56742610
+            Preventing cycle on table [table: 56742610]
+            (function) Comparer = function: 56729DE8
+            (table) __index = table: 62C88138
+            Preventing cycle on table [table: 62C88138]
+            (number) Count = 0
+            end
+         (table) DisplaySize = table: 62C88110
+            (number) Height = 0
+            (number) Width = 0
+            end
+         (string) m_Name = BuffHead114AlwaysShow
+         (table) ContainerSettings = table: 56974530
+         Preventing cycle on table [table: 56974530]
+         (table) PriorityEffects = table: 62C88698
+            (table) Frames = table: 62C886C0
+               end
+            (number) Count = 0
+            end
+         (number) m_Id = 1648
+         (table) EffectFrames = table: 62C88050
+            end
+         (table) Queue = table: 62C88160
+            (table) Update = table: 62C88528
+               (table) Keys = table: 62C88578
+                  end
+               (table) __index = table: 62C88528
+               Preventing cycle on table [table: 62C88528]
+               (table) Queue = table: 62C88550
+                  end
+               end
+            (table) Remove = table: 62C88670
+               end
+            end
+         (table) Settings = table: 5696CE58
+         Preventing cycle on table [table: 5696CE58]
+         (table) Parent = table: 62C871E8
+         Preventing cycle on table [table: 62C871E8]
+         (boolean) DimensionsDirty = false
+         (table) CompressedEffects = table: 62C880C0
+            end
+         (boolean) m_Showing = true
+         (table) Size = table: 62C880E8
+            (number) Height = 0
+            (number) Width = 0
+            end
+         end
+      (table) Buffs = table: 62C888F0
+         (table) SortTree = table: 62C889D0
+            (table) Root = table: 56742610
+            Preventing cycle on table [table: 56742610]
+            (function) Comparer = function: 56729DE8
+            (table) __index = table: 62C889D0
+            Preventing cycle on table [table: 62C889D0]
+            (number) Count = 0
+            end
+         (table) DisplaySize = table: 62C88220
+            (number) Height = 0
+            (number) Width = 0
+            end
+         (string) m_Name = BuffHead114Buffs
+         (table) ContainerSettings = table: 56974650
+         Preventing cycle on table [table: 56974650]
+         (table) PriorityEffects = table: 62C88E68
+            (table) Frames = table: 62C88E90
+               end
+            (number) Count = 0
+            end
+         (number) m_Id = 1649
+         (table) EffectFrames = table: 62C88918
+            end
+         (table) Queue = table: 62C889F8
+            (table) Update = table: 62C88AF0
+               (table) Keys = table: 62C88D48
+                  end
+               (table) __index = table: 62C88AF0
+               Preventing cycle on table [table: 62C88AF0]
+               (table) Queue = table: 62C88D20
+                  end
+               end
+            (table) Remove = table: 62C88E40
+               end
+            end
+         (table) Settings = table: 5696CE58
+         Preventing cycle on table [table: 5696CE58]
+         (table) Parent = table: 62C871E8
+         Preventing cycle on table [table: 62C871E8]
+         (boolean) DimensionsDirty = false
+         (table) CompressedEffects = table: 62C881D0
+            end
+         (boolean) m_Showing = true
+         (table) Size = table: 62C881F8
+            (number) Height = 0
+            (number) Width = 0
+            end
+         end
+      (table) Debuffs = table: 62C890C0
+         (table) SortTree = table: 62C891D0
+            (table) Root = table: 56742610
+            Preventing cycle on table [table: 56742610]
+            (function) Comparer = function: 56729DE8
+            (table) __index = table: 62C891D0
+            Preventing cycle on table [table: 62C891D0]
+            (number) Count = 0
+            end
+         (table) DisplaySize = table: 62C891A8
+            (number) Height = 0
+            (number) Width = 0
+            end
+         (string) m_Name = BuffHead114Debuffs
+         (table) ContainerSettings = table: 56974770
+         Preventing cycle on table [table: 56974770]
+         (table) PriorityEffects = table: 62C89730
+            (table) Frames = table: 62C89758
+               end
+            (number) Count = 0
+            end
+         (number) m_Id = 1650
+         (table) EffectFrames = table: 62C890E8
+            end
+         (table) Queue = table: 62C891F8
+            (table) Update = table: 62C895C0
+               (table) Keys = table: 62C89610
+                  end
+               (table) __index = table: 62C895C0
+               Preventing cycle on table [table: 62C895C0]
+               (table) Queue = table: 62C895E8
+                  end
+               end
+            (table) Remove = table: 62C89708
+               end
+            end
+         (table) Settings = table: 5696CE58
+         Preventing cycle on table [table: 5696CE58]
+         (table) Parent = table: 62C871E8
+         Preventing cycle on table [table: 62C871E8]
+         (boolean) DimensionsDirty = false
+         (table) CompressedEffects = table: 62C89158
+            end
+         (boolean) m_Showing = true
+         (table) Size = table: 62C89180
+            (number) Height = 0
+            (number) Width = 0
+            end
+         end
+      end
+   (boolean) m_Showing = false
+   (boolean) IsAdvancedContainer = false
+   end
+end

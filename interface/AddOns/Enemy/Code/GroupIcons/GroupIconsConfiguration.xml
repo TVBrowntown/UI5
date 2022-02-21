@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyGroupIconsConfiguration">
+			<Windows>
+			
+				<!-- Content -->
+				<ScrollWindow name="$parentContent" childscrollwindow="$parentScrollChild" scrollbar="$parentScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="660" y="410" />
+					</Size>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="24" y="410" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+			            </VerticalScrollbar>
+			            
+			            <Window name="$parentScrollChild">
+			            	<Size>
+								<AbsPoint x="624" y="410" />
+							</Size>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+							<Windows>
+								<!-- Content: parts -->
+								<!--
+								<Label name="$parentGroupIconPartsLabel" font="font_default_text_large">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Color r="255" g="204" b="102" />
+								</Label>
+								<FullResizeImage name="$parentGroupIconPartsListBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+									<Size>
+										<AbsPoint x="500" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupIconPartsLabel" />
+									</Anchors>
+								</FullResizeImage>
+								<ListBox name="$parentGroupIconPartsList" rowdef="EnemySimpleListRowTemplate" visiblerows="5" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+									<Size>
+										<AbsPoint x="526" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupIconPartsLabel" />
+									</Anchors>
+
+									<ListData table="Enemy.unitFramesPartsListData" populationfunction="Enemy.GroupIconsUI_ConfigDialog_OnGroupIconPartsListPopulate">
+									</ListData>
+									
+									<EventHandlers>
+						                <EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_OnGroupIconPartsListLButtonUp" />
+						            </EventHandlers>
+								</ListBox>
+								<Button name="$parentGroupIconPartsAddButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupIconPartsList">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsAdd" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentGroupIconPartsEditButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="50" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentGroupIconPartsAddButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsEdit" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentGroupIconPartsDeleteButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentGroupIconPartsEditButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsDelete" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentGroupIconPartsUpButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentGroupIconPartsDeleteButton">
+											<AbsPoint x="60" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsUp" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentGroupIconPartsDownButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentGroupIconPartsUpButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsDown" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentGroupIconPartsEnableButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupIconPartsAddButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsEnable" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentGroupIconPartsResetButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentGroupIconPartsEnableButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsReset" />
+									</EventHandlers>
+								</Button>
+								
+								<Button name="$parentGroupIconPartsImportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupIconPartsUpButton">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsImport" />
+									</EventHandlers>
+								</Button>
+								<Button name="$parentGroupIconPartsExportButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+									<Size>
+										<AbsPoint x="75" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentGroupIconPartsImportButton">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.GroupIconsUI_ConfigDialog_GroupIconPartsExport" />
+									</EventHandlers>
+								</Button>
+								
+								<Window name="$parentDummy">
+									<Size>
+										<AbsPoint x="50" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupIconPartsExportButton">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								-->
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

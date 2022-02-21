@@ -1,0 +1,326 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="BuffHeadSetupAdvancedContainersItemRowTemplate">
+			<Size>
+				<AbsPoint x="415" y="30" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Size>
+						<AbsPoint x="415" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+							<Anchor point="bottomright" relativePoint="bottomright" relativeTo="" />
+						</Anchor>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentText" font="font_clear_small" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentType" font="font_clear_small" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="90" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentText">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="BuffHead.Setup.AdvancedContainersItem.OnRowLDown" />
+				<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnRowLUp" />
+				<EventHandler event="OnRButtonDown" function="BuffHead.Setup.AdvancedContainersItem.OnRowRDown" />
+				<EventHandler event="OnRButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnRowRUp" />
+				<EventHandler event="OnMouseOver" function="BuffHead.Setup.AdvancedContainersItem.OnRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.AdvancedContainersItem.OnRowMouseOut" />
+			</EventHandlers>
+		</Window>
+	
+		<Window name="BuffHeadSetupAdvancedContainersItemWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.AdvancedContainersItem.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="540" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentTargetLabel" font="font_clear_small_bold" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentTargetInfoLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTargetLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentTargetComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTargetInfoLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.OnTargetTypeChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentPositionLabel" font="font_clear_small_bold" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTargetComboBox">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentPositionComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPositionLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.OnPositionChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentContainerLayoutLabel" font="font_clear_small_bold" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPositionComboBox">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentContainerLayoutInfoLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentContainerLayoutLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentContainerAnchorLabel" font="font_clear_small" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentContainerLayoutInfoLabel">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<DynamicImage name="$parentContainerLegendAlwaysSquare" texture="EA_TintableImage">
+					<TintColor r="155" g="155" b="255" />
+					<Size>
+						<AbsPoint x="20" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentContainerAnchorLabel">
+							<AbsPoint x="220" y="130"/>
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				<Label name="$parentContainerLegendAlwaysShowLabel" font="font_clear_small" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentContainerLegendAlwaysSquare">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<DynamicImage name="$parentContainerLegendBuffsSquare" texture="EA_TintableImage">
+					<TintColor r="155" g="255" b="155" />
+					<Size>
+						<AbsPoint x="20" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentContainerLegendAlwaysShowLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				<Label name="$parentContainerLegendBuffsLabel" font="font_clear_small" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentContainerLegendBuffsSquare">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<DynamicImage name="$parentContainerLegendDebuffsSquare" texture="EA_TintableImage">
+					<TintColor r="255" g="155" b="155" />
+					<Size>
+						<AbsPoint x="20" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentContainerLegendBuffsLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				<Label name="$parentContainerLegendDebuffsLabel" font="font_clear_small" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentContainerLegendDebuffsSquare">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<DynamicImage name="$parentContainerAlwaysSquare" texture="EA_TintableImage" id="1">
+					<TintColor r="155" g="155" b="255" />
+					<Size>
+						<AbsPoint x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parentContainerAnchorLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnRButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnContainerRClick" />
+                    </EventHandlers>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentContainerBuffsSquare" texture="EA_TintableImage" id="2">
+					<TintColor r="155" g="255" b="155" />
+					<Size>
+						<AbsPoint x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentContainerAlwaysSquare">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnRButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnContainerRClick" />
+                    </EventHandlers>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentContainerDebuffsSquare" texture="EA_TintableImage" id="3">
+					<TintColor r="255" g="155" b="155" />
+					<Size>
+						<AbsPoint x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentContainerBuffsSquare">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnRButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnContainerRClick" />
+                    </EventHandlers>
+				</DynamicImage>
+				
+				
+				
+				
+				
+				
+				
+				<Button name="$parentApplyButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="200" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="-20" y="-20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnApplyLClick" />
+					</EventHandlers>
+				</Button>
+				
+				<Button name="$parentCreateButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="140" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentApplyButton" />
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.OnCreateLClick" />
+					</EventHandlers>
+				</Button>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

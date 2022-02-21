@@ -1,0 +1,329 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="BuffHeadSetupTrackersWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.Trackers.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="520" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTrackersLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentTrackerTypeLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="70" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrackersLabel">
+							<AbsPoint x="20" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentTrackerTypeList" inherits="EA_ComboBox_DefaultResizableSmall">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTrackerTypeLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Trackers.OnTrackerTypeChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentTrackerEnable" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrackerTypeLabel">
+							<AbsPoint x="10" y="20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnTrackerEnableLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentTrackerEnableCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200" autoresize="true">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTrackerEnable">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentTrackerBuffsLabel" font="font_clear_small" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrackerEnable">
+							<AbsPoint x="0" y="10"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentTrackerBuffsList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTrackerBuffsLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Trackers.OnTrackerBuffChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentTrackerDebuffsLabel" font="font_clear_small" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrackerBuffsLabel">
+							<AbsPoint x="0" y="10"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentTrackerDebuffsList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTrackerDebuffsLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Trackers.OnTrackerDebuffChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentTrackerPermanentEffects" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrackerDebuffsLabel">
+							<AbsPoint x="0" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnTrackerPermanentLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentTrackerPermanentEffectsCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200" autoresize="true">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTrackerPermanentEffects">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentOnTargetChangeLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="280" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTrackerPermanentEffects">
+							<AbsPoint x="0" y="20"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentOnTargetChangeClearAlwaysShow" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOnTargetChangeLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnTargetChangeClearAlwaysShowLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentOnTargetChangeClearAlwaysShowCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200" autoresize="true">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOnTargetChangeClearAlwaysShow">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentOnTargetChangeClearBuffs" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOnTargetChangeClearAlwaysShow">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnTargetChangeClearBuffsLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentOnTargetChangeClearBuffsCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200" autoresize="true">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOnTargetChangeClearBuffs">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentOnTargetChangeClearDebuffs" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOnTargetChangeClearBuffs">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnTargetChangeClearDebuffsLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentOnTargetChangeClearDebuffsCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200" autoresize="true">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOnTargetChangeClearDebuffs">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentAlwaysIgnoreLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="280" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOnTargetChangeClearDebuffs">
+							<AbsPoint x="-10" y="20"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentAlwaysIgnoreDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100" wordwrap="true">
+					<Size>
+						<AbsPoint x="240" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Button name="$parentAlwaysIgnoreButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="140" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreDescriptionLabel">
+							<AbsPoint x="30" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnAlwaysIgnoreLClick" />
+					</EventHandlers>
+				</Button>
+				
+				<Label name="$parentAlwaysShowLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="280" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreLabel">
+							<AbsPoint x="280" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentAlwaysShowDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100" wordwrap="true">
+					<Size>
+						<AbsPoint x="240" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysShowLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Button name="$parentAlwaysShowButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="140" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysShowDescriptionLabel">
+							<AbsPoint x="30" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Trackers.OnAlwaysShowLClick" />
+					</EventHandlers>
+				</Button>
+
+
+				
+
+
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

@@ -1,0 +1,115 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+<Assets>
+	<Texture name="SwiftAssistCIFX" file="yIconFX.tga" />
+	<Texture name="SwiftAssistRedirect" file="yRedirect.tga" />
+</Assets>
+<Windows>
+	<Window name="SwiftAssist" layer="secondary" popable="false" movable="false" savesettings="true" handleinput="false">
+		<Size>
+			<AbsPoint x="180" y="28" />
+		</Size>
+		<Anchors>
+			<Anchor point="center" relativePoint="center" relativeTo="Root">
+			<AbsPoint x="0" y="150" />
+			</Anchor>
+		</Anchors>
+		<Windows>
+
+			<DynamicImage name="$parentCareerIcon">
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="SwiftAssist">
+						<AbsPoint x="1" y="1" />
+					</Anchor>
+				</Anchors>
+				<TexDims x="32" y="32" />
+				<Size>
+					<AbsPoint x="28" y="28" />
+				</Size>
+			</DynamicImage>
+			<DynamicImage name="$parentCareerIconFX" texture="SwiftAssistCIFX">
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="SwiftAssist">
+						<AbsPoint x="1" y="1" />
+					</Anchor>
+				</Anchors>
+				<TexDims x="32" y="32" />
+				<Size>
+					<AbsPoint x="28" y="28" />
+				</Size>
+			</DynamicImage>
+
+			<Label name="$parentShadow" font="font_clear_medium_bold" autoresize="true" textalign="leftcenter" layer="popup" popable="false" handleinput="false">
+				<Size>
+					<AbsPoint x="140" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft"  relativeTo="SwiftAssist">
+						<AbsPoint x="36" y="7" />
+					</Anchor>
+				</Anchors>
+				<Color r="0" g="0" b="0" a="255" />
+			</Label>
+			<Label name="$parentLabel" font="font_clear_medium_bold" autoresize="true" textalign="leftcenter" layer="popup" popable="false" handleinput="false">
+				<Size>
+					<AbsPoint x="140" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft"  relativeTo="SwiftAssist">
+					<AbsPoint x="33" y="5" />
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255" />
+			</Label>
+
+			<!-- -->
+
+			<DynamicImage name="$parentSmartCareerIcon">
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="SwiftAssist">
+						<AbsPoint x="1" y="41" />
+					</Anchor>
+				</Anchors>
+				<TexDims x="32" y="32" />
+				<Size>
+					<AbsPoint x="28" y="28" />
+				</Size>
+			</DynamicImage>
+			<DynamicImage name="$parentSmartCareerIconFX" texture="SwiftAssistCIFX">
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft" relativeTo="SwiftAssist">
+						<AbsPoint x="1" y="41" />
+					</Anchor>
+				</Anchors>
+				<TexDims x="32" y="32" />
+				<Size>
+					<AbsPoint x="28" y="28" />
+				</Size>
+			</DynamicImage>
+
+			<Label name="$parentSmartShadow" font="font_clear_medium_bold" autoresize="true" textalign="leftcenter" layer="popup" popable="false" handleinput="false">
+				<Size>
+					<AbsPoint x="140" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft"  relativeTo="SwiftAssist">
+						<AbsPoint x="36" y="47" />
+					</Anchor>
+				</Anchors>
+				<Color r="0" g="0" b="0" a="255" />
+			</Label>
+			<Label name="$parentSmartLabel" font="font_clear_medium_bold" autoresize="true" textalign="leftcenter" layer="popup" popable="false" handleinput="false">
+				<Size>
+					<AbsPoint x="140" y="25" />
+				</Size>
+				<Anchors>
+					<Anchor point="topleft" relativePoint="topleft"  relativeTo="SwiftAssist">
+					<AbsPoint x="33" y="45" />
+					</Anchor>
+				</Anchors>
+				<Color r="255" g="255" b="255" a="255" />
+			</Label>
+
+		</Windows>
+	</Window>
+</Windows>
+</Interface>

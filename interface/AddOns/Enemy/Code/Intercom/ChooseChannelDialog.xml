@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyChooseChannelDialog" movable="true" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="400" y="230" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="300" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_ChooseChannelDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content -->
+				<ComboBox name="$parentChannelList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="Enemy.IntercomUI_ChooseChannelDialog_ChannelListChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentTellDetails">
+					<Size>
+						<AbsPoint x="400" y="100" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentChannelList">
+							<AbsPoint x="0" y="15"/>
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<Label name="$parentText" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+							<Size>
+								<AbsPoint x="50" y="50" />
+							</Size>
+						</Label>
+						<EditBox name="$parentName" maxchars="50" inherits="EA_EditBox_DefaultFrame">
+							<Size>
+								<AbsPoint x="200" y="30" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentText">
+									<AbsPoint x="20" y="0" />
+								</Anchor>
+							</Anchors>
+						</EditBox>
+				   </Windows>
+				</Window>
+				
+				<!-- Bottom panel -->
+				<Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background">
+					<Size>
+						<AbsPoint x="0" y="65" />
+					</Size>
+				</Window>
+				
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom">
+							<AbsPoint x="0" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_ChooseChannelDialog_OnOkButton" />
+					</EventHandlers>
+				</Button>                
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.IntercomUI_ChooseChannelDialog_Hide" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

@@ -1,0 +1,240 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="LibGroupSetupWindow" inherits="EA_Window_Default" movable="true" layer="popup" savesettings="false" scale="1.0">
+			<Size>
+				<AbsPoint x="580" y="480" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="LibGroup.Setup.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGroupUpdateDelayLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGroupUpdateDelayDescriptionLabel" font="font_clear_small" textalign="left" maxchars="300" wordwrap="true">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupUpdateDelayLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentGroupUpdateDelaySlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="120" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupUpdateDelayDescriptionLabel">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="LibGroup.Setup.OnSlideGroupUpdateDelay" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentGroupUpdateDelaySliderValue" font="font_clear_small" textalign="left" maxchars="50">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentGroupUpdateDelaySlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGroupDistanceLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupUpdateDelaySlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentEnableGroupDistance" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupDistanceLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="LibGroup.Setup.OnEnableGroupDistanceLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentEnableGroupDistanceCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEnableGroupDistance">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGroupDistanceCacheUpdateLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnableGroupDistance">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGroupDistanceCacheUpdateDescriptionLabel" font="font_clear_small" textalign="left" maxchars="300" wordwrap="true">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupDistanceCacheUpdateLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentGroupDistanceCacheUpdateSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="120" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupDistanceCacheUpdateDescriptionLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="LibGroup.Setup.OnSlideGroupDistanceCacheUpdate" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentGroupDistanceCacheUpdateSliderValue" font="font_clear_small" textalign="left" maxchars="50">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentGroupDistanceCacheUpdateSlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGroupDistanceSearchUpdateLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="180" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupDistanceCacheUpdateSlider">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGroupDistanceSearchUpdateDescriptionLabel" font="font_clear_small" textalign="left" maxchars="300" wordwrap="true">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="400" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupDistanceSearchUpdateLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentGroupDistanceSearchUpdateSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="160" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGroupDistanceSearchUpdateDescriptionLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="LibGroup.Setup.OnSlideGroupDistanceSearchUpdate" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentGroupDistanceSearchUpdateSliderValue" font="font_clear_small" textalign="left" maxchars="50">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentGroupDistanceSearchUpdateSlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				
+				
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

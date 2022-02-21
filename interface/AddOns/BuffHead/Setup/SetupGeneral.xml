@@ -1,0 +1,203 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="BuffHeadSetupGeneralWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.General.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="420" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.General.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentOptionsLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentOptionsMaximumThresholdLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOptionsLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentOptionsMaximumThresholdDescriptionLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOptionsMaximumThresholdLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentOptionsMaximumThresholdSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="180" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOptionsMaximumThresholdDescriptionLabel">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.General.OnSlideMaximumThreshold" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentOptionsMaximumThresholdValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOptionsMaximumThresholdSlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentCompressLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOptionsMaximumThresholdSlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentCompressDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100" wordwrap="true">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCompressLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentCompressList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCompressDescriptionLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.General.OnCompressionChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentAlwaysIgnoreLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="280" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCompressList">
+							<AbsPoint x="-10" y="30"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentAlwaysIgnoreDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100" wordwrap="true">
+					<Size>
+						<AbsPoint x="240" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Button name="$parentAlwaysIgnoreButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="140" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreDescriptionLabel">
+							<AbsPoint x="30" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.General.OnAlwaysIgnoreLClick" />
+					</EventHandlers>
+				</Button>
+				
+				<Label name="$parentAlwaysShowLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="280" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreLabel">
+							<AbsPoint x="280" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentAlwaysShowDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100" wordwrap="true">
+					<Size>
+						<AbsPoint x="240" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysShowLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Button name="$parentAlwaysShowButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="140" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysShowDescriptionLabel">
+							<AbsPoint x="30" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.General.OnAlwaysShowLClick" />
+					</EventHandlers>
+				</Button>
+
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	
+	<Windows>
+		
+		<Window name="EnemyCombatLogSnapshotWindow" inherits="EA_Window_Default" layer="secondary" movable="true" savesettings="false">
+			<Size>
+				<AbsPoint x="900" y="500" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_SnapshotWindow_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content -->
+				<Label name="$parentTitle" font="font_default_text_large" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="800" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="30" y="20" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="102" />
+				</Label>
+				
+				<ListBox name="$parentList" rowdef="EnemyCombatLogStatsWindowSnapshot_ListRowTemplate" visiblerows="16" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+					<Size>
+						<AbsPoint x="860" y="390" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitle">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="Enemy.combatLogSnapshotWindowListData" populationfunction="Enemy.CombatLogUI_SnapshotWindow_OnListPopulate">
+					</ListData>
+				</ListBox>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.CombatLogUI_SnapshotWindow_Hide" />
+			</EventHandlers>
+		</Window>
+		
+		
+		<Window name="EnemyCombatLogStatsWindowSnapshot_ListRowTemplate">
+			<Size>
+				<AbsPoint x="835" y="24" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentTime" font="font_clear_small" textalign="leftcenter" handleinput="false">
+					<Size>
+						<AbsPoint x="70" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="150" g="150" b="150" />
+				</Label>
+				<Label name="$parentAbility" font="font_clear_small" textalign="leftcenter" autoresize="false" handleinput="false">
+					<Size>
+						<AbsPoint x="250" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentTime">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="102" />
+				</Label>
+				<Label name="$parentCrit" font="font_clear_small" textalign="center" autoresize="false" handleinput="false">
+					<Size>
+						<AbsPoint x="45" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentAbility">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="150" g="255" b="50" />
+				</Label>
+				<Label name="$parentValue" font="font_clear_small" textalign="center" autoresize="false" handleinput="false">
+					<Size>
+						<AbsPoint x="70" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentCrit">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="150" g="255" b="50" />
+				</Label>
+				<Label name="$parentObject" font="font_clear_small" textalign="leftcenter" autoresize="false" handleinput="false">
+					<Size>
+						<AbsPoint x="150" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentValue">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentInfo" font="font_clear_small" textalign="leftcenter" autoresize="false" handleinput="false">
+					<Size>
+						<AbsPoint x="235" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentObject">
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="120" g="200" b="255" />
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_SnapshotWindow_ListRowMouseOver" />
+			</EventHandlers>
+		</Window>
+		
+	</Windows>
+</Interface>

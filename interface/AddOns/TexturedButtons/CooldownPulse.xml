@@ -1,0 +1,23 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="TexturedButtonsCooldownPulse" movable="false" handleinput="false" sticky="false">
+            <Size>
+                <AbsPoint x="64" y="64" />
+            </Size>
+			<Windows>
+			
+				<DynamicImage name="$parentIcon" handleinput="false" layer="secondary">
+					<Size>
+						<AbsPoint x="64" y="64" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

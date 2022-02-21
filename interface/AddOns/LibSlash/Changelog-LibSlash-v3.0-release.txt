@@ -1,0 +1,15 @@
+------------------------------------------------------------------------
+r56 | aiiane | 2010-05-19 18:15:17 +0000 (Wed, 19 May 2010) | 1 line
+Changed paths:
+   A /tags/v3.0-release (from /trunk:55)
+
+Tagging as v3.0-release
+------------------------------------------------------------------------
+r55 | aiiane | 2010-05-19 18:12:20 +0000 (Wed, 19 May 2010) | 1 line
+Changed paths:
+   M /trunk/LibSlash.mod
+   A /trunk/LibSlash.xml
+   A /trunk/tint_square.tga
+
+Added tint_square to replace texture lost in 1.3.5.
+------------------------------------------------------------------------

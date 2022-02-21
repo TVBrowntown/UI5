@@ -1,0 +1,10 @@
+2008-12-14  aiiane  <aiiane@aiiane.net>
+
+	* BuffThrottle.lua:
+	Make BuffThrottle always pass through Clear() calls - while
+	BuffThrottle shouldn't be necessary after the 1.1 patch, at least
+	this way people who autoupdate their addons or just update without
+	reading notes won't come complaining to me that buffs are sticking
+	around. Hopefully.
+	[4b69811269f6] [1.3.4]
+

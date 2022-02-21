@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyEffectFilterDialog" movable="true" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="710" y="580" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.GroupsUI_EffectFilterDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content -->
+				
+				<!-- Content: filter name -->
+				<Label name="$parentFilterNameLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="40" y="30" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<EditBox name="$parentFilterName" inherits="EA_EditBox_DefaultFrame" maxchars="100">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentFilterNameLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				
+				<Window name="$parentDivider1" inherits="EA_Window_DefaultSeparator">
+					<Size>
+						<AbsPoint x="710" y="28" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFilterNameLabel">
+							<AbsPoint x="-40" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				
+				<!-- Content: name -->
+				<Label name="$parentNameLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+							<AbsPoint x="40" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<EditBox name="$parentName" inherits="EA_EditBox_DefaultFrame" maxchars="300">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentNameLabel">
+							<AbsPoint x="0" y="-8" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<ComboBox name="$parentNameMatch" inherits="EA_ComboBox_DefaultResizableSmall">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentName">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</ComboBox>
+				
+				<!-- Content: description -->
+				<Label name="$parentDescriptionLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentNameLabel">
+							<AbsPoint x="0" y="15" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<EditBox name="$parentDescription" inherits="EA_EditBox_DefaultFrame" maxchars="300">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDescriptionLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<ComboBox name="$parentDescriptionMatch" inherits="EA_ComboBox_DefaultResizableSmall">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDescription">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</ComboBox>
+				
+				<!-- Content: ability ids -->
+				<Label name="$parentAbilityIdsLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDescriptionLabel">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<EditBox name="$parentAbilityIds" inherits="EA_EditBox_DefaultFrame" maxchars="300">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentAbilityIdsLabel">
+							<AbsPoint x="0" y="-8" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.GroupsUI_EffectFilterDialog_OnAbilityIdsMouseOver" />
+					</EventHandlers>
+				</EditBox>
+				
+				<!-- Content: type -->
+				<ComboBox name="$parentTypeMatch" inherits="EA_ComboBox_DefaultResizableSmall">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAbilityIdsLabel">
+							<AbsPoint x="0" y="15" />
+						</Anchor>
+					</Anchors>
+				</ComboBox>
+				<ComboBox name="$parentType" inherits="EA_ComboBox_DefaultResizableLarge">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentTypeMatch">
+							<AbsPoint x="200" y="0" />
+						</Anchor>
+					</Anchors>
+				</ComboBox>
+				
+				<Window name="$parentDivider2" inherits="EA_Window_DefaultSeparator">
+					<Size>
+						<AbsPoint x="710" y="28" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTypeMatch">
+							<AbsPoint x="-40" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				
+				<!-- Content: duration -->
+				<Label name="$parentDurationLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider2">
+							<AbsPoint x="40" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<ComboBox name="$parentDurationType" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDurationLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+                        <EventHandler event="OnSelChanged" function="Enemy.GroupsUI_EffectFilterDialog_OnDurationTypeSelChanged" />
+                    </EventHandlers>
+				</ComboBox>
+				<EditBox name="$parentDurationMin" inherits="EA_EditBox_DefaultFrame" maxchars="5">
+					<Size>
+						<AbsPoint x="50" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDurationType">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<Label name="$parentDurationLabel2" textalign="center" font="font_chat_text">
+					<Size>
+						<AbsPoint x="50" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDurationMin">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<EditBox name="$parentDurationMax" inherits="EA_EditBox_DefaultFrame" maxchars="5">
+					<Size>
+						<AbsPoint x="50" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDurationLabel2">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				
+				<!-- Content: stack count -->
+				<Label name="$parentStackCountLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDurationLabel">
+							<AbsPoint x="0" y="15" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<EditBox name="$parentStackCount" inherits="EA_EditBox_DefaultFrame" maxchars="5">
+					<Size>
+						<AbsPoint x="100" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStackCountLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				
+				<!-- Content: casted by me -->
+				<Label name="$parentCastedByMeLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStackCountLabel">
+							<AbsPoint x="0" y="15" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<ComboBox name="$parentCastedByMe" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentCastedByMeLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+				</ComboBox>
+				
+				<!-- Bottom panel -->
+				<Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background">
+					<Size>
+						<AbsPoint x="0" y="65" />
+					</Size>
+				</Window>
+				
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom">
+							<AbsPoint x="-70" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.GroupsUI_EffectFilterDialog_Ok" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom">
+							<AbsPoint x="70" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.GroupsUI_EffectFilterDialog_Hide" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.GroupsUI_EffectFilterDialog_Hide" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

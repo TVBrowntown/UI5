@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="RenownTabTemplate" layer="background">
+			<Size>
+				<AbsPoint x="800" y="455"/>
+			</Size>
+			<Anchors>
+				<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			<Windows>
+				<Label name="$parentLevel1" wordwrap="false" font="font_default_text" layer="secondary" inherits="DefaultWindowText" handleinput="false" textalign="center">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+							<AbsPoint x="-5" y="95" /> 
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentLevel2" wordwrap="false" font="font_default_text" layer="secondary" inherits="DefaultWindowText" handleinput="false" textalign="center">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentLevel1">
+							<AbsPoint x="0" y="23" /> 
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentLevel3" wordwrap="false" font="font_default_text" layer="secondary" inherits="DefaultWindowText" handleinput="false" textalign="center">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentLevel2">
+							<AbsPoint x="0" y="23" /> 
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentLevel4" wordwrap="false" font="font_default_text" layer="secondary" inherits="DefaultWindowText" handleinput="false" textalign="center">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentLevel3">
+							<AbsPoint x="0" y="23" /> 
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentLevel5" wordwrap="false" font="font_default_text" layer="secondary" inherits="DefaultWindowText" handleinput="false" textalign="center">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentLevel4">
+							<AbsPoint x="0" y="23" /> 
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

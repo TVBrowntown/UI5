@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+	
+		<Window name="EnemyScenarioInfoConfiguration">
+			<Windows>
+				<Window name="$parentConfig">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				
+				<Label name="$parentMacrosLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentConfig">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentMacroToggle" inherits="DefaultIconButton">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMacrosLabel">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnMouseDrag" function="Enemy.ScenarioInfoUI_ConfigDialog_OnMacroToggleMouseDrag" />
+		                <EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ConfigDialog_OnMacroToggleMouseOver" />
+		            </EventHandlers>
+		        </Button>
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

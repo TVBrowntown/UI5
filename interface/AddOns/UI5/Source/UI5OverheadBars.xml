@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="UI5_O_Friendly" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="240" y="12" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+
+				<DynamicImage name="UI5_O_F_Background" texture="">
+					<Size>
+	                	<AbsPoint x="36" y="36" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="left" relativePoint="right" relativeTo="UI5_O_Friendly" />
+	                		<AbsPoint x="0" y="0" />
+	              	</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="UI5_O_F_Fill" texture="">
+					<Size>
+	                	<AbsPoint x="36" y="36" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="center" relativePoint="center" relativeTo="UI5_O_Friendly" />
+	                		<AbsPoint x="0" y="0" />
+	              	</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="ClassIcon" texture="UF_Avatar_BG">
+					<Size>
+	                	<AbsPoint x="36" y="36" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="left" relativePoint="right" relativeTo="UI5_O_Friendly" />
+	                		<AbsPoint x="0" y="0" />
+	              	</Anchors>
+				</DynamicImage>
+
+			</Windows>
+
+		</Window>
+
+		<Window name="UI5_O_Hostile" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="240" y="12" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+
+				<DynamicImage name="UI5_O_Hostile_Background" texture="">
+					<Size>
+	                	<AbsPoint x="36" y="36" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="left" relativePoint="right" relativeTo="UI5_O_Hostile" />
+	                		<AbsPoint x="0" y="0" />
+	              	</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="UI5_O_Hostile_Fill" texture="">
+					<Size>
+	                	<AbsPoint x="36" y="36" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="center" relativePoint="center" relativeTo="UI5_O_Hostile" />
+	                		<AbsPoint x="0" y="0" />
+	              	</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="UI5_O_Hostile_ClassIcon" texture="UF_Avatar_BG">
+					<Size>
+	                	<AbsPoint x="36" y="36" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="left" relativePoint="right" relativeTo="UI5_O_Hostile" />
+	                		<AbsPoint x="0" y="0" />
+	              	</Anchors>
+				</DynamicImage>
+
+			</Windows>
+
+		</Window>
+
+	</Windows>
+
+</Interface>

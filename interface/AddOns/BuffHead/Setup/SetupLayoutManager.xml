@@ -1,0 +1,360 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="BuffHeadSetupLayoutManagerWindow" inherits="EA_Window_Default" movable="true" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.Layout.Manager.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="580" y="410" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+
+				<Window name="$parentImport" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnImportLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentImportCheckboxLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentImport">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnImportLUp" />
+					</EventHandlers>
+				</Label>
+
+				<Window name="$parentExport" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentImportCheckboxLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnExportLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentExportCheckboxLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentExport">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnExportLUp" />
+					</EventHandlers>
+				</Label>
+
+				<Window name="$parentLayouts" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentExportCheckboxLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnLayoutsLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentLayoutsCheckboxLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentLayouts">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnLayoutsLUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Window name="$parentElementImport">
+					<Size>
+						<AbsPoint x="520" y="300"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentImport">
+							<AbsPoint x="10" y="20"/>
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<EditBox name="$parentEditBox" inherits="EA_EditBox_DefaultFrame_Multiline" font="font_clear_small" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+							<Size>
+								<AbsPoint x="500" y="230"/>
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="0" y="0"/>
+								</Anchor>
+							</Anchors>
+						</EditBox>
+				
+						<Button name="$parentButton" inherits="EA_Button_DefaultResizeable">
+							<Size>
+								<AbsPoint x="220" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+									<AbsPoint x="-10" y="-10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnImportLClick" />
+							</EventHandlers>
+						</Button>
+				
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementExport">
+					<Size>
+						<AbsPoint x="520" y="300"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentImport">
+							<AbsPoint x="10" y="20"/>
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<Label name="$parentInfoLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="380" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentLayouts">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentInfoLabel">
+									<AbsPoint x="0" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Manager.OnExportLayoutChanged" />
+							</EventHandlers>
+						</ComboBox>
+				
+						<EditBox name="$parentEditBox" inherits="EA_EditBox_DefaultFrame_Multiline" font="font_clear_small" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+							<Size>
+								<AbsPoint x="500" y="210"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentComboBox">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+						</EditBox>
+				
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementLayouts">
+					<Size>
+						<AbsPoint x="520" y="300"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentImport">
+							<AbsPoint x="10" y="20"/>
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<ComboBox name="$parentComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentInfoLabel">
+									<AbsPoint x="0" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Manager.OnLayoutsLayoutChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Window name="$parentCurrentLayout">
+							<Size>
+								<AbsPoint x="520" y="250"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentComboBox">
+									<AbsPoint x="0" y="20"/>
+								</Anchor>
+							</Anchors>
+							<Windows>
+				
+								<Label name="$parentSaveLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="380" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+				
+								<EditBox name="$parentSaveEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="40">
+									<Size>
+										<AbsPoint x="320" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSaveLabel">
+											<AbsPoint x="0" y="0"/>
+										</Anchor>
+									</Anchors>
+								</EditBox>
+				
+								<Button name="$parentSaveButton" inherits="EA_Button_DefaultResizeable">
+									<Size>
+										<AbsPoint x="120" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentSaveEditBox">
+											<AbsPoint x="10" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnLayoutsSaveCurrentLayoutLClick" />
+									</EventHandlers>
+								</Button>
+						
+							</Windows>
+						</Window>
+						
+						<Window name="$parentSavedLayout">
+							<Size>
+								<AbsPoint x="520" y="250"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentComboBox">
+									<AbsPoint x="0" y="20"/>
+								</Anchor>
+							</Anchors>
+							<Windows>
+				
+								<Label name="$parentActivateLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="380" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+				
+								<Button name="$parentActivateButton" inherits="EA_Button_DefaultResizeable">
+									<Size>
+										<AbsPoint x="180" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActivateLabel">
+											<AbsPoint x="10" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnLayoutsActivateLClick" />
+									</EventHandlers>
+								</Button>
+				
+								<Label name="$parentDeleteLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="380" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActivateButton">
+											<AbsPoint x="-10" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+				
+								<Button name="$parentDeleteButton" inherits="EA_Button_DefaultResizeable">
+									<Size>
+										<AbsPoint x="180" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDeleteLabel">
+											<AbsPoint x="10" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Manager.OnLayoutsDeleteLClick" />
+									</EventHandlers>
+								</Button>
+						
+							</Windows>
+						</Window>
+				
+					</Windows>
+				</Window>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

@@ -1,0 +1,105 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="BuffHeadSetupMenuRowTemplate">
+			<Size>
+				<AbsPoint x="240" y="30" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Size>
+						<AbsPoint x="240" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+							<Anchor point="bottomright" relativePoint="bottomright" relativeTo="" />
+						</Anchor>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentText" font="font_clear_small_bold" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="235" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="BuffHead.Setup.OnRowLDown" />
+				<EventHandler event="OnLButtonUp" function="BuffHead.Setup.OnRowLUp" />
+				<EventHandler event="OnRButtonDown" function="BuffHead.Setup.OnRowRDown" />
+				<EventHandler event="OnRButtonUp" function="BuffHead.Setup.OnRowRUp" />
+				<EventHandler event="OnMouseOver" function="BuffHead.Setup.OnRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.OnRowMouseOut" />
+			</EventHandlers>
+		</Window>
+		
+		<Window name="BuffHeadSetupMenuWindow" inherits="EA_Window_Default" movable="true" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="285" y="445" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="200" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ListBox name="$parentList" rowdef="BuffHeadSetupMenuRowTemplate" visiblerows="12" rowspacing="0">
+					<Size>
+						<AbsPoint x="240" y="390" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="BuffHead.Setup.Entries" populationfunction="BuffHead.Setup.OnPopulate">
+						<ListColumns>
+							<ListColumn windowname="Text" variable="Text" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

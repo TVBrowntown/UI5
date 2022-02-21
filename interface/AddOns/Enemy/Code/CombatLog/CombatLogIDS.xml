@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="EnemyCombatLogIDSRow" inherits="EA_Window_Default" layer="secondary" handleinput="true" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="250" y="30" />
+			</Size>			
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</FullResizeImage>
+				<DynamicImage name="$parentIcon" handleinput="true">
+					<TexDims x="32" y="32" />
+					<Size>
+						<AbsPoint x="26" y="26" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="3" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonDown" function="Enemy.CombatLogUI_IDS_OnRowLButtonDown" />
+					</EventHandlers>
+				</DynamicImage>
+				<Label name="$parentName" handleinput="true" textalign="left" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="150" y="19" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="$parent">
+							<AbsPoint x="-65" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonDown" function="Enemy.CombatLogUI_IDS_OnRowLButtonDown" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue" handleinput="true" textalign="right" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="60" y="19" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="$parent">
+							<AbsPoint x="-5" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonDown" function="Enemy.CombatLogUI_IDS_OnRowLButtonDown" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Window>
+		
+		
+		
+		<Window name="EnemyCombatLogIDSAnchor" inherits="EA_Window_Default" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="32" y="32" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="-91" y="100" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+			</Windows>
+
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="Enemy.CombatLogUI_IDSAnchor_OnLButtonDown" />
+				<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_IDSAnchor_OnLButtonUp" />
+				<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_IDSAnchor_OnMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="Enemy.CombatLogUI_IDSAnchor_OnMouseOverEnd" />
+			</EventHandlers>
+		</Window>
+				
+	</Windows>
+</Interface>

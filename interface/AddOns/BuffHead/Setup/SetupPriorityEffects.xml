@@ -1,0 +1,189 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="BuffHeadSetupPriorityEffectsRowTemplate">
+			<Size>
+				<AbsPoint x="515" y="40" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Size>
+						<AbsPoint x="515" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+							<Anchor point="bottomright" relativePoint="bottomright" relativeTo="" />
+						</Anchor>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentName" font="font_clear_small" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="500" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentDescription" font="font_clear_tiny" handleinput="false" textalign="left" wordwrap="true">
+					<Color r="90" g="90" b="90" />
+					<Size>
+						<AbsPoint x="500" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomLeft" relativePoint="topleft" relativeTo="$parentName">
+							<AbsPoint x="" y="0"  />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="BuffHead.Setup.PriorityEffects.OnRowLDown" />
+				<EventHandler event="OnLButtonUp" function="BuffHead.Setup.PriorityEffects.OnRowLUp" />
+				<EventHandler event="OnRButtonDown" function="BuffHead.Setup.PriorityEffects.OnRowRDown" />
+				<EventHandler event="OnRButtonUp" function="BuffHead.Setup.PriorityEffects.OnRowRUp" />
+				<EventHandler event="OnMouseOver" function="BuffHead.Setup.PriorityEffects.OnRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.PriorityEffects.OnRowMouseOut" />
+			</EventHandlers>
+		</Window>
+		
+		<Window name="BuffHeadSetupPriorityEffectsWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.PriorityEffects.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="520" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.PriorityEffects.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+									
+				<Window name="$parentSortFirst" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="20" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.PriorityEffects.OnSortFirstLUp" />
+					</EventHandlers>
+				</Window>
+				
+				<Label name="$parentSortFirstCheckboxLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortFirst">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+						
+				<Label name="$parentAnimationLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSortFirst">
+							<AbsPoint x="0" y="15" />
+						</Anchor>
+					</Anchors>
+				</Label>
+		
+				<ComboBox name="$parentAnimationComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAnimationLabel">
+							<AbsPoint x="20" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.PriorityEffects.OnAnimationChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Label name="$parentEffectsLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAnimationComboBox">
+							<AbsPoint x="-20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="BuffHeadSetupPriorityEffectsRowTemplate" visiblerows="6" rowspacing="0">
+					<Size>
+						<AbsPoint x="540" y="240" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="BuffHead.Setup.PriorityEffects.Entries" populationfunction="BuffHead.Setup.PriorityEffects.OnPopulate">
+						<ListColumns>
+							<ListColumn windowname="Name" variable="Name" format="wstring" />
+							<ListColumn windowname="Description" variable="Description" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>	
+				
+				<Button name="$parentNewButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="240" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="-20" y="-20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.PriorityEffects.OnNewLClick" />
+					</EventHandlers>
+				</Button> 
+
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

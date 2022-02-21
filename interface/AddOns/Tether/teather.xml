@@ -1,0 +1,223 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>  
+    <Texture name="Modern_TeatherLine" file="Textures/Modern/teather_Out.tga" />
+    <Texture name="Modern_XGuardLine" file="Textures/Modern/teather_Cross.tga" />	
+	<Texture name="Modern_TeatherLine2" file="Textures/Modern/teather_In.tga" />
+	<Texture name="Modern_TeatherArrow" file="Textures/Modern/Arrow.tga" />
+	<Texture name="Modern_CircleBG" file="Textures/Modern/Circle.tga" />	
+
+    <Texture name="Classic_TeatherLine" file="Textures/Classic/teather_Out.tga" />
+    <Texture name="Classic_XGuardLine" file="Textures/Classic/teather_Cross.tga" />	
+	<Texture name="Classic_TeatherLine2" file="Textures/Classic/teather_In.tga" />
+	<Texture name="Classic_TeatherArrow" file="Textures/Classic/Arrow.tga" />
+	<Texture name="Classic_CircleBG" file="Textures/Classic/Circle.tga" />	
+
+	<Texture name="GuardIcon" file="Textures/GuardIcon.tga" />	
+	<Texture name="DistantIcon" file="Textures/Distant.tga" />	
+	<Texture name="GuardEffect" file="Textures/GuardEffect.tga" />	
+	
+
+	
+  </Assets>
+
+   <Scripts>
+      <Script file="teather.lua" />
+   </Scripts>
+   
+      <Windows>
+	    
+
+		<Window name="ArrowTemplate" layer="default" movable="false" popable="false" sticky="true"  handleinput="false">
+        <Size><AbsPoint x="70" y="70" /></Size>
+        <Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+		<Windows>
+				<DynamicImage name="$parentLine"  texture="Modern_TeatherArrow" layer="overlay" textureScale="1" handleinput="false" >
+                <Size><AbsPoint x="70" y="70" /></Size>
+				<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+                </DynamicImage>  
+					
+				</Windows>				
+		</Window>				
+				
+				
+		  	  		<!--Template for the Line itself-->				
+		<Window name="LineTemplate" layer="background" movable="false" popable="false" sticky="true"  handleinput="false">
+        <Size><AbsPoint x="3" y="3" /></Size>
+        <Anchors><Anchor point="center" relativePoint="center" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+		<Windows>
+				<DynamicImage name="$parentLine"  texture="Modern_TeatherLine" layer="default" textureScale="1" handleinput="false" >
+                <Size><AbsPoint x="14" y="61" /></Size>
+				<Anchors><Anchor point="center" relativePoint="center" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+                </DynamicImage>                
+				</Windows>				
+		</Window>	
+
+		<Window name="LineTemplate2" layer="background" movable="false" popable="false" sticky="true"  handleinput="false">
+        <Size><AbsPoint x="3" y="3" /></Size>
+        <Anchors><Anchor point="center" relativePoint="center" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+		<Windows>
+				<DynamicImage name="$parentLine"  texture="Modern_TeatherLine2" layer="default" textureScale="1" handleinput="false" >
+                <Size><AbsPoint x="10" y="61" /></Size>
+				<Anchors><Anchor point="center" relativePoint="center" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+                </DynamicImage>                
+				</Windows>				
+		</Window>	
+
+
+		
+			<!--Window for the Target Player -->
+		<Window name="TeatherTargetWindow" layer="default" movable="false" popable="false" sticky="false" savesettings="false" handleinput="false">
+         <Size><AbsPoint x="70" y="70" /></Size>
+         <Anchors><Anchor point="center" relativePoint="center" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+		 	<Windows>					
+
+					<CircleImage name="$parentIcon" textureScale="0.48" numsegments="16" layer="default" popable="false">
+                    <Size><AbsPoint x="40" y="40" /></Size>
+                    <Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="15" y="15" /></Anchor></Anchors>
+                    <TexCoords x="32" y="32" />
+					</CircleImage>	
+				
+					<DynamicImage name="$parentCircle"  texture="Modern_CircleBG" layer="overlay" textureScale="1" handleinput="false" >
+					<Size><AbsPoint x="70" y="70" /></Size>
+					<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+					</DynamicImage>     
+
+					<AnimatedImage name="$parentGlow" inherits="EA_MoraleButtonAnimation" fps="13" layer="background" texture="GuardEffect" textureScale="1" alpha="1"handleinput="false">
+					<Size>
+					<AbsPoint x="140" y="140"/>
+					</Size>
+					<Anchors>
+					<Anchor relativePoint="topleft" point="topleft" relativeTo="$parentCircle">
+					<AbsPoint x="-30" y="-30" />
+					</Anchor>
+					</Anchors>
+					</AnimatedImage>	
+
+<!--
+ 	<FullResizeImage name="$parentBG" inherits="EA_FullResizeImage_TintableSolidBackground" layer="default" alpha="0.3" handleinput="false">        
+	<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor><Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor></Anchors>
+	<TintColor r="90" g="90" b="255" a="0.3"/>						
+	</FullResizeImage>	
+-->
+			</Windows>		 
+		</Window>		    
+	  
+
+	 		<Window name="TeatherOffGuardTargetWindow" layer="default" movable="false" popable="false" sticky="false" savesettings="false" handleinput="false">
+         <Size><AbsPoint x="70" y="70" /></Size>
+         <Anchors><Anchor point="center" relativePoint="center" relativeTo="$parent"><AbsPoint x="0" y="-30" /></Anchor></Anchors>
+		 	<Windows>					
+
+					<CircleImage name="$parentIcon" textureScale="0.48" numsegments="16" layer="default" popable="false">
+                    <Size><AbsPoint x="40" y="40" /></Size>
+                    <Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="15" y="15" /></Anchor></Anchors>
+                    <TexCoords x="32" y="32" />
+					</CircleImage>	
+				
+					<DynamicImage name="$parentCircle"  texture="Modern_CircleBG" layer="overlay" textureScale="1" handleinput="false" >
+					<Size><AbsPoint x="70" y="70" /></Size>
+					<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+					</DynamicImage>     
+<!--
+	<FullResizeImage name="$parentBG" inherits="EA_FullResizeImage_TintableSolidBackground" layer="default" alpha="0.3" handleinput="false">        
+	<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor><Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor></Anchors>
+	<TintColor r="90" g="255" b="90" a="0.3"/>						
+	</FullResizeImage>	
+-->
+			</Windows>		 
+		</Window>	 
+
+	  
+	  
+		<!--Window for the Self Player -->
+		<Window name="TeatherSelfWindow" layer="default" movable="true" popable="false" sticky="true" savesettings="false" handleinput="true">
+         <Size><AbsPoint x="70" y="70" /></Size>
+	<!--	 <EventHandlers><EventHandler event="OnUpdate" function="teather.update" /></EventHandlers>-->
+         <Anchors><Anchor point="center" relativePoint="center" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+		 	<Windows>
+
+					<CircleImage name="$parentIcon" textureScale="0.48" numsegments="16" layer="default" popable="false">
+                    <Size><AbsPoint x="40" y="40" /></Size>
+                    <Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="15" y="15" /></Anchor></Anchors>
+                    <TexCoords x="32" y="32" />
+					</CircleImage>	
+				
+					<DynamicImage name="$parentCircle"  texture="Modern_CircleBG" layer="overlay" textureScale="1" handleinput="false" >
+					<Size><AbsPoint x="70" y="70" /></Size>
+					<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+					</DynamicImage>          
+
+					<Label name="$parentLabel" font="font_clear_medium_bold" autoresize="true" textalign="center" wordwrap="true" layer="overlay" alpha="1" popable="false" handleinput="false">	
+					<Size><AbsPoint x="75" y="45" /></Size>
+					<Anchors><Anchor point="center" relativePoint="center" relativeTo="$parentIcon"><AbsPoint x="0" y="58" /></Anchor></Anchors>
+					<Color r="255" g="255" b="255" />
+					</Label>	
+
+					<Label name="$parentLabelBG" font="font_clear_medium_bold" autoresize="true" textalign="center" wordwrap="true" layer="background" alpha="1" popable="false" handleinput="false">	
+					<Size><AbsPoint x="75" y="45" /></Size>
+					<Anchors><Anchor point="center" relativePoint="center" relativeTo="$parentIcon"><AbsPoint x="2" y="60" /></Anchor></Anchors>
+					<Color r="0" g="0" b="0" />
+					</Label>	
+
+					<AnimatedImage name="$parentGlow" inherits="EA_MoraleButtonAnimation" fps="13" layer="background" texture="GuardEffect" textureScale="1" alpha="1"handleinput="false">
+					<Size>
+					<AbsPoint x="140" y="140"/>
+					</Size>
+					<Anchors>
+					<Anchor relativePoint="topleft" point="topleft" relativeTo="$parentCircle">
+					<AbsPoint x="-30" y="-30" />
+					</Anchor>
+					</Anchors>
+					</AnimatedImage>	
+<!--
+ 	<FullResizeImage name="$parentBG" inherits="EA_FullResizeImage_TintableSolidBackground" layer="default" alpha="0.3" handleinput="false">        
+	<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor><Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor></Anchors>
+	<TintColor r="90" g="90" b="255" a="0.3"/>						
+	</FullResizeImage>						
+-->
+					
+			</Windows>
+		</Window>
+
+
+		<Window name="TeatherOffGuardSelfWindow" layer="default" movable="false" popable="false" sticky="true" savesettings="false" handleinput="false">
+         <Size><AbsPoint x="70" y="70" /></Size>
+	<!--	 <EventHandlers><EventHandler event="OnUpdate" function="teather.update" /></EventHandlers>-->
+         <Anchors><Anchor point="center" relativePoint="center" relativeTo="TeatherSelfWindow"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+		 	<Windows>
+
+					<CircleImage name="$parentIcon" textureScale="0.48" numsegments="16" layer="default" popable="false">
+                    <Size><AbsPoint x="40" y="40" /></Size>
+                    <Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="15" y="15" /></Anchor></Anchors>
+                    <TexCoords x="32" y="32" />
+					</CircleImage>	
+				
+					<DynamicImage name="$parentCircle"  texture="Modern_CircleBG" layer="overlay" textureScale="1" handleinput="false" >
+					<Size><AbsPoint x="70" y="70" /></Size>
+					<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0" /></Anchor></Anchors>
+					</DynamicImage>         
+				
+				
+					<Label name="$parentLabel" font="font_clear_medium_bold" autoresize="true" textalign="center" wordwrap="true" layer="overlay" alpha="1" popable="false" handleinput="false">	
+					<Size><AbsPoint x="75" y="45" /></Size>
+					<Anchors><Anchor point="center" relativePoint="center" relativeTo="$parentIcon"><AbsPoint x="0" y="38" /></Anchor></Anchors>
+					<Color r="255" g="255" b="255" />
+					</Label>	
+
+					<Label name="$parentLabelBG" font="font_clear_medium_bold" autoresize="true" textalign="center" wordwrap="true" layer="background" alpha="1" popable="false" handleinput="false">	
+					<Size><AbsPoint x="75" y="45" /></Size>
+					<Anchors><Anchor point="center" relativePoint="center" relativeTo="$parentIcon"><AbsPoint x="2" y="40" /></Anchor></Anchors>
+					<Color r="0" g="0" b="0" />
+					</Label>	
+<!--
+	<FullResizeImage name="$parentBG" inherits="EA_FullResizeImage_TintableSolidBackground" layer="default" alpha="0.3" handleinput="false">        
+	<Anchors><Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor><Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"><AbsPoint x="0" y="0"/></Anchor></Anchors>
+	<TintColor r="90" g="255" b="90" a="0.3"/>		
+	</FullResizeImage>				
+-->
+			</Windows>
+		</Window>
+
+
+   </Windows>
+</Interface>

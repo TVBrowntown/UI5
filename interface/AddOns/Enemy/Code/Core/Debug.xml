@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyDebugList_RowTemplate">
+			<Size>
+				<AbsPoint x="400" y="20" />
+			</Size>
+			<Windows>
+				<Label name="$parentText" font="font_chat_text" handleinput="false">
+					<Size>
+						<AbsPoint x="1000" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+	
+		<Window name="EnemyDebug" inherits="EA_Window_Default" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="50" y="50" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root" />
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+                </FullResizeImage>
+				
+				<!-- Content -->
+				<ListBox name="$parentList" rowdef="EnemyDebugList_RowTemplate" visiblerows="30" rowspacing="0">
+					<Size>
+						<AbsPoint x="400" y="600" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+					</Anchors>
+
+					<ListData table="Enemy.debugListData" populationfunction="Enemy.UI_Debug_OnListPopulate">
+						<ListColumns>
+							<ListColumn windowname="Text" variable="text" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnRButtonUp" function="Enemy.UI_Debug_OnRButtonUp" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

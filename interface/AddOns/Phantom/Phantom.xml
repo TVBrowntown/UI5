@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+    <Windows>
+        <!-- SETTINGS -->
+        
+        <Window name="PhantomSettings" movable="true" layer="popup" savesettings="false">
+            <Size>
+                <AbsPoint x="640" y="680"/> 
+            </Size>
+            <Anchors>
+                <Anchor point="center" relativePoint="center" relativeTo="Root">
+                    <AbsPoint x="200" y="0"/>
+                </Anchor>
+            </Anchors>
+            <Windows>
+                <Window name="$parentTitleBar" inherits="EA_TitleBar_Default" /> 
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Phantom.CloseSettingsWindow" />
+                    </EventHandlers>
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topright" relativeTo="$parentTitleBar">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Window name="$parentFrame" inherits="EA_Window_DefaultFrame" handleinput="true" layer="background">
+                    <Anchors>
+                        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+                            <AbsPoint x="4" y="-4"/>
+                        </Anchor>
+                        <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                            <AbsPoint x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                </Window>
+                
+                <!--<Button name="$parentHidePlayer" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="20" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>-->
+                
+                <Button name="$parentHidePlayerBuffs" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="60" y="20" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHidePlayerLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <!--<Anchor point="right" relativePoint="left" relativeTo="$parentHidePlayer">-->
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHidePlayerBuffs">
+                            <AbsPoint x="15" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <!--<Button name="$parentHideGroup" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="60" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>-->
+                
+                <Button name="$parentHideGroupBuffs" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="60" y="60" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideGroupLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <!--<Anchor point="right" relativePoint="left" relativeTo="$parentHideGroup">-->
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHideGroupBuffs">
+                            <AbsPoint x="15" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <!--<Button name="$parentHideTarget" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="100" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>-->
+                
+                <Button name="$parentHideTargetBuffs" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="60" y="100" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideTargetLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <!--<Anchor point="right" relativePoint="left" relativeTo="$parentHideTarget">-->
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHideTargetBuffs">
+                            <AbsPoint x="15" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <!--<Button name="$parentHideWarband" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="140" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideWarbandLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideWarband">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <Button name="$parentHideScenario" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="180" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideScenarioLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideScenario">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>-->
+                
+                <Button name="$parentHidePet" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="220" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHidePetLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHidePet">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <!--<Button name="$parentHideInfluence" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="260" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideInfluenceLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideInfluence">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>-->
+                
+                <Button name="$parentHideMainAssist" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="300" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideMainAssistLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMainAssist">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideBarLock" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="340" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideBarLockLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideBarLock">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideSocial" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="380" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideSocialLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideSocial">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <!--<Button name="$parentHideStanceBar" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="420" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHideStanceBarLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideStanceBar">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <Button name="$parentHidePetStance" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="460" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHidePetStanceLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHidePetStance">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <Button name="$parentHidePetAction" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="500" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+                
+                <Label name="$parentHidePetActionLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHidePetAction">
+                            <AbsPoint x="60" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>-->
+				
+				<!--<Button name="$parentHideBar1" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="20" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideBar1Label" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideBar1">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideBar2" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="60" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideBar2Label" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideBar2">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+				<Button name="$parentHideBar3" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="100" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideBar3Label" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideBar3">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideBar4" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="140" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideBar4Label" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideBar4">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>-->
+				
+				<Button name="$parentHideMapArea" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="180" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapAreaLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapArea">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideMapWorld" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="220" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapWorldLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapWorld">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideMapCity" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="260" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapCityLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapCity">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideMapZoom" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="300" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapZoomLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapZoom">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideMapScen" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="340" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapScenLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapScen">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideMapMail" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="380" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapMailLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapMail">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideMapPins" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="420" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapPinsLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapPins">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+				<Button name="$parentHideMapFrame" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="460" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapFrameLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapFrame">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <Button name="$parentHideMapRally" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="340" y="500" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Button>
+				
+				<Label name="$parentHideMapRallyLabel" textalign="left" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="200" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentHideMapRally">
+                            <AbsPoint x="40" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+				
+                <Label name="$parentInstructionsLabel" textalign="top" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="280" y="50" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" relativeTo="$parentFrame">
+                            <AbsPoint x="20" y="540" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+                <Label name="$parentInstructions2Label" maxchars="400" textalign="top" layer="overlay" inherits="EA_CheckButtonLabel" handleinput="false">
+                    <Size>
+                        <AbsPoint x="560" y="50" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="bottom" relativeTo="$parentFrame">
+                            <AbsPoint x="0" y="-20" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" />
+                </Label>
+                
+            </Windows>
+            
+            <EventHandlers>
+                <EventHandler event="OnShown" function="Phantom.PopulateWindow" />
+                <EventHandler event="OnHidden" function="Phantom.SaveSettings" />
+            </EventHandlers>
+        </Window>
+        
+        
+    </Windows>
+</Interface>

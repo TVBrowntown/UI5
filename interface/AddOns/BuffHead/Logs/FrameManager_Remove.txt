@@ -1,0 +1,40 @@
+function FrameManager:Remove(frameName)
+    assert (frameName ~= nil)
+    assert (type (frameName) == "string")
+    assert (self.m_Frames[frameName] ~= nil)
+    
+    -- Remove this frame, and all of its children from the managed frame table
+    -- Currently implemented with a temporary table which will cause some GC churn...
+    
+    self.m_Frames[frameName] = nil
+    
+    -- Forgive the napping/playing analogy, it sounded less brutal than the alternative.
+    
+    -- 
+    local nappingChildTable = {}
+    local playingChildTable = self.m_Frames
+    local patternString     = "^"..frameName
+    
+    for potentialNapper, _ in pairs (playingChildTable)
+    do  
+        -- For each window that is a child of this frame, add it to the removal list
+        local windowName = potentialNapper
+        while( windowName ~= nil and windowName ~= "" )
+        do
+        
+            if( windowName == frameName )
+            then
+                nappingChildTable[ potentialNapper ] = true
+                break
+            end
+            
+            windowName = WindowGetParent( windowName )
+        end
+        
+    end
+    
+    for childScheduledForNapping, _ in pairs (nappingChildTable)
+    do
+        self.m_Frames[childScheduledForNapping] = nil
+    end
+end

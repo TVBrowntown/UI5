@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<ProfileSettings isShared="true">
+    <KeyBindings>
+        <KeyBinding action="PLAYER_FORWARD" key="W" />
+        <KeyBinding action="PLAYER_FORWARD" key="Up" />
+        <KeyBinding action="PLAYER_BACK" key="S" />
+        <KeyBinding action="PLAYER_BACK" key="Down" />
+        <KeyBinding action="PLAYER_LEFT" key="Left" />
+        <KeyBinding action="PLAYER_RIGHT" key="Right" />
+        <KeyBinding action="STRAFE_LEFT" key="A" />
+        <KeyBinding action="STRAFE_RIGHT" key="D" />
+        <KeyBinding action="JUMP" key="Space" />
+        <KeyBinding action="TOGGLE_WALK" key="NONE" />
+        <KeyBinding action="AUTO_RUN" key="Mouse Button 4" />
+        <KeyBinding action="AUTO_RUN" key="Num Lock" />
+        <KeyBinding action="TOGGLE_ABILITIES_WINDOW" key="NONE" />
+        <KeyBinding action="TOGGLE_BACKPACK_WINDOW" key="B" />
+        <KeyBinding action="TOGGLE_CHARACTER_WINDOW" key="P" />
+        <KeyBinding action="TOGGLE_PARTY_WINDOW" key="L" />
+        <KeyBinding action="TOGGLE_TOME_WINDOW" key="K" />
+        <KeyBinding action="TOGGLE_GUILD_WINDOW" key="G" />
+        <KeyBinding action="TOGGLE_HELP_WINDOW" key="NONE" />
+        <KeyBinding action="TOGGLE_SOCIAL_WINDOW" key="O" />
+        <KeyBinding action="TOGGLE_BATTLEGROUP_WINDOW" key="NONE" />
+        <KeyBinding action="TOGGLE_WORLD_MAP_WINDOW" key="M" />
+        <KeyBinding action="TOGGLE_SCENARIO_SUMMARY_WINDOW" key="`" />
+        <KeyBinding action="TOGGLE_CURRENT_EVENTS_WINDOW" key="NONE" />
+        <KeyBinding action="TOGGLE_USER_SETTINGS_WINDOW" key="U" />
+        <KeyBinding action="PET_ATTACK" key="NONE" />
+        <KeyBinding action="PET_FOLLOW" key="NONE" />
+        <KeyBinding action="PET_STAY" key="Left Shift+G" />
+        <KeyBinding action="PET_AGGRESSIVE" key="Left Alt+&apos;" />
+        <KeyBinding action="PET_DEFENSIVE" key="Left Alt+;" />
+        <KeyBinding action="PET_PASSIVE" key="Left Alt+[" />
+        <KeyBinding action="MORALE_BAR_1" key="1" />
+        <KeyBinding action="MORALE_BAR_1" key="F9" />
+        <KeyBinding action="MORALE_BAR_2" key="2" />
+        <KeyBinding action="MORALE_BAR_2" key="F10" />
+        <KeyBinding action="MORALE_BAR_3" key="3" />
+        <KeyBinding action="MORALE_BAR_3" key="F11" />
+        <KeyBinding action="MORALE_BAR_4" key="4" />
+        <KeyBinding action="MORALE_BAR_4" key="F12" />
+        <KeyBinding action="ACTION_BAR_114" key="NONE" />
+        <KeyBinding action="ACTION_BAR_115" key="NONE" />
+        <KeyBinding action="ACTION_BAR_116" key="NONE" />
+        <KeyBinding action="ACTION_BAR_117" key="NONE" />
+        <KeyBinding action="ACTION_BAR_108" key="Left Shift+F9" />
+        <KeyBinding action="ACTION_BAR_109" key="Left Shift+F10" />
+        <KeyBinding action="ACTION_BAR_110" key="Left Shift+F11" />
+        <KeyBinding action="ACTION_BAR_111" key="Left Shift+F12" />
+        <KeyBinding action="ACTION_BAR_112" key="NONE" />
+        <KeyBinding action="SWITCH_ACTION_BAR_PAGE_1" key="NONE" />
+        <KeyBinding action="SWITCH_ACTION_BAR_PAGE_2" key="NONE" />
+        <KeyBinding action="SWITCH_ACTION_BAR_PAGE_3" key="NONE" />
+        <KeyBinding action="SWITCH_ACTION_BAR_PAGE_4" key="NONE" />
+        <KeyBinding action="SWITCH_ACTION_BAR_PAGE_5" key="NONE" />
+        <KeyBinding action="ACTION_BAR_1" key="Q" />
+        <KeyBinding action="ACTION_BAR_2" key="E" />
+        <KeyBinding action="ACTION_BAR_3" key="R" />
+        <KeyBinding action="ACTION_BAR_4" key="T" />
+        <KeyBinding action="ACTION_BAR_5" key="F" />
+        <KeyBinding action="ACTION_BAR_6" key="Z" />
+        <KeyBinding action="ACTION_BAR_7" key="X" />
+        <KeyBinding action="ACTION_BAR_8" key="C" />
+        <KeyBinding action="ACTION_BAR_9" key="V" />
+        <KeyBinding action="ACTION_BAR_10" key="0" />
+        <KeyBinding action="ACTION_BAR_11" key="-" />
+        <KeyBinding action="ACTION_BAR_12" key="NONE" />
+        <KeyBinding action="ACTION_BAR_13" key="NONE" />
+        <KeyBinding action="ACTION_BAR_14" key="NONE" />
+        <KeyBinding action="ACTION_BAR_15" key="NONE" />
+        <KeyBinding action="ACTION_BAR_16" key="NONE" />
+        <KeyBinding action="ACTION_BAR_17" key="NONE" />
+        <KeyBinding action="ACTION_BAR_18" key="NONE" />
+        <KeyBinding action="ACTION_BAR_19" key="NONE" />
+        <KeyBinding action="ACTION_BAR_20" key="NONE" />
+        <KeyBinding action="ACTION_BAR_21" key="NONE" />
+        <KeyBinding action="ACTION_BAR_22" key="NONE" />
+        <KeyBinding action="ACTION_BAR_23" key="NONE" />
+        <KeyBinding action="ACTION_BAR_24" key="NONE" />
+        <KeyBinding action="ACTION_BAR_25" key="=" />
+        <KeyBinding action="ACTION_BAR_26" key="Left Control+2" />
+        <KeyBinding action="ACTION_BAR_27" key="Left Control+3" />
+        <KeyBinding action="ACTION_BAR_28" key="Left Control+4" />
+        <KeyBinding action="ACTION_BAR_29" key="Left Control+5" />
+        <KeyBinding action="ACTION_BAR_30" key="Left Control+6" />
+        <KeyBinding action="ACTION_BAR_31" key="Left Control+7" />
+        <KeyBinding action="ACTION_BAR_32" key="Left Control+8" />
+        <KeyBinding action="ACTION_BAR_33" key="Left Control+9" />
+        <KeyBinding action="ACTION_BAR_34" key="Left Control+0" />
+        <KeyBinding action="ACTION_BAR_35" key="Left Control+-" />
+        <KeyBinding action="ACTION_BAR_36" key="Left Control+=" />
+        <KeyBinding action="ACTION_BAR_37" key="Left Shift+Q" />
+        <KeyBinding action="ACTION_BAR_38" key="Left Shift+E" />
+        <KeyBinding action="ACTION_BAR_39" key="Left Shift+R" />
+        <KeyBinding action="ACTION_BAR_40" key="Left Shift+T" />
+        <KeyBinding action="ACTION_BAR_41" key="Left Shift+F" />
+        <KeyBinding action="ACTION_BAR_42" key="Left Shift+Z" />
+        <KeyBinding action="ACTION_BAR_43" key="Left Shift+X" />
+        <KeyBinding action="ACTION_BAR_44" key="Left Shift+C" />
+        <KeyBinding action="ACTION_BAR_45" key="Left Shift+V" />
+        <KeyBinding action="ACTION_BAR_46" key="NONE" />
+        <KeyBinding action="ACTION_BAR_47" key="NONE" />
+        <KeyBinding action="ACTION_BAR_48" key="NONE" />
+        <KeyBinding action="ACTION_BAR_49" key="NONE" />
+        <KeyBinding action="ACTION_BAR_50" key="NONE" />
+        <KeyBinding action="ACTION_BAR_51" key="NONE" />
+        <KeyBinding action="ACTION_BAR_52" key="NONE" />
+        <KeyBinding action="ACTION_BAR_53" key="NONE" />
+        <KeyBinding action="ACTION_BAR_54" key="NONE" />
+        <KeyBinding action="ACTION_BAR_55" key="NONE" />
+        <KeyBinding action="ACTION_BAR_56" key="NONE" />
+        <KeyBinding action="ACTION_BAR_57" key="NONE" />
+        <KeyBinding action="ACTION_BAR_58" key="NONE" />
+        <KeyBinding action="ACTION_BAR_59" key="NONE" />
+        <KeyBinding action="ACTION_BAR_60" key="NONE" />
+        <KeyBinding action="ACTION_BAR_61" key="NONE" />
+        <KeyBinding action="ACTION_BAR_62" key="NONE" />
+        <KeyBinding action="ACTION_BAR_63" key="NONE" />
+        <KeyBinding action="ACTION_BAR_64" key="NONE" />
+        <KeyBinding action="ACTION_BAR_65" key="NONE" />
+        <KeyBinding action="ACTION_BAR_66" key="NONE" />
+        <KeyBinding action="ACTION_BAR_67" key="NONE" />
+        <KeyBinding action="ACTION_BAR_68" key="NONE" />
+        <KeyBinding action="ACTION_BAR_69" key="NONE" />
+        <KeyBinding action="ACTION_BAR_70" key="NONE" />
+        <KeyBinding action="ACTION_BAR_71" key="NONE" />
+        <KeyBinding action="ACTION_BAR_72" key="NONE" />
+        <KeyBinding action="ACTION_BAR_73" key="NONE" />
+        <KeyBinding action="ACTION_BAR_74" key="NONE" />
+        <KeyBinding action="ACTION_BAR_75" key="NONE" />
+        <KeyBinding action="ACTION_BAR_76" key="NONE" />
+        <KeyBinding action="ACTION_BAR_77" key="NONE" />
+        <KeyBinding action="ACTION_BAR_78" key="NONE" />
+        <KeyBinding action="ACTION_BAR_79" key="NONE" />
+        <KeyBinding action="ACTION_BAR_80" key="NONE" />
+        <KeyBinding action="ACTION_BAR_81" key="NONE" />
+        <KeyBinding action="ACTION_BAR_82" key="NONE" />
+        <KeyBinding action="ACTION_BAR_83" key="NONE" />
+        <KeyBinding action="ACTION_BAR_84" key="NONE" />
+        <KeyBinding action="ACTION_BAR_85" key="NONE" />
+        <KeyBinding action="ACTION_BAR_86" key="NONE" />
+        <KeyBinding action="ACTION_BAR_87" key="NONE" />
+        <KeyBinding action="ACTION_BAR_88" key="NONE" />
+        <KeyBinding action="ACTION_BAR_89" key="NONE" />
+        <KeyBinding action="ACTION_BAR_90" key="NONE" />
+        <KeyBinding action="ACTION_BAR_91" key="NONE" />
+        <KeyBinding action="ACTION_BAR_92" key="NONE" />
+        <KeyBinding action="ACTION_BAR_93" key="NONE" />
+        <KeyBinding action="ACTION_BAR_94" key="NONE" />
+        <KeyBinding action="ACTION_BAR_95" key="NONE" />
+        <KeyBinding action="ACTION_BAR_96" key="NONE" />
+        <KeyBinding action="ACTION_BAR_97" key="NONE" />
+        <KeyBinding action="ACTION_BAR_98" key="NONE" />
+        <KeyBinding action="ACTION_BAR_99" key="NONE" />
+        <KeyBinding action="ACTION_BAR_100" key="NONE" />
+        <KeyBinding action="ACTION_BAR_101" key="NONE" />
+        <KeyBinding action="ACTION_BAR_102" key="NONE" />
+        <KeyBinding action="ACTION_BAR_103" key="NONE" />
+        <KeyBinding action="ACTION_BAR_104" key="NONE" />
+        <KeyBinding action="ACTION_BAR_105" key="NONE" />
+        <KeyBinding action="ACTION_BAR_106" key="NONE" />
+        <KeyBinding action="ACTION_BAR_107" key="NONE" />
+        <KeyBinding action="ACTION_BAR_113" key="NONE" />
+        <KeyBinding action="ACTION_BAR_118" key="NONE" />
+        <KeyBinding action="ACTION_BAR_119" key="NONE" />
+        <KeyBinding action="ACTION_BAR_120" key="NONE" />
+        <KeyBinding action="ACTION_BAR_121" key="NONE" />
+        <KeyBinding action="ACTION_BAR_122" key="NONE" />
+        <KeyBinding action="ACTION_BAR_123" key="NONE" />
+        <KeyBinding action="ACTION_BAR_124" key="NONE" />
+        <KeyBinding action="ACTION_BAR_125" key="NONE" />
+        <KeyBinding action="ACTION_BAR_126" key="NONE" />
+        <KeyBinding action="ACTION_BAR_127" key="NONE" />
+        <KeyBinding action="ACTION_BAR_128" key="NONE" />
+        <KeyBinding action="ACTION_BAR_129" key="NONE" />
+        <KeyBinding action="ACTION_BAR_130" key="NONE" />
+        <KeyBinding action="ACTION_BAR_131" key="NONE" />
+        <KeyBinding action="ACTION_BAR_132" key="Escape" />
+        <KeyBinding action="TARGET_SELF" key="F1" />
+        <KeyBinding action="TARGET_PET" key="Left Alt+F1" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_1" key="F2" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_2" key="F3" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_3" key="F4" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_4" key="F5" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_5" key="F6" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_6" key="F7" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_1_PET" key="Left Alt+F2" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_2_PET" key="Left Alt+F3" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_3_PET" key="Left Alt+F4" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_4_PET" key="Left Alt+F5" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_5_PET" key="Left Alt+F6" />
+        <KeyBinding action="TARGET_GROUP_MEMBER_6_PET" key="Left Alt+F7" />
+        <KeyBinding action="NEAREST_ENEMY_TARGET" key="N" />
+        <KeyBinding action="NEAREST_FRIENDLY_TARGET" key="Left Control+N" />
+        <KeyBinding action="CYCLE_ENEMY_TARGET" key="Tab" />
+        <KeyBinding action="NEXT_ENEMY_TARGET" key="Left Shift+N" />
+        <KeyBinding action="NEXT_FRIENDLY_TARGET" key="Left Control+Tab" />
+        <KeyBinding action="PREVIOUS_ENEMY_TARGET" key="Left Shift+Tab" />
+        <KeyBinding action="PREVIOUS_FRIENDLY_TARGET" key="NONE" />
+        <KeyBinding action="ASSIST_MAIN_ASSIST" key="F8" />
+        <KeyBinding action="ASSIST_GROUP_MEMBER_1" key="Left Shift+F2" />
+        <KeyBinding action="ASSIST_GROUP_MEMBER_2" key="Left Shift+F3" />
+        <KeyBinding action="ASSIST_GROUP_MEMBER_3" key="Left Shift+F4" />
+        <KeyBinding action="ASSIST_GROUP_MEMBER_4" key="Left Shift+F5" />
+        <KeyBinding action="ASSIST_GROUP_MEMBER_5" key="Left Shift+F6" />
+        <KeyBinding action="AID_GROUP_MEMBER_1" key="Left Control+F2" />
+        <KeyBinding action="AID_GROUP_MEMBER_2" key="Left Control+F3" />
+        <KeyBinding action="AID_GROUP_MEMBER_3" key="Left Control+F4" />
+        <KeyBinding action="AID_GROUP_MEMBER_4" key="Left Control+F5" />
+        <KeyBinding action="AID_GROUP_MEMBER_5" key="Left Control+F6" />
+        <KeyBinding action="LOOT_ALL" key="NONE" />
+        <KeyBinding action="LOOT_NEED" key="NONE" />
+        <KeyBinding action="LOOT_GREED" key="NONE" />
+        <KeyBinding action="LOOT_PASS" key="NONE" />
+        <KeyBinding action="LOOT_NEAREST" key="NONE" />
+        <KeyBinding action="TOGGLE_CONTROL_LOCK" key="NONE" />
+        <KeyBinding action="CAMERA_UP" key="NONE" />
+        <KeyBinding action="CAMERA_DOWN" key="NONE" />
+        <KeyBinding action="CHAT_REPLY" key="NONE" />
+        <KeyBinding action="INVERT_MOUSE_LOOK" key="Left Shift+Left Control+F11" />
+        <KeyBinding action="SWITCH_ATTACK" key="NONE" />
+        <KeyBinding action="TOGGLE_WEAPON_SHEATHE" key="NONE" />
+        <KeyBinding action="SCREENSHOT" key="NONE" />
+        <KeyBinding action="SUPER_SCREENSHOT" key="NONE" />
+        <KeyBinding action="TOGGLE_UI" key="NONE" />
+        <KeyBinding action="BRACKET_CHAT" key="NONE" />
+        <KeyBinding action="STAR_CHAT" key="NONE" />
+    </KeyBindings>
+</ProfileSettings>

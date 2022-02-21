@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	
+	<Windows>
+	
+		<Window name="EnemyCombatLogStatsWindow_ListHeaderTemplate">
+			<Size>
+				<AbsPoint x="950" y="30" />
+			</Size>
+			<Windows>
+				<Button name="$parentSortColumn1" inherits="EA_Button_DefaultListSort" font="font_chat_text">
+					<Size>
+						<AbsPoint x="200" y="30" />
+					</Size>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortColumn2" inherits="EA_Button_DefaultListSort" font="font_chat_text">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortColumn1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnClick" />
+		                <EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnRClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortColumn3" inherits="EA_Button_DefaultListSort" font="font_chat_text">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortColumn2">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnClick" />
+		                <EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnRClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortColumn4" inherits="EA_Button_DefaultListSort" font="font_chat_text">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortColumn3">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnClick" />
+		                <EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnRClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortColumn5" inherits="EA_Button_DefaultListSort" font="font_chat_text">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortColumn4">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnClick" />
+		                <EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnRClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortColumn6" inherits="EA_Button_DefaultListSort" font="font_chat_text">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortColumn5">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnClick" />
+		                <EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_StatsWindow_SortColumnRClick" />
+		            </EventHandlers>
+		        </Button>
+			</Windows>
+		</Window>
+		
+		
+		
+		<Window name="EnemyCombatLogStatsWindow_ListRowTemplate">
+			<Size>
+				<AbsPoint x="950" y="30" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentValue1" textalign="left" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="195" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="5" y="6" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_ListRowMouseOver" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue2" textalign="center" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue1">
+							<AbsPoint x="0" y="-6" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_ListRowMouseOver" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue3" textalign="center" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue2">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_ListRowMouseOver" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue4" textalign="center" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue3">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_ListRowMouseOver" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue5" textalign="center" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue4">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_ListRowMouseOver" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue6" textalign="center" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue5">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_ListRowMouseOver" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Window>
+		
+		
+	
+		<Window name="EnemyCombatLogStatsWindow" inherits="EA_Window_Default" layer="secondary" movable="true" savesettings="false">
+			<Size>
+				<AbsPoint x="1000" y="830" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content -->
+				
+				<!-- Session -->
+				<Label name="$parentSessionLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="75" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="30" y="30" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parentSession" inherits="EA_ComboBox_DefaultResizableLarge">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSessionLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+                        <EventHandler event="OnSelChanged" function="Enemy.CombatLogUI_StatsWindow_OnSessionSelChanged" />
+                    </EventHandlers>
+				</ComboBox>
+				<Button name="$parentSessionAddButton" inherits="EA_Button_DefaultText" font="font_chat_text">
+					<Size>
+						<AbsPoint x="100" y="36" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSession">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SessionAdd" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentSessionDeleteButton" inherits="EA_Button_DefaultText" font="font_chat_text">
+					<Size>
+						<AbsPoint x="100" y="36" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSessionAddButton">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SessionDelete" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentSessionRenameButton" inherits="EA_Button_DefaultText" font="font_chat_text">
+					<Size>
+						<AbsPoint x="100" y="36" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSessionDeleteButton">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_SessionRename" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentSessionFullNameLabel" font="font_clear_small_bold">
+					<Size>
+						<AbsPoint x="800" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSession">
+							<AbsPoint x="5" y="2" />
+						</Anchor>
+					</Anchors>
+					<Color r="150" g="150" b="150" />
+				</Label>
+				
+				<!-- Type -->
+				<Label name="$parentTypeLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="75" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSessionLabel">
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parentType" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTypeLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+                        <EventHandler event="OnSelChanged" function="Enemy.CombatLogUI_StatsWindow_OnTypeSelChanged" />
+                    </EventHandlers>
+				</ComboBox>
+				
+				<!-- EPS -->
+				<Label name="$parentEpsLabel" font="font_chat_text" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentType">
+							<AbsPoint x="50" y="-15" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentEpsCurLabel" font="font_chat_text" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEpsLabel">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+					<EventHandlers>
+                        <EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_OnEpsMouseOver" />
+                        <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_OnEpsCurClick" />
+                    </EventHandlers>
+				</Label>
+				<Label name="$parentEpsMaxLabel" font="font_chat_text" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEpsCurLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+					<EventHandlers>
+                        <EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_OnEpsMouseOver" />
+                        <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_OnEpsMaxClick" />
+                    </EventHandlers>
+				</Label>
+				
+				<Label name="$parentEpsAoeLabel" font="font_chat_text" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEpsLabel">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentEpsAoeCurLabel" font="font_chat_text" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEpsAoeLabel">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+					<EventHandlers>
+                        <EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_OnEpsMouseOver" />
+                        <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_OnEpsAoeCurClick" />
+                    </EventHandlers>
+				</Label>
+				<Label name="$parentEpsAoeMaxLabel" font="font_chat_text" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEpsAoeCurLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+					<EventHandlers>
+                        <EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_StatsWindow_OnEpsMouseOver" />
+                        <EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_StatsWindow_OnEpsAoeMaxClick" />
+                    </EventHandlers>
+				</Label>
+				
+				<!-- List -->
+				<Window name="$parentListHeader" inherits="EnemyCombatLogStatsWindow_ListHeaderTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTypeLabel">
+							<AbsPoint x="-15" y="20" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<ListBox name="$parentList" rowdef="EnemyCombatLogStatsWindow_ListRowTemplate" visiblerows="20" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+					<Size>
+						<AbsPoint x="973" y="600" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentListHeader">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="Enemy.combatLogStatsWindowListData" populationfunction="Enemy.CombatLogUI_StatsWindow_OnListPopulate">
+					</ListData>
+				</ListBox>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.CombatLogUI_StatsWindow_Hide" />
+			</EventHandlers>
+		</Window>
+		
+		
+		<Window name="EnemyCombatLogStatsWindowTooltip" inherits="TooltipBase">
+			<Size>
+				<AbsPoint x="600" y="500" />
+			</Size>
+			<Windows>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultTooltipBackground" />
+				
+				<Label name="$parentTitle" font="font_default_text_large" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="500" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="10" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="102" />
+				</Label>
+			</Windows>
+		</Window>
+		
+		
+		<Window name="EnemyCombatLogStatsWindowTooltip_RowTemplate">
+			<Size>
+				<AbsPoint x="600" y="24" />
+			</Size>
+			<Windows>
+				<Label name="$parentLabel1" font="font_clear_small">
+					<Size>
+						<AbsPoint x="150" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentLabel2" font="font_clear_small">
+					<Size>
+						<AbsPoint x="100" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentLabel1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentLabel3" font="font_clear_small" maxchars="30" autoresize="false">
+					<Size>
+						<AbsPoint x="300" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentLabel2">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

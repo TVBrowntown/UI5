@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="UI5_Mechanics" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="29" y="20" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+		</Window>
+
+		<Window name="TargetUI5_Player" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="512" y="118" />
+			</Size>
+			<Anchors>
+				<Anchor point="left" relativePoint="left" relativeTo="Root">
+					<AbsPoint x="0" y="-300" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<Label name="UI5EXPDisplay" inherits="EA_Label_DefaultText" layer="overlay" textalign="center">
+					<Size>
+						<AbsPoint x="370" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="center" relativePoint="center" relativeTo="UF_EXP_BG">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+				<Label name="PlayerTopText" inherits="EA_Label_DefaultText" layer="overlay" textalign="left">
+					<Size>
+						<AbsPoint x="512" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="TargetUI5_Player">
+							<AbsPoint x="114" y="34"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+				<Label name="PlayerBotText" inherits="EA_Label_DefaultText" layer="overlay" textalign="left">
+					<Size>
+						<AbsPoint x="512" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="TargetUI5_Player">
+							<AbsPoint x="114" y="72"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+
+				<DynamicImage name="PlayerAvatarFrame" texture="UF_Avatar_BG">
+					<Size>
+	                	<AbsPoint x="172" y="172" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="topleft" relativePoint="topleft" relativeTo="TargetUI5_Player" />
+	                		<AbsPoint x="200" y="200" />
+	              	</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="PlayerAvatar" texture="UF_Avatar_Example" layer="overlay">
+					<Size>
+	                	<AbsPoint x="150" y="150" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="center" relativePoint="center" relativeTo="PlayerAvatarFrame"/>
+	              	</Anchors>
+				</DynamicImage>
+
+				<AnimatedImage name="DangerGlowPlayer" texture="anim_waaagh_round_1" textureScale="1.15" fps="10" sticky="false">
+                    <Size>
+                        <AbsPoint x="108" y="125"/>
+                    </Size>
+                    <Anchors>
+	                	<Anchor point="bottom" relativePoint="bottom" relativeTo="PlayerAvatarFrame"/>
+	                		<AbsPoint x="0" y="10" />
+	              	</Anchors>
+                    <AnimFrames>
+                                <AnimFrame id="1" 	x="2" 		y="0" />
+                                <AnimFrame id="2" 	x="101" 	y="0" />
+                                <AnimFrame id="3" 	x="200" 	y="0" />
+                                <AnimFrame id="4" 	x="300" 	y="0" />
+                                <AnimFrame id="5" 	x="399" 	y="0" />
+                                <AnimFrame id="6" 	x="3" 		y="128" />
+                                <AnimFrame id="7" 	x="101" 	y="128" />
+                                <AnimFrame id="8" 	x="201" 	y="128" />
+                                <AnimFrame id="9" 	x="300" 	y="128" />
+                                <AnimFrame id="10" 	x="398" 	y="128" />
+                                <AnimFrame id="11" 	x="2" 		y="256" />
+                                <AnimFrame id="12" 	x="101" 	y="256" />
+                                <AnimFrame id="13" 	x="200" 	y="256" />
+                                <AnimFrame id="14" 	x="300" 	y="256" />
+                                <AnimFrame id="15" 	x="398" 	y="256" />
+                    </AnimFrames>
+                </AnimatedImage>
+
+			</Windows>
+
+			<EventHandlers>
+			
+			</EventHandlers>
+		</Window>
+		
+		<Window name="TargetUI5_Hostile" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="512" y="118" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+
+				<Label name="HostileTopText" inherits="EA_Label_DefaultText" layer="overlay" textalign="right">
+					<Size>
+						<AbsPoint x="370" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="TargetUI5_Hostile">
+							<AbsPoint x="-114" y="34"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+				<Label name="HostileBotText" inherits="EA_Label_DefaultText" layer="overlay" textalign="right">
+					<Size>
+						<AbsPoint x="512" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="TargetUI5_Hostile">
+							<AbsPoint x="-114" y="72"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+
+				<DynamicImage name="HostileAvatarFrame" texture="UF_Avatar_BG">
+					<Size>
+	                	<AbsPoint x="172" y="172" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="topright" relativePoint="topright" relativeTo="TargetUI5_Hostile"/>
+	              	</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="HostileAvatar" texture="UF_Avatar_Example" layer="overlay">
+					<Size>
+	                	<AbsPoint x="150" y="150" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="center" relativePoint="center" relativeTo="HostileAvatarFrame"/>
+	              	</Anchors>
+				</DynamicImage>
+
+				<AnimatedImage name="DangerGlowHostile" texture="anim_waaagh_round_1" textureScale="1.15" fps="10" sticky="false">
+                    <Size>
+                        <AbsPoint x="108" y="125"/>
+                    </Size>
+                    <Anchors>
+	                	<Anchor point="bottom" relativePoint="bottom" relativeTo="HostileAvatarFrame"/>
+	                		<AbsPoint x="0" y="10" />
+	              	</Anchors>
+                    <AnimFrames>
+                                <AnimFrame id="1" 	x="2" 		y="0" />
+                                <AnimFrame id="2" 	x="101" 	y="0" />
+                                <AnimFrame id="3" 	x="200" 	y="0" />
+                                <AnimFrame id="4" 	x="300" 	y="0" />
+                                <AnimFrame id="5" 	x="399" 	y="0" />
+                                <AnimFrame id="6" 	x="3" 		y="128" />
+                                <AnimFrame id="7" 	x="101" 	y="128" />
+                                <AnimFrame id="8" 	x="201" 	y="128" />
+                                <AnimFrame id="9" 	x="300" 	y="128" />
+                                <AnimFrame id="10" 	x="398" 	y="128" />
+                                <AnimFrame id="11" 	x="2" 		y="256" />
+                                <AnimFrame id="12" 	x="101" 	y="256" />
+                                <AnimFrame id="13" 	x="200" 	y="256" />
+                                <AnimFrame id="14" 	x="300" 	y="256" />
+                                <AnimFrame id="15" 	x="398" 	y="256" />
+                    </AnimFrames>
+                </AnimatedImage>
+
+			</Windows>
+		</Window>
+
+
+		<Window name="TargetUI5_Friendly" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="512" y="118" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+
+				<Label name="FriendlyTopText" inherits="EA_Label_DefaultText" layer="overlay" textalign="left">
+					<Size>
+						<AbsPoint x="512" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="TargetUI5_Friendly">
+							<AbsPoint x="114" y="34"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+				<Label name="FriendlyBotText" inherits="EA_Label_DefaultText" layer="overlay" textalign="left">
+					<Size>
+						<AbsPoint x="512" y="40"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="TargetUI5_Friendly">
+							<AbsPoint x="114" y="72"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+
+				<DynamicImage name="FriendlyAvatarFrame" texture="UF_Avatar_BG">
+					<Size>
+	                	<AbsPoint x="172" y="172" />
+	              	</Size>
+	              	<Anchors>
+	              		<Anchor point="topleft" relativePoint="topleft" relativeTo="TargetUI5_Friendly"/>
+	              	</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="FriendlyAvatar" texture="UF_Avatar_Example" layer="overlay">
+					<Size>
+	                	<AbsPoint x="150" y="150" />
+	              	</Size>
+	              	<Anchors>
+	                	<Anchor point="center" relativePoint="center" relativeTo="FriendlyAvatarFrame"/>
+	              	</Anchors>
+				</DynamicImage>
+
+
+				<AnimatedImage name="DangerGlowFriendly" texture="anim_waaagh_round_1" textureScale="1.15" fps="10" sticky="false">
+                    <Size>
+                        <AbsPoint x="108" y="125"/>
+                    </Size>
+                    <Anchors>
+	                	<Anchor point="bottom" relativePoint="bottom" relativeTo="FriendlyAvatarFrame"/>
+	                		<AbsPoint x="0" y="10" />
+	              	</Anchors>
+                    <AnimFrames>
+                                <AnimFrame id="1" 	x="2" 		y="0" />
+                                <AnimFrame id="2" 	x="101" 	y="0" />
+                                <AnimFrame id="3" 	x="200" 	y="0" />
+                                <AnimFrame id="4" 	x="300" 	y="0" />
+                                <AnimFrame id="5" 	x="399" 	y="0" />
+                                <AnimFrame id="6" 	x="3" 		y="128" />
+                                <AnimFrame id="7" 	x="101" 	y="128" />
+                                <AnimFrame id="8" 	x="201" 	y="128" />
+                                <AnimFrame id="9" 	x="300" 	y="128" />
+                                <AnimFrame id="10" 	x="398" 	y="128" />
+                                <AnimFrame id="11" 	x="2" 		y="256" />
+                                <AnimFrame id="12" 	x="101" 	y="256" />
+                                <AnimFrame id="13" 	x="200" 	y="256" />
+                                <AnimFrame id="14" 	x="300" 	y="256" />
+                                <AnimFrame id="15" 	x="398" 	y="256" />
+                    </AnimFrames>
+                </AnimatedImage>
+
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

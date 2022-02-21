@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Button name="EnemyChooseIconDialogList_IconButton" inherits="EA_Button_DefaultIconFrame_Large" handleinput="true">
+            <Size>
+                <AbsPoint x="64" y="64" />
+            </Size>
+            <EventHandlers>
+                <EventHandler event="OnLButtonUp" function="Enemy.UI_ChooseIconDialog_OnListRowLButtonUp" />
+            </EventHandlers>
+        </Button>
+	
+		<Window name="EnemyChooseIconDialogList_RowTemplate">
+			<Size>
+				<AbsPoint x="512" y="64" />
+			</Size>
+			<Windows>
+		        <Button name="$parentIcon1" inherits="EnemyChooseIconDialogList_IconButton" id="1">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft">
+                            <AbsPoint x="2" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parentIcon2" inherits="EnemyChooseIconDialogList_IconButton" id="2">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon1">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parentIcon3" inherits="EnemyChooseIconDialogList_IconButton" id="3">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon2">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parentIcon4" inherits="EnemyChooseIconDialogList_IconButton" id="4">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon3">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parentIcon5" inherits="EnemyChooseIconDialogList_IconButton" id="5">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon4">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parentIcon6" inherits="EnemyChooseIconDialogList_IconButton" id="6">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon5">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parentIcon7" inherits="EnemyChooseIconDialogList_IconButton" id="7">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon6">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parentIcon8" inherits="EnemyChooseIconDialogList_IconButton" id="8">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parentIcon7">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+			</Windows>
+		</Window>
+		
+		<Window name="EnemyChooseIconDialog" inherits="EA_Window_Default" movable="true">
+			<Size>
+                <AbsPoint x="570" y="330" />
+            </Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_ChooseIconDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content -->
+				
+				<!-- Content: name -->
+				<ListBox name="$parentIcons" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="EnemyChooseIconDialogList_RowTemplate" visiblerows="4" rowspacing="0">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="20" y="15" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright">
+							<AbsPoint x="-10" y="-23"/>
+						</Anchor>
+					</Anchors>
+					<ListData table="Enemy.chooseIconDialogListData" populationfunction="Enemy.UI_ChooseIconDialog_OnIconsPopulate" />
+				</ListBox>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.UI_ChooseIconDialog_Hide" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

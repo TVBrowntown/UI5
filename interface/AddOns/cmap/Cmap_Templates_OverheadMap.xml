@@ -1,0 +1,281 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Windows>
+        <Window name="HUDInfluenceBar" layer="secondary">
+            <Size>
+                <AbsPoint x="20" y="270" />   
+            </Size>
+            <EventHandlers>
+                <EventHandler event="OnMouseOver" function="CMapWindow.OnMouseOverInfluenceBar" />
+                <EventHandler event="OnLButtonUp" function="CMapWindow.OnClickInfluenceBar" />
+            </EventHandlers>
+            <Windows>
+                <VerticalResizeImage name="$parentBackground" handleinput="false" texture="ui_main">
+                    <Size>
+                        <AbsPoint x="18" y="270" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="bottomright" >
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Sizes middle="90" />
+                    <TexCoords>
+                        <Middle x="576" y="1" />
+                    </TexCoords>
+                </VerticalResizeImage>
+                <VerticalResizeImage name="$parentFill" handleinput="false" reversefill="true" texture="ui_main" sticky="false">
+                    <Size>
+                        <AbsPoint x="18" y="0" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="bottom" realtiveTo="$parentBackground">
+                            <AbsPoint x="2" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <Sizes middle="90" />
+                    <TexCoords>
+                        <Middle x="598" y="1" />
+                    </TexCoords>
+                </VerticalResizeImage>
+            </Windows>
+        </Window>
+
+        <!-- Map Point Filter Menu Window -->
+     <Window name="Cmap_MapPinFilterEntry">
+            <Size>
+                <AbsPoint x="550" y="32" />
+            </Size>
+            <Windows>
+                <Button name="$parentButton1" inherits="EA_Button_DefaultCheckBox" textalign="left" textAutoFitMinScale="0.5">
+                    <Size>
+                        <AbsPoint x="22" y="22" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="CMapWindow.ToggleMapPinFilter" />
+                    </EventHandlers>
+                </Button>
+                <DynamicImage name="$parentIcon1" handleinput="false" layer="background" texture="map_markers01">
+                    <Size>
+                        <AbsPoint x="32" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentButton1">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </DynamicImage>
+                <Label name="$parentLabel1" font="font_default_text" textalign="left" handleinput="false" wordwrap="false">
+                    <Size>
+                        <AbsPoint x="195" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentIcon1">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Label>
+                <Button name="$parentButton2" inherits="EA_Button_DefaultCheckBox" textalign="left" textAutoFitMinScale="0.5">
+                    <Size>
+                        <AbsPoint x="22" y="22" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentLabel1">
+                            <AbsPoint x="11" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="CMapWindow.ToggleMapPinFilter" />
+                    </EventHandlers>
+                </Button>
+                <DynamicImage name="$parentIcon2" handleinput="false" layer="background" texture="map_markers01">
+                    <Size>
+                        <AbsPoint x="32" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentButton2">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </DynamicImage>
+                <Label name="$parentLabel2" font="font_default_text" textalign="left" handleinput="false" wordwrap="false">
+                    <Size>
+                        <AbsPoint x="195" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentIcon2">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Label>
+            </Windows>
+        </Window>         
+		<Window name="Cmap_MapPinGutterEntry">
+            <Size>
+                <AbsPoint x="550" y="32" />
+            </Size>
+            <Windows>
+                <Button name="$parentButton1" inherits="EA_Button_DefaultCheckBox" textalign="left" textAutoFitMinScale="0.5">
+                    <Size>
+                        <AbsPoint x="22" y="22" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="CMapWindow.ToggleMapPinGutter" />
+                    </EventHandlers>
+                </Button>
+                <DynamicImage name="$parentIcon1" handleinput="false" layer="background" texture="map_markers01">
+                    <Size>
+                        <AbsPoint x="32" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentButton1">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </DynamicImage>
+                <Label name="$parentLabel1" font="font_default_text" textalign="left" handleinput="false" wordwrap="false">
+                    <Size>
+                        <AbsPoint x="195" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentIcon1">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Label>
+                <Button name="$parentButton2" inherits="EA_Button_DefaultCheckBox" textalign="left" textAutoFitMinScale="0.5">
+                    <Size>
+                        <AbsPoint x="22" y="22" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentLabel1">
+                            <AbsPoint x="11" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="CMapWindow.ToggleMapPinGutter" />
+                    </EventHandlers>
+                </Button>
+                <DynamicImage name="$parentIcon2" handleinput="false" layer="background" texture="map_markers01">
+                    <Size>
+                        <AbsPoint x="32" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentButton2">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </DynamicImage>
+                <Label name="$parentLabel2" font="font_default_text" textalign="left" handleinput="false" wordwrap="false">
+                    <Size>
+                        <AbsPoint x="195" y="32" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentIcon2">
+                            <AbsPoint x="5" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Label>
+            </Windows>
+        </Window>
+
+
+        <!-- Zoom Slider for Overhead Map -->
+        <DynamicImage name="Cmap_DynamicImage_OverheadZoomSliderBackground" texture="EA_HUD_01" slice="Map-Zoom-Slider-Background">
+            <Size>
+                <AbsPoint x="28" y="95" />
+            </Size>
+        </DynamicImage>
+
+        <Button name="Cmap_Button_VerticalZoomSlider" inherits="DefaultButton" backgroundtexture="EA_HUD_01" highlighttexture="EA_HUD_01" >
+            <Size>
+                <AbsPoint x="20" y="14" />
+            </Size>
+            <TexSlices>
+                <Normal          id="Map-Zoom-Slider"            />
+                <NormalHighlit   id="Map-Zoom-Slider-ROLLOVER"   />
+                <Pressed         id="Map-Zoom-Slider-Depressed"  />
+                <PressedHighlit  id="Map-Zoom-Slider-ROLLOVER"   />
+            </TexSlices>
+        </Button>
+
+        <Window name="Cmap_Template_OverheadMapZoomSlider">
+            <Size>
+                <AbsPoint x="28" y="56" />
+            </Size>
+            <Windows>
+                <Button name="$parentInButton" inherits="DefaultButton" backgroundtexture="EA_HUD_01" highlighttexture="EA_HUD_01" >
+                    <Size>
+                        <AbsPoint x="25" y="25" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topright">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="CMapWindow.ZoomIn" />
+                        <EventHandler event="OnMouseOver" function="CMapWindow.OnMouseoverZoomInBtn" />
+                    </EventHandlers>
+                    <TexSlices>
+                        <Normal          id="Map-Plus-Button"            />
+                        <NormalHighlit   id="Map-Plus-Button-ROLLOVER"   />
+                        <Pressed         id="Map-Plus-Button-Depressed"  />
+                        <PressedHighlit  id="Map-Plus-Button-Depressed"  />
+                        <Disabled        id="Map-Plus-Button-Disabled"   />
+                        <DisabledPressed id="Map-Plus-Button-Disabled"   />
+                    </TexSlices>
+                </Button>
+<!--
+                <SliderBar name="$parentBar" layer="background"
+                           background="" tickmark=""
+                           sliderbutton="Cmap_Button_VerticalZoomSlider" numticks="3" orientation="vertical" locktoticks="true">
+                    <Size>
+                        <AbsPoint x="28" y="75" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="topright" relativeTo="$parentInButton">
+                            <AbsPoint x="0" y="2" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnSlide" function="CMapWindow.SlideZoom" />
+                    </EventHandlers>
+                </SliderBar>
+-->
+                <Button name="$parentOutButton" inherits="DefaultButton" backgroundtexture="EA_HUD_01" highlighttexture="EA_HUD_01" >
+                    <Size>
+                        <AbsPoint x="25" y="25" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="CMapWindow.ZoomOut" />
+                        <EventHandler event="OnMouseOver" function="CMapWindow.OnMouseoverZoomOutBtn" />
+                    </EventHandlers>
+                    <TexSlices>
+                        <Normal          id="Map-Minus-Button"            />
+                        <NormalHighlit   id="Map-Minus-Button-ROLLOVER"   />
+                        <Pressed         id="Map-Minus-Button-Depressed"  />
+                        <PressedHighlit  id="Map-Minus-Button-Depressed"  />
+                        <Disabled        id="Map-Minus-Button-Disabled"   />
+                        <DisabledPressed id="Map-Minus-Button-Disabled"   />
+                    </TexSlices>
+                </Button>
+            </Windows>
+        </Window>
+
+    </Windows>
+</Interface>

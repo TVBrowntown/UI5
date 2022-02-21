@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="AdvancedRenownTrainingPresetsWindow" movable="false" layer="popup" inherits="EA_Window_Default" handleinput="true">
+			<Size>
+				<AbsPoint x="400" y="500" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnShown" function="AdvancedRenownTraining.PresetOnShown" />
+				<EventHandler event="OnHidden" function="AdvancedRenownTraining.PresetOnHidden" />
+			</EventHandlers>
+			<Windows>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame" layer="background">
+					<Size>
+						<AbsPoint x="400" y="500" />
+					</Size>
+				</Window>
+				<EditBox name="$parentSaveNameInput" inherits="EA_EditBox_DefaultFrame" layer="secondary" maxchars="20" handleinput="true">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="50" y="50" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				<Button name="$parentSaveButton" inherits="EA_Button_DefaultResizeable" >
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="top" relativeTo="$parentSaveNameInput">
+                            <AbsPoint x="0" y="40"/>
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.SavePreset" />
+                    </EventHandlers>
+                </Button>
+				<Button name="$parentSaveSelectedCheckBox" inherits="EA_Button_DefaultCheckBox" handleinput="true">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parentSaveNameInput">
+							<AbsPoint x="0" y="33"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ToggleSaveSettings" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentSaveSelectedLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="left">
+					<Size>
+						<AbsPoint x="250" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSaveSelectedCheckBox">
+							<AbsPoint x="5" y="16" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentWardrobeButton" inherits="EA_Button_DefaultResizeable" >
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="top" relativeTo="$parentSaveButton">
+                            <AbsPoint x="0" y="10"/>
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.ShowWardrobeImport" />
+                    </EventHandlers>
+                </Button>
+				<Label name="$parentSaveLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="center">
+					<Size>
+						<AbsPoint x="300" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="top" relativePoint="bottom" relativeTo="$parentSaveNameInput">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Window name="$parentFooterSeparator" inherits="EA_Window_DefaultSeparator">
+                    <Size>
+                        <AbsPoint x="400" y="28" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="left" relativePoint="left" relativeTo="$parent">
+                            <AbsPoint x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                </Window>
+				<Label name="$parentLoadLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="center">
+					<Size>
+						<AbsPoint x="300" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentFooterSeparator">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<ComboBox name="$parentLoadComboBox" inherits="EA_ComboBox_DefaultResizable">
+					<Size>
+						<AbsPoint x="300" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentLoadLabel">
+							<AbsPoint x="20" y="5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="AdvancedRenownTraining.SelectedItemChanged" />
+					</EventHandlers>
+				</ComboBox>
+				<Button name="$parentLoadButton" inherits="EA_Button_DefaultResizeable" >
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="top" relativeTo="$parentLoadLabel">
+                            <AbsPoint x="-90" y="80"/>
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.OnLoadPressed" />
+                    </EventHandlers>
+                </Button>
+				<Button name="$parentDeleteButton" inherits="EA_Button_DefaultResizeable" >
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="top" relativeTo="$parentLoadLabel">
+                            <AbsPoint x="90" y="80"/>
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.DeletePreset" />
+                    </EventHandlers>
+                </Button>
+				<Button name="$parentExportButton" inherits="EA_Button_DefaultResizeable" >
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="top" relativeTo="$parentLoadButton">
+                            <AbsPoint x="0" y="10"/>
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="AdvancedRenownTraining.OnExportButtonPressed" />
+                    </EventHandlers>
+                </Button>
+				<Label name="$parentPointNeededLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="left">
+					<Size>
+						<AbsPoint x="150" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parentLoadComboBox">
+							<AbsPoint x="0" y="40" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentPointLabel" wordwrap="false" font="font_default_text" inherits="DefaultWindowText" handleinput="false" textalign="left">
+					<Size>
+						<AbsPoint x="50" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentPointNeededLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

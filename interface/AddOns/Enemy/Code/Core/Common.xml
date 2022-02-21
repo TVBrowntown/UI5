@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Assets>
+		<Texture name="enemy_bar_rect" file="textures\bar_rect.dds" />
+	</Assets>
+	
+	<Windows>
+	
+	<DynamicImage name="EnemyDynamicImageTemplate" handleinput="false">
+		<Windows>
+			<Label name="$parentTLabel" textalign="center" font="font_clear_large_bold" handleinput="false">
+				<Size>
+					<AbsPoint x="32" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="center" relativePoint="center" relativeTo="$parent">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</Label>
+		</Windows>
+        </DynamicImage>
+        
+        <CircleImage name="EnemyCircleImageTemplate" handleinput="false">
+		<Windows>
+			<Label name="$parentTLabel" textalign="center" font="font_clear_large_bold" handleinput="false">
+				<Size>
+					<AbsPoint x="32" y="32" />
+				</Size>
+				<Anchors>
+					<Anchor point="center" relativePoint="center" relativeTo="$parent">
+						<AbsPoint x="0" y="0" />
+					</Anchor>
+				</Anchors>
+			</Label>
+		</Windows>
+        </CircleImage>
+	
+		<Window name="EnemySimpleListRowTemplate">
+			<Size>
+				<AbsPoint x="500" y="20" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentText" font="font_chat_text" handleinput="false">
+					<Size>
+						<AbsPoint x="500" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="0" y="3" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+		
+		<FullResizeImage name="EnemyRectangleTemplate" texture="enemy_bar_rect" handleinput="false">
+			<TexDims x="136" y="36" />
+			<Size>
+				<AbsPoint x="65" y="20" />
+			</Size>
+			<Sizes>
+                <TopLeft x="2" y="2" />
+                <BottomRight x="2" y="2" />
+                <Middle x="2" y="2" />
+            </Sizes>
+            <TexCoords>
+                <TopLeft x="0" y="0" />
+                <TopCenter x="60" y="0" />
+                <TopRight x="135" y="0" />
+                <MiddleLeft x="0" y="18" />
+                <MiddleCenter x="60" y="18" />
+                <MiddleRight x="135" y="18" />
+                <BottomLeft x="0" y="35" />
+                <BottomCenter x="60" y="35" />
+                <BottomRight x="135" y="35" />
+            </TexCoords>
+		</FullResizeImage>
+		
+		<Window name="EnemyTextEntryDialog" movable="true" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="600" y="500" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_TextEntryDialog_Close" />
+					</EventHandlers>
+				</Button>
+				
+				<Label name="$parentLabel" font="font_chat_text" wordwrap="true">
+					<Size>
+						<AbsPoint x="540" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="30" y="30" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				
+				<EditBox name="$parentValue" inherits="EA_EditBox_DefaultFrame_Multiline" maxchars="1000000" taborder="1" scrolling="vert" font="font_chat_text">
+					<Size>
+						<AbsPoint x="540" y="320" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</EditBox>
+
+				<!-- Bottom panel -->
+				<Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background">
+					<Size>
+						<AbsPoint x="0" y="65" />
+					</Size>
+				</Window>
+				
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom">
+							<AbsPoint x="-60" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_TextEntryDialog_Ok" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOkButton">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_TextEntryDialog_Close" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.UI_TextEntryDialog_Close" />
+			</EventHandlers>
+		</Window>
+		
+	</Windows>
+</Interface>

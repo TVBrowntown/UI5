@@ -1,0 +1,256 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="TexturedButtonsSetupFontsWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="TexturedButtons.Setup.Fonts.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="580" y="440" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentEnable" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnEnableLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentEnableCheckboxLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEnable">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentKeybind" font="font_clear_small_bold" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnable">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentHideKeybind" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentKeybind">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnHideKeybindLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentHideKeybindCheckboxLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHideKeybind">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentKeybindFont" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHideKeybind">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentKeybindFontExample" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="390" y="70" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentKeybindFont">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="TexturedButtons.Setup.Fonts.OnFontExampleMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="TexturedButtons.Setup.Fonts.OnFontExampleMouseOut" />
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnKeybindFontLUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Label name="$parentKeybindColor" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="60" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentKeybindFont">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+						
+				<Window name="$parentKeybindColorExample" inherits="TexturedButtonsColorExample" layer="secondary">
+					<Size>
+						<AbsPoint x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentKeybindColor">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="TexturedButtons.Setup.Fonts.OnColorExampleMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="TexturedButtons.Setup.Fonts.OnColorExampleMouseOut" />
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnKeybindColorLUp" />
+					</EventHandlers>						
+				</Window>
+				
+				<Label name="$parentCooldown" font="font_clear_small_bold" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentKeybindFontExample">
+							<AbsPoint x="-20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentHideCooldown" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCooldown">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnHideCooldownLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentHideCooldownCheckboxLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="300" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHideCooldown">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentCooldownFont" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHideCooldown">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentCooldownFontExample" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="390" y="70" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCooldownFont">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="TexturedButtons.Setup.Fonts.OnFontExampleMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="TexturedButtons.Setup.Fonts.OnFontExampleMouseOut" />
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnCooldownFontLUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Label name="$parentCooldownColor" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="60" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentCooldownFont">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+						
+				<Window name="$parentCooldownColorExample" inherits="TexturedButtonsColorExample" layer="secondary">
+					<Size>
+						<AbsPoint x="30" y="30"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCooldownColor">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="TexturedButtons.Setup.Fonts.OnColorExampleMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="TexturedButtons.Setup.Fonts.OnColorExampleMouseOut" />
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Fonts.OnCooldownColorLUp" />
+					</EventHandlers>						
+				</Window>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

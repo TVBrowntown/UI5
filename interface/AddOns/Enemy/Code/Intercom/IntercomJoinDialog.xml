@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyIntercomJoinDialog" movable="true" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="400" y="170" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="300" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomJoinDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content -->
+				<ComboBox name="$parentGroupList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</ComboBox>
+				
+				<!-- Bottom panel -->
+				<Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background">
+					<Size>
+						<AbsPoint x="0" y="65" />
+					</Size>
+				</Window>
+				
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom">
+							<AbsPoint x="0" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomJoinDialog_OnOkButton" />
+					</EventHandlers>
+				</Button>                
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.IntercomUI_IntercomJoinDialog_Hide" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Assets>
+		<Texture name="enemy_mark_icon_template" file="textures\mark_icon_template.dds" />
+		<Texture name="enemy_mark_icon_template_add" file="textures\mark_icon_template_add.dds" />
+	</Assets>
+
+	<Windows>
+		<Window name="EnemyMarksWindow" layer="background" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="50" y="50" />
+			</Size>
+			
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+				<DynamicImage name="$parentAdd" texture="enemy_mark_icon_template_add">
+					<TexCoords x="0" y="0" />
+					<TexDims x="32" y="32" />
+					
+					<Size>
+						<AbsPoint x="32" y="32" />
+					</Size>
+			
+					<Anchors>
+						<Anchor point="right" relativePoint="right">
+							<AbsPoint x="-10" y="0" />
+						</Anchor>
+					</Anchors>
+					
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.MarksUI_EnemyMarksWindow_OnAddLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.MarksUI_EnemyMarksWindow_OnAddRButtonUp" />
+						<EventHandler event="OnMouseOver" function="Enemy.MarksUI_EnemyMarksWindow_OnAddMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="Enemy.MarksUI_EnemyMarksWindow_OnAddMouseOverEnd" />
+					</EventHandlers>
+				</DynamicImage>
+			</Windows>
+
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="Enemy.MarksUI_EnemyMarksWindow_OnLButtonDown" />
+				<EventHandler event="OnLButtonUp" function="Enemy.MarksUI_EnemyMarksWindow_OnLButtonUp" />
+				<EventHandler event="OnMouseOver" function="Enemy.MarksUI_EnemyMarksWindow_OnMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="Enemy.MarksUI_EnemyMarksWindow_OnMouseOverEnd" />
+			</EventHandlers>
+		</Window>
+		
+		<Window name="EnemyMarkIcon">
+			<Size>
+				<AbsPoint x="32" y="32" />
+			</Size>
+			
+			<Windows>
+				<DynamicImage name="$parentBackground" texture="enemy_mark_icon_template" handleinput="false">
+					<TexCoords x="0" y="0" />
+					<TexDims x="32" y="32" />
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</DynamicImage>
+				<Label name="$parentText" font="font_clear_small_bold" textalign="center" handleinput="false" warnOnTextCropped="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Label>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="Enemy.MarksUI_EnemyMarkIcon_OnMouseOver" />
+				<EventHandler event="OnLButtonUp" function="Enemy.MarksUI_EnemyMarkIcon_OnLButtonUp" />
+				<EventHandler event="OnRButtonUp" function="Enemy.MarksUI_EnemyMarkIcon_OnRButtonUp" />
+			</EventHandlers>
+		</Window>
+		
+	</Windows>
+</Interface>

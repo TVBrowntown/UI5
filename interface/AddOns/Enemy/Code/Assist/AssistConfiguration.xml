@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+	
+		<Window name="EnemyAssistConfiguration">
+			<Windows>
+				<!-- Content: mark new target -->
+				<Button name="$parentMarkNewTarget" inherits="EA_Button_DefaultCheckBox">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.AssistUI_ConfigDialog_OnMarkNewTargetChanged" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentMarkNewTargetLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentMarkNewTarget">
+							<AbsPoint x="10" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				
+				<!-- Content: mark new target edit template -->
+				<Button name="$parentMarkNewTargetEditTemplateButton" inherits="EA_Button_DefaultText" textalign="left" font="font_chat_text">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentMarkNewTargetLabel">
+							<AbsPoint x="5" y="1" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.AssistUI_ConfigDialog_MarkNewTargetEditTemplate" />
+					</EventHandlers>
+				</Button>
+
+				<!-- Content: new target sound -->
+				<Button name="$parentNewTargetSound" inherits="EA_Button_DefaultCheckBox">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMarkNewTarget">
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.AssistUI_ConfigDialog_OnNewTargetSoundChanged" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentNewTargetSoundLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="400" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentNewTargetSound">
+							<AbsPoint x="10" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				
+				<!-- Content: new target sound id -->
+				<Label name="$parentNewTargetSoundIdLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="75" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentNewTargetSound">
+							<AbsPoint x="0" y="13" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parentNewTargetSoundId" inherits="EA_ComboBox_DefaultResizableLarge">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentNewTargetSoundIdLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+                        <EventHandler event="OnSelChanged" function="Enemy.AssistUI_ConfigDialog_OnNewTargetSoundIdSelChanged" />
+                    </EventHandlers>
+				</ComboBox>
+				
+				<!-- Content: target on notify click -->
+				<Button name="$parentTargetOnNotifyClick" inherits="EA_Button_DefaultCheckBox">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentNewTargetSoundIdLabel">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.AssistUI_ConfigDialog_OnTargetOnNotifyClickChanged" />
+					</EventHandlers>
+				</Button>
+				<Label name="$parentTargetOnNotifyClickLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="400" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTargetOnNotifyClick">
+							<AbsPoint x="10" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				
+				
+				<Label name="$parentMacrosLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTargetOnNotifyClick">
+							<AbsPoint x="0" y="40" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentMacroMark" inherits="DefaultIconButton">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMacrosLabel">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnMouseDrag" function="Enemy.AssistUI_ConfigDialog_OnMacroMarkMouseDrag" />
+		                <EventHandler event="OnMouseOver" function="Enemy.AssistUI_ConfigDialog_OnMacroMarkMouseOver" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentMacroTarget" inherits="DefaultIconButton">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentMacroMark">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnMouseDrag" function="Enemy.AssistUI_ConfigDialog_OnMacroTargetMouseDrag" />
+		                <EventHandler event="OnMouseOver" function="Enemy.AssistUI_ConfigDialog_OnMacroTargetMouseOver" />
+		            </EventHandlers>
+		        </Button>
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

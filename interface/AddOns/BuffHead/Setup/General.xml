@@ -1,0 +1,242 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="BuffHeadSetupSelectTextureRowTemplate">
+			<Size>
+				<AbsPoint x="260" y="40" />
+			</Size>
+			<Windows>
+				<DynamicImage name="$parentTexture" texture="" handleinput="false" layer="background">
+					<Size>
+						<AbsPoint x="260" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				<Label name="$parentName" font="font_clear_small_bold" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="250" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>			
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="BuffHead.Setup.SelectTexture.OnTextureRowLDown" />
+				<EventHandler event="OnLButtonUp" function="BuffHead.Setup.SelectTexture.OnTextureRowLUp" />
+				<EventHandler event="OnRButtonDown" function="BuffHead.Setup.SelectTexture.OnTextureRowRDown" />
+				<EventHandler event="OnRButtonUp" function="BuffHead.Setup.SelectTexture.OnTextureRowRUp" />
+				<EventHandler event="OnMouseOver" function="BuffHead.Setup.SelectTexture.OnTextureRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.SelectTexture.OnTextureRowMouseOut" />
+			</EventHandlers>
+		</Window>
+		
+		<Window name="BuffHeadSetupSelectTextureWindow">
+			<Size>
+				<AbsPoint x="300" y="250" />
+			</Size>
+			<Windows>
+				<Window name="$parentBackground" inherits="EA_Window_ComboBoxMenuBackground">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</Window>
+				<ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="BuffHeadSetupSelectTextureRowTemplate" visiblerows="6" rowspacing="0">
+					<Size>
+						<AbsPoint x="290" y="240" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="5" y="5" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="BuffHead.Setup.SelectTexture.Textures" populationfunction="BuffHead.Setup.SelectTexture.OnPopulate">
+						<ListColumns>
+							<ListColumn windowname="Name" variable="Name" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>
+			</Windows>
+		</Window>
+	
+        <Button name="BuffHeadContextMenuItemFontSelection" inherits="EA_Button_DefaultMenuButton" id="1">
+            <Size>
+                <AbsPoint x="350" y="25" />
+            </Size>
+            <Windows>
+                <Label name="$parentLabel" font="font_default_text" maxchars="256" textalign="left" autoresize="true" handleinput="false">
+                    <Size>
+                        <AbsPoint x="350" y="25" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Label>
+            </Windows>
+        </Button>
+		
+		<Window name="BuffHeadColorExample" handleinput="true">
+			<Windows>
+				<DynamicImage name="$parentColor" texture="EA_TintableImage" layer="background" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</DynamicImage>
+				<DynamicImage name="$parentBorder" texture="BuffHead_Effect_Border" layer="default" handleinput="false">
+            		<TintColor r="50" g="50" b="50" />
+					<TexDims x="64" y="64" />
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</DynamicImage>
+			</Windows>
+			<EventHandlers>
+			</EventHandlers>
+		</Window>
+
+		<Window name="BuffHeadSetupSelectColorWindow">
+			<Size>
+				<AbsPoint x="280" y="140" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="true">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+					</Anchors>
+				</FullResizeImage>
+				
+				<Label name="$parentTintRed" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="60" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentTintRedSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="100" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTintRed">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.SelectColor.OnSlideTint" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<EditBox name="$parentTintRedEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="3" input="numbers">
+					<Size>
+						<AbsPoint x="60" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTintRedSlider">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnTextChanged" function="BuffHead.Setup.SelectColor.OnTintChanged" />
+					</EventHandlers>
+				</EditBox>
+				
+				<Label name="$parentTintGreen" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="60" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTintRed">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentTintGreenSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="100" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTintGreen">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+
+						<EventHandler event="OnSlide" function="BuffHead.Setup.SelectColor.OnSlideTint" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<EditBox name="$parentTintGreenEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="3" input="numbers">
+					<Size>
+						<AbsPoint x="60" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTintGreenSlider">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnTextChanged" function="BuffHead.Setup.SelectColor.OnTintChanged" />
+					</EventHandlers>
+				</EditBox>
+				
+				<Label name="$parentTintBlue" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="60" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTintGreen">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentTintBlueSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="100" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTintBlue">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.SelectColor.OnSlideTint" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<EditBox name="$parentTintBlueEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="3" input="numbers">
+					<Size>
+						<AbsPoint x="60" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentTintBlueSlider">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnTextChanged" function="BuffHead.Setup.SelectColor.OnTintChanged" />
+					</EventHandlers>
+				</EditBox>
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

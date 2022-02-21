@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Queue Queuer
+Warhammer Online: Age of Reckoning UI modification that simplifies warband
+scenario queueing with other scenario-oriented features as well.
+    
+Copyright (C) 2008-2010  Dillon "Rhekua" DeLoss
+rhekua@msn.com		    www.rhekua.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="QueueQueuer_GUI_TabTier1.lua" />
+  </Scripts>
+  <Windows>
+    <Window name="BlacklistCheckBox" inherits="EA_LabelCheckButton" id="1">
+	<Size>
+        <AbsPoint x="225" y="25" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.BlacklistCheckBox_OnLButtonUp" />
+      </EventHandlers>
+    </Window>
+
+        <Window name="QueueQueuer_GUI_TabTier1Socket" movable="false">
+            <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="QueueQueuer_GUI_Socket">
+                    <AbsPoint x="0" y="0"/>
+                </Anchor>
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="QueueQueuer_GUI_Socket">
+                    <AbsPoint x="0" y="0"/>
+                </Anchor>
+            </Anchors>
+            <EventHandlers>
+                <EventHandler event="OnInitialize" function="QueueQueuer_GUI_TabTier1.OnInitialize" />
+                <EventHandler event="OnShutdown" function="QueueQueuer_GUI_TabTier1.OnShutdown" />
+            </EventHandlers>
+		<Windows>
+
+        <Label name="$parent_BlacklistTier1Title" inherits="EA_Settings_SectionTitle" textalign="center">
+          <Size>
+            <AbsPoint x="150" y="20" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parent">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Window name="$parent_BlacklistCheckBox1" inherits="BlacklistCheckBox" id="1">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="20" y="55" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox2" inherits="BlacklistCheckBox" id="2">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox1">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox3" inherits="BlacklistCheckBox" id="3">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox2">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+	</Windows>
+	
+	</Window>
+
+  </Windows>
+</Interface>

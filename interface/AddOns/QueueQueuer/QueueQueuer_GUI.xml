@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Queue Queuer
+Warhammer Online: Age of Reckoning UI modification that simplifies warband
+scenario queueing with other scenario-oriented features as well.
+    
+Copyright (C) 2008-2010  Dillon "Rhekua" DeLoss
+rhekua@msn.com		    www.rhekua.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="QueueQueuer_GUI.lua" />
+  </Scripts>
+  <Windows>
+
+    <Window name="QueueQueuer_GUI_MapButtons" savesettings="true" movable="false" popable="false" handleinput="false">
+      <Size>
+        <AbsPoint x="31" y="33" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="EA_Window_OverheadMap">
+          <AbsPoint x="-90" y="-35" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="QueueQueuer_GUI_MapButtons.OnInitialize" />
+        <EventHandler event="OnShutdown" function="QueueQueuer_GUI_MapButtons.OnShutdown" />
+      </EventHandlers>
+    </Window>
+    <Button name="QueueQueuer_GUI_MapButton" inherits="DefaultButton" textureScale="0.51" backgroundtexture="EA_Training_Specialization" highlighttexture="EA_Training_Specialization" id="1">
+      <Size>
+        <AbsPoint x="31" y="33" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="QueueQueuer_GUI_MapButtons" layer="overlay">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.MapButton_OnLButtonUp" />
+        <EventHandler event="OnRButtonUp" function="QueueQueuer_GUI.MapButton_OnRButtonUp" />
+        <EventHandler event="OnMouseOver" function="QueueQueuer_GUI.MapButton_OnMouseOver" />
+	  <EventHandler event="OnUpdate" function="QueueQueuer_GUI.MapButton_OnUpdate" />
+      </EventHandlers>
+      <TexSlices>
+        <Normal         id="tactic-black" />
+        <NormalHighlit  id="tactic-black" />
+        <Pressed        id="tactic-black" />
+        <PressedHighlit id="tactic-black" />
+      </TexSlices>
+      <TexDims x="61" y="66" />
+    </Button>
+    <Button name="QueueQueuer_GUI_MapButton_QUEUER" inherits="DefaultButton" textureScale="0.51" backgroundtexture="EA_Training_Specialization" highlighttexture="EA_Training_Specialization" id="1">
+      <Size>
+        <AbsPoint x="31" y="33" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="QueueQueuer_GUI_MapButton" layer="overlay">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.MapButton_OnLButtonUp" />
+        <EventHandler event="OnRButtonUp" function="QueueQueuer_GUI.MapButton_OnRButtonUp" />
+        <EventHandler event="OnMouseOver" function="QueueQueuer_GUI.MapButton_OnMouseOver" />
+	  <EventHandler event="OnUpdate" function="QueueQueuer_GUI.MapButton_OnUpdate" />
+      </EventHandlers>
+      <TexSlices>
+        <Normal         id="tactic-white" />
+        <NormalHighlit  id="tactic-white" />
+        <Pressed        id="tactic-white" />
+        <PressedHighlit id="tactic-white" />
+      </TexSlices>
+      <TexDims x="61" y="66" />
+    </Button>  
+    <Button name="QueueQueuer_GUI_MapButton_DISABLED" inherits="DefaultButton" textureScale="0.51" backgroundtexture="EA_Training_Specialization" highlighttexture="EA_Training_Specialization" id="1">
+      <Size>
+        <AbsPoint x="31" y="33" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="QueueQueuer_GUI_MapButton" layer="overlay">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.MapButton_OnLButtonUp" />
+        <EventHandler event="OnRButtonUp" function="QueueQueuer_GUI.MapButton_OnRButtonUp" />
+        <EventHandler event="OnMouseOver" function="QueueQueuer_GUI.MapButton_OnMouseOver" />
+	  <EventHandler event="OnUpdate" function="QueueQueuer_GUI.MapButton_OnUpdate" />
+      </EventHandlers>
+      <TexSlices>
+        <Normal         id="tactic-orange" />
+        <NormalHighlit  id="tactic-orange" />
+        <Pressed        id="tactic-orange" />
+        <PressedHighlit id="tactic-orange" />
+      </TexSlices>
+      <TexDims x="61" y="66" />
+    </Button>  
+    <Button name="QueueQueuer_GUI_MapButton_COOLDOWN" inherits="DefaultButton" textureScale="0.51" backgroundtexture="EA_Training_Specialization" highlighttexture="EA_Training_Specialization" id="1">
+      <Size>
+        <AbsPoint x="31" y="33" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="QueueQueuer_GUI_MapButton" layer="overlay">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.MapButton_OnLButtonUp" />
+        <EventHandler event="OnRButtonUp" function="QueueQueuer_GUI.MapButton_OnRButtonUp" />
+        <EventHandler event="OnMouseOver" function="QueueQueuer_GUI.MapButton_OnMouseOver" />
+	  <EventHandler event="OnUpdate" function="QueueQueuer_GUI.MapButton_OnUpdate" />
+      </EventHandlers>
+      <TexSlices>
+        <Normal         id="tactic-yellow" />
+        <NormalHighlit  id="tactic-yellow" />
+        <Pressed        id="tactic-yellow" />
+        <PressedHighlit id="tactic-yellow" />
+      </TexSlices>
+      <TexDims x="61" y="66" />
+    </Button>  
+
+    <Window name="OptionCheckBox" inherits="EA_LabelCheckButton" id="1">
+	<Size>
+        <AbsPoint x="250" y="25" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.OptionCheckBox_OnLButtonUp" />
+      </EventHandlers>
+    </Window>
+        <Button name="TabButton" inherits="EA_Button_Tab">
+          <Size>
+            <AbsPoint x="124" y="35" />
+          </Size>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.OnLButtonUpTab" />
+            <EventHandler event="OnMouseOver" function="QueueQueuer_GUI.OnMouseOverTab" />
+          </EventHandlers>
+          <TextOffset x="0" y="5" />
+        </Button>
+
+    <Window name="QueueQueuer_GUI" movable="true" layer="popup">
+      <Size>
+	  <!-- Enlarged spacing -->
+        <AbsPoint x="810" y="650" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="QueueQueuer_GUI.OnInitialize" />
+        <EventHandler event="OnUpdate" function="QueueQueuer_GUI.OnUpdate" />
+        <EventHandler event="OnShutdown" function="QueueQueuer_GUI.OnShutdown" />
+      </EventHandlers>
+      <Windows>
+
+	<DynamicImage name="EA_Default_SettingsImage" inherits="EA_Default_CornerImage" texture="EA_CornerIcon_Settings" /> 
+        <Window name="$parent_TitleBar" inherits="EA_TitleBar_Default" />
+
+
+        <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose" >
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.Close_OnLButtonUp" />
+          </EventHandlers>
+        </Button>
+
+        <!-- <Label name="$parent_BlacklistTitle" inherits="EA_Settings_SectionTitle" textalign="center">
+          <Size>
+            <AbsPoint x="400" y="20" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parent">
+              <AbsPoint x="0" y="40" />
+            </Anchor>
+          </Anchors>
+        </Label> -->
+
+ 		    <!-- Tabs and Filter toggle Block -->
+                <Window name="$parent_Tabs">
+                    <Size>
+                        <AbsPoint x="810" y="35" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_TitleBar"/>
+                        <Anchor point="bottomright" relativePoint="topright" relativeTo="$parent_TitleBar"/>
+                    </Anchors>
+
+                    <FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_MetalFill">
+                        <Anchors>
+                            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent"/>
+                            <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+                        </Anchors>
+                    </FullResizeImage>
+                    <Windows>
+                        <Window name="$parentSeparatorLeft" inherits="EA_Window_TabSeparatorLeftSide" layer="background" popable="false">
+                            <Anchors>
+                                <Anchor point="bottomleft" relativePoint="bottomleft">
+                                    <AbsPoint x="0" y="-6" />
+                                </Anchor>
+                                <Anchor point="bottomleft" relativePoint="topright" relativeTo="$parentTier1">
+                                    <AbsPoint x="0" y="-6" />
+                                </Anchor>
+                            </Anchors>
+                        </Window>
+
+                        <Button name="$parentTier1" inherits="TabButton" id="1">
+                            <Anchors>
+                                <Anchor point="topleft" relativePoint="topleft">
+                                    <AbsPoint x="25" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <Button name="$parentTier2" inherits="TabButton" id="2">
+                            <Anchors>
+                                <Anchor point="right" relativePoint="left" relativeTo="$parentTier1">
+                                    <AbsPoint x="0" y="0" />
+                                </Anchor>
+                            </Anchors>
+                        </Button>
+                        <Button name="$parentTier3" inherits="TabButton" id="3">
+                          <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentTier2">
+                              <AbsPoint x="0" y="0" />
+                            </Anchor>
+                          </Anchors>
+                        </Button>
+                        <Button name="$parentTier4" inherits="TabButton" id="4">
+                          <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentTier3">
+                              <AbsPoint x="0" y="0" />
+                            </Anchor>
+                          </Anchors>
+                        </Button>
+                        <Button name="$parentHelp" inherits="TabButton" id="5">
+                          <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentTier4">
+                              <AbsPoint x="0" y="0" />
+                            </Anchor>
+                          </Anchors>
+                        </Button>
+                        <Button name="$parentAbout" inherits="TabButton" id="6">
+                          <Anchors>
+                            <Anchor point="right" relativePoint="left" relativeTo="$parentHelp">
+                              <AbsPoint x="0" y="0" />
+                            </Anchor>
+                          </Anchors>
+                        </Button>
+
+		                <Window name="$parentSeparatorRight" inherits="EA_Window_TabSeparatorRightSide" layer="background" popable="false">
+		                  <Anchors>
+		                    <Anchor point="bottomright" relativePoint="topleft" relativeTo="$parentAbout">
+		                      <AbsPoint x="0" y="-6" />
+		                    </Anchor>
+		                    <Anchor point="bottomright" relativePoint="bottomright" >
+		                      <AbsPoint x="0" y="-6" />
+		                    </Anchor>
+		                  </Anchors>
+                        </Window>
+                    </Windows>
+                </Window>
+                <!-- TABS End -->
+
+                <!-- Main Window Background -->
+                <Window name="$parent_Background" inherits="EA_Window_DefaultBackgroundFrame" handleinput="false" >
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft" >
+                            <AbsPoint x="0" y="32" />
+                        </Anchor>
+                        <Anchor point="bottomright" relativePoint="bottomright" />
+                    </Anchors>
+                </Window>
+
+                <Window name="QueueQueuer_GUI_Socket" movable="false">
+                    <Anchors>
+                        <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_Tabs"/>
+                        <Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent_DisplaySeperator"/>
+                    </Anchors>
+                </Window>
+
+                <Window name ="QueueQueuer_GUI_TabTier1" inherits ="QueueQueuer_GUI_TabTier1Socket"/>
+                <Window name ="QueueQueuer_GUI_TabTier2" inherits ="QueueQueuer_GUI_TabTier2Socket"/>
+                <Window name ="QueueQueuer_GUI_TabTier3" inherits ="QueueQueuer_GUI_TabTier3Socket"/>
+                <Window name ="QueueQueuer_GUI_TabTier4" inherits ="QueueQueuer_GUI_TabTier4Socket"/>
+                <Window name ="QueueQueuer_GUI_TabHelp" inherits ="QueueQueuer_GUI_TabHelpSocket"/>
+                <Window name ="QueueQueuer_GUI_TabAbout" inherits ="QueueQueuer_GUI_TabAboutSocket"/>
+
+        <Window name="$parent_DisplaySeperator" inherits="EA_Window_DefaultSeparator" handleinput="false" >
+          <Anchors>
+            <Anchor point="topleft" relativePoint="bottomleft" relativeTo="$parent_ButtonBackground" >
+              <AbsPoint x="0" y="-65" />
+            </Anchor>
+            <Anchor point="topright" relativePoint="bottomright" relativeTo="$parent_ButtonBackground" >
+              <AbsPoint x="0" y="-40" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_OptionCheckBox1" inherits="OptionCheckBox" id="1">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent_DisplaySeperator">
+              <AbsPoint x="120" y="20" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_OptionCheckBox2" inherits="OptionCheckBox" id="2">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_OptionCheckBox1">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_OptionCheckBox3" inherits="OptionCheckBox" id="3">
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parent_OptionCheckBox1">
+              <AbsPoint x="30" y="0" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_OptionCheckBox4" inherits="OptionCheckBox" id="4">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_OptionCheckBox3">
+              <AbsPoint x="0" y="15" />
+            </Anchor>
+          </Anchors>
+        </Window>
+
+        <Window name="$parent_ButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background" >
+          <Size>
+            <AbsPoint x="0" y="64" />
+          </Size>
+        </Window>
+
+        <Button name="$parent_BlacklistAllButton" inherits="EA_Button_DefaultResizeable"  font="font_chat_text" textalign="center">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft" >
+              <AbsPoint x="15" y="-10" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.BlacklistAllButton_OnLButtonUp"/>
+          </EventHandlers>
+        </Button>
+        <Button name="$parent_BlacklistNoneButton" inherits="EA_Button_DefaultResizeable"  font="font_chat_text" textalign="center">
+          <Anchors>
+            <Anchor point="bottomright" relativePoint="bottomleft" relativeTo="$parent_BlacklistAllButton">
+              <AbsPoint x="5" y="0" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.BlacklistNoneButton_OnLButtonUp"/>
+          </EventHandlers>
+        </Button>
+        <Button name="$parent_QueuerCheckButton" inherits="EA_Button_DefaultResizeable" font="font_chat_text" textalign="center">
+          <Anchors>
+            <Anchor point="bottom" relativePoint="bottom" >
+              <AbsPoint x="0" y="-10" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.QueuerCheckButton_OnLButtonUp"/>
+          </EventHandlers>
+        </Button>
+        <Button name="$parent_JoinButton" inherits="EA_Button_DefaultResizeable" font="font_chat_text" textalign="center">
+          <Anchors>
+            <Anchor point="bottomright" relativePoint="bottomright" >
+              <AbsPoint x="-15" y="-10" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.JoinButton_OnLButtonUp"/>
+          </EventHandlers>
+        </Button>
+        <Button name="$parent_LeaveButton" inherits="EA_Button_DefaultResizeable"  font="font_chat_text" textalign="center">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomright" relativeTo="$parent_JoinButton">
+              <AbsPoint x="-5" y="0" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.LeaveButton_OnLButtonUp"/>
+          </EventHandlers>
+        </Button>
+      </Windows>
+    </Window>
+
+  </Windows>
+</Interface>

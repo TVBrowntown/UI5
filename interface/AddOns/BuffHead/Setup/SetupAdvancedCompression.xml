@@ -1,0 +1,142 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="BuffHeadSetupAdvancedCompressionRowTemplate">
+			<Size>
+				<AbsPoint x="515" y="40" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Size>
+						<AbsPoint x="515" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+							<Anchor point="bottomright" relativePoint="bottomright" relativeTo="" />
+						</Anchor>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentText" font="font_clear_small" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="500" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentEffects" font="font_clear_tiny" handleinput="false" textalign="left" wordwrap="true">
+					<Color r="90" g="90" b="90" />
+					<Size>
+						<AbsPoint x="500" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomLeft" relativePoint="topleft" relativeTo="$parentText">
+							<AbsPoint x="" y="0"  />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="BuffHead.Setup.AdvancedCompression.OnRowLDown" />
+				<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompression.OnRowLUp" />
+				<EventHandler event="OnRButtonDown" function="BuffHead.Setup.AdvancedCompression.OnRowRDown" />
+				<EventHandler event="OnRButtonUp" function="BuffHead.Setup.AdvancedCompression.OnRowRUp" />
+				<EventHandler event="OnMouseOver" function="BuffHead.Setup.AdvancedCompression.OnRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.AdvancedCompression.OnRowMouseOut" />
+			</EventHandlers>
+		</Window>
+		
+		<Window name="BuffHeadSetupAdvancedCompressionWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.AdvancedCompression.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="430" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompression.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentCompressedEffectsLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="BuffHeadSetupAdvancedCompressionRowTemplate" visiblerows="6" rowspacing="0">
+					<Size>
+						<AbsPoint x="540" y="240" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCompressedEffectsLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="BuffHead.Setup.AdvancedCompression.Entries" populationfunction="BuffHead.Setup.AdvancedCompression.OnPopulate">
+						<ListColumns>
+							<ListColumn windowname="Text" variable="Text" format="wstring" />
+							<ListColumn windowname="Effects" variable="Effects" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>	
+				
+				<Button name="$parentNewButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="240" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="-20" y="-20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompression.OnNewLClick" />
+					</EventHandlers>
+				</Button> 
+
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

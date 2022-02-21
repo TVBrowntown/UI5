@@ -1,0 +1,1048 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="BuffHeadSetupAdvancedContainersItemPropertiesWindow" inherits="EA_Window_Default" movable="true" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="580" y="600" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPropertyTitleMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPropertyTitleMouseOut" />
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPropertyTitleLClick" />
+					</EventHandlers>
+				</Label>
+				
+				<ComboBox name="$parentPropertiesComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPropertiesChanged" />
+					</EventHandlers>
+				</ComboBox>
+						
+				<Label name="$parentElementLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentElementComboBox" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnElementChanged" />
+					</EventHandlers>
+				</ComboBox>
+
+				<Window name="$parentElementContainer">
+					<Size>
+						<AbsPoint x="500" y="110" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentSizeLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentSizeColumnsLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentSizeColumnsEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="2" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentSizeColumnsLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnContainerSizeColumnsChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<Label name="$parentSizeRowsLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeColumnsLabel">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentSizeRowsEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="2" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentSizeRowsLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnContainerSizeRowsChanged" />
+							</EventHandlers>
+						</EditBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementPosition">
+					<Size>
+						<AbsPoint x="500" y="180" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentPlacementLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentPlacementComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPlacementLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPositionPlacementChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Window name="$parentPlacementAnchored">
+							<Size>
+								<AbsPoint x="480" y="100" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPlacementComboBox">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+
+								<Label name="$parentLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="280" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<ComboBox name="$parentAnchorComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPositionAnchorChanged" />
+									</EventHandlers>
+								</ComboBox>
+
+							</Windows>
+						</Window>
+						
+						<Window name="$parentPlacementFixed">
+							<Size>
+								<AbsPoint x="480" y="100" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPlacementComboBox">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+							
+								<Label name="$parentOffsetLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="9" input="numbers">
+									<Size>
+										<AbsPoint x="80" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPlacementFixedOffsetXChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="9" input="numbers">
+									<Size>
+										<AbsPoint x="80" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnPlacementFixedOffsetYChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+							</Windows>
+						</Window>
+
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementEffects">
+					<Size>
+						<AbsPoint x="500" y="380" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+									
+						<Window name="$parentPermanent" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="25" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnEffectsPermanentLUp" />
+							</EventHandlers>
+						</Window>
+						
+						<Label name="$parentPermanentCheckboxLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentPermanent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+									
+						<Window name="$parentAlwaysShowEnable" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="25" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPermanent">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnEffectsAlwaysShowEnableLUp" />
+							</EventHandlers>
+						</Window>
+						
+						<Label name="$parentAlwaysShowEnableCheckboxLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentAlwaysShowEnable">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentBuffsLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysShowEnable">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentBuffsComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBuffsLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnEffectsBuffsChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Label name="$parentDebuffsLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBuffsComboBox">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentDebuffsComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDebuffsLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnEffectsDebuffsChanged" />
+							</EventHandlers>
+						</ComboBox>
+				
+						<Label name="$parentAlwaysIgnoreLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+							<Size>
+								<AbsPoint x="260" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDebuffsComboBox">
+									<AbsPoint x="-20" y="30"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentAlwaysIgnoreDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100" wordwrap="true">
+							<Size>
+								<AbsPoint x="220" y="50" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreLabel">
+									<AbsPoint x="0" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Button name="$parentAlwaysIgnoreButton" inherits="EA_Button_DefaultResizeable">
+							<Size>
+								<AbsPoint x="140" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreDescriptionLabel">
+									<AbsPoint x="30" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnEffectsAlwaysIgnoreLUp" />
+							</EventHandlers>
+						</Button>
+						
+						<Label name="$parentAlwaysShowLabel" font="font_clear_small_bold" textalign="left" maxchars="35">
+							<Size>
+								<AbsPoint x="260" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentAlwaysIgnoreLabel">
+									<AbsPoint x="260" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentAlwaysShowDescriptionLabel" font="font_clear_small" textalign="left" maxchars="100" wordwrap="true">
+							<Size>
+								<AbsPoint x="220" y="50" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysShowLabel">
+									<AbsPoint x="0" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Button name="$parentAlwaysShowButton" inherits="EA_Button_DefaultResizeable">
+							<Size>
+								<AbsPoint x="140" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlwaysShowDescriptionLabel">
+									<AbsPoint x="30" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnEffectsAlwaysShowLUp" />
+							</EventHandlers>
+						</Button>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementPadding">
+					<Size>
+						<AbsPoint x="500" y="210" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentContainerPaddingLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentContainerPaddingXLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentContainerPaddingLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentContainerPaddingXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="2" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentContainerPaddingXLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnContainerPaddingXChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<Label name="$parentContainerPaddingYLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentContainerPaddingXLabel">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentContainerPaddingYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="2" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentContainerPaddingYLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnContainerPaddingYChanged" />
+							</EventHandlers>
+						</EditBox>
+						
+						<Label name="$parentIndicatorPaddingLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentContainerPaddingYLabel">
+									<AbsPoint x="-20" y="30"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentIndicatorPaddingXLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorPaddingLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentIndicatorPaddingXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="2" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentIndicatorPaddingXLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnIndicatorPaddingXChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<Label name="$parentIndicatorPaddingYLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentIndicatorPaddingXLabel">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentIndicatorPaddingYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="2" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentIndicatorPaddingYLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnIndicatorPaddingYChanged" />
+							</EventHandlers>
+						</EditBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementLayer">
+					<Size>
+						<AbsPoint x="500" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentLayerComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnLayerChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementOffset">
+					<Size>
+						<AbsPoint x="500" y="100" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentOffsetLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="9">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnOffsetXChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="9">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnOffsetYChanged" />
+							</EventHandlers>
+						</EditBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementLayout">
+					<Size>
+						<AbsPoint x="500" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentLayoutComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnLayoutChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementScale">
+					<Size>
+						<AbsPoint x="500" y="90" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<SliderBar name="$parentSlider" inherits="EA_Default_SliderBar">
+							<Size>
+								<AbsPoint x="280" y="35" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSlide" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnSlideScale" />
+							</EventHandlers>
+						</SliderBar>
+						
+						<Label name="$parentValue" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="120" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentSlider">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementGrowth">
+					<Size>
+						<AbsPoint x="500" y="150" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentHorizontalLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentHorizontalComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="secondary">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHorizontalLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnGrowthHorizontalChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Label name="$parentVerticalLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHorizontalComboBox">
+									<AbsPoint x="-20" y="20"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentVerticalComboBox" inherits="EA_ComboBox_DefaultResizableSmall" layer="secondary">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentVerticalLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnGrowthVerticalChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementMaximumThreshold">
+					<Size>
+						<AbsPoint x="500" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="480" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="7" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnMaximumThresholdChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<ComboBox name="$parentComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentEditBox">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnMaximumThresholdChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementMinimumThreshold">
+					<Size>
+						<AbsPoint x="500" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="480" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="7" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnMinimumThresholdChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<ComboBox name="$parentComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentEditBox">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnMinimumThresholdChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+
+				<Window name="$parentElementHandleInput">
+					<Size>
+						<AbsPoint x="500" y="70" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+									
+						<Window name="$parentShowTooltips" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="25" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnHandleInputShowTooltipsLUp" />
+							</EventHandlers>
+						</Window>
+						
+						<Label name="$parentShowTooltipsCheckboxLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentShowTooltips">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+									
+						<Window name="$parentEnableRemovable" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="25" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentShowTooltips">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedContainersItem.Properties.OnHandleInputEnableRemovableLUp" />
+							</EventHandlers>
+						</Window>
+						
+						<Label name="$parentEnableRemovableCheckboxLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentEnableRemovable">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+					</Windows>
+				</Window>
+				
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

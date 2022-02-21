@@ -1,0 +1,195 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Assets>
+		<Texture name="Obsidian_Spark" file="Textures/spark.tga" />
+		<Texture name="CastBar_BG_UI5" file="Textures/CastBar/CastBar_Background.tga" />
+		<Texture name="CastBar_Fill_UI5" file="Textures/CastBar/CastBar_Fill.tga" />
+		<Texture name="CastBar_IconFrame_UI5" file="Textures/CastBar/CastBar_IconFrame.tga" />
+		<Texture name="CastBar_IconBorder_UI5" file="Textures/CastBar/CastBar_IconBorder.tga" />
+	</Assets>
+
+	<Windows>
+		<Window name="ObsidianCastbarTemplate" movable="false" handleinput="false" layer="secondary">
+			<Windows>
+				
+				<DynamicImage name="$parentBackground" texture="EA_TintableImage" handleinput="false" layer="background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</DynamicImage>
+
+				<DynamicImage name="$parentFlareBG" texture="CastBar_BG_UI5" handleinput="false" layer="secondary">
+					<Size>
+						<AbsPoint x="512" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parentBackground">
+							<AbsPoint x="-50" y="-5" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentLatency" texture="" handleinput="false" layer="default">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentFill" texture="" handleinput="false" layer="secondary">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentSpark" texture="Obsidian_Spark" handleinput="false" layer="secondary">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentFill">
+							<AbsPoint x="-8" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="15" y="32" />
+				</DynamicImage>
+				
+				<Label name="$parentLatencyText" font="font_clear_tiny" textalign="bottom" autoresize="true" resizewidth="true" handleinput="false" autoscale="true" layer="popup">
+					<Size>
+						<AbsPoint x="100" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="$parentLatency">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+
+				<Label name="$parentName" font="font_clear_small_bold" textalign="leftcenter" handleinput="false" layer="popup">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentTimer" font="font_clear_small_bold" textalign="rightcenter" handleinput="false" layer="popup">
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<DynamicImage name="$parentIcon" texture="" handleinput="false" layer="popup">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="64" y="64" />
+				</DynamicImage>
+
+				<DynamicImage name="$parentIconFrame" texture="CastBar_IconBorder_UI5" handleinput="false" layer="popup">
+					<Anchors>
+						<Anchor point="center" relativePoint="center" relativeTo="$parentIcon">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="64" y="64" />
+				</DynamicImage>
+				
+			</Windows>
+		</Window>
+		
+		<Window name="ObsidianGlobalCooldownBarTemplate" movable="false" handleinput="false">
+			<Windows>
+				
+				<DynamicImage name="$parentBackground" texture="EA_TintableImage" handleinput="false" layer="background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentFill" texture="EA_TintableImage" handleinput="false" layer="secondary">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentSpark" texture="Obsidian_Spark" handleinput="false" layer="secondary">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentFill">
+							<AbsPoint x="-8" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="15" y="32" />
+				</DynamicImage>
+
+				<DynamicImage name="$parentDivider" texture="EA_TintableImage" handleinput="false" layer="secondary">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+			</Windows>
+		</Window>
+		
+		<Window name="ObsidianEffectTemplate" movable="false" handleinput="false">
+			<Windows>
+				
+				<DynamicImage name="$parentBackground" texture="EA_TintableImage" handleinput="false" layer="background">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</DynamicImage>
+				
+				<DynamicImage name="$parentFill" texture="" handleinput="false" layer="secondary">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+
+				<Label name="$parentName" font="font_clear_small_bold" textalign="leftcenter" handleinput="false" layer="popup">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentTimer" font="font_clear_small_bold" textalign="rightcenter" handleinput="false" layer="popup">
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<DynamicImage name="$parentIcon" texture="" handleinput="false" layer="popup">
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<TexDims x="64" y="64" />
+				</DynamicImage>
+				
+			</Windows>
+		</Window>
+		
+		<Window name="ObsidianEffectContainerTemplate" movable="false" handleinput="false">
+			<Windows>
+				
+			</Windows>
+		</Window>
+	
+	</Windows>
+</Interface>

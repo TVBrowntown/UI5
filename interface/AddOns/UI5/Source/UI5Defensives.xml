@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="UI5Defensives" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="120" y="200" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<Label name="Defensives1" inherits="EA_Label_DefaultText" layer="overlay" textalign="right">
+					<Size>
+						<AbsPoint x="100" y="26"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright" relativeTo="UI5Defensives">
+							<AbsPoint x="-10" y="4"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+
+				<Label name="Defensives2" inherits="EA_Label_DefaultText" layer="overlay" textalign="right">
+					<Size>
+						<AbsPoint x="100" y="26"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="Defensives1">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+
+				<Label name="Defensives3" inherits="EA_Label_DefaultText" layer="overlay" textalign="right">
+					<Size>
+						<AbsPoint x="100" y="26"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="Defensives2">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255"/>
+				</Label>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

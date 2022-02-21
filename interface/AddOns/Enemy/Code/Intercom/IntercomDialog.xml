@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyIntercomDialog" movable="true" inherits="EA_Window_Default">
+			<Size>
+                <AbsPoint x="500" y="630" />
+            </Size>
+            <Anchors>
+                <Anchor point="center" relativePoint="center" relativeTo="Root">
+                    <AbsPoint x="0" y="0" />
+                </Anchor>
+            </Anchors>
+
+            <Windows>
+            	<!-- Init -->
+            	<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+                    <Anchors>
+                        <Anchor point="topleft" relativePoint="topleft">
+                            <AbsPoint x="0" y="32" />
+                        </Anchor>
+                        <Anchor point="bottomright" relativePoint="bottomright" />
+                    </Anchors>
+                </Window>
+
+                <Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_Hide" />
+                    </EventHandlers>
+                </Button>
+
+                <!-- Content -->
+				<Label name="$parentMessage" font="font_default_text_large" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="500" y="70" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="5"/>
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="204" b="102" />
+				</Label>
+
+				<Window name="$parentDivider1" inherits="EA_Window_DefaultSeparator" layer="secondary">
+					 <Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMessage" />
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentMessage" />
+					</Anchors>
+				</Window>
+
+				<Label name="$parentCreateText" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="350" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+							<AbsPoint x="0" y="320" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentCreateButton" inherits="EA_Button_DefaultResizeable">
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentCreateText">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Enemy.OnLeaveButton" />
+                    </EventHandlers>
+                </Button>
+
+				<Label name="$parentCreateText2" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="350" y="250" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+							<AbsPoint x="0" y="50" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentCreateButton2" inherits="EA_Button_DefaultResizeable">
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentCreateText2">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_OnCreateButton2" />
+                    </EventHandlers>
+                </Button>
+
+								<Label name="$parentCreateText3" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+								<Size>
+									<AbsPoint x="350" y="350" />
+								</Size>
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+										<AbsPoint x="0" y="50" />
+									</Anchor>
+								</Anchors>
+							</Label>
+							<Button name="$parentCreateButton3" inherits="EA_Button_DefaultResizeable">
+			                    <Anchors>
+			                        <Anchor point="right" relativePoint="left" relativeTo="$parentCreateText3">
+			                            <AbsPoint x="0" y="0" />
+			                        </Anchor>
+			                    </Anchors>
+			                    <EventHandlers>
+			                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_OnCreateButton3" />
+			                    </EventHandlers>
+			                </Button>
+
+											<Label name="$parentCreateText7" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+											<Size>
+												<AbsPoint x="350" y="450" />
+											</Size>
+											<Anchors>
+												<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+													<AbsPoint x="0" y="50" />
+												</Anchor>
+											</Anchors>
+										</Label>
+										<Button name="$parentCreateButton7" inherits="EA_Button_DefaultResizeable">
+																<Anchors>
+																		<Anchor point="right" relativePoint="left" relativeTo="$parentCreateText7">
+																				<AbsPoint x="0" y="0" />
+																		</Anchor>
+																</Anchors>
+																<EventHandlers>
+																		<EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_OnCreateButton7" />
+																</EventHandlers>
+														</Button>
+
+
+					<Label name="$parentCreateText5" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="350" y="150" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+							<AbsPoint x="0" y="50" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentWarningText" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+				<Size>
+					<AbsPoint x="350" y="150" />
+				</Size>
+				<Anchors>
+					<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCreateText5">
+						<AbsPoint x="0" y="50" />
+					</Anchor>
+				</Anchors>
+			</Label>
+				<Button name="$parentCreateButton5" inherits="EA_Button_DefaultResizeable">
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentCreateText5">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_OnCreateButton5" />
+                    </EventHandlers>
+                </Button>
+
+					<Label name="$parentCreateText4" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="350" y="150" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentCreateButton4" inherits="EA_Button_DefaultResizeable">
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentCreateText4">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_OnCreateButton4" />
+                    </EventHandlers>
+                </Button>
+
+								<Label name="$parentCreateText6" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+								<Size>
+									<AbsPoint x="350" y="50" />
+								</Size>
+								<Anchors>
+									<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+										<AbsPoint x="0" y="0" />
+									</Anchor>
+								</Anchors>
+							</Label>
+							<Button name="$parentCreateButton6" inherits="EA_Button_DefaultResizeable">
+			                    <Anchors>
+			                        <Anchor point="right" relativePoint="left" relativeTo="$parentCreateText6">
+			                            <AbsPoint x="0" y="0" />
+			                        </Anchor>
+			                    </Anchors>
+			                    <EventHandlers>
+			                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_OnCreateButton" />
+			                    </EventHandlers>
+			                </Button>
+
+
+
+
+
+
+                <Label name="$parentInviteText" font="font_chat_text" textalign="center" handleinput="false" wordwrap="true">
+					<Size>
+						<AbsPoint x="350" y="50" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCreateText">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Button name="$parentInviteButton" inherits="EA_Button_DefaultResizeable">
+                    <Anchors>
+                        <Anchor point="right" relativePoint="left" relativeTo="$parentInviteText">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_OnInviteButton" />
+                    </EventHandlers>
+                </Button>
+
+                <!-- Bottom panel -->
+                <Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background">
+                    <Size>
+                        <AbsPoint x="0" y="65" />
+                    </Size>
+                </Window>
+
+                <Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable">
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="bottom">
+                            <AbsPoint x="0" y="-10" />
+                        </Anchor>
+                    </Anchors>
+                    <EventHandlers>
+                        <EventHandler event="OnLButtonUp" function="Enemy.IntercomUI_IntercomDialog_Hide" />
+                    </EventHandlers>
+                </Button>
+            </Windows>
+
+            <EventHandlers>
+            	<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+            	<EventHandler event="OnKeyEscape" function="Enemy.IntercomUI_IntercomDialog_Hide" />
+            </EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

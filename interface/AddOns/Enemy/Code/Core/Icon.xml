@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	
+	<Assets>
+		<Texture name="enemy_icon_active" file="textures\target_green.tga" />
+		<Texture name="enemy_icon_inactive" file="textures\target_red.tga" />
+	</Assets>
+	
+	<Windows>
+		<DynamicImage name="EnemyIcon" savesettings="true" handleinput="true" texture="enemy_icon_inactive">
+			<TexCoords x="0" y="0" />
+			<TexDims x="48" y="48" />
+			
+			<Size>
+				<AbsPoint x="32" y="32" />
+			</Size>		
+			
+			<Anchors>
+				<Anchor point="bottomright" relativePoint="topleft" relativeTo="EA_Window_OverheadMapMapDisplay">
+					<AbsPoint x="-40" y="-40" />
+				</Anchor>
+			</Anchors>
+			
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="Enemy.UI_Icon_OnMouseOver" />
+				<EventHandler event="OnLButtonUp" function="Enemy.UI_Icon_OnLButtonUp" />
+				<EventHandler event="OnRButtonUp" function="Enemy.UI_Icon_OnRButtonUp" />
+			</EventHandlers>
+		</DynamicImage>
+	</Windows>
+	
+</Interface>

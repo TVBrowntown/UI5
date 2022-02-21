@@ -1,0 +1,246 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="BuffHeadSetupAdvancedCompressionItemRowTemplate">
+			<Size>
+				<AbsPoint x="415" y="30" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Size>
+						<AbsPoint x="415" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+							<Anchor point="bottomright" relativePoint="bottomright" relativeTo="" />
+						</Anchor>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentText" font="font_clear_small" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentType" font="font_clear_small" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="90" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentText">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="BuffHead.Setup.AdvancedCompressionItem.OnRowLDown" />
+				<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompressionItem.OnRowLUp" />
+				<EventHandler event="OnRButtonDown" function="BuffHead.Setup.AdvancedCompressionItem.OnRowRDown" />
+				<EventHandler event="OnRButtonUp" function="BuffHead.Setup.AdvancedCompressionItem.OnRowRUp" />
+				<EventHandler event="OnMouseOver" function="BuffHead.Setup.AdvancedCompressionItem.OnRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.AdvancedCompressionItem.OnRowMouseOut" />
+			</EventHandlers>
+		</Window>
+	
+		<Window name="BuffHeadSetupAdvancedCompressionItemWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.AdvancedCompressionItem.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="620" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompressionItem.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentNameLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<EditBox name="$parentNameEditBox" inherits="EA_EditBox_DefaultFrame">
+					<Size>
+						<AbsPoint x="280" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentNameLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				
+				<Label name="$parentOverrideLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentNameEditBox">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentOverrideNameLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOverrideLabel">
+							<AbsPoint x="20" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<EditBox name="$parentOverrideNameEditBox" inherits="EA_EditBox_DefaultFrame">
+					<Size>
+						<AbsPoint x="280" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOverrideNameLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				
+				<Label name="$parentOverrideIconLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOverrideNameLabel">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<EditBox name="$parentOverrideIconEditBox" inherits="EA_EditBox_DefaultFrame">
+					<Size>
+						<AbsPoint x="280" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentOverrideIconLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				
+				<Label name="$parentEffectsLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOverrideIconLabel">
+							<AbsPoint x="-20" y="30" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="BuffHeadSetupAdvancedCompressionItemRowTemplate" visiblerows="6" rowspacing="0">
+					<Size>
+						<AbsPoint x="440" y="180" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectsLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="BuffHead.Setup.AdvancedCompressionItem.Entries" populationfunction="BuffHead.Setup.AdvancedCompressionItem.OnPopulate">
+						<ListColumns>
+							<ListColumn windowname="Text" variable="Text" format="wstring" />
+							<ListColumn windowname="Type" variable="Type" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>
+				
+				<Button name="$parentAddButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="180" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentList">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompressionItem.OnAddEffectLClick" />
+					</EventHandlers>
+				</Button>
+				
+				
+				
+				<Button name="$parentApplyButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="200" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent">
+							<AbsPoint x="-20" y="-20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompressionItem.OnApplyLClick" />
+					</EventHandlers>
+				</Button>
+				
+				<Button name="$parentCreateButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="140" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topright" relativeTo="$parentApplyButton" />
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.AdvancedCompressionItem.OnCreateLClick" />
+					</EventHandlers>
+				</Button>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

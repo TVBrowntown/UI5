@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UserSettings>
+    <Graphics>
+        <Mode window_frame="false" fullscreen="false" />
+        <FullScreen width="1920" height="1080" bitdepth="32" />
+        <Windowed width="1920" height="1080" bitdepth="32" />
+        <Color brightness_boost="0.000" monitor_gamma="2.403" />
+    </Graphics>
+    <Interface global_ui_scale="0.777323" lock_action_bars="1" mouse_sensitivity="0.50" warn_on_sell="false" warn_on_buy="false" warn_on_repair="false" warn_on_perf_change="false" warn_on_refine="false" warn_on_refine_currency="false">
+        <MainUI path="Interface/Custom" enabled="false" />
+        <AddOns path="Interface/AddOns" />
+    </Interface>
+    <Performance>
+        <perflevel level="custom1" />
+        <perfcustom1 drawDistance="1.00" texture_Cache="1.00" effects="veryhigh" abilityEffects="party" animation="veryhigh" shadows="medium" specular="false" lightmaps="false" postProcess="false" grass="true" waterRef="true" waterWakes="true" />
+        <perfcustom2 drawDistance="1.00" texture_Cache="1.00" effects="high" abilityEffects="all" animation="veryhigh" shadows="veryhigh" specular="false" lightmaps="false" postProcess="false" grass="true" waterRef="true" waterWakes="true" />
+        <ShaderCache caching="true" />
+        <Logging logAllToDisk="false" />
+        <hwcache cache1="1901983455" cache2="-1317557392" />
+    </Performance>
+    <Login account="" character="4" eula="2101241342" roc="-1633567991" first_run="false" lastlogintime="1645145808" lastserver="1" />
+    <Camera view_mode="third" desired_cam_distance="322.950745" camera_tilt="0.217608" invert_mouselook="false" player_fade="true" smart_follow="false" />
+    <Maps>
+        <MapOverlay QuestWaypoints="true" />
+    </Maps>
+    <Chat fade="false" profanityFilter="false" visible_time="300.00" scroll_limit="2000" />
+    <Language id="1" />
+    <Developer />
+    <Names font="2" friendlyplayers="true" enemyplayers="true" friendlynpcnames="false" enemynpcnames="true" your="false" yourpet="false" target="false" friendlytitles="false" enemytitles="false" yourtitle="false" npctitles="true" targettitle="false" yourguild="false" targetguild="false" friendlyguilds="true" enemyguilds="true" yourhealthbar="off" grouphealthbar="hurt" friendlyhealthbar="hurt" enemyhealthbar="on" npchealthbar="on" targethealthbar="off" />
+    <Reticles target="true" mouseover="true" targetPointer="false" arrowOverTarget="false" friend="false" enemy="false" />
+    <Audio enabled="true" master_volume="0.49" speaker_config="Unknown" eax_enabled="false" disable_communication_sounds="false">
+        <Effects enabled="true" volume="0.44" />
+        <Music enabled="false" volume="0.25" />
+    </Audio>
+    <GamePlay allowautoqueueing="false" autolootall="true" showtooltips="true" statictooltips="false" staticabilitytooltips="true" preventhealthbarfade="false" clickthroughself="true" stickytargeting="false" clicktomove="false" showbeginnerhelptips="false" showgameplayhelptips="false" showuihelptips="false" showadvancedhelptips="false" showrvrscreenmsgs="false" showplayerchatbubbles="true" shownpcchatbubbles="true" showpartychatbubbles="true" autolootinrvr="true" oldminimapborder="true" combatlighting="none" />
+</UserSettings>

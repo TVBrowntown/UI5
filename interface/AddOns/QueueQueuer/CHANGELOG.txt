@@ -1,0 +1,192 @@
+CHANGELOG
+2.8.7 - Updated as of 8/12/2020.
+* Added "Ranked" & "Ranked Solo" Scenario
+* Removed R/RS replacement for the "Ranked" & "Ranked Solo" SC
+
+2.8.6 - Updated as of 6/26/2020.
+* Re-Organized and enlarged T4 Tab
+
+2.8.5 - Updated as of 5/01/2020.
+* Fixed the "Caledor Woods (Ranked Solo)" scenario 
+
+2.8.4 - Updated as of 5/01/2020.
+* Merged changes made in other modified QueuerQueuer versions and changed version number accordingly
+* Fixed Contextmenu position when not using warboard (again...)
+
+2.7.4 - Updated as of 4/19/2020.
+* "Maw of Madness (Ranked)" Scenario is now handled correctly
+* Replace "Ranked" with R in the blacklist pop to avoid cutting off the name
+
+2.7.3 - Updated as of 4/19/2020.
+* Replace "Ranked Solo" with RS in the blacklist pop to avoid cutting off the name
+
+2.7.2 - Updated as of 4/18/2020.
+* "Maw of Madness (Ranked Solo)" Scenario is now handeled correctly
+
+2.7.1 - Updated as of 4/4/2020.
+* Fixed blacklist and options parameter
+* Fixed Contextmenu position when not using warboard
+* "Thanquol's Stand: Ratnarök" Scenario is now handeled correctly
+* Update Warboard QueuerQueuer Contectmenu
+
+------------------------------------------------------------------------------
+
+2.7 - Updated as of 8/4/2010 9:54PM PST.
+* Queue Queuer *SHOULD* be WAR 1.3.6 Patch ready!
+* Fixed a problem with the Queue Queuer map button not being positioned correctly on a fresh install.
+* Changed how warband queuing works. Now it generates a list based on the available scenarios, instead of the predetermined list I had before.
+  This means that weekend scenarios or other wacky tier-jumping scenarios can be blacklisted in warband queues.
+* Added detailed tooltips for option settings.
+* A few options that were enabled by default are now disabled, such as Autoqueue and Autojoin.
+* Removed all instances of Tier and Zone checking.
+* If you are a warband leader and you press Queuer Check, you can hover over the QQ button to see a list of Queuers and what group they are in.
+* Queuer Check will now automatically move queuers out of the same group and set them as assistants.
+  This can be disabled in the options or by slash command "/autobalance".
+* Left clicking on the Queue Queuer map button will now join queues and leave queues if already queued.
+* Context menu blacklist will now grey out scenario text.
+
+2.6 Revision 1 - Updated as of 8/23/2009 2:11AM PST.
+* Fixed an issue with the minimap button not saving it's position. Thanks, Nwf!
+
+2.6 - Updated as of 7/2/2009 2:23PM PST.
+* Added "No Scenarios" message to the context menu.
+* Queue Queuer should not queue when scenarios are locked/unavailable.
+* Automatic queuing now works in Land of the Dead.
+* Fixed an issue with Battle for Praag not manually removing from the cooldown list. I hate this scenario's fucked up name.
+* Queue Queuer will no longer consider forts to be non-queuable zones.
+
+2.5 - Updated as of 5/27/2009 8:38AM PST.
+* Queue Queuer *SHOULD* be WAR 1.3 Patch ready!
+* Fixed an issue with Maw of Madness and Reikland Hills scenarios when queuing as a warband.
+* Moving to Inevitable City or Altdorf will no longer report to the warband. These zones were changed to allow queuing.
+
+2.4 - Updated as of 2/22/2009 2:22PM PST.
+* Queue Queuer is now WAR 1.2 Patch ready! Issues with this patch and Queue Queuer have been resolved.
+* Enabling or disabling features of Queue Queuer through the GUI, with the right-click ContextMenu up, will no longer cause them to display incorrect information.
+* Fixed the dates in CHANGELOG.txt to more accurately show that I am not a time-traveler.
+* The scenario queuing system now waits 3 seconds, to make up for server lag, before reporting if the queue attempt was successful or not.
+* When tier 4 zones become locked and the scenarios tied to those zones become locked, Queue Queuer will refresh the scenario queue list automatically.
+* Changed the way the Scenario Lobby Popup is handled.
+* QUEUER CHECK warband messages now use the unacronymed Queue Queuer name.
+* GROUP QUEUER ENABLED, and DISABLED warband messages now display the current group, zone, and tier.
+
+2.3 Revision 1 - Updated as of 1/24/2009 11:34AM PST.
+* Fixed an issue with the scenario name "Battle for Praag" in certain languages. This scenario name contains a Tab character that throws off wstring comparisons.
+
+2.3 - Updated as of 1/23/2009 5:22PM PST.
+* Queue Queuer should now operate under different game localizations. The language used in the Queue Queuer menus will stay in English.
+* Autojoin will now trigger after 55 seconds instead of 30.
+* Autoqueue will now trigger with the ScenarioSummary window up.
+* Right-clicking the Queue Queuer mini-map button will now bring up a context menu.
+* When you leave a scenario pop, that scenario will be placed into the new cooldown system. It will be considered as "blacklisted" for 3 minutes, or until it is removed from the cooldown list. This system affects solo, group, and warband queuing.
+* Various other core changes.
+
+2.2 - Updated as of 12/26/2008 5:24PM PST.
+* Major bug fixes to the zone checking system implemented in 2.1. I blame myself for being stupid, WAR's recent C++ runtime errors when reloading UI while debugging, and lua for being so damned forgiving.
+* Auto-queue system will not trigger in zones that do not allow queuing.
+* Tier 4 scenario blacklist will now only check for disabled scenarios in a Tier 4 zone.
+
+2.1 - Updated as of 12/16/2008 5:33PM PST.
+* It is suggested that you delete the old ..\addons\Queue Queuer directory before installing this update.
+* Queue Queuer no longer uses the QQ namespace.
+* Minimap button is now moveable in the layout editor.
+* Queuer Check will work even if the group queuer is in a scenario.
+* Changes to how names are checked.
+* Minor bug fixes to the autoqueue system and shared processes with the warband queuing system.
+* Tier 4 scenario blacklist will correctly disable unavailable scenarios.
+* Automatic scenario 'join' feature will now wait until 30 seconds have past.
+
+2.0 - Updated as of 11/7/2008 6:31PM PST.
+* Added buttons for blacklisting all or no scenarios within the displayed tier. Should make filtering easier.
+* Fixed a bug that caused the mod to report it failed to join queues if a scenario popped before it was done queuing.
+* Queue Queuer released to the public!
+
+1.9b - Updated as of 10/31/2008 9:51AM PST.
+* QQ should now pop up the scenario lobby less (yes the game requires it to pop up still, it's tied to an event with no documentation or source of what the event actually does). The lobby will now only pop up when you first log in (or /reloadui), when you change Zone Tiers, or you change Zone Pairings.
+* [QQ: QUEUER CHECK] now shows Zone Tier and Zone information.
+* When a Group Queuer moves to a different tier zone or moves to IC and back, the mod will report to the warband of this.
+* QQ now joins and leaves queues immediately instead of queuing them up like before the Join All patch, when it was the only option due to a flood filter. This has the added effect of better synchronization when the QUEUE command is sent; QQ works like this: You send the command, QQ waits until you get the message you sent back from the server, when all other group queuers get it, then it begins the queue process based off of the filter list supplied in the command. QQ should be the easiest, fastest, and most accurate way to synchronize multiple-group, single group, and solo queuing.
+* Fixed a bug with warband chat in which the game would tag something on to the author's name so comparisons would not work correctly. QQ now does not send a response message if you are the person sending the command, as it was supposed to.
+* Improvements to the Auto-Join feature; the game would sometimes show both the JoinPrompt (main scenario pop window) and the ScenarioStarting (when you press wait a minute or when Auto-Join does its thing) windows. I implemented a work-around for this problem. The Auto Join feature will also wait 3 seconds before pressing the Wait a Minute button for you, to compensate for UI lag.
+* When a scenario pops, group queuers will alert in warband chat about the scenario that popped and the group it popped for.
+* [QQ: LEAVE] will now leave queues regardless of whether or not the JoinPrompt or ScenarioStarting window is up. This seems to be the functionality that works best; I limited it before as I did not want someone leaving the queue and getting a pop at that moment, but experience shows players want everyone to leave regardless.
+* A few fixes and workarounds to accurately handle new events to inform QQ better of what is going on and how to deal with it, IE: When you press Join on a scenario, there is a few seconds of time in which QQ would attempt to re-queue you before the game catches up and loads the scenario. This now has an event command tied to it, putting the system on a few second cooldown.
+* If you aren't using Auto Join and you let a scenario time out, the game handles this by re-queuing you for that one scenario alone. This has been dealt with properly and now QQ will tell the game to cancel that single queue so that QQ can re-queue you for your non-blacklisted scenarios.
+* When leaving queues or canceling a pop, QQ will put the Auto-Queue system on a 3 second cooldown to allow you some time to turn Auto-Queue off, or change other settings.
+* QQ will no longer Auto-Queue you while the ScenarioSummary window is showing. This helps time re-queues better and acts as a bonus to help prevent AFK players from auto-queuing or auto-joining a queue. This should make it so if you do go AFK with auto-queue and auto-join on, you will only waste 1 minute of time in the scenario before the game kicks you out and shows the ScenarioSummary, preventing you from auto-queuing or auto-joining until you come back to close the window.
+* Various other performance changes and fixes.
+
+1.8b - Updated as of 10/27/2008 9:01AM PST.
+JUST IN CASE, YOU SHOULD DELETE THIS FOLDER BEFORE LAUNCHING THE GAME: WARHAMMER_INSTALL_LOCATION\user\interface\AllCharacters\Queue Queuer
+NINJA UPDATE: Fixed a minor bug that would make the GUI black if you clicked on the background.
+* QQ's folder was changed from /QQ/ to /Queue Queuer/ to prevent conflicts from curse client replacing QQ with that faggot pubbie's QQ DPS mod.
+* QQ_GUI just got better, check out the screenshots! (CTRL+F5 if you still see the old screenshots)
+* Version information moved to the new About tab, which also includes me jacking myself off in text form!
+* The mod will no longer autojoin queues when you are flagged AFK.
+* Minor performance updates.
+
+1.7b - Updated as of 10/18/2008 5:08PM PST.
+NINJA UPDATE: Fixed a bug in which QQ would not solo queue with group queuer off while in a group. Changing modes resets related variables now.
+FISHER-PRICE UPDATE:
+* QQ will now send a message to the warband if you enable or disable group queuer or enable or disable QQ when group queuer is on.
+* There is now a Queuer Check button that sends a command for all queuers to report their group and QQ version. Alternatively, you can use the "/qq check" command. This should help relieve the frustration that occurs when people don't realize group queuer is still on or when "funny people" decide to turn on group queuer for laughs. If someone has an older version they will not report back through this command.
+* When you are a group queuer and enter a scenario, after that scenario ends and your game finishes loading you will send a message to the warband that you are now ready to queue. This should help when some people have really slow computers but this only tells you about the queuers, not the other people. I can handle this better in the future, just not sure how.
+* If group queuer is disabled and you are in a warband or group, QQ will solo queue or solo leave all requested queues, instead of just giving an error.
+
+1.6b - Updated as of 10/15/2008 4:22PM PST.
+NINJA UPDATE: Tool Tip text will now display correctly.
+* QQ now shows it's status through the map button; black means it is enabled, white means you are a group queuer, yellow means it is on cooldown, and orange means the mod is disabled.
+* Fixed a bug in which QQ would autoqueue a group if you join that group/warband while in the middle of solo/automatic queuing.
+
+1.5b - Updated as of 10/14/2008 4:30PM PST.
+* Fixed a bug in which you can send an empty queue join message in a zone with no scenarios available.
+* Fixed a few bugs with the warband queuing filter list not detecting the tier correctly when a special scenario was showing.
+* Fixed the special scenarios, all of them are tier 4 despite what wardb.com told me.
+* Fixed a bug in that enabled Cahal to use this mod.
+These changes are compatible with older QQ versions, as have been all previous changes. (THOUGH I DO NOT SEE A REASON TO USE OLD VERSIONS)
+
+1.4b - Updated as of 10/9/2008 4:27PM PST.
+Major update: Fixed what the WAR patch broke.
+
+1.3b - Updated as of 10/7/2008 7:01PM PST.
+Minor update: QQ does not need to have a timer for when you are loading now. it will detect as soon as you have stopped loading and proceed as normal.
+
+1.3b - Updated as of 10/7/2008 2:15AM PST.
+MAJOR BUG FIXES! EVERYONE SHOULD DOWNLOAD THIS VERSION IMMEDIATELY!
+These affect the auto-queuing system and the warband/group syncing system.
+YOU MUST DELETE THIS FOLDER BEFORE LAUNCHING THE GAME: WARHAMMER_INSTALL_LOCATION\user\interface\AllCharacters\Queue Queuer
+NINJA UPDATE: QQ returns faster without delay during blacklist filter steps. This prevents synchronization problems within different pairing areas.
+* Fixed an issue in which Group Queuers in different pairing areas would not sync up blacklists correctly. This is because the game sorts the scenarios differently in each pairing and I did not realize this after the patch that enabled queuing from anywhere.
+* Added all known special scenarios. They are added into the blacklist and GUI.
+* GUI now contains some help information in the window.
+
+1.2b - Updated as of 10/5/2008 4:05PM PST.
+Minor bug fixes:
+* QQ should no longer get locked out of auto-queuing after failing to join queues due to rank issues or in a city.
+* queueAttempts has been defaulted to 1 with queueAttemptsDefault, it may be edited back to 3 times but I see no reason to do this.
+* QQ won't start up with a 2 minute cooldown when disabled.
+* Fixed a few issues with the information given in status messages being incorrect or vague.
+* The mod shouldn't ever stop auto-queuing you when it is possible now. Please report if it does. Thanks!
+
+1.2b - Updated as of 10/3/2008 11:11PM PST.
+EMERGENCY UPDATE: Fixed a problem with the ninja update. After 3 queues it would think it failed attempts and put QQ on cooldown. SORRY!
+NINJA UPDATE: Minor bugfix: Prevented the mod from updating your zone each time you join a scenario. Stops excessive scenario lobby pop-ups.
+MAJOR BUG FIXES! EVERYONE SHOULD DOWNLOAD THIS VERSION IMMEDIATELY!
+These affect the auto-queuing system and the warband/group syncing system.
+* The mod should bounce out of leave and join commands faster.
+* The mod will no longer override command queues such as: you are leaving queues and you press join or if someone else issues those commands you will report to your warband or group.
+* Auto-queue should not try to queue you up again during the small amount of time between when you accept and when you join a scenario.
+* Auto-queues will no longer hang should you instantly pop to join a scenario in the middle of queuing.
+* The mod is a little bit smarter now and will not flash the scenario lobby window as much (this flashing of the window is required for queues to work, just in-case you wondered why the mod does this).
+All sorts of other things that I cannot recall at this time.
+
+1.1b - Updated as of 10/2/2008 3:43PM PST.
+NINJA UPDATE: Fixed a bug that would keep the scenario lobby window up when looking at the scoreboard after a game. Not too big of a deal, if you are reading this go ahead and update.
+* Added a GUI (GASP! Command system would be horrible for the blacklist.) - to access click the black hexagon with a hole in it (can't use custom images yet) right below the scenario button, added a blacklisting system to avoid horrible scenarios, fixed some bugs, works with v1.01's stupid ChatWindow to EA_ChatWindow update. Oh, and it now waits 2 minutes when you first log in to prevent it from trying to queue before you have loaded the game.
+This version is backwards compatible with the crappy version that doesn't even work anymore.
+
+1.0b - Updated as of 9/29/2008 8:33PM PST.
+* Fixed a few issues and made the mod less spammy. Before, if you are in an area without queues it will hammer the server every second and failing.
+* You may now turn on/off autoqueuing while solo and turn on/off autojoining of scenarios.
+
+Project created, 9/27/2008.

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Assets>
+		<Texture name="enemy_bar_fill_shadow" file="textures\bar_fill_shadow.dds" />
+		<Texture name="enemy_bar_fill_shadow2" file="textures\bar_fill_shadow2.dds" />
+		<Texture name="enemy_bar_rect" file="textures\bar_rect.dds" />
+		<Texture name="enemy_star" file="textures\star.dds" />
+		<Texture name="enemy_4dots" file="textures\bar_4dots.dds" />
+		<Texture name="enemy_3dots" file="textures\bar_3dots.dds" />
+		<Texture name="enemy_4dots_vertical" file="textures\bar_4dots_vertical.dds" />
+		<Texture name="enemy_3dots_vertical" file="textures\bar_3dots_vertical.dds" />
+		
+		<Texture name="SharedMediaAluminium" file="textures\shared\Aluminium.tga" />
+		<Texture name="SharedMediaArmory" file="textures\shared\Armory.tga" />
+		<Texture name="SharedMediaBantoBar" file="textures\shared\BantoBar.tga" />
+		<Texture name="SharedMediaBars" file="textures\shared\Bars.tga" />
+		<Texture name="SharedMediaBumps" file="textures\shared\Bumps.tga" />
+		<Texture name="SharedMediaButton" file="textures\shared\Button.tga" />
+		<Texture name="SharedMediaCharcoal" file="textures\shared\Charcoal.tga" />
+		<Texture name="SharedMediaCilo" file="textures\shared\Cilo.tga" />
+		<Texture name="SharedMediaCloud" file="textures\shared\Cloud.tga" />
+		<Texture name="SharedMediacombo" file="textures\shared\combo.tga" />
+		<Texture name="SharedMediaComet" file="textures\shared\Comet.tga" />
+		<Texture name="SharedMediaDabs" file="textures\shared\Dabs.tga" />
+		<Texture name="SharedMediaDarkBottom" file="textures\shared\DarkBottom.tga" />
+		<Texture name="SharedMediaDiagonal" file="textures\shared\Diagonal.tga" />
+		<Texture name="SharedMediaEmpty" file="textures\shared\Empty.tga" />
+		<Texture name="SharedMediaFalumn" file="textures\shared\Falumn.tga" />
+		<Texture name="SharedMediaFifths" file="textures\shared\Fifths.tga" />
+		<Texture name="SharedMediaFlat" file="textures\shared\Flat.tga" />
+		<Texture name="SharedMediaFourths" file="textures\shared\Fourths.tga" />
+		<Texture name="SharedMediaFrost" file="textures\shared\Frost.tga" />
+		<Texture name="SharedMediaGlamour" file="textures\shared\Glamour.tga" />
+		<Texture name="SharedMediaGlamour2" file="textures\shared\Glamour2.tga" />
+		<Texture name="SharedMediaGlamour3" file="textures\shared\Glamour3.tga" />
+		<Texture name="SharedMediaGlamour4" file="textures\shared\Glamour4.tga" />
+		<Texture name="SharedMediaGlamour5" file="textures\shared\Glamour5.tga" />
+		<Texture name="SharedMediaGlamour6" file="textures\shared\Glamour6.tga" />
+		<Texture name="SharedMediaGlamour7" file="textures\shared\Glamour7.tga" />
+		<Texture name="SharedMediaGlass" file="textures\shared\Glass.tga" />
+		<Texture name="SharedMediaGlaze" file="textures\shared\Glaze.tga" />
+		<Texture name="SharedMediaGlaze2" file="textures\shared\Glaze2.tga" />
+		<Texture name="SharedMediaGloss" file="textures\shared\Gloss.tga" />
+		<Texture name="SharedMediaGraphite" file="textures\shared\Graphite.tga" />
+		<Texture name="SharedMediaGrid" file="textures\shared\Grid.tga" />
+		<Texture name="SharedMediaHatched" file="textures\shared\Hatched.tga" />
+		<Texture name="SharedMediaHealbot" file="textures\shared\Healbot.tga" />
+		<Texture name="SharedMediaLiteStep" file="textures\shared\LiteStep.tga" />
+		<Texture name="SharedMediaLiteStepLite" file="textures\shared\LiteStepLite.tga" />
+		<Texture name="SharedMediaLyfe" file="textures\shared\Lyfe.tga" />
+		<Texture name="SharedMediaMelli" file="textures\shared\Melli.tga" />
+		<Texture name="SharedMediaMelliDark" file="textures\shared\MelliDark.tga" />
+		<Texture name="SharedMediaMelliDarkRough" file="textures\shared\MelliDarkRough.tga" />
+		<Texture name="SharedMediaMinimalist" file="textures\shared\Minimalist.tga" />
+		<Texture name="SharedMediaOtravi" file="textures\shared\Otravi.tga" />
+		<Texture name="SharedMediaOutline" file="textures\shared\Outline.tga" />
+		<Texture name="SharedMediaPerl" file="textures\shared\Perl.tga" />
+		<Texture name="SharedMediaPerl2" file="textures\shared\Perl2.tga" />
+		<Texture name="SharedMediaPill" file="textures\shared\Pill.tga" />
+		<Texture name="SharedMediaRain" file="textures\shared\Rain.tga" />
+		<Texture name="SharedMediaRocks" file="textures\shared\Rocks.tga" />
+		<Texture name="SharedMediaRound" file="textures\shared\Round.tga" />
+		<Texture name="SharedMediaRuben" file="textures\shared\Ruben.tga" />
+		<Texture name="SharedMediaRunes" file="textures\shared\Runes.tga" />
+		<Texture name="SharedMediaSkewed" file="textures\shared\Skewed.tga" />
+		<Texture name="SharedMediaSmooth" file="textures\shared\Smooth.tga" />
+		<Texture name="SharedMediaSmoothv2" file="textures\shared\Smoothv2.tga" />
+		<Texture name="SharedMediaSmudge" file="textures\shared\Smudge.tga" />
+		<Texture name="SharedMediaSteel" file="textures\shared\Steel.tga" />
+		<Texture name="SharedMediaStriped" file="textures\shared\Striped.tga" />
+		<Texture name="SharedMediaTube" file="textures\shared\Tube.tga" />
+		<Texture name="SharedMediaWater" file="textures\shared\Water.tga" />
+		<Texture name="SharedMediaWglass" file="textures\shared\Wglass.tga" />
+		<Texture name="SharedMediaWisps" file="textures\shared\Wisps.tga" />
+		<Texture name="SharedMediaXeon" file="textures\shared\Xeon.tga" />
+	</Assets>
+
+	<Windows>
+		<Window name="EnemyUnitFrame" layer="background">
+			<Size>
+				<AbsPoint x="167" y="36" />
+			</Size>
+			
+			<Windows>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="Enemy.UnitFramesUI_UnitFrame_OnLButtonDown" />
+				<EventHandler event="OnMButtonDown" function="Enemy.UnitFramesUI_UnitFrame_OnMButtonDown" />
+				<EventHandler event="OnRButtonDown" function="Enemy.UnitFramesUI_UnitFrame_OnRButtonDown" />
+				<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrame_OnLButtonUp" />
+				<EventHandler event="OnMButtonUp" function="Enemy.UnitFramesUI_UnitFrame_OnMButtonUp" />
+				<EventHandler event="OnRButtonUp" function="Enemy.UnitFramesUI_UnitFrame_OnRButtonUp" />
+				<EventHandler event="OnMouseOver" function="Enemy.UnitFramesUI_UnitFrame_OnMouseOver" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

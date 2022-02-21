@@ -1,0 +1,1421 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="ObsidianSetupEffectTrackerWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="Obsidian.Setup.EffectTracker.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="580" y="600" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+						
+				<Label name="$parentElementLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentElementComboBox" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnElementChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentElementBars">
+					<Size>
+						<AbsPoint x="500" y="200" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<ComboBox name="$parentElementComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnBarElementChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Window name="$parentElementGeneral">
+							<Size>
+								<AbsPoint x="500" y="380" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+						
+								<Label name="$parentLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+									<Size>
+										<AbsPoint x="480" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentSizeLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="10" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentSizeWidthLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentSizeWidthEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4" input="numbers">
+									<Size>
+										<AbsPoint x="80" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentSizeWidthLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnGeneralSizeWidthChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentSizeHeightLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeWidthLabel">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentSizeHeightEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4" input="numbers">
+									<Size>
+										<AbsPoint x="80" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentSizeHeightLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnGeneralSizeHeightChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentSpacingLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="400" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeHeightLabel">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentSpacingEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="3" input="numbers">
+									<Size>
+										<AbsPoint x="80" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSpacingLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnGeneralSpacingChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentMaximumDurationLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="400" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSpacingEditBox">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentMaximumDurationEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="5" input="numbers">
+									<Size>
+										<AbsPoint x="100" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMaximumDurationLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnGeneralMaximumDurationChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentMaximumDurationSecondsLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="100" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentMaximumDurationEditBox">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentFixedDurationLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="400" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMaximumDurationEditBox">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentFixedDurationEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="5" input="numbers">
+									<Size>
+										<AbsPoint x="100" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFixedDurationLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnGeneralFixedDurationChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentFixedDurationSecondsLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="100" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentFixedDurationEditBox">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+		
+							</Windows>
+						</Window>
+						
+						<Window name="$parentElementBackground">
+							<Size>
+								<AbsPoint x="500" y="210" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+						
+								<Label name="$parentLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+									<Size>
+										<AbsPoint x="480" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentColorLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="10" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Window name="$parentColorExample" inherits="ObsidianColorExample">
+									<Size>
+										<AbsPoint x="40" y="40"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOver" />
+										<EventHandler event="OnMouseOverEnd" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOut" />
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnBackgroundColorLUp" />
+									</EventHandlers>						
+								</Window>
+						
+								<Label name="$parentAlphaLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorExample">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentAlphaSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="180" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideBackgroundAlpha" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentAlphaValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentAlphaSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+		
+							</Windows>
+						</Window>
+						
+						<Window name="$parentElementFill">
+							<Size>
+								<AbsPoint x="500" y="290" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+						
+								<Label name="$parentLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+									<Size>
+										<AbsPoint x="480" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentAlphaLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="10" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentAlphaSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="180" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideFillAlpha" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentAlphaValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentAlphaSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentTextureLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaSlider">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Window name="$parentTextureButton" inherits="ObsidianSetupSelectTextureRowTemplate">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTextureLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnFillTextureLUp" />
+										<EventHandler event="OnMouseOver" function="Obsidian.Setup.EffectTracker.OnTextureButtonMouseOver" />
+										<EventHandler event="OnMouseOverEnd" function="Obsidian.Setup.EffectTracker.OnTextureButtonMouseOut" />
+									</EventHandlers>
+								</Window>
+								
+								<Label name="$parentUpdatePriorityLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="180" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTextureButton">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<ComboBox name="$parentUpdatePriorityComboBox" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUpdatePriorityLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnFillUpdatePriorityChanged" />
+									</EventHandlers>
+								</ComboBox>
+								
+							</Windows>
+						</Window>
+						
+						<Window name="$parentElementName">
+							<Size>
+								<AbsPoint x="500" y="470" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+						
+								<Label name="$parentLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+									<Size>
+										<AbsPoint x="480" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentColorLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="10" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Window name="$parentColorExample" inherits="ObsidianColorExample">
+									<Size>
+										<AbsPoint x="32" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOver" />
+										<EventHandler event="OnMouseOverEnd" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOut" />
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnNameColorLUp" />
+									</EventHandlers>						
+								</Window>
+								
+								<Label name="$parentAlphaLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentColorLabel">
+											<AbsPoint x="40" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentAlphaSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="180" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideNameAlpha" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentAlphaValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentAlphaSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="200" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorExample">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4">
+									<Size>
+										<AbsPoint x="60" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnNameOffsetXChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4">
+									<Size>
+										<AbsPoint x="60" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnNameOffsetYChanged" />
+									</EventHandlers>
+								</EditBox>
+				
+								<Label name="$parentAlignmentLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetLabel">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<ComboBox name="$parentAlignmentComboBox" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlignmentLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnNameAlignmentChanged" />
+									</EventHandlers>
+								</ComboBox>
+								
+								<Label name="$parentFontLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentFontExampleLabel" font="font_clear_small" textalign="left" handleinput="true">
+									<Size>
+										<AbsPoint x="480" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFontLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="Obsidian.Setup.EffectTracker.OnFontExampleMouseOver" />
+										<EventHandler event="OnMouseOverEnd" function="Obsidian.Setup.EffectTracker.OnFontExampleMouseOut" />
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnNameFontLUp" />
+									</EventHandlers>
+								</Label>
+								
+								<Label name="$parentScaleLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFontExampleLabel">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentScaleSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="300" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentScaleLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideNameScale" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentScaleValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentScaleSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentWidthLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentScaleSlider">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentWidthSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="180" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentWidthLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideNameWidth" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentWidthValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentWidthSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+		
+							</Windows>
+						</Window>
+						
+						<Window name="$parentElementTimer">
+							<Size>
+								<AbsPoint x="500" y="390" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+						
+								<Label name="$parentLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+									<Size>
+										<AbsPoint x="480" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentColorLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="10" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Window name="$parentColorExample" inherits="ObsidianColorExample">
+									<Size>
+										<AbsPoint x="32" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOver" />
+										<EventHandler event="OnMouseOverEnd" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOut" />
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnTimerColorLUp" />
+									</EventHandlers>						
+								</Window>
+								
+								<Label name="$parentAlphaLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentColorLabel">
+											<AbsPoint x="40" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentAlphaSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="180" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideTimerAlpha" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentAlphaValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentAlphaSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="200" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorExample">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4">
+									<Size>
+										<AbsPoint x="60" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnTimerOffsetXChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4">
+									<Size>
+										<AbsPoint x="60" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnTimerOffsetYChanged" />
+									</EventHandlers>
+								</EditBox>
+				
+								<Label name="$parentAlignmentLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetLabel">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<ComboBox name="$parentAlignmentComboBox" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlignmentLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnTimerAlignmentChanged" />
+									</EventHandlers>
+								</ComboBox>
+								
+								<Label name="$parentFontLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentFontExampleLabel" font="font_clear_small" textalign="left" handleinput="true">
+									<Size>
+										<AbsPoint x="480" y="40" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFontLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="Obsidian.Setup.EffectTracker.OnFontExampleMouseOver" />
+										<EventHandler event="OnMouseOverEnd" function="Obsidian.Setup.EffectTracker.OnFontExampleMouseOut" />
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnTimerFontLUp" />
+									</EventHandlers>
+								</Label>
+								
+								<Label name="$parentScaleLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFontExampleLabel">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentScaleSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="300" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentScaleLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideTimerScale" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentScaleValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentScaleSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+		
+							</Windows>
+						</Window>
+						
+				
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementTracker">
+					<Size>
+						<AbsPoint x="500" y="200" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<ComboBox name="$parentElementComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnTrackerElementChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Window name="$parentElementGeneral">
+							<Size>
+								<AbsPoint x="500" y="410" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+						
+								<Label name="$parentLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+									<Size>
+										<AbsPoint x="480" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Window name="$parentEnable" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="25" y="25" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="10" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnTrackerEnableLUp" />
+									</EventHandlers>
+								</Window>
+								
+								<Label name="$parentEnableCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+									<Size>
+										<AbsPoint x="300" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEnable">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+		
+								<Label name="$parentOffsetLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnable">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="8">
+									<Size>
+										<AbsPoint x="90" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnTrackerOffsetXChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="8">
+									<Size>
+										<AbsPoint x="90" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnTrackerOffsetYChanged" />
+									</EventHandlers>
+								</EditBox>
+		
+								<Label name="$parentFillColorLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="300" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<ComboBox name="$parentFillColorComboBox" inherits="EA_ComboBox_DefaultResizable">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFillColorLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnTrackerFillColorChanged" />
+									</EventHandlers>
+								</ComboBox>
+										
+								<Window name="$parentColorExample" inherits="ObsidianColorExample">
+									<Size>
+										<AbsPoint x="40" y="40"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentFillColorComboBox">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnMouseOver" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOver" />
+										<EventHandler event="OnMouseOverEnd" function="Obsidian.Setup.EffectTracker.OnColorExampleMouseOut" />
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnTrackerFillColorLUp" />
+									</EventHandlers>						
+								</Window>
+		
+								<Label name="$parentPositionLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="300" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFillColorComboBox">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<ComboBox name="$parentPositionComboBox" inherits="EA_ComboBox_DefaultResizable">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPositionLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnTrackerPositionChanged" />
+									</EventHandlers>
+								</ComboBox>
+		
+								<Label name="$parentMaximumEffectsLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="300" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPositionComboBox">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentMaximumEffectsSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="180" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMaximumEffectsLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideTrackerMaximumEffects" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentMaximumEffectsValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentMaximumEffectsSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+		
+							</Windows>
+						</Window>
+				
+						<Window name="$parentElementIcon">
+							<Size>
+								<AbsPoint x="500" y="420" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+							<Windows>
+						
+								<Label name="$parentLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+									<Size>
+										<AbsPoint x="480" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="0" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Window name="$parentEnable" inherits="EA_LabelCheckButton">
+									<Size>
+										<AbsPoint x="25" y="25" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+											<AbsPoint x="10" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Obsidian.Setup.EffectTracker.OnTrackerIconEnableLUp" />
+									</EventHandlers>
+								</Window>
+								
+								<Label name="$parentEnableCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+									<Size>
+										<AbsPoint x="300" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentEnable">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Label name="$parentAlphaLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnable">
+											<AbsPoint x="0" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentAlphaSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="180" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideTrackerIconAlpha" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentAlphaValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentAlphaSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaSlider">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4">
+									<Size>
+										<AbsPoint x="60" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnTrackerIconOffsetXChanged" />
+									</EventHandlers>
+								</EditBox>
+						
+								<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="40" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+											<AbsPoint x="0" y="10" />
+										</Anchor>
+									</Anchors>
+								</Label>
+										
+								<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="4">
+									<Size>
+										<AbsPoint x="60" y="32"/>
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="10" y="0"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnTextChanged" function="Obsidian.Setup.EffectTracker.OnTrackerIconOffsetYChanged" />
+									</EventHandlers>
+								</EditBox>
+								
+								<Label name="$parentPositionLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetYLabel">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+						
+								<ComboBox name="$parentPositionComboBox" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPositionLabel">
+											<AbsPoint x="20" y="10"/>
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSelChanged" function="Obsidian.Setup.EffectTracker.OnTrackerIconPositionChanged" />
+									</EventHandlers>
+								</ComboBox>
+						
+								<Label name="$parentScaleLabel" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="80" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPositionComboBox">
+											<AbsPoint x="-20" y="20" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<SliderBar name="$parentScaleSlider" inherits="EA_Default_SliderBar">
+									<Size>
+										<AbsPoint x="300" y="35" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentScaleLabel">
+											<AbsPoint x="20" y="10" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnSlide" function="Obsidian.Setup.EffectTracker.OnSlideTrackerIconScale" />
+									</EventHandlers>
+								</SliderBar>
+								
+								<Label name="$parentScaleValue" font="font_clear_small" textalign="left">
+									<Size>
+										<AbsPoint x="60" y="20" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentScaleSlider">
+											<AbsPoint x="10" y="0" />
+										</Anchor>
+									</Anchors>
+								</Label>
+		
+							</Windows>
+						</Window>
+				
+						
+						
+					</Windows>
+				</Window>
+				
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

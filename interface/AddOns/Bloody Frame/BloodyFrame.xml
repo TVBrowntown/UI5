@@ -1,0 +1,24 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Assets>
+		<Texture name="BloodyFrame" file="textures/BloodyFrame.tga"/>
+
+	</Assets>
+
+	<Windows>
+	
+		<!-- OVERVIEW WINDOW: BEGIN -->
+		<Window name="BloodyFrame" layer="background" movable="false" handleinput="true" savesettings="true" >
+		
+			<Size> <AbsPoint x="1024" y="588" /> </Size>
+            <Anchors>
+                <Anchor point="center" relativePoint="center">
+                    <AbsPoint x="1920" y="1080" />
+                </Anchor>
+            </Anchors>
+
+		</Window>
+		<!-- OVERVIEW WINDOW: END -->
+		
+	</Windows>
+</Interface>

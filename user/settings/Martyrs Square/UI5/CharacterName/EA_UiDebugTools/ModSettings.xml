@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="2.0" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="" savedVariablesVersion="" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="DebugWindow" sizeX="1037.572754" sizeY="934.505371" movable="false" alpha="0.970000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="Root" xOffset="830.485596" yOffset="60.035103" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="DevPadWindow" sizeX="750.000000" sizeY="700.000000" movable="false" alpha="0.970000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="topleft" relativePoint="topleft" relativeTo="" xOffset="100.000000" yOffset="100.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="EnemyIcon" sizeX="32.000000" sizeY="32.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="8.370364" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottomright" relativePoint="topleft" relativeTo="EA_Window_OverheadMapMapDisplay" xOffset="-40.000000" yOffset="-40.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="ObjectInspector" sizeX="600.000000" sizeY="700.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="false">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="TargetUI5_Hostile" sizeX="600.000000" sizeY="140.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-560.612732" yOffset="-279.019470" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UF_AB_BtnBG" sizeX="64.000000" sizeY="64.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.071685" showing="true">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5_Mechanics" sizeX="240.000000" sizeY="44.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="0.000000" yOffset="0.000000" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

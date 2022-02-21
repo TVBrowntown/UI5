@@ -1,0 +1,5 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    <Texture name="Reticle" file="Reticle.dds" />
+  </Assets>
+</Interface>

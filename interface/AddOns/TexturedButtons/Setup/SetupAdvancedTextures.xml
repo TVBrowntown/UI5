@@ -1,0 +1,341 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="TexturedButtonsSetupAdvancedTexturesWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="TexturedButtons.Setup.AdvancedTextures.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="580" y="540" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.AdvancedTextures.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentSelectBarLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentSlotTypeComboBox" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSelectBarLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="TexturedButtons.Setup.AdvancedTextures.OnSlotTypeChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentUsePreset" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSlotTypeComboBox">
+							<AbsPoint x="0" y="20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.AdvancedTextures.OnUsePresetLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentUsePresetCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="60" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentUsePreset">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentUseCustom" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentUsePresetCheckboxLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.AdvancedTextures.OnUseCustomLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentUseCustomCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="70" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentUseCustom">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentDisabled" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentUseCustomCheckboxLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.AdvancedTextures.OnDisabledLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentDisabledCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentDisabled">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentPreset">
+					<Size>
+						<AbsPoint x="400" y="400" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUsePreset">
+							<AbsPoint x="0" y="20"/>
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<Label name="$parentNameLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentNameLabel">
+									<AbsPoint x="10" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="TexturedButtons.Setup.AdvancedTextures.OnPresetChanged" />
+							</EventHandlers>
+						</ComboBox>
+				
+						<Label name="$parentAuthorLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentComboBox">
+									<AbsPoint x="-10" y="30" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentAuthor" font="font_clear_small" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAuthorLabel">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentDescriptionLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAuthor">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentDescription" font="font_clear_small" textalign="left" maxchars="600" wordwrap="true">
+							<Size>
+								<AbsPoint x="380" y="200" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDescriptionLabel">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+					</Windows>
+    			</Window>
+				
+				<Window name="$parentCustom">
+					<Size>
+						<AbsPoint x="400" y="400" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentUsePreset">
+							<AbsPoint x="0" y="20"/>
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<Label name="$parentButtonLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentButtonComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentButtonLabel">
+									<AbsPoint x="10" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="TexturedButtons.Setup.AdvancedTextures.OnCustomChanged" />
+							</EventHandlers>
+						</ComboBox>
+				
+						<Label name="$parentTextureLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentButtonComboBox">
+									<AbsPoint x="-10" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentTextureComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTextureLabel">
+									<AbsPoint x="10" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="TexturedButtons.Setup.AdvancedTextures.OnCustomTextureChanged" />
+							</EventHandlers>
+						</ComboBox>
+				
+						<ComboBox name="$parentTextureSliceComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentTextureComboBox">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="TexturedButtons.Setup.AdvancedTextures.OnCustomTextureSliceChanged" />
+							</EventHandlers>
+						</ComboBox>
+				
+						<Label name="$parentTextureNameLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="60" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTextureComboBox">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentTextureName" font="font_clear_small" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="480" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTextureNameLabel">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentTextureExampleLabel" font="font_clear_small_bold" textalign="left" maxchars="200">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTextureName">
+									<AbsPoint x="0" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<DynamicImage name="$parentIcon" texture="EA_TintableImage" handleinput="false">
+							<Size>
+								<AbsPoint x="64" y="64"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTextureExampleLabel">
+									<AbsPoint x="10" y="10"/>
+								</Anchor>
+							</Anchors>
+						</DynamicImage>
+					
+					</Windows>
+				</Window>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

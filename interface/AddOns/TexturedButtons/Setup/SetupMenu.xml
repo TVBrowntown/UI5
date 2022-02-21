@@ -1,0 +1,106 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="TexturedButtonsSetupMenuRowTemplate">
+			<Size>
+				<AbsPoint x="240" y="30" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Size>
+						<AbsPoint x="240" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+							<Anchor point="bottomright" relativePoint="bottomright" relativeTo="" />
+						</Anchor>
+					</Anchors>
+				</FullResizeImage>
+				<Label name="$parentText" font="font_clear_small_bold" handleinput="false" textalign="leftcenter" wordwrap="true">
+					<Size>
+						<AbsPoint x="235" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="5" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="TexturedButtons.Setup.OnRowLDown" />
+				<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.OnRowLUp" />
+				<EventHandler event="OnRButtonDown" function="TexturedButtons.Setup.OnRowRDown" />
+				<EventHandler event="OnRButtonUp" function="TexturedButtons.Setup.OnRowRUp" />
+				<EventHandler event="OnMouseOver" function="TexturedButtons.Setup.OnRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="TexturedButtons.Setup.OnRowMouseOut" />
+			</EventHandlers>
+		</Window>
+		
+		<Window name="TexturedButtonsSetupMenuWindow" inherits="EA_Window_Default" movable="true" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="TexturedButtons.Setup.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="285" y="350" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentLabel" font="font_default_text" textalign="left" maxchars="35">
+					<TintColor r="255" g="255" b="255" />
+					<Size>
+						<AbsPoint x="200" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ListBox name="$parentList" rowdef="TexturedButtonsSetupMenuRowTemplate" visiblerows="9" rowspacing="0">
+					<Size>
+						<AbsPoint x="240" y="290" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="TexturedButtons.Setup.Entries" populationfunction="TexturedButtons.Setup.OnPopulate">
+						<ListColumns>
+							<ListColumn windowname="Text" variable="Text" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

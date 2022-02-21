@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyConfigDialog" movable="true" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="700" y="600" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_ConfigDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content: section -->
+				<Label name="$parentSectionLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="75" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="30" y="30" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<ComboBox name="$parentSection" inherits="EA_ComboBox_DefaultResizableLarge" maxvisibleitems="15">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSectionLabel">
+							<AbsPoint x="0" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+                        <EventHandler event="OnSelChanged" function="Enemy.UI_ConfigDialog_OnSectionSelChanged" />
+                    </EventHandlers>
+				</ComboBox>
+				
+				<!-- Content: sections -->
+				<Window name="$parentSections">
+					<Size>
+						<AbsPoint x="660" y="400" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSectionLabel">
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- Bottom panel -->
+				<Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background">
+					<Size>
+						<AbsPoint x="0" y="65" />
+					</Size>
+				</Window>
+				
+				<Button name="$parentResetButton" inherits="EA_Button_DefaultText" font="font_chat_text">
+					<Size>
+						<AbsPoint x="100" y="36" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="bottomleft">
+							<AbsPoint x="10" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_ConfigDialog_Reset" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentResetAllButton" inherits="EA_Button_DefaultText" font="font_chat_text">
+					<Size>
+						<AbsPoint x="100" y="36" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentResetButton">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_ConfigDialog_ResetAll" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright">
+							<AbsPoint x="-10" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_ConfigDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="left" relativePoint="right" relativeTo="$parentCancelButton">
+							<AbsPoint x="-10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UI_ConfigDialog_Ok" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.UI_ConfigDialog_Hide" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

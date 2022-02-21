@@ -1,0 +1,328 @@
+2.8.0
+- Fixed issue with errors on addon startup when there are some modules of the addon switched off
+
+2.7.9
+- [combat log] Added "Ignore NPC" and "Ignore when polymorphed" options in the combat log configuration
+- [guard] Added "Movable" and "Click through" options in the guard configuration
+- [combat log] Added text truncation for long session names in combat log statistics window
+- [combat log] Added "Rename" button in combat log statistics window
+- [combat log] Fixed issue when clicking on DPS numbers in combat log statistics window always open snapshot for current session instead of the selected one
+- [combat log] Fixed issue with max dps snapshot for single target sometime include events for more than one target
+- [combat log] Improved efficiency of old dps statistics data cleaning
+- [core] Fixed limit of maximum 6 groups in warband/scenario
+
+2.7.8
+- [combat log] Fixed percent value sorting issue in combat log statistics window
+- [combat log] Changed the way ability average statistic is calculated
+
+2.7.7
+- [combat log] Added 'Target defense' module which can display current target defense statistics (based on your attack on him)
+- [combat log] Fixed sort issue in combat log statistics
+
+2.7.6
+- [combat log] Fixed issue with combat log DPS/HPS recordings were not properly decaying
+
+2.7.5
+- [combat log] Fixed issue with incomming damage was not properly counted for DPS statistics in some circumstances
+
+2.7.4
+- [combat log] Combat log parsing is now enabled by default
+- [combat log] Added "toggle combat log statistics window" macro and added a drag&drop button in config window for it
+- [combat log] Default type for combat log incomming statistics is set to "dps"
+- [combat log] Added min/max normal/crit statistics (with targets)
+- [global] Fixed issue that sometimes made all addon settings lost after relog/reload
+- [comabt log] Fixed bug with parsing self damaging abilites (NOTE TO LOCALIZATORS: you must add new "combatLogParse_regexIncommingDamageFromSelf" entry)
+- [combat log] Added dps/hps statistics counting (displayed in the combat log statistics window)
+
+2.7.3
+- [killspam] Updated killspam parsing expressions for German language (thanks Tmpst)
+
+2.7.2
+- [combat log] Hopefully a fix for Enemy addon main menu not showing up problem
+
+2.7.1
+- [combat log] Small fix to prevent Enemy addon generate error on loading
+- [group icons] Fixed issue that prevented group icon to be showed again after mark has been cleared from player and with "Show icons on marked players" group icons option not checked.
+- [marks] Shift-right click on permanent marks will correctly remove mark and remove marked player name from permanent names list
+- [marks] Added "unique" option in mark template configuration dialog that allows you to create unique marks.
+
+
+2.7.0
+- [combat log] Added new functionality that will parse combat log events. THIS FEATURE DISABLED BY DEFAULT (see configuration to enable it)
+- [combat log stats] Added "combat log stats window" that will display statistics of abilities recorded by combat log module (if it's enabled). To open this window right-click Enemy addon icon and select "Show combat log stats window"
+- [combat log IDS] Added "combat log incomming damage statistics (ids) window" that will display statistics of incomming damage by given timeframe (like DetauntHelper addon). See combat log configuration.
+- [timer] Hours won't be displayed if zero
+- [timer] Resetting on right click instead of left click
+- [timer] Open configuration no on shift+right click instead of right click
+- [marks] Default 'B' mark is now permanent
+- [marks] Added 'Ctrl+Left click to open permanent marked players list' to permanent mark templates' tooltip
+- [marks] Fixed issue with permanent marks sometimes bugged and were unable to be removed by toggling
+- [global] Changed the way object windows/marks being notified about target world object id changes
+- [group icons] Added "Show icons on marked players" configuration option (unchecked by default)
+- [kill spam] Added "sound on your kills" feature - see configuration dialog
+
+2.6.0
+- [mark templates] Fixed issue after fresh intall/full config reset with mark templates default colors
+- [unit frames] Added tooltip display mode configuration option
+- [unit frames] Fixed bug with "detach my group" feature was not working properly sometimes
+- [unit frames] Added "hide my group" configuration option
+- [marks] To remove mark shift-rightclick the mark. Will only work if "target on click" is also enabled.
+- [marks] Added "permanent" option in template configuration dialog - now you can create permanent marks which saves marked players across game sessions. Also read mark templates tooltips for new key combinations.
+- [guard] Added normal and warning scaling configuration option
+- [guard] Guard distance window is now movable
+- [tallisman alerter] Added new feature "Tallisman alerter" which will display a glowing diamon image when you have items with empty tallisman slots. See talisman alerter configuration.
+- [timer] Added new feature "Timer" that will display small combat timer window under the minimap. See timer configuration.
+- [effects filters] Changed the "type" property so it's become key in the Types array instead of index
+- [effects filters] Added types for outgoing heal debuff 25% and 50%
+- [effects filters] Added effect duration option "has current duration" and changed name to old "has duration" to "has initial duration"
+- [unit frames] Changed defaults for effects indictators
+- [assist] Fixed bug with improper timer delay value for "KILL" mark
+- [group icons] Added self pet group icon and configuration options for it
+
+2.5.1
+- [global] Patch 4.0.1 compatibility fix
+- [kill spam] Added Korean language support
+
+2.5.0
+- [assist] Removed "autofocus" feature (since after 1.3.6 it's impossible to implement it) and added new way to correctly assist on marked target (manualy).
+- [guard] Reworked "guard mark" plugin - the information about guards is now transfered via communcation channel and now you can see who you guard and distance to them in sepparate window; also guarding target will be able to place guard mark on his guarder.
+- [assist] The "KILL" mark will be shown if you target the last called enemy within 5 seconds and now it will be shown on mobs too (not only players).
+- [click casting] Fixed some bugs related to command-type click castings
+- [click casting] Since Mythic disabled /target even for friendly players you can no longer click cast what it meant to be (with one click). I've changed the functionality the only way it could still work- you'll have to perform mouse action two times (for example two alt+left click) in order to launch the ability for non targeted player.
+- [mark templates] Refactored internal configuration dialog code
+- [kill spam] Fixed some issues with not all kill spam messages was correctly parsed.
+
+2.4.6
+- [global] Fixed communication issues after 1.3.6 patch
+
+2.4.5
+- [global] Fixed issue with effects not properly removed from player outside of your own group in scnearios (resulting in lingering effects indicators)
+- [global] Moved initialization of some core components to the very start of Enemy addon init
+- [unit frames] Implemented "Detach my group" configuration options which allows you to move your group freely and independant of other groups unit frames
+
+2.4.4
+- [scenario info] Reworked window layout and statistics output
+- [scenario info] Added enable/disable configuration option
+- [scenario info] Added "replace standard scenario ending window" feature
+- [scenario info] Fixed a bug with incorrect rounding with big numbers
+- [scenario info] Fixed a bug with incorrect sorting in some rare cases
+- [global] City defence join prompt window is now smaller and movable
+- [global] Added "Switch to extended scenario info" button to the top of standard scenario info window
+- [scenario info] Added "Switch to standard scenario info" button
+- [global] Redraw "dots" textures
+
+2.4.3
+- [unit frames] Added support for game global UI scaling
+- [global] Fixed issue with effects not properly removed from player outside of your own group (resulting in lingering effects indicators)
+- [kill spam] Fixed issue with "killed by" text was not correctly hid after timeout
+
+2.4.2
+- [unit frames] Added some tooltips and "Show virtual box" in configuration window
+- [unit frames] Fixed some issues with default layout configuration
+- [core] Added "Reset" button to the configuration dialog that will reset only current section settings (not available for all sections).
+- [unit frame visual part] In configuration dialog added controls to show unit frame bounding box, self bounding box and example data refresh
+- [unit frame effect indicator] In configuration dialog added controls to show unit frame bounding box, self bounding box and example data refresh
+- [unit frame visual part] Fixed issues with career and level colored hp bar visual part types
+- [unit frames] Added configure parameter "scale"
+- [unit frames] Fixed issue with test mode unit frames not updated after changing visual parts/effects indicators/click castings
+- [marks] Added some default marks (use "Reset all" in configuration dialog if you want to reset all settings to defualts)
+- [unit frames] Added "Distance bar" visual part type (and added visual part in default configuration for it - reset the unit frames settings to see it)
+- [unit frames] Added 3 dots, 4dots_vertical and 3dots_vertical textures (can be used in visual parts)
+- [global] Enemy addon will tuned up a game "death window" to be smaller and movable
+- [unit frames] Added "HP %" visual part (disabled by default)
+
+2.4.1
+- [group icon] Fixed issue with impossible to set negative offsets
+- [unit frames] Fixed several bugs with configuration dialog
+- [core] Fixed bug with order players position in scenarios calculated incorectly
+
+2.4.0
+- [unit frames] Fully reworked unit frames display code - not unit frames consists of customizable visual parts you can freely configure
+- [unit frames] Added "enable/disable" and "reset" buttons to list editors in configuration window
+- [core] Fixed issue with lingering effects not correctly removed after duration timeout (which result in effects indicators sticking for too long)
+- [group icons] Reworked configuration dialog, added "layer" setting
+- [assist] Fixed issue click through was not properly turned off after target notification has been hid
+
+
+2.3.3
+- [scenario info] Fixed issue with numbers rounding
+
+2.3.2
+- [scenario info] Fixed issue with sorting
+
+2.3.1
+- [scenario info] Fixed issue with sorting
+- [scenario info] Big values rounding
+
+2.3.0
+- Added new feature: scenario info window (accessible via Enemy addon icon context menu or via macro named "Enemy: toggle scenario info")
+- [assist] Created two buttons for "Mark" and "Assist" macroses in the configuration dialog that can be dragged to hotbar
+
+2.2.2
+- [global] Fixed issue targeting dead bodies of friendly players result in incorrect unit frames/group icons HP displaying
+- [effect filters] Fixed issuse White Lion's "Thin the Herd" classified as incomming heal debuff instead of outgoing
+- [effect filters] Fixed issue Iron Breaker's "Punishing Knock" was not classified as outgoing heal debuff
+
+2.2.1
+- [unit frames] Fixed issue with "hide when solo" reseting when using ability
+- [global] Fixed issue with effects not properly removed from player outside of your own group (resulting in lingering effects indicators)
+- [unit frames] Fixed issue preventing editing effects indicators
+
+2.2.0
+- [unit frames] Implemented "click casting" feature
+- [group icons] Added warband icons feature
+- [group icons] Added many various configuration options
+- [kill spamm] Added mouseover tooltips statistics for "Total" row
+- [kill spamm] Added window for all player statistics (click on "Total" row)
+- [unit frames] Added "unit frames options" and "group icons options" into player context menu
+- [unit frames] Added "hide when solo" configuration option
+
+2.1.2
+- [unit frames] Added "truncate name" configuration option
+- [unit frames] Added "my group first" configuration option
+- [unit frames] Added group index into the player tooltip
+- [effect filters] Fixed issue with RP "Rune of Binding" was not classified as stagger
+- [global] Fixed issues that entering too big values in configuration dialog could crash the client
+- [unit frames] Added import/export feature for effects indicators
+- [unit frames] Fixed issue with circle icon configuration for effects indicators
+- [killed by] Fixed issue with fade out animation
+
+2.1.1
+- [unit frames] Fixed issue with fonts scaling settings could crash the client
+
+2.1.0
+- [unit frames] Added a lot of appearance configuration options
+- [unit frames] Added hp archetype coloring feature
+- [assist] Fixed issue with new target notification window does not allowing click-through when invisible
+- [unit frames] Fixed issue with LOS flag sticking after removing selection from the player
+- [unit frames] "Player too far away to target" message now will mark player as distant
+- [core] Added reset settings button into configuration dialog
+
+2.0.2
+- Compatibility fixes for 1.3.5 new city siege support
+
+2.0.1
+- [unit frames] Added HP% indicator
+- [unit frames] Added more appearance configuration options
+- [unit frames] Changed graphics of group leader icon
+- [unit frames] Added LOS-checking
+- [unit frames] Added AP bar indicator (for player group only)
+- [effect filters] Name and Description fields are no longer case sensitive
+- [assist] Click on new target notification will now target the enemy player (if it's not too far away). Can be disabled in configuration dialog.
+- [unit frames] Added HP coloring feature (see configuration dialog)
+
+2.0.0
+- Implemented custom unit frames (can be switched off and configured in configuration dialog)
+- Implemented configurable custom effects indicators for unit frames (check unit frames section in configuration dialog)
+- Remove "healing low notify" feature (it's seems not too usefull after all)
+- Implemented feature that will automatically mark groupmate that you guard (mark template can be edited in configuration)
+- Added "total kills" row to killstats window
+- Redesigned killspam window a bit
+- Changed "mark on new target" mechanic (should be more precise now)
+- Changed new target mark window to be overlay (over the top of other windows)
+- Reworked some internal core mechanics code
+- Group icons and marks now can have negative offset again
+- Disabling some part of Enemy addon via configuration window will no longer continue to consume game resources (the disabled part will be completely shutted down)
+- Group icon on self will be visible if "hide icon on self" is not checked (in configuration diealog) and regardless of player is in group or not
+- Added "deaths" column to killspam area statistics window (you can still view extended statistics about player in tooltip)
+- Added configuration section for "killspam". You can now disable/enable killspam parsing and make killspam list building bottom-up.
+- Added new display modes for player KDR (see Configuration dialog / Killspam section)
+- Added "Killed By" window that will show who killed your current enemy
+- Added "Scenario alerter" feature (can be switched off in configuration dialog)
+
+1.6.1
+- Added a little bit more detail tooltips to the mark template icon
+- Added group icon configuration option "Hide icon on self"
+
+1.6.0
+- Added "group icons" feature. Group icons will be showed only for your group and can be disabled in Enemy addon configuration dialog.
+- Marks click-targeting of friendly players now will perform faster
+- Add new command for marking targets via macros. For example to mark last target with template named "A" use macro: '/script Enemy.MarksToggle ("a")' or you can mark by template number: '/script Enemy.MarksToggle (1)'
+- Added some fix to ensure fail safe parsing of French client killspam messages
+- Fixed couple of bugs preventing "Heal low" message to be broadcasted when healer got outgoing heal debuff
+- Reworked object windows engine code (internal change)
+- Reworked configuration dialog
+- Added total destruction/order players participated in tooltip for killspam window
+- Added "alliance" option for sending/receiving intercom channel invites/asks
+- Added "Answer channel name only within group/warband/guild/alliance" option to main configuration dialog
+- Pressing "Ctrl + Right click" on mark template will clear all active marks for this template
+- Pressing "Ctrl + Left click" on mark template will brings up a context menu with latest 10 players marked with this target - you can try target a player by selecting him in that menu
+- Fixed a bug with target on click for marks with "Offset" setted to anything than zero
+- Changed the way "Offset" in marks template behave - now you can enter only positive numbers
+
+1.5.2
+- Added feature that will mark target when you press "Target" macro (after new assist has been received). Check out configuration to change mark template.
+- Added "font" option to the mark's template configuration
+- Changed the way font and the content of the mark scaling and how it's affected by Y offset (should be more correct now)
+- Added "Clear all active marks" for main context menu (Enemy addon icon context menu)
+- You can now clear mark by right-clicking it if "Target on click" is enabled (otherwise mark will act as "click through")
+- Refactored mark template engine code (internal change)
+
+1.5.1
+- Fixed bug with French client not parsing killspam messages
+- Fixed bug with marks with "Target on click" were not targeting enemy players
+- Added "Clear active marks" context menu command for mark templates
+- Fixed issues with targeting - now marks applied to the last targeted player (either friendly or hostile).
+
+1.5.0
+- Added new feature called "Marks" - allows you to create custom graphical mark presets (templates) and mark players with them
+- Fixed a bug with disabled low healing notification after first character login
+- Fixed a bug with autoassist on new target
+- Some minor UI fixes
+
+1.4.9
+- Fixed bug with Russian client killspam parsing
+
+1.4.8
+- Refactored code for info window UI (simplification)
+- Added configuration for a new target sound (see configuration dialog)
+
+1.4.7
+- Fixed a bug with assisting on new target
+- Redesigned info window layout and graphics
+- Added support for Russian client killspam parsing
+
+1.4.6
+- Fixed couple of bugs with info window
+- Added configuration for info window items graphical representation
+- Added new notification for healer "outgoing debuff" - healers will notify others that they have been affected by outgoing heal debuff
+
+1.4.5
+- Completely refactored the whole code (corrected couple of hard to catch internal bugs). Due to this I expect some of you will find bugs - please write them down in comments (or via tickets: http://war.curseforge.com/addons/enemy/tickets/).
+- Fixed (I think) bug with German client unable to properly parse killspam messages
+- Renamed "enemy group" entity to "intercom channel" - it's a more appropriate name for this
+- Added new feature "Healing power notification". If it's enabled then (if you're the healer) Enemy will broadcast messages to intercom channel about your level of AP (or SE/RF in case of DoK/WP) is below configured amount (see configuration).
+- Added new window "Enemy Info" that will hold various informational messages for Enemy addon. For now it's only shows heal power notifications.
+
+1.4.4
+- Added support for German and France languages (I think other should work too - dunno about that)
+- Added "Sound on new target" feature (right click Enemy addon icon and select "Configuration")
+
+1.4.3
+- Added new display mode for player kill/death ratio window (kills/deaths in current zone)
+
+1.4.2
+- Added "Switch display mode" feature for player kill/death ratio window (right click it to bring up the context menu)
+
+1.4.1
+- Couple of UI bug fixes and tweaks
+
+1.4
+- Added tooltips with detail statistics for players in zone kill stats window
+- Added new sepparate "player kill/death ratio" window (right-click on Enemy addon icon and see the menu)
+- Added "autofocus" checkbox in focus group dialog (left click on Enemy addon icon) - this will enable autoassist on new target
+- Couple of UI changes (context menu, tooltips, target animation)
+
+1.3
+- Added feature to display zone kills statistics (analog of CasualtiesOfWar addon)
+- Added context menu for Enemy addon icon
+
+1.2
+- Removed limitation on sending Mark command for the same target again
+- Invitation to join group dialog won't appear if now if you already joined that group
+
+1.1
+- Minor bug fixes
+
+1.0
+- First release

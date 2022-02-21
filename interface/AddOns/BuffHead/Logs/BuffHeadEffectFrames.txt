@@ -1,0 +1,2258 @@
+[19/02/09][11:56:57](table) BuffHeadEffectFrame119 = table: 59FB7A00
+[19/02/09][11:56:57]   (table) AbilityData = table: 1DB0C958
+[19/02/09][11:56:57]      (number) Type = 1
+[19/02/09][11:56:57]      (number) TimeAdded = 574.59130891599
+[19/02/09][11:56:57]      (number) Duration = 30
+[19/02/09][11:56:57]      (table) Data = table: 58A2F178
+[19/02/09][11:56:57]         (number) iconNum = 5007
+[19/02/09][11:56:57]         (table) source = table: 606C68F0
+[19/02/09][11:56:57]            (wstring) effectText = Can not be knocked back
+Can not be rooted.
+[19/02/09][11:56:57]            (boolean) isHealing = false
+[19/02/09][11:56:57]            (number) effectIndex = 3072
+[19/02/09][11:56:57]            (boolean) isStatsBuff = false
+[19/02/09][11:56:57]            (boolean) isOffensive = false
+[19/02/09][11:56:57]            (number) _enemyTimeout = 600.91904756147
+[19/02/09][11:56:57]            (number) stackCount = 1
+[19/02/09][11:56:57]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:57]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:57]            (number) _enemyDuration = 30
+[19/02/09][11:56:57]            (number) iconNum = 5007
+[19/02/09][11:56:57]            (boolean) _enemy = true
+[19/02/09][11:56:57]            (boolean) isDebuff = false
+[19/02/09][11:56:57]            (boolean) isDefensive = true
+[19/02/09][11:56:57]            (wstring) _enemyName = immovable
+[19/02/09][11:56:57]            (number) duration = 30
+[19/02/09][11:56:57]            (number) trackerPriority = 100
+[19/02/09][11:56:57]            (boolean) isDamaging = false
+[19/02/09][11:56:57]            (number) abilityId = 408
+[19/02/09][11:56:57]            (wstring) name = Immovable
+[19/02/09][11:56:57]            (wstring) _enemyEffectText = can not be knocked back
+can not be rooted.
+[19/02/09][11:56:57]            (boolean) isBuff = false
+[19/02/09][11:56:57]            (boolean) castByPlayer = false
+[19/02/09][11:56:57]            (boolean) isGranted = false
+[19/02/09][11:56:57]            (boolean) isPassive = false
+[19/02/09][11:56:57]            end
+[19/02/09][11:56:57]         (table) color = table: 4FA0F4C0
+[19/02/09][11:56:57]            (number) b = 0
+[19/02/09][11:56:57]            (number) g = 255
+[19/02/09][11:56:57]            (number) r = 0
+[19/02/09][11:56:57]            end
+[19/02/09][11:56:57]         (number) duration = 30
+[19/02/09][11:56:57]         (number) abilityId = 408
+[19/02/09][11:56:57]         (wstring) name = Immovable
+[19/02/09][11:56:57]         (number) stackCount = 1
+[19/02/09][11:56:57]         (boolean) castByPlayer = false
+[19/02/09][11:56:57]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:57]         end
+[19/02/09][11:56:57]      (number) Index = 3072
+[19/02/09][11:56:57]      end
+[19/02/09][11:56:57]   (table) StatusBar = table: 5A4D1428
+[19/02/09][11:56:57]      (boolean) Visible = false
+[19/02/09][11:56:57]      (number) Type = 0
+[19/02/09][11:56:57]      (number) Height = 0
+[19/02/09][11:56:57]      (number) Value = 0
+[19/02/09][11:56:57]      (number) Max = 30
+[19/02/09][11:56:57]      (number) Width = 0
+[19/02/09][11:56:57]      end
+[19/02/09][11:56:57]   (table) Values = table: 5B50C0E0
+[19/02/09][11:56:57]      (number) Stacks = 0
+[19/02/09][11:56:57]      (string) Duration = 25s
+[19/02/09][11:56:57]      end
+[19/02/09][11:56:57]   (number) Alpha = 1
+[19/02/09][11:56:57]   (string) m_Name = BuffHeadEffectFrame119
+[19/02/09][11:56:57]   (table) Layout = table: 297C4890
+[19/02/09][11:56:57]      (number) Scale = 1
+[19/02/09][11:56:57]      (boolean) Name = false
+[19/02/09][11:56:57]      (table) Settings = table: 52EED720
+[19/02/09][11:56:57]         (table) StatusBar = table: 5544D098
+[19/02/09][11:56:57]            (boolean) Enabled = false
+[19/02/09][11:56:57]            (number) Scale = 1
+[19/02/09][11:56:57]            (number) Layer = 1
+[19/02/09][11:56:57]            (number) Width = 48
+[19/02/09][11:56:57]            (number) Y = 48
+[19/02/09][11:56:57]            (number) X = 0
+[19/02/09][11:56:57]            (boolean) Reverse = false
+[19/02/09][11:56:57]            (number) Height = 16
+[19/02/09][11:56:57]            (table) Background = table: 5549FD30
+[19/02/09][11:56:57]               (table) TextureDimensions = table: 52EE5B60
+[19/02/09][11:56:57]                  (number) Height = 128
+[19/02/09][11:56:57]                  (number) Width = 128
+[19/02/09][11:56:57]                  end
+[19/02/09][11:56:57]               (table) Color = table: 55481AC0
+[19/02/09][11:56:57]                  (number) B = 0
+[19/02/09][11:56:57]                  (number) G = 0
+[19/02/09][11:56:57]                  (number) R = 0
+[19/02/09][11:56:57]                  end
+[19/02/09][11:56:57]               (boolean) Stretch = true
+[19/02/09][11:56:57]               (number) Alpha = 0.8
+[19/02/09][11:56:57]               (string) Texture = EA_TintableImage
+[19/02/09][11:56:57]               end
+[19/02/09][11:56:57]            (number) Orientation = 1
+[19/02/09][11:56:57]            (table) Foreground = table: 554220D0
+[19/02/09][11:56:57]               (number) Type = 1
+[19/02/09][11:56:57]               (table) TextureDimensions = table: 5546EE38
+[19/02/09][11:56:57]                  (number) Height = 128
+[19/02/09][11:56:57]                  (number) Width = 128
+[19/02/09][11:56:57]                  end
+[19/02/09][11:56:57]               (table) Color = table: 52EE2708
+[19/02/09][11:56:57]                  (number) B = 255
+[19/02/09][11:56:57]                  (number) G = 255
+[19/02/09][11:56:57]                  (number) R = 255
+[19/02/09][11:56:57]                  end
+[19/02/09][11:56:57]               (boolean) Stretch = true
+[19/02/09][11:56:57]               (number) Alpha = 1
+[19/02/09][11:56:57]               (string) Texture = EA_TintableImage
+[19/02/09][11:56:57]               end
+[19/02/09][11:56:57]            end
+[19/02/09][11:56:57]         (table) Name = table: 52EE0A40
+[19/02/09][11:56:57]            (number) Scale = 1
+[19/02/09][11:56:57]            (number) Layer = 2
+[19/02/09][11:56:57]            (number) Alpha = 0
+[19/02/09][11:56:57]            (number) Width = 48
+[19/02/09][11:56:57]            (number) Y = 12
+[19/02/09][11:56:57]            (number) X = 50
+[19/02/09][11:56:57]            (string) Alignment = leftcenter
+[19/02/09][11:56:57]            (number) Height = 16
+[19/02/09][11:56:57]            (string) Font = font_clear_small
+[19/02/09][11:56:57]            (table) Color = table: 52EEB208
+[19/02/09][11:56:57]               (number) B = 255
+[19/02/09][11:56:57]               (number) G = 255
+[19/02/09][11:56:57]               (number) R = 255
+[19/02/09][11:56:57]               end
+[19/02/09][11:56:57]            end
+[19/02/09][11:56:57]         (table) StackCount = table: 52EE5C38
+[19/02/09][11:56:57]            (number) Scale = 1
+[19/02/09][11:56:57]            (number) Layer = 2
+[19/02/09][11:56:57]            (number) Alpha = 1
+[19/02/09][11:56:57]            (number) Width = 48
+[19/02/09][11:56:57]            (number) Y = 2
+[19/02/09][11:56:57]            (number) X = 0
+[19/02/09][11:56:57]            (string) Alignment = rightcenter
+[19/02/09][11:56:57]            (number) Height = 16
+[19/02/09][11:56:57]            (string) Font = font_clear_small_bold
+[19/02/09][11:56:57]            (table) Color = table: 55F93248
+[19/02/09][11:56:57]               (number) B = 255
+[19/02/09][11:56:57]               (number) G = 255
+[19/02/09][11:56:57]               (number) R = 255
+[19/02/09][11:56:57]               end
+[19/02/09][11:56:57]            end
+[19/02/09][11:56:57]         (number) Height = 48
+[19/02/09][11:56:57]         (table) Duration = table: 52ED3C50
+[19/02/09][11:56:57]            (number) Scale = 1
+[19/02/09][11:56:57]            (number) Layer = 2
+[19/02/09][11:56:57]            (number) Alpha = 1
+[19/02/09][11:56:57]            (number) Width = 48
+[19/02/09][11:56:57]            (number) Y = 30
+[19/02/09][11:56:57]            (number) X = 0
+[19/02/09][11:56:57]            (string) Alignment = center
+[19/02/09][11:56:57]            (number) Height = 16
+[19/02/09][11:56:57]            (number) Format = 3
+[19/02/09][11:56:57]            (string) Font = font_clear_small_bold
+[19/02/09][11:56:57]            (table) Color = table: 556182B0
+[19/02/09][11:56:57]               (number) B = 255
+[19/02/09][11:56:57]               (number) G = 255
+[19/02/09][11:56:57]               (number) R = 255
+[19/02/09][11:56:57]               end
+[19/02/09][11:56:57]            end
+[19/02/09][11:56:57]         (table) Icon = table: 5545C080
+[19/02/09][11:56:57]            (number) Y = 0
+[19/02/09][11:56:57]            (number) X = 0
+[19/02/09][11:56:57]            (number) Scale = 1
+[19/02/09][11:56:57]            (table) Border = table: 52EC7EF8
+[19/02/09][11:56:57]               (table) Color = table: 554308F0
+[19/02/09][11:56:57]                  (number) B = 0
+[19/02/09][11:56:57]                  (number) G = 0
+[19/02/09][11:56:57]                  (number) R = 0
+[19/02/09][11:56:57]                  end
+[19/02/09][11:56:57]               (number) Type = 1
+[19/02/09][11:56:57]               (number) Alpha = 1
+[19/02/09][11:56:57]               end
+[19/02/09][11:56:57]            (number) Height = 48
+[19/02/09][11:56:57]            (number) Layer = 1
+[19/02/09][11:56:57]            (number) Alpha = 1
+[19/02/09][11:56:57]            (number) Width = 48
+[19/02/09][11:56:57]            end
+[19/02/09][11:56:57]         (number) Width = 48
+[19/02/09][11:56:57]         end
+[19/02/09][11:56:57]      (table) BorderColor = table: 4FA0F4C0
+[19/02/09][11:56:57]      Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:57]      (number) SettingsRevision = 0
+[19/02/09][11:56:57]      (boolean) Duration = true
+[19/02/09][11:56:57]      (number) Icon = 5007
+[19/02/09][11:56:57]      (boolean) StackCount = true
+[19/02/09][11:56:57]      end
+[19/02/09][11:56:57]   (boolean) m_Showing = false
+[19/02/09][11:56:57]   (number) m_Id = 1913
+[19/02/09][11:56:57]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame142 = table: 5AC6EF38
+[19/02/09][11:56:58]   (table) AbilityData = table: 625CE8C8
+[19/02/09][11:56:58]      (number) Type = 2
+[19/02/09][11:56:58]      (number) TimeAdded = 547.97375344019
+[19/02/09][11:56:58]      (number) Duration = 10
+[19/02/09][11:56:58]      (table) Data = table: 1DC52658
+[19/02/09][11:56:58]         (number) iconNum = 5267
+[19/02/09][11:56:58]         (table) source = table: 1FA3F738
+[19/02/09][11:56:58]            (wstring) effectText = Initiative reduced by 100.
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 4864
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 554.30149208568
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 10
+[19/02/09][11:56:58]            (number) iconNum = 5267
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = true
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (wstring) _enemyName = marked
+[19/02/09][11:56:58]            (number) duration = 10
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 10714
+[19/02/09][11:56:58]            (wstring) name = Marked
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = initiative reduced by 100.
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FA0F410
+[19/02/09][11:56:58]            (number) b = 255
+[19/02/09][11:56:58]            (number) g = 112
+[19/02/09][11:56:58]            (number) r = 250
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (number) duration = 10
+[19/02/09][11:56:58]         (number) abilityId = 10714
+[19/02/09][11:56:58]         (wstring) name = Marked
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 4864
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 4ECD3408
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 2BED44F8
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      (string) Duration = 9s
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame142
+[19/02/09][11:56:58]   (table) Layout = table: 1F26F178
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FA0F410
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FA0F410]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 5267
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1944
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame141 = table: 61C73760
+[19/02/09][11:56:58]   (table) AbilityData = table: 2B1E05F8
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 547.47973266523
+[19/02/09][11:56:58]      (number) Duration = 0
+[19/02/09][11:56:58]      (table) Data = table: 1C74AC88
+[19/02/09][11:56:58]         (number) iconNum = 8076
+[19/02/09][11:56:58]         (table) source = table: 1FDE23E8
+[19/02/09][11:56:58]            (wstring) effectText = Periodically losing Action Points
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 4608
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 543.80747131072
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 0
+[19/02/09][11:56:58]            (number) iconNum = 8076
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isDefensive = false
+[19/02/09][11:56:58]            (wstring) _enemyName = to glory!
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 8030
+[19/02/09][11:56:58]            (wstring) name = To Glory!
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = periodically losing action points
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FC06298
+[19/02/09][11:56:58]            (number) b = 234
+[19/02/09][11:56:58]            (number) g = 234
+[19/02/09][11:56:58]            (number) r = 234
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (number) duration = 0
+[19/02/09][11:56:58]         (number) abilityId = 8030
+[19/02/09][11:56:58]         (wstring) name = To Glory!
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 4608
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 1C4E0530
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 61C73788
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame141
+[19/02/09][11:56:58]   (table) Layout = table: 2B005090
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FC06298
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 8076
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = true
+[19/02/09][11:56:58]   (number) m_Id = 1943
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame140 = table: 4EBD9FC0
+[19/02/09][11:56:58]   (table) AbilityData = table: 59934018
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 547.47973266523
+[19/02/09][11:56:58]      (number) Duration = 0
+[19/02/09][11:56:58]      (table) Data = table: 2B565058
+[19/02/09][11:56:58]         (number) iconNum = 8002
+[19/02/09][11:56:58]         (table) source = table: 1F58B388
+[19/02/09][11:56:58]            (wstring) effectText = All resistances reduced by 117.
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 4352
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 543.80747131072
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 0
+[19/02/09][11:56:58]            (number) iconNum = 8002
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isDefensive = false
+[19/02/09][11:56:58]            (wstring) _enemyName = gather your resolve!
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 8008
+[19/02/09][11:56:58]            (wstring) name = Gather Your Resolve!
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = all resistances reduced by 117.
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FC06298
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:56:58]         (number) duration = 0
+[19/02/09][11:56:58]         (number) abilityId = 8008
+[19/02/09][11:56:58]         (wstring) name = Gather Your Resolve!
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 4352
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 251B9640
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 27750720
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame140
+[19/02/09][11:56:58]   (table) Layout = table: 617DB328
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FC06298
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 8002
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = true
+[19/02/09][11:56:58]   (number) m_Id = 1942
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame139 = table: 62901D08
+[19/02/09][11:56:58]   (table) AbilityData = table: 26FD7348
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 546.34994832892
+[19/02/09][11:56:58]      (number) Duration = 5
+[19/02/09][11:56:58]      (table) Data = table: 274DA438
+[19/02/09][11:56:58]         (number) iconNum = 10935
+[19/02/09][11:56:58]         (table) source = table: 62D97488
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (number) _enemyDuration = 5
+[19/02/09][11:56:58]            (number) duration = 5
+[19/02/09][11:56:58]            (number) typeColorRed = 255
+[19/02/09][11:56:58]            (number) effectIndex = 3584
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 547.67768697441
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = periodically healing for 109.
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (wstring) _enemyName = lingering restore essence
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (wstring) effectText = Periodically healing for 109.
+[19/02/09][11:56:58]            (number) iconNum = 10935
+[19/02/09][11:56:58]            (number) typeColorBlue = 80
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (number) typeColorGreen = 220
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (boolean) isHealing = true
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 3695
+[19/02/09][11:56:58]            (wstring) name = Lingering Restore Essence
+[19/02/09][11:56:58]            (boolean) isBlessing = true
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 546BC3C0
+[19/02/09][11:56:58]            (number) b = 80
+[19/02/09][11:56:58]            (number) g = 220
+[19/02/09][11:56:58]            (number) r = 255
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (number) duration = 5
+[19/02/09][11:56:58]         (number) abilityId = 3695
+[19/02/09][11:56:58]         (wstring) name = Lingering Restore Essence
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 3584
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 578FDFA8
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 62613BD8
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      (string) Duration = 2.4s
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame139
+[19/02/09][11:56:58]   (table) Layout = table: 5999E570
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 546BC3C0
+[19/02/09][11:56:58]      Preventing cycle on table [table: 546BC3C0]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 10935
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1941
+[19/02/09][11:56:58]   end
+
+[19/02/09][11:56:58](table) BuffHeadEffectFrame137 = table: 62F7A6D8
+[19/02/09][11:56:58]   (table) AbilityData = table: 582C50F0
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 552.20046385657
+[19/02/09][11:56:58]      (number) Duration = 0
+[19/02/09][11:56:58]      (table) Data = table: 58DAE390
+[19/02/09][11:56:58]         (number) iconNum = 8066
+[19/02/09][11:56:58]         (table) source = table: 63FAFD98
+[19/02/09][11:56:58]            (wstring) effectText = Outgoing healing reduced to 75% effectiveness
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 2048
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 548.52820250206
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 0
+[19/02/09][11:56:58]            (number) iconNum = 8066
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isDefensive = false
+[19/02/09][11:56:58]            (wstring) _enemyName = now's our chance!
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 8036
+[19/02/09][11:56:58]            (wstring) name = Now's Our Chance!
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = outgoing healing reduced to 75% effectiveness
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FC06298
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:56:58]         (number) duration = 0
+[19/02/09][11:56:58]         (number) abilityId = 8036
+[19/02/09][11:56:58]         (wstring) name = Now's Our Chance!
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 2048
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 59FB5A10
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 63A71B28
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame137
+[19/02/09][11:56:58]   (table) Layout = table: 4E932468
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FC06298
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 8066
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1939
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame134 = table: 5CB0F9E8
+[19/02/09][11:56:58]   (table) AbilityData = table: 64915510
+[19/02/09][11:56:58]      (number) Type = 2
+[19/02/09][11:56:58]      (number) TimeAdded = 576.91792670637
+[19/02/09][11:56:58]      (number) Duration = 8
+[19/02/09][11:56:58]      (table) Data = table: 5FF0FFA0
+[19/02/09][11:56:58]         (number) iconNum = 13353
+[19/02/09][11:56:58]         (table) source = table: 2925C1E0
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (number) _enemyDuration = 8
+[19/02/09][11:56:58]            (wstring) effectText = Periodically losing AP
+[19/02/09][11:56:58]            (number) typeColorRed = 184
+[19/02/09][11:56:58]            (number) effectIndex = 3584
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 581.24566535186
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (wstring) _enemyName = drain magic
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) duration = 8
+[19/02/09][11:56:58]            (number) iconNum = 13353
+[19/02/09][11:56:58]            (number) typeColorBlue = 9
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isHex = true
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 9249
+[19/02/09][11:56:58]            (wstring) name = Drain Magic
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = periodically losing ap
+[19/02/09][11:56:58]            (number) typeColorGreen = 0
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 1C1CDD50
+[19/02/09][11:56:58]            (number) b = 9
+[19/02/09][11:56:58]            (number) g = 0
+[19/02/09][11:56:58]            (number) r = 184
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (number) duration = 8
+[19/02/09][11:56:58]         (number) abilityId = 9249
+[19/02/09][11:56:58]         (wstring) name = Drain Magic
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 3584
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 636062B8
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 8
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 60967050
+[19/02/09][11:56:58]      (string) Duration = 5s
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame134
+[19/02/09][11:56:58]   (table) Layout = table: 635E4CD8
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 1C1CDD50
+[19/02/09][11:56:58]      Preventing cycle on table [table: 1C1CDD50]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 13353
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1936
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame133 = table: 60503058
+[19/02/09][11:56:58]   (table) AbilityData = table: 5B1B83E8
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 580.01891805325
+[19/02/09][11:56:58]      (number) Duration = 0
+[19/02/09][11:56:58]      (table) Data = table: 568FC1A0
+[19/02/09][11:56:58]         (number) iconNum = 2456
+[19/02/09][11:56:58]         (table) source = table: 2743AFC8
+[19/02/09][11:56:58]            (wstring) effectText = Your Rank has been modified! Your stats, items, and combat abilities are improved while you remain in the RvR area.
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 256
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) iconNum = 2456
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 14316
+[19/02/09][11:56:58]            (wstring) name = Bolster
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FA0F4C0
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:58]         (number) duration = 0
+[19/02/09][11:56:58]         (number) abilityId = 14316
+[19/02/09][11:56:58]         (wstring) name = Bolster
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 256
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 59B55DE0
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 5792D318
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame133
+[19/02/09][11:56:58]   (table) Layout = table: 6468C468
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FA0F4C0
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 2456
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1935
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame132 = table: 60E0DF98
+[19/02/09][11:56:58]   (table) AbilityData = table: 59749AA8
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 548.5925438134
+[19/02/09][11:56:58]      (number) Duration = 15
+[19/02/09][11:56:58]      (table) Data = table: 59428D00
+[19/02/09][11:56:58]         (number) iconNum = 10937
+[19/02/09][11:56:58]         (table) source = table: 5950B970
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (number) _enemyDuration = 15
+[19/02/09][11:56:58]            (number) duration = 15
+[19/02/09][11:56:58]            (number) typeColorRed = 255
+[19/02/09][11:56:58]            (number) effectIndex = 5376
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 559.92028245889
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = periodically recovering 442 health.
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (wstring) _enemyName = soul infusion
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (wstring) effectText = Periodically recovering 442 Health.
+[19/02/09][11:56:58]            (number) iconNum = 10937
+[19/02/09][11:56:58]            (number) typeColorBlue = 80
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (number) typeColorGreen = 220
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (boolean) isHealing = true
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 3366
+[19/02/09][11:56:58]            (wstring) name = Soul Infusion
+[19/02/09][11:56:58]            (boolean) isBlessing = true
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 59749A80
+[19/02/09][11:56:58]            (number) b = 80
+[19/02/09][11:56:58]            (number) g = 220
+[19/02/09][11:56:58]            (number) r = 255
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (number) duration = 15
+[19/02/09][11:56:58]         (number) abilityId = 3366
+[19/02/09][11:56:58]         (wstring) name = Soul Infusion
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 5376
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 609FF650
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 15
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 60519DB8
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      (string) Duration = 15s
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame132
+[19/02/09][11:56:58]   (table) Layout = table: 2998BC28
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 59749A80
+[19/02/09][11:56:58]      Preventing cycle on table [table: 59749A80]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 10937
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1934
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame131 = table: 62229120
+[19/02/09][11:56:58]   (table) AbilityData = table: 62C3FD00
+[19/02/09][11:56:58]      (number) Type = 2
+[19/02/09][11:56:58]      (number) TimeAdded = 540.70824330579
+[19/02/09][11:56:58]      (number) Duration = 10
+[19/02/09][11:56:58]      (table) Data = table: 5FE23808
+[19/02/09][11:56:58]         (number) iconNum = 5267
+[19/02/09][11:56:58]         (table) source = table: 550F74D8
+[19/02/09][11:56:58]            (wstring) effectText = Toughness reduced by 100.
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 2048
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 547.03598195128
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 10
+[19/02/09][11:56:58]            (number) iconNum = 5267
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = true
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (wstring) _enemyName = domination
+[19/02/09][11:56:58]            (number) duration = 10
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 10704
+[19/02/09][11:56:58]            (wstring) name = Domination
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = toughness reduced by 100.
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FA0F410
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FA0F410]
+[19/02/09][11:56:58]         (number) duration = 10
+[19/02/09][11:56:58]         (number) abilityId = 10704
+[19/02/09][11:56:58]         (wstring) name = Domination
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 2048
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 295AED70
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 5A015B00
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      (string) Duration = 1.7s
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 0.1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame131
+[19/02/09][11:56:58]   (table) Layout = table: 6067F738
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FA0F410
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FA0F410]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 5267
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1933
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame130 = table: 5C764400
+[19/02/09][11:56:58]   (table) AbilityData = table: 60561D40
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 569.29663188569
+[19/02/09][11:56:58]      (number) Duration = 0
+[19/02/09][11:56:58]      (table) Data = table: 5E055D08
+[19/02/09][11:56:58]         (number) iconNum = 23177
+[19/02/09][11:56:58]         (table) source = table: 27506ED0
+[19/02/09][11:56:58]            (wstring) effectText = Your Realm has waged war against a larger army! You will receive increased reward for your actions. Does not apply to monster or NPC kills.
+Experience gains increased by 40%
+Renown gains increased by 40%
+Influence gains increased by 40%
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 2304
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 565.62437053118
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 0
+[19/02/09][11:56:58]            (number) iconNum = 23177
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isDefensive = false
+[19/02/09][11:56:58]            (wstring) _enemyName = against all odds
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 24658
+[19/02/09][11:56:58]            (wstring) name = Against All Odds
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = your realm has waged war against a larger army! you will receive increased reward for your actions. does not apply to monster or npc kills.
+experience gains increased by 40%
+renown gains increased by 40%
+influence gains increased by 40%
+[19/02/09][11:56:58]            (boolean) isBuff = true
+[19/02/09][11:56:58]            (boolean) castByPlayer = true
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FA105D0
+[19/02/09][11:56:58]            (number) b = 168
+[19/02/09][11:56:58]            (number) g = 55
+[19/02/09][11:56:58]            (number) r = 11
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (number) duration = 0
+[19/02/09][11:56:58]         (number) abilityId = 24658
+[19/02/09][11:56:58]         (wstring) name = Against All Odds
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = true
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 2304
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 5C894FB0
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 2B9762A0
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame130
+[19/02/09][11:56:58]   (table) Layout = table: 50113A70
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 23177
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1932
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame129 = table: 591F7590
+[19/02/09][11:56:58]   (table) AbilityData = table: 614DDCE0
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 539.00168316439
+[19/02/09][11:56:58]      (number) Duration = 0
+[19/02/09][11:56:58]      (table) Data = table: 2972D3F0
+[19/02/09][11:56:58]         (number) iconNum = 23177
+[19/02/09][11:56:58]         (table) source = table: 220D9470
+[19/02/09][11:56:58]            (wstring) effectText = Your Realm has waged war against a larger army! You will receive increased reward for your actions. Does not apply to monster or NPC kills.
+Experience gains increased by 20%
+Renown gains increased by 20%
+Influence gains increased by 20%
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 1792
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 535.32942180987
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 0
+[19/02/09][11:56:58]            (number) iconNum = 23177
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isDefensive = false
+[19/02/09][11:56:58]            (wstring) _enemyName = against all odds
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 24658
+[19/02/09][11:56:58]            (wstring) name = Against All Odds
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = your realm has waged war against a larger army! you will receive increased reward for your actions. does not apply to monster or npc kills.
+experience gains increased by 20%
+renown gains increased by 20%
+influence gains increased by 20%
+[19/02/09][11:56:58]            (boolean) isBuff = true
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FA105D0
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:58]         (number) duration = 0
+[19/02/09][11:56:58]         (number) abilityId = 24658
+[19/02/09][11:56:58]         (wstring) name = Against All Odds
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 1792
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 62BE3490
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 620F0B78
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame129
+[19/02/09][11:56:58]   (table) Layout = table: 62077EE0
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 23177
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1931
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame128 = table: 57911F88
+[19/02/09][11:56:58]   (table) AbilityData = table: 596F1798
+[19/02/09][11:56:58]      (number) Type = 2
+[19/02/09][11:56:58]      (number) TimeAdded = 539.00168316439
+[19/02/09][11:56:58]      (number) Duration = 15
+[19/02/09][11:56:58]      (table) Data = table: 1FA61548
+[19/02/09][11:56:58]         (number) iconNum = 10998
+[19/02/09][11:56:58]         (table) source = table: 5012FBE0
+[19/02/09][11:56:58]            (wstring) effectText = Inflicting 50% damage to de-taunter.
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 768
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) iconNum = 10998
+[19/02/09][11:56:58]            (boolean) isDebuff = true
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 9474
+[19/02/09][11:56:58]            (wstring) name = Dread Aspect
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = true
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FA0F410
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FA0F410]
+[19/02/09][11:56:58]         (number) duration = 15
+[19/02/09][11:56:58]         (number) abilityId = 9474
+[19/02/09][11:56:58]         (wstring) name = Dread Aspect
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = true
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 768
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 637C21B0
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 29898DA8
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      (string) Duration = 0.1s
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 0.1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame128
+[19/02/09][11:56:58]   (table) Layout = table: 60598428
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FA0F410
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FA0F410]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 10998
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1930
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame125 = table: 2BCC6258
+[19/02/09][11:56:58]   (table) AbilityData = table: 5F9E1770
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 547.47973266523
+[19/02/09][11:56:58]      (number) Duration = 0
+[19/02/09][11:56:58]      (table) Data = table: 25D201B8
+[19/02/09][11:56:58]         (number) iconNum = 7995
+[19/02/09][11:56:58]         (table) source = table: 273FC790
+[19/02/09][11:56:58]            (wstring) effectText = Strength reduced by 114.
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 4096
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 543.80747131072
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 0
+[19/02/09][11:56:58]            (number) iconNum = 7995
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isDefensive = false
+[19/02/09][11:56:58]            (wstring) _enemyName = press the attack!
+[19/02/09][11:56:58]            (number) duration = 0
+[19/02/09][11:56:58]            (number) trackerPriority = 0
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 8004
+[19/02/09][11:56:58]            (wstring) name = Press The Attack!
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = strength reduced by 114.
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FC06298
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:56:58]         (number) duration = 0
+[19/02/09][11:56:58]         (number) abilityId = 8004
+[19/02/09][11:56:58]         (wstring) name = Press The Attack!
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 4096
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 58ABF260
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 0
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 1D735808
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame125
+[19/02/09][11:56:58]   (table) Layout = table: 29BC80A0
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FC06298
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 7995
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = true
+[19/02/09][11:56:58]   (number) m_Id = 1927
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:58](table) BuffHeadEffectFrame121 = table: 5147CB78
+[19/02/09][11:56:58]   (table) AbilityData = table: 5C72BC50
+[19/02/09][11:56:58]      (number) Type = 1
+[19/02/09][11:56:58]      (number) TimeAdded = 536.50017426815
+[19/02/09][11:56:58]      (number) Duration = 30
+[19/02/09][11:56:58]      (table) Data = table: 60AADE78
+[19/02/09][11:56:58]         (number) iconNum = 5006
+[19/02/09][11:56:58]         (table) source = table: 2BC2F8A8
+[19/02/09][11:56:58]            (wstring) effectText = Immune to Stagger, Knockdown, Disarm, and Silence effects.
+[19/02/09][11:56:58]            (boolean) isHealing = false
+[19/02/09][11:56:58]            (number) effectIndex = 2560
+[19/02/09][11:56:58]            (boolean) isStatsBuff = false
+[19/02/09][11:56:58]            (boolean) isOffensive = false
+[19/02/09][11:56:58]            (number) _enemyTimeout = 562.82791291364
+[19/02/09][11:56:58]            (number) stackCount = 1
+[19/02/09][11:56:58]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:58]            (number) _enemyDuration = 30
+[19/02/09][11:56:58]            (number) iconNum = 5006
+[19/02/09][11:56:58]            (boolean) _enemy = true
+[19/02/09][11:56:58]            (boolean) isDebuff = false
+[19/02/09][11:56:58]            (boolean) isDefensive = true
+[19/02/09][11:56:58]            (wstring) _enemyName = unstoppable
+[19/02/09][11:56:58]            (number) duration = 30
+[19/02/09][11:56:58]            (number) trackerPriority = 100
+[19/02/09][11:56:58]            (boolean) isDamaging = false
+[19/02/09][11:56:58]            (number) abilityId = 402
+[19/02/09][11:56:58]            (wstring) name = Unstoppable
+[19/02/09][11:56:58]            (wstring) _enemyEffectText = immune to stagger, knockdown, disarm, and silence effects.
+[19/02/09][11:56:58]            (boolean) isBuff = false
+[19/02/09][11:56:58]            (boolean) castByPlayer = false
+[19/02/09][11:56:58]            (boolean) isGranted = false
+[19/02/09][11:56:58]            (boolean) isPassive = false
+[19/02/09][11:56:58]            end
+[19/02/09][11:56:58]         (table) color = table: 4FA0F4C0
+[19/02/09][11:56:58]         Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:58]         (number) duration = 30
+[19/02/09][11:56:58]         (number) abilityId = 402
+[19/02/09][11:56:58]         (wstring) name = Unstoppable
+[19/02/09][11:56:58]         (number) stackCount = 1
+[19/02/09][11:56:58]         (boolean) castByPlayer = false
+[19/02/09][11:56:58]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:58]         end
+[19/02/09][11:56:58]      (number) Index = 2560
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) StatusBar = table: 57EBC120
+[19/02/09][11:56:58]      (boolean) Visible = false
+[19/02/09][11:56:58]      (number) Type = 0
+[19/02/09][11:56:58]      (number) Height = 0
+[19/02/09][11:56:58]      (number) Value = 0
+[19/02/09][11:56:58]      (number) Max = 30
+[19/02/09][11:56:58]      (number) Width = 0
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (table) Values = table: 58FFCE50
+[19/02/09][11:56:58]      (number) Stacks = 0
+[19/02/09][11:56:58]      (string) Duration = 18s
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (number) Alpha = 1
+[19/02/09][11:56:58]   (string) m_Name = BuffHeadEffectFrame121
+[19/02/09][11:56:58]   (table) Layout = table: 608A9C68
+[19/02/09][11:56:58]      (number) Scale = 1
+[19/02/09][11:56:58]      (boolean) Name = false
+[19/02/09][11:56:58]      (table) Settings = table: 52EED720
+[19/02/09][11:56:58]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:58]      (table) BorderColor = table: 4FA0F4C0
+[19/02/09][11:56:58]      Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:58]      (number) SettingsRevision = 0
+[19/02/09][11:56:58]      (boolean) Duration = true
+[19/02/09][11:56:58]      (number) Icon = 5006
+[19/02/09][11:56:58]      (boolean) StackCount = true
+[19/02/09][11:56:58]      end
+[19/02/09][11:56:58]   (boolean) m_Showing = false
+[19/02/09][11:56:58]   (number) m_Id = 1923
+[19/02/09][11:56:58]   end
+[19/02/09][11:56:59](table) BuffHeadEffectFrame118 = table: 609B6008
+[19/02/09][11:56:59]   (table) AbilityData = table: 21E079B0
+[19/02/09][11:56:59]      (number) Type = 2
+[19/02/09][11:56:59]      (number) TimeAdded = 529.92243554536
+[19/02/09][11:56:59]      (number) Duration = 21
+[19/02/09][11:56:59]      (table) Data = table: 5877FDF0
+[19/02/09][11:56:59]         (number) iconNum = 4604
+[19/02/09][11:56:59]         (table) source = table: 5C818B20
+[19/02/09][11:56:59]            (boolean) _enemy = true
+[19/02/09][11:56:59]            (number) _enemyDuration = 21
+[19/02/09][11:56:59]            (wstring) effectText = Corporeal resistance reduced by 359.
+[19/02/09][11:56:59]            (number) typeColorRed = 184
+[19/02/09][11:56:59]            (number) effectIndex = 2304
+[19/02/09][11:56:59]            (boolean) isStatsBuff = false
+[19/02/09][11:56:59]            (boolean) isOffensive = false
+[19/02/09][11:56:59]            (number) _enemyTimeout = 547.25017419085
+[19/02/09][11:56:59]            (boolean) isBuff = false
+[19/02/09][11:56:59]            (number) stackCount = 1
+[19/02/09][11:56:59]            (wstring) _enemyName = acid bomb
+[19/02/09][11:56:59]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:59]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:59]            (number) duration = 21
+[19/02/09][11:56:59]            (number) iconNum = 4604
+[19/02/09][11:56:59]            (number) typeColorBlue = 9
+[19/02/09][11:56:59]            (boolean) isDebuff = true
+[19/02/09][11:56:59]            (boolean) isHex = true
+[19/02/09][11:56:59]            (boolean) isDefensive = true
+[19/02/09][11:56:59]            (boolean) isHealing = false
+[19/02/09][11:56:59]            (number) trackerPriority = 0
+[19/02/09][11:56:59]            (boolean) isDamaging = true
+[19/02/09][11:56:59]            (number) abilityId = 1514
+[19/02/09][11:56:59]            (wstring) name = Acid Bomb
+[19/02/09][11:56:59]            (wstring) _enemyEffectText = corporeal resistance reduced by 359.
+[19/02/09][11:56:59]            (number) typeColorGreen = 0
+[19/02/09][11:56:59]            (boolean) castByPlayer = false
+[19/02/09][11:56:59]            (boolean) isGranted = false
+[19/02/09][11:56:59]            (boolean) isPassive = false
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (table) color = table: 1F99FDD0
+[19/02/09][11:56:59]            (number) b = 9
+[19/02/09][11:56:59]            (number) g = 0
+[19/02/09][11:56:59]            (number) r = 184
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (number) duration = 21
+[19/02/09][11:56:59]         (number) abilityId = 1514
+[19/02/09][11:56:59]         (wstring) name = Acid Bomb
+[19/02/09][11:56:59]         (number) stackCount = 1
+[19/02/09][11:56:59]         (boolean) castByPlayer = false
+[19/02/09][11:56:59]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:59]         end
+[19/02/09][11:56:59]      (number) Index = 2304
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) StatusBar = table: 60CFC1B0
+[19/02/09][11:56:59]      (boolean) Visible = false
+[19/02/09][11:56:59]      (number) Type = 0
+[19/02/09][11:56:59]      (number) Height = 0
+[19/02/09][11:56:59]      (number) Value = 0
+[19/02/09][11:56:59]      (number) Max = 0
+[19/02/09][11:56:59]      (number) Width = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) Values = table: 57ABFF68
+[19/02/09][11:56:59]      (number) Stacks = 0
+[19/02/09][11:56:59]      (string) Duration = 2s
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (number) Alpha = 0.1
+[19/02/09][11:56:59]   (string) m_Name = BuffHeadEffectFrame118
+[19/02/09][11:56:59]   (table) Layout = table: 61E95FE8
+[19/02/09][11:56:59]      (number) Scale = 1
+[19/02/09][11:56:59]      (boolean) Name = false
+[19/02/09][11:56:59]      (table) Settings = table: 52EED720
+[19/02/09][11:56:59]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:59]      (table) BorderColor = table: 1F99FDD0
+[19/02/09][11:56:59]      Preventing cycle on table [table: 1F99FDD0]
+[19/02/09][11:56:59]      (number) SettingsRevision = 0
+[19/02/09][11:56:59]      (boolean) Duration = true
+[19/02/09][11:56:59]      (number) Icon = 4604
+[19/02/09][11:56:59]      (boolean) StackCount = true
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (boolean) m_Showing = false
+[19/02/09][11:56:59]   (number) m_Id = 1912
+[19/02/09][11:56:59]   end
+[19/02/09][11:56:59](table) BuffHeadEffectFrame117 = table: 5B3AF190
+[19/02/09][11:56:59]   (table) AbilityData = table: 632E77F0
+[19/02/09][11:56:59]      (number) Type = 1
+[19/02/09][11:56:59]      (number) TimeAdded = 529.13558877259
+[19/02/09][11:56:59]      (number) Duration = 0
+[19/02/09][11:56:59]      (table) Data = table: 27A0F100
+[19/02/09][11:56:59]         (number) iconNum = 20230
+[19/02/09][11:56:59]         (table) source = table: 64634010
+[19/02/09][11:56:59]            (wstring) effectText = Movement speed increased by 60%.
+[19/02/09][11:56:59]            (boolean) isHealing = false
+[19/02/09][11:56:59]            (number) effectIndex = 3328
+[19/02/09][11:56:59]            (boolean) isStatsBuff = false
+[19/02/09][11:56:59]            (boolean) isOffensive = false
+[19/02/09][11:56:59]            (number) stackCount = 1
+[19/02/09][11:56:59]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]            (boolean) isCasterDispellable = true
+[19/02/09][11:56:59]            (number) iconNum = 20230
+[19/02/09][11:56:59]            (boolean) isDebuff = false
+[19/02/09][11:56:59]            (number) duration = 0
+[19/02/09][11:56:59]            (number) trackerPriority = 0
+[19/02/09][11:56:59]            (boolean) isDamaging = false
+[19/02/09][11:56:59]            (number) abilityId = 14809
+[19/02/09][11:56:59]            (wstring) name = Summon Mount
+[19/02/09][11:56:59]            (boolean) isDefensive = false
+[19/02/09][11:56:59]            (boolean) isBuff = true
+[19/02/09][11:56:59]            (boolean) castByPlayer = false
+[19/02/09][11:56:59]            (boolean) isGranted = true
+[19/02/09][11:56:59]            (boolean) isPassive = false
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (table) color = table: 4FA105D0
+[19/02/09][11:56:59]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]         (number) duration = 0
+[19/02/09][11:56:59]         (number) abilityId = 14809
+[19/02/09][11:56:59]         (wstring) name = Summon Mount
+[19/02/09][11:56:59]         (number) stackCount = 1
+[19/02/09][11:56:59]         (boolean) castByPlayer = false
+[19/02/09][11:56:59]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]         end
+[19/02/09][11:56:59]      (number) Index = 3328
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) StatusBar = table: 1E14CE18
+[19/02/09][11:56:59]      (boolean) Visible = false
+[19/02/09][11:56:59]      (number) Type = 0
+[19/02/09][11:56:59]      (number) Height = 0
+[19/02/09][11:56:59]      (number) Value = 0
+[19/02/09][11:56:59]      (number) Max = 0
+[19/02/09][11:56:59]      (number) Width = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) Values = table: 50C56568
+[19/02/09][11:56:59]      (number) Stacks = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (number) Alpha = 1
+[19/02/09][11:56:59]   (string) m_Name = BuffHeadEffectFrame117
+[19/02/09][11:56:59]   (table) Layout = table: 5C129B50
+[19/02/09][11:56:59]      (number) Scale = 1
+[19/02/09][11:56:59]      (boolean) Name = false
+[19/02/09][11:56:59]      (table) Settings = table: 52EED720
+[19/02/09][11:56:59]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:59]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:56:59]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]      (number) SettingsRevision = 0
+[19/02/09][11:56:59]      (boolean) Duration = true
+[19/02/09][11:56:59]      (number) Icon = 20230
+[19/02/09][11:56:59]      (boolean) StackCount = true
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (boolean) m_Showing = true
+[19/02/09][11:56:59]   (number) m_Id = 1907
+[19/02/09][11:56:59]   end
+[19/02/09][11:56:59](table) BuffHeadEffectFrame116 = table: 57181238
+[19/02/09][11:56:59]   (table) AbilityData = table: 1F386378
+[19/02/09][11:56:59]      (number) Type = 1
+[19/02/09][11:56:59]      (number) TimeAdded = 529.13558877259
+[19/02/09][11:56:59]      (number) Duration = 0
+[19/02/09][11:56:59]      (table) Data = table: 5B703CA8
+[19/02/09][11:56:59]         (number) iconNum = 7917
+[19/02/09][11:56:59]         (table) source = table: 60528A78
+[19/02/09][11:56:59]            (wstring) effectText = Armor increased by 627
+[19/02/09][11:56:59]            (boolean) isHealing = false
+[19/02/09][11:56:59]            (number) effectIndex = 2816
+[19/02/09][11:56:59]            (boolean) isStatsBuff = false
+[19/02/09][11:56:59]            (boolean) isOffensive = true
+[19/02/09][11:56:59]            (number) stackCount = 1
+[19/02/09][11:56:59]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:59]            (number) iconNum = 7917
+[19/02/09][11:56:59]            (boolean) isDebuff = false
+[19/02/09][11:56:59]            (number) duration = 0
+[19/02/09][11:56:59]            (number) trackerPriority = 0
+[19/02/09][11:56:59]            (boolean) isDamaging = false
+[19/02/09][11:56:59]            (number) abilityId = 8242
+[19/02/09][11:56:59]            (wstring) name = Prayer of Absolution
+[19/02/09][11:56:59]            (boolean) isDefensive = true
+[19/02/09][11:56:59]            (boolean) isBuff = true
+[19/02/09][11:56:59]            (boolean) castByPlayer = false
+[19/02/09][11:56:59]            (boolean) isGranted = false
+[19/02/09][11:56:59]            (boolean) isPassive = false
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (table) color = table: 4FA105D0
+[19/02/09][11:56:59]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]         (number) duration = 0
+[19/02/09][11:56:59]         (number) abilityId = 8242
+[19/02/09][11:56:59]         (wstring) name = Prayer of Absolution
+[19/02/09][11:56:59]         (number) stackCount = 1
+[19/02/09][11:56:59]         (boolean) castByPlayer = false
+[19/02/09][11:56:59]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]         end
+[19/02/09][11:56:59]      (number) Index = 2816
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) StatusBar = table: 21DD24B0
+[19/02/09][11:56:59]      (boolean) Visible = false
+[19/02/09][11:56:59]      (number) Type = 0
+[19/02/09][11:56:59]      (number) Height = 0
+[19/02/09][11:56:59]      (number) Value = 0
+[19/02/09][11:56:59]      (number) Max = 0
+[19/02/09][11:56:59]      (number) Width = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) Values = table: 57181260
+[19/02/09][11:56:59]      (number) Stacks = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (number) Alpha = 1
+[19/02/09][11:56:59]   (string) m_Name = BuffHeadEffectFrame116
+[19/02/09][11:56:59]   (table) Layout = table: 2956DEB8
+[19/02/09][11:56:59]      (number) Scale = 1
+[19/02/09][11:56:59]      (boolean) Name = false
+[19/02/09][11:56:59]      (table) Settings = table: 52EED720
+[19/02/09][11:56:59]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:59]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:56:59]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]      (number) SettingsRevision = 0
+[19/02/09][11:56:59]      (boolean) Duration = true
+[19/02/09][11:56:59]      (number) Icon = 7917
+[19/02/09][11:56:59]      (boolean) StackCount = true
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (boolean) m_Showing = true
+[19/02/09][11:56:59]   (number) m_Id = 1906
+[19/02/09][11:56:59]   end
+[19/02/09][11:56:59](table) BuffHeadEffectFrame115 = table: 595659B0
+[19/02/09][11:56:59]   (table) AbilityData = table: 5C410930
+[19/02/09][11:56:59]      (number) Type = 1
+[19/02/09][11:56:59]      (number) TimeAdded = 529.13558877259
+[19/02/09][11:56:59]      (number) Duration = 0
+[19/02/09][11:56:59]      (table) Data = table: 28F8FA20
+[19/02/09][11:56:59]         (number) iconNum = 2456
+[19/02/09][11:56:59]         (table) source = table: 5011EDE8
+[19/02/09][11:56:59]            (wstring) effectText = Experience gains increased by 100%
+Experience bonus increased by an additional 50% near Battlefield Objectives and Keeps!
+Renown gained increased by 150% near Battlefield Objectives and Keeps!
+[19/02/09][11:56:59]            (boolean) isHealing = false
+[19/02/09][11:56:59]            (number) effectIndex = 3072
+[19/02/09][11:56:59]            (boolean) isStatsBuff = false
+[19/02/09][11:56:59]            (boolean) isOffensive = false
+[19/02/09][11:56:59]            (number) stackCount = 1
+[19/02/09][11:56:59]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:59]            (number) iconNum = 2456
+[19/02/09][11:56:59]            (boolean) isDebuff = false
+[19/02/09][11:56:59]            (number) duration = 0
+[19/02/09][11:56:59]            (number) trackerPriority = 0
+[19/02/09][11:56:59]            (boolean) isDamaging = false
+[19/02/09][11:56:59]            (number) abilityId = 14318
+[19/02/09][11:56:59]            (wstring) name = Field of Glory
+[19/02/09][11:56:59]            (boolean) isDefensive = true
+[19/02/09][11:56:59]            (boolean) isBuff = false
+[19/02/09][11:56:59]            (boolean) castByPlayer = false
+[19/02/09][11:56:59]            (boolean) isGranted = false
+[19/02/09][11:56:59]            (boolean) isPassive = false
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (table) color = table: 4FA0F4C0
+[19/02/09][11:56:59]         Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:59]         (number) duration = 0
+[19/02/09][11:56:59]         (number) abilityId = 14318
+[19/02/09][11:56:59]         (wstring) name = Field of Glory
+[19/02/09][11:56:59]         (number) stackCount = 1
+[19/02/09][11:56:59]         (boolean) castByPlayer = false
+[19/02/09][11:56:59]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]         end
+[19/02/09][11:56:59]      (number) Index = 3072
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) StatusBar = table: 578C1D30
+[19/02/09][11:56:59]      (boolean) Visible = false
+[19/02/09][11:56:59]      (number) Type = 0
+[19/02/09][11:56:59]      (number) Height = 0
+[19/02/09][11:56:59]      (number) Value = 0
+[19/02/09][11:56:59]      (number) Max = 0
+[19/02/09][11:56:59]      (number) Width = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) Values = table: 5A977DC0
+[19/02/09][11:56:59]      (number) Stacks = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (number) Alpha = 1
+[19/02/09][11:56:59]   (string) m_Name = BuffHeadEffectFrame115
+[19/02/09][11:56:59]   (table) Layout = table: 5B7AB558
+[19/02/09][11:56:59]      (number) Scale = 1
+[19/02/09][11:56:59]      (boolean) Name = false
+[19/02/09][11:56:59]      (table) Settings = table: 52EED720
+[19/02/09][11:56:59]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:59]      (table) BorderColor = table: 4FA0F4C0
+[19/02/09][11:56:59]      Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:59]      (number) SettingsRevision = 0
+[19/02/09][11:56:59]      (boolean) Duration = true
+[19/02/09][11:56:59]      (number) Icon = 2456
+[19/02/09][11:56:59]      (boolean) StackCount = true
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (boolean) m_Showing = true
+[19/02/09][11:56:59]   (number) m_Id = 1905
+[19/02/09][11:56:59]   end
+[19/02/09][11:56:59](table) BuffHeadEffectFrame114 = table: 2938AC38
+[19/02/09][11:56:59]   (table) AbilityData = table: 4F772E40
+[19/02/09][11:56:59]      (number) Type = 1
+[19/02/09][11:56:59]      (number) TimeAdded = 515.76178541034
+[19/02/09][11:56:59]      (number) Duration = 0
+[19/02/09][11:56:59]      (table) Data = table: 5CB5DB98
+[19/02/09][11:56:59]         (number) iconNum = 2456
+[19/02/09][11:56:59]         (table) source = table: 5B582CD8
+[19/02/09][11:56:59]            (wstring) effectText = Experience gains increased by 100%
+Experience bonus increased by an additional 50% near Battlefield Objectives and Keeps!
+Renown gained increased by 150% near Battlefield Objectives and Keeps!
+[19/02/09][11:56:59]            (boolean) isHealing = false
+[19/02/09][11:56:59]            (number) effectIndex = 2560
+[19/02/09][11:56:59]            (boolean) isStatsBuff = false
+[19/02/09][11:56:59]            (boolean) isOffensive = false
+[19/02/09][11:56:59]            (number) _enemyTimeout = 512.08952405583
+[19/02/09][11:56:59]            (number) stackCount = 1
+[19/02/09][11:56:59]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:59]            (number) _enemyDuration = 0
+[19/02/09][11:56:59]            (number) iconNum = 2456
+[19/02/09][11:56:59]            (boolean) _enemy = true
+[19/02/09][11:56:59]            (boolean) isDebuff = false
+[19/02/09][11:56:59]            (boolean) isDefensive = true
+[19/02/09][11:56:59]            (wstring) _enemyName = field of glory
+[19/02/09][11:56:59]            (number) duration = 0
+[19/02/09][11:56:59]            (number) trackerPriority = 0
+[19/02/09][11:56:59]            (boolean) isDamaging = false
+[19/02/09][11:56:59]            (number) abilityId = 14318
+[19/02/09][11:56:59]            (wstring) name = Field of Glory
+[19/02/09][11:56:59]            (wstring) _enemyEffectText = experience gains increased by 100%
+experience bonus increased by an additional 50% near battlefield objectives and keeps!
+renown gained increased by 150% near battlefield objectives and keeps!
+[19/02/09][11:56:59]            (boolean) isBuff = false
+[19/02/09][11:56:59]            (boolean) castByPlayer = true
+[19/02/09][11:56:59]            (boolean) isGranted = false
+[19/02/09][11:56:59]            (boolean) isPassive = false
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (table) color = table: 4FA0F4C0
+[19/02/09][11:56:59]         Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:59]         (number) duration = 0
+[19/02/09][11:56:59]         (number) abilityId = 14318
+[19/02/09][11:56:59]         (wstring) name = Field of Glory
+[19/02/09][11:56:59]         (number) stackCount = 1
+[19/02/09][11:56:59]         (boolean) castByPlayer = true
+[19/02/09][11:56:59]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]         end
+[19/02/09][11:56:59]      (number) Index = 2560
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) StatusBar = table: 607F7438
+[19/02/09][11:56:59]      (boolean) Visible = false
+[19/02/09][11:56:59]      (number) Type = 0
+[19/02/09][11:56:59]      (number) Height = 0
+[19/02/09][11:56:59]      (number) Value = 0
+[19/02/09][11:56:59]      (number) Max = 0
+[19/02/09][11:56:59]      (number) Width = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) Values = table: 2938AC60
+[19/02/09][11:56:59]      (number) Stacks = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (number) Alpha = 1
+[19/02/09][11:56:59]   (string) m_Name = BuffHeadEffectFrame114
+[19/02/09][11:56:59]   (table) Layout = table: 5E127D20
+[19/02/09][11:56:59]      (number) Scale = 1
+[19/02/09][11:56:59]      (boolean) Name = false
+[19/02/09][11:56:59]      (table) Settings = table: 52EED720
+[19/02/09][11:56:59]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:59]      (table) BorderColor = table: 4FA0F4C0
+[19/02/09][11:56:59]      Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:56:59]      (number) SettingsRevision = 0
+[19/02/09][11:56:59]      (boolean) Duration = true
+[19/02/09][11:56:59]      (number) Icon = 2456
+[19/02/09][11:56:59]      (boolean) StackCount = true
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (boolean) m_Showing = false
+[19/02/09][11:56:59]   (number) m_Id = 1889
+[19/02/09][11:56:59]   end
+[19/02/09][11:56:59](table) BuffHeadEffectFrame113 = table: 2B1A7D28
+[19/02/09][11:56:59]   (table) AbilityData = table: 2BB971C8
+[19/02/09][11:56:59]      (number) Type = 1
+[19/02/09][11:56:59]      (number) TimeAdded = 582.35244594142
+[19/02/09][11:56:59]      (number) Duration = 5
+[19/02/09][11:56:59]      (table) Data = table: 634518E0
+[19/02/09][11:56:59]         (number) iconNum = 22702
+[19/02/09][11:56:59]         (table) source = table: 1D1D3BD8
+[19/02/09][11:56:59]            (wstring) effectText = Absorbing up to 358 damage.
+[19/02/09][11:56:59]            (boolean) isHealing = false
+[19/02/09][11:56:59]            (number) effectIndex = 3072
+[19/02/09][11:56:59]            (boolean) isStatsBuff = false
+[19/02/09][11:56:59]            (boolean) isOffensive = false
+[19/02/09][11:56:59]            (number) _enemyTimeout = 583.6801845869
+[19/02/09][11:56:59]            (number) stackCount = 1
+[19/02/09][11:56:59]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:59]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:59]            (number) _enemyDuration = 5
+[19/02/09][11:56:59]            (number) iconNum = 22702
+[19/02/09][11:56:59]            (boolean) _enemy = true
+[19/02/09][11:56:59]            (boolean) isDebuff = false
+[19/02/09][11:56:59]            (boolean) isDefensive = true
+[19/02/09][11:56:59]            (wstring) _enemyName = tapping the dark
+[19/02/09][11:56:59]            (number) duration = 5
+[19/02/09][11:56:59]            (number) trackerPriority = 0
+[19/02/09][11:56:59]            (boolean) isDamaging = false
+[19/02/09][11:56:59]            (number) abilityId = 3425
+[19/02/09][11:56:59]            (wstring) name = Tapping The Dark
+[19/02/09][11:56:59]            (wstring) _enemyEffectText = absorbing up to 358 damage.
+[19/02/09][11:56:59]            (boolean) isBuff = true
+[19/02/09][11:56:59]            (boolean) castByPlayer = true
+[19/02/09][11:56:59]            (boolean) isGranted = false
+[19/02/09][11:56:59]            (boolean) isPassive = false
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (table) color = table: 4FA105D0
+[19/02/09][11:56:59]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]         (number) duration = 5
+[19/02/09][11:56:59]         (number) abilityId = 3425
+[19/02/09][11:56:59]         (wstring) name = Tapping The Dark
+[19/02/09][11:56:59]         (number) stackCount = 1
+[19/02/09][11:56:59]         (boolean) castByPlayer = true
+[19/02/09][11:56:59]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:56:59]         end
+[19/02/09][11:56:59]      (number) Index = 3072
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) StatusBar = table: 1E32C7E0
+[19/02/09][11:56:59]      (boolean) Visible = false
+[19/02/09][11:56:59]      (number) Type = 0
+[19/02/09][11:56:59]      (number) Height = 0
+[19/02/09][11:56:59]      (number) Value = 0
+[19/02/09][11:56:59]      (number) Max = 5
+[19/02/09][11:56:59]      (number) Width = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) Values = table: 642B3D48
+[19/02/09][11:56:59]      (string) Duration = 0.2s
+[19/02/09][11:56:59]      (number) Stacks = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (number) Alpha = 0.1
+[19/02/09][11:56:59]   (string) m_Name = BuffHeadEffectFrame113
+[19/02/09][11:56:59]   (table) Layout = table: 58FA0D70
+[19/02/09][11:56:59]      (number) Scale = 1
+[19/02/09][11:56:59]      (boolean) Name = false
+[19/02/09][11:56:59]      (table) Settings = table: 52EED720
+[19/02/09][11:56:59]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:59]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:56:59]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]      (number) SettingsRevision = 0
+[19/02/09][11:56:59]      (boolean) Duration = true
+[19/02/09][11:56:59]      (number) Icon = 22702
+[19/02/09][11:56:59]      (boolean) StackCount = true
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (boolean) m_Showing = false
+[19/02/09][11:56:59]   (number) m_Id = 1888
+[19/02/09][11:56:59]   end
+[19/02/09][11:56:59](table) BuffHeadEffectFrame124 = table: 637C2A68
+[19/02/09][11:56:59]   (table) AbilityData = table: 58A7CE48
+[19/02/09][11:56:59]      (number) Type = 1
+[19/02/09][11:56:59]      (number) TimeAdded = 569.29663188569
+[19/02/09][11:56:59]      (number) Duration = 0
+[19/02/09][11:56:59]      (table) Data = table: 5E1CA8D0
+[19/02/09][11:56:59]         (number) iconNum = 23177
+[19/02/09][11:56:59]         (table) source = table: 5BCC6008
+[19/02/09][11:56:59]            (wstring) effectText = Your Realm has waged war against a larger army! You will receive increased reward for your actions. Does not apply to monster or NPC kills.
+Experience gains increased by 40%
+Renown gains increased by 40%
+Influence gains increased by 40%
+[19/02/09][11:56:59]            (boolean) isHealing = false
+[19/02/09][11:56:59]            (number) effectIndex = 2048
+[19/02/09][11:56:59]            (boolean) isStatsBuff = false
+[19/02/09][11:56:59]            (boolean) isOffensive = false
+[19/02/09][11:56:59]            (number) _enemyTimeout = 565.62437053118
+[19/02/09][11:56:59]            (number) stackCount = 1
+[19/02/09][11:56:59]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]            (boolean) isCasterDispellable = false
+[19/02/09][11:56:59]            (number) _enemyDuration = 0
+[19/02/09][11:56:59]            (number) iconNum = 23177
+[19/02/09][11:56:59]            (boolean) _enemy = true
+[19/02/09][11:56:59]            (boolean) isDebuff = false
+[19/02/09][11:56:59]            (boolean) isDefensive = false
+[19/02/09][11:56:59]            (wstring) _enemyName = against all odds
+[19/02/09][11:56:59]            (number) duration = 0
+[19/02/09][11:56:59]            (number) trackerPriority = 0
+[19/02/09][11:56:59]            (boolean) isDamaging = false
+[19/02/09][11:56:59]            (number) abilityId = 24658
+[19/02/09][11:56:59]            (wstring) name = Against All Odds
+[19/02/09][11:56:59]            (wstring) _enemyEffectText = your realm has waged war against a larger army! you will receive increased reward for your actions. does not apply to monster or npc kills.
+experience gains increased by 40%
+renown gains increased by 40%
+influence gains increased by 40%
+[19/02/09][11:56:59]            (boolean) isBuff = true
+[19/02/09][11:56:59]            (boolean) castByPlayer = false
+[19/02/09][11:56:59]            (boolean) isGranted = false
+[19/02/09][11:56:59]            (boolean) isPassive = false
+[19/02/09][11:56:59]            end
+[19/02/09][11:56:59]         (table) color = table: 4FA105D0
+[19/02/09][11:56:59]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]         (number) duration = 0
+[19/02/09][11:56:59]         (number) abilityId = 24658
+[19/02/09][11:56:59]         (wstring) name = Against All Odds
+[19/02/09][11:56:59]         (number) stackCount = 1
+[19/02/09][11:56:59]         (boolean) castByPlayer = false
+[19/02/09][11:56:59]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:56:59]         end
+[19/02/09][11:56:59]      (number) Index = 2048
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) StatusBar = table: 5857A4E8
+[19/02/09][11:56:59]      (boolean) Visible = false
+[19/02/09][11:56:59]      (number) Type = 0
+[19/02/09][11:56:59]      (number) Height = 0
+[19/02/09][11:56:59]      (number) Value = 0
+[19/02/09][11:56:59]      (number) Max = 0
+[19/02/09][11:56:59]      (number) Width = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (table) Values = table: 1FA46790
+[19/02/09][11:56:59]      (number) Stacks = 0
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (number) Alpha = 1
+[19/02/09][11:56:59]   (string) m_Name = BuffHeadEffectFrame124
+[19/02/09][11:56:59]   (table) Layout = table: 1C7CEE58
+[19/02/09][11:56:59]      (number) Scale = 1
+[19/02/09][11:56:59]      (boolean) Name = false
+[19/02/09][11:56:59]      (table) Settings = table: 52EED720
+[19/02/09][11:56:59]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:56:59]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:56:59]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:56:59]      (number) SettingsRevision = 0
+[19/02/09][11:56:59]      (boolean) Duration = true
+[19/02/09][11:56:59]      (number) Icon = 23177
+[19/02/09][11:56:59]      (boolean) StackCount = true
+[19/02/09][11:56:59]      end
+[19/02/09][11:56:59]   (boolean) m_Showing = false
+[19/02/09][11:56:59]   (number) m_Id = 1926
+[19/02/09][11:56:59]   end
+[19/02/09][11:57:00](table) BuffHeadEffectFrame135 = table: 1F568948
+[19/02/09][11:57:00]   (table) AbilityData = table: 1D982EF8
+[19/02/09][11:57:00]      (number) Type = 2
+[19/02/09][11:57:00]      (number) TimeAdded = 543.36738183443
+[19/02/09][11:57:00]      (number) Duration = 6
+[19/02/09][11:57:00]      (table) Data = table: 1D0A1A28
+[19/02/09][11:57:00]         (number) iconNum = 5287
+[19/02/09][11:57:00]         (table) source = table: 21F829D0
+[19/02/09][11:57:00]            (wstring) effectText = Armor is reduced by 800.
+[19/02/09][11:57:00]            (boolean) isHealing = false
+[19/02/09][11:57:00]            (number) effectIndex = 2816
+[19/02/09][11:57:00]            (boolean) isStatsBuff = false
+[19/02/09][11:57:00]            (boolean) isOffensive = false
+[19/02/09][11:57:00]            (number) _enemyTimeout = 545.69512047991
+[19/02/09][11:57:00]            (number) stackCount = 1
+[19/02/09][11:57:00]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:00]            (boolean) isCasterDispellable = false
+[19/02/09][11:57:00]            (number) _enemyDuration = 6
+[19/02/09][11:57:00]            (number) iconNum = 5287
+[19/02/09][11:57:00]            (boolean) _enemy = true
+[19/02/09][11:57:00]            (boolean) isDebuff = true
+[19/02/09][11:57:00]            (boolean) isDefensive = true
+[19/02/09][11:57:00]            (wstring) _enemyName = dissolve ix
+[19/02/09][11:57:00]            (number) duration = 6
+[19/02/09][11:57:00]            (number) trackerPriority = 0
+[19/02/09][11:57:00]            (boolean) isDamaging = false
+[19/02/09][11:57:00]            (number) abilityId = 10577
+[19/02/09][11:57:00]            (wstring) name = Dissolve IX
+[19/02/09][11:57:00]            (wstring) _enemyEffectText = armor is reduced by 800.
+[19/02/09][11:57:00]            (boolean) isBuff = false
+[19/02/09][11:57:00]            (boolean) castByPlayer = false
+[19/02/09][11:57:00]            (boolean) isGranted = false
+[19/02/09][11:57:00]            (boolean) isPassive = false
+[19/02/09][11:57:00]            end
+[19/02/09][11:57:00]         (table) color = table: 4FA0F410
+[19/02/09][11:57:00]         Preventing cycle on table [table: 4FA0F410]
+[19/02/09][11:57:00]         (number) duration = 6
+[19/02/09][11:57:00]         (number) abilityId = 10577
+[19/02/09][11:57:00]         (wstring) name = Dissolve IX
+[19/02/09][11:57:00]         (number) stackCount = 1
+[19/02/09][11:57:00]         (boolean) castByPlayer = false
+[19/02/09][11:57:00]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:00]         end
+[19/02/09][11:57:00]      (number) Index = 2816
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (table) StatusBar = table: 5CF4C9D8
+[19/02/09][11:57:00]      (boolean) Visible = false
+[19/02/09][11:57:00]      (number) Type = 0
+[19/02/09][11:57:00]      (number) Height = 0
+[19/02/09][11:57:00]      (number) Value = 0
+[19/02/09][11:57:00]      (number) Max = 0
+[19/02/09][11:57:00]      (number) Width = 0
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (table) Values = table: 4EE7B7B0
+[19/02/09][11:57:00]      (number) Stacks = 0
+[19/02/09][11:57:00]      (string) Duration = 0.4s
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (number) Alpha = 0.1
+[19/02/09][11:57:00]   (string) m_Name = BuffHeadEffectFrame135
+[19/02/09][11:57:00]   (table) Layout = table: 2BC84DA8
+[19/02/09][11:57:00]      (number) Scale = 1
+[19/02/09][11:57:00]      (boolean) Name = false
+[19/02/09][11:57:00]      (table) Settings = table: 52EED720
+[19/02/09][11:57:00]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:57:00]      (table) BorderColor = table: 4FA0F410
+[19/02/09][11:57:00]      Preventing cycle on table [table: 4FA0F410]
+[19/02/09][11:57:00]      (number) SettingsRevision = 0
+[19/02/09][11:57:00]      (boolean) Duration = true
+[19/02/09][11:57:00]      (number) Icon = 5287
+[19/02/09][11:57:00]      (boolean) StackCount = true
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (boolean) m_Showing = false
+[19/02/09][11:57:00]   (number) m_Id = 1937
+[19/02/09][11:57:00]   end
+[19/02/09][11:57:00](table) BuffHeadEffectFrame138 = table: 25E5ADE0
+[19/02/09][11:57:00]   (table) AbilityData = table: 531EB820
+[19/02/09][11:57:00]      (number) Type = 1
+[19/02/09][11:57:00]      (number) TimeAdded = 546.34994832892
+[19/02/09][11:57:00]      (number) Duration = 11
+[19/02/09][11:57:00]      (table) Data = table: 1E098D28
+[19/02/09][11:57:00]         (number) iconNum = 5143
+[19/02/09][11:57:00]         (table) source = table: 2AF598D0
+[19/02/09][11:57:00]            (wstring) effectText = Dodge and Disrupt chances increased by 15%.
+[19/02/09][11:57:00]            (boolean) isHealing = false
+[19/02/09][11:57:00]            (number) effectIndex = 3840
+[19/02/09][11:57:00]            (boolean) isStatsBuff = false
+[19/02/09][11:57:00]            (boolean) isOffensive = false
+[19/02/09][11:57:00]            (number) _enemyTimeout = 553.67768697441
+[19/02/09][11:57:00]            (number) stackCount = 1
+[19/02/09][11:57:00]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:00]            (boolean) isCasterDispellable = false
+[19/02/09][11:57:00]            (number) _enemyDuration = 11
+[19/02/09][11:57:00]            (number) iconNum = 5143
+[19/02/09][11:57:00]            (boolean) _enemy = true
+[19/02/09][11:57:00]            (boolean) isDebuff = false
+[19/02/09][11:57:00]            (boolean) isDefensive = true
+[19/02/09][11:57:00]            (wstring) _enemyName = hold the line!
+[19/02/09][11:57:00]            (number) duration = 11
+[19/02/09][11:57:00]            (number) trackerPriority = 0
+[19/02/09][11:57:00]            (boolean) isDamaging = false
+[19/02/09][11:57:00]            (number) abilityId = 8326
+[19/02/09][11:57:00]            (wstring) name = Hold The Line!
+[19/02/09][11:57:00]            (wstring) _enemyEffectText = dodge and disrupt chances increased by 15%.
+[19/02/09][11:57:00]            (boolean) isBuff = true
+[19/02/09][11:57:00]            (boolean) castByPlayer = false
+[19/02/09][11:57:00]            (boolean) isGranted = false
+[19/02/09][11:57:00]            (boolean) isPassive = false
+[19/02/09][11:57:00]            end
+[19/02/09][11:57:00]         (table) color = table: 4FA105D0
+[19/02/09][11:57:00]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:57:00]         (number) duration = 11
+[19/02/09][11:57:00]         (number) abilityId = 8326
+[19/02/09][11:57:00]         (wstring) name = Hold The Line!
+[19/02/09][11:57:00]         (number) stackCount = 1
+[19/02/09][11:57:00]         (boolean) castByPlayer = false
+[19/02/09][11:57:00]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:00]         end
+[19/02/09][11:57:00]      (number) Index = 3840
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (table) StatusBar = table: 212DD7D8
+[19/02/09][11:57:00]      (boolean) Visible = false
+[19/02/09][11:57:00]      (number) Type = 0
+[19/02/09][11:57:00]      (number) Height = 0
+[19/02/09][11:57:00]      (number) Value = 0
+[19/02/09][11:57:00]      (number) Max = 0
+[19/02/09][11:57:00]      (number) Width = 0
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (table) Values = table: 27A15738
+[19/02/09][11:57:00]      (number) Stacks = 0
+[19/02/09][11:57:00]      (string) Duration = 9s
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (number) Alpha = 1
+[19/02/09][11:57:00]   (string) m_Name = BuffHeadEffectFrame138
+[19/02/09][11:57:00]   (table) Layout = table: 25162E88
+[19/02/09][11:57:00]      (number) Scale = 1
+[19/02/09][11:57:00]      (boolean) Name = false
+[19/02/09][11:57:00]      (table) Settings = table: 52EED720
+[19/02/09][11:57:00]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:57:00]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:57:00]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:57:00]      (number) SettingsRevision = 0
+[19/02/09][11:57:00]      (boolean) Duration = true
+[19/02/09][11:57:00]      (number) Icon = 5143
+[19/02/09][11:57:00]      (boolean) StackCount = true
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (boolean) m_Showing = false
+[19/02/09][11:57:00]   (number) m_Id = 1940
+[19/02/09][11:57:00]   end
+[19/02/09][11:57:00](table) BuffHeadEffectFrame122 = table: 5AF1B858
+[19/02/09][11:57:00]   (table) AbilityData = table: 61E2FC18
+[19/02/09][11:57:00]      (number) Type = 1
+[19/02/09][11:57:00]      (number) TimeAdded = 547.97375344019
+[19/02/09][11:57:00]      (number) Duration = 0
+[19/02/09][11:57:00]      (table) Data = table: 5BBF3F28
+[19/02/09][11:57:00]         (number) iconNum = 5253
+[19/02/09][11:57:00]         (table) source = table: 50237F78
+[19/02/09][11:57:00]            (wstring) effectText = All resists decreased by 178.
+[19/02/09][11:57:00]            (boolean) isHealing = false
+[19/02/09][11:57:00]            (number) effectIndex = 1280
+[19/02/09][11:57:00]            (boolean) isStatsBuff = false
+[19/02/09][11:57:00]            (boolean) isOffensive = false
+[19/02/09][11:57:00]            (number) stackCount = 1
+[19/02/09][11:57:00]            (boolean) permanentUntilDispelled = true
+[19/02/09][11:57:00]            (boolean) isCasterDispellable = false
+[19/02/09][11:57:00]            (number) iconNum = 5253
+[19/02/09][11:57:00]            (boolean) isDebuff = false
+[19/02/09][11:57:00]            (number) duration = 0
+[19/02/09][11:57:00]            (number) trackerPriority = 0
+[19/02/09][11:57:00]            (boolean) isDamaging = false
+[19/02/09][11:57:00]            (number) abilityId = 8321
+[19/02/09][11:57:00]            (wstring) name = Discordant Instability
+[19/02/09][11:57:00]            (boolean) isDefensive = false
+[19/02/09][11:57:00]            (boolean) isBuff = false
+[19/02/09][11:57:00]            (boolean) castByPlayer = false
+[19/02/09][11:57:00]            (boolean) isGranted = false
+[19/02/09][11:57:00]            (boolean) isPassive = false
+[19/02/09][11:57:00]            end
+[19/02/09][11:57:00]         (table) color = table: 4FC06298
+[19/02/09][11:57:00]         Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:57:00]         (number) duration = 0
+[19/02/09][11:57:00]         (number) abilityId = 8321
+[19/02/09][11:57:00]         (wstring) name = Discordant Instability
+[19/02/09][11:57:00]         (number) stackCount = 1
+[19/02/09][11:57:00]         (boolean) castByPlayer = false
+[19/02/09][11:57:00]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:57:00]         end
+[19/02/09][11:57:00]      (number) Index = 1280
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (table) StatusBar = table: 1E3298F0
+[19/02/09][11:57:00]      (boolean) Visible = false
+[19/02/09][11:57:00]      (number) Type = 0
+[19/02/09][11:57:00]      (number) Height = 0
+[19/02/09][11:57:00]      (number) Value = 0
+[19/02/09][11:57:00]      (number) Max = 0
+[19/02/09][11:57:00]      (number) Width = 0
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (table) Values = table: 1DB14E20
+[19/02/09][11:57:00]      (number) Stacks = 0
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (number) Alpha = 1
+[19/02/09][11:57:00]   (string) m_Name = BuffHeadEffectFrame122
+[19/02/09][11:57:00]   (table) Layout = table: 27EFFBA8
+[19/02/09][11:57:00]      (number) Scale = 1
+[19/02/09][11:57:00]      (boolean) Name = false
+[19/02/09][11:57:00]      (table) Settings = table: 52EED720
+[19/02/09][11:57:00]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:57:00]      (table) BorderColor = table: 4FC06298
+[19/02/09][11:57:00]      Preventing cycle on table [table: 4FC06298]
+[19/02/09][11:57:00]      (number) SettingsRevision = 0
+[19/02/09][11:57:00]      (boolean) Duration = true
+[19/02/09][11:57:00]      (number) Icon = 5253
+[19/02/09][11:57:00]      (boolean) StackCount = true
+[19/02/09][11:57:00]      end
+[19/02/09][11:57:00]   (boolean) m_Showing = false
+[19/02/09][11:57:00]   (number) m_Id = 1924
+[19/02/09][11:57:00]   end
+[19/02/09][11:57:01](table) BuffHeadEffectFrame112 = table: 5E19A010
+[19/02/09][11:57:01]   (table) AbilityData = table: 1F075B40
+[19/02/09][11:57:01]      (number) Type = 2
+[19/02/09][11:57:01]      (number) TimeAdded = 548.5925438134
+[19/02/09][11:57:01]      (number) Duration = 3
+[19/02/09][11:57:01]      (table) Data = table: 1F71B8B0
+[19/02/09][11:57:01]         (number) iconNum = 7956
+[19/02/09][11:57:01]         (table) source = table: 58DC9830
+[19/02/09][11:57:01]            (wstring) effectText = Periodically taking 72 Damage.
+[19/02/09][11:57:01]            (boolean) isHealing = false
+[19/02/09][11:57:01]            (number) effectIndex = 5120
+[19/02/09][11:57:01]            (boolean) isStatsBuff = false
+[19/02/09][11:57:01]            (boolean) isOffensive = false
+[19/02/09][11:57:01]            (number) _enemyTimeout = 547.92028245889
+[19/02/09][11:57:01]            (number) stackCount = 1
+[19/02/09][11:57:01]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:01]            (boolean) isCasterDispellable = false
+[19/02/09][11:57:01]            (number) _enemyDuration = 3
+[19/02/09][11:57:01]            (number) iconNum = 7956
+[19/02/09][11:57:01]            (boolean) _enemy = true
+[19/02/09][11:57:01]            (boolean) isDebuff = false
+[19/02/09][11:57:01]            (boolean) isDefensive = true
+[19/02/09][11:57:01]            (wstring) _enemyName = spreading flames
+[19/02/09][11:57:01]            (number) duration = 3
+[19/02/09][11:57:01]            (number) trackerPriority = 0
+[19/02/09][11:57:01]            (boolean) isDamaging = true
+[19/02/09][11:57:01]            (number) abilityId = 3930
+[19/02/09][11:57:01]            (wstring) name = Spreading Flames
+[19/02/09][11:57:01]            (wstring) _enemyEffectText = periodically taking 72 damage.
+[19/02/09][11:57:01]            (boolean) isBuff = false
+[19/02/09][11:57:01]            (boolean) castByPlayer = false
+[19/02/09][11:57:01]            (boolean) isGranted = false
+[19/02/09][11:57:01]            (boolean) isPassive = false
+[19/02/09][11:57:01]            end
+[19/02/09][11:57:01]         (table) color = table: 4FA10520
+[19/02/09][11:57:01]            (number) b = 33
+[19/02/09][11:57:01]            (number) g = 64
+[19/02/09][11:57:01]            (number) r = 255
+[19/02/09][11:57:01]            end
+[19/02/09][11:57:01]         (number) duration = 3
+[19/02/09][11:57:01]         (number) abilityId = 3930
+[19/02/09][11:57:01]         (wstring) name = Spreading Flames
+[19/02/09][11:57:01]         (number) stackCount = 1
+[19/02/09][11:57:01]         (boolean) castByPlayer = false
+[19/02/09][11:57:01]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:01]         end
+[19/02/09][11:57:01]      (number) Index = 5120
+[19/02/09][11:57:01]      end
+[19/02/09][11:57:01]   (table) StatusBar = table: 5C3E84B0
+[19/02/09][11:57:01]      (boolean) Visible = false
+[19/02/09][11:57:01]      (number) Type = 0
+[19/02/09][11:57:01]      (number) Height = 0
+[19/02/09][11:57:01]      (number) Value = 0
+[19/02/09][11:57:01]      (number) Max = 3
+[19/02/09][11:57:01]      (number) Width = 0
+[19/02/09][11:57:01]      end
+[19/02/09][11:57:01]   (table) Values = table: 1EC3FCA0
+[19/02/09][11:57:01]      (number) Stacks = 0
+[19/02/09][11:57:01]      (string) Duration = 2.6s
+[19/02/09][11:57:01]      end
+[19/02/09][11:57:01]   (number) Alpha = 1
+[19/02/09][11:57:01]   (string) m_Name = BuffHeadEffectFrame112
+[19/02/09][11:57:01]   (table) Layout = table: 5DFA5740
+[19/02/09][11:57:01]      (number) Scale = 1
+[19/02/09][11:57:01]      (boolean) Name = false
+[19/02/09][11:57:01]      (table) Settings = table: 52EED720
+[19/02/09][11:57:01]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:57:01]      (table) BorderColor = table: 4FA10520
+[19/02/09][11:57:01]      Preventing cycle on table [table: 4FA10520]
+[19/02/09][11:57:01]      (number) SettingsRevision = 0
+[19/02/09][11:57:01]      (boolean) Duration = true
+[19/02/09][11:57:01]      (number) Icon = 7956
+[19/02/09][11:57:01]      (boolean) StackCount = true
+[19/02/09][11:57:01]      end
+[19/02/09][11:57:01]   (boolean) m_Showing = false
+[19/02/09][11:57:01]   (number) m_Id = 1859
+[19/02/09][11:57:01]   end
+[19/02/09][11:57:01](table) BuffHeadEffectFrame136 = table: 5C164AF0
+[19/02/09][11:57:01]Preventing cycle on table [table: 5C164AF0]
+[19/02/09][11:57:02](table) BuffHeadEffectFrame123 = table: 57360770
+[19/02/09][11:57:02]   (table) AbilityData = table: 5C337AB0
+[19/02/09][11:57:02]      (number) Type = 1
+[19/02/09][11:57:02]      (number) TimeAdded = 582.35244594142
+[19/02/09][11:57:02]      (number) Duration = 10
+[19/02/09][11:57:02]      (table) Data = table: 575A5F48
+[19/02/09][11:57:02]         (number) iconNum = 5267
+[19/02/09][11:57:02]         (table) source = table: 1DA062F0
+[19/02/09][11:57:02]            (wstring) effectText = The next ability activation is free.
+[19/02/09][11:57:02]            (boolean) isHealing = false
+[19/02/09][11:57:02]            (number) effectIndex = 2816
+[19/02/09][11:57:02]            (boolean) isStatsBuff = false
+[19/02/09][11:57:02]            (boolean) isOffensive = false
+[19/02/09][11:57:02]            (number) _enemyTimeout = 588.6801845869
+[19/02/09][11:57:02]            (number) stackCount = 1
+[19/02/09][11:57:02]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:02]            (boolean) isCasterDispellable = false
+[19/02/09][11:57:02]            (number) _enemyDuration = 10
+[19/02/09][11:57:02]            (number) iconNum = 5267
+[19/02/09][11:57:02]            (boolean) _enemy = true
+[19/02/09][11:57:02]            (boolean) isDebuff = false
+[19/02/09][11:57:02]            (boolean) isDefensive = true
+[19/02/09][11:57:02]            (wstring) _enemyName = clarity
+[19/02/09][11:57:02]            (number) duration = 10
+[19/02/09][11:57:02]            (number) trackerPriority = 0
+[19/02/09][11:57:02]            (boolean) isDamaging = false
+[19/02/09][11:57:02]            (number) abilityId = 10701
+[19/02/09][11:57:02]            (wstring) name = Clarity
+[19/02/09][11:57:02]            (wstring) _enemyEffectText = the next ability activation is free.
+[19/02/09][11:57:02]            (boolean) isBuff = true
+[19/02/09][11:57:02]            (boolean) castByPlayer = true
+[19/02/09][11:57:02]            (boolean) isGranted = false
+[19/02/09][11:57:02]            (boolean) isPassive = false
+[19/02/09][11:57:02]            end
+[19/02/09][11:57:02]         (table) color = table: 4FA105D0
+[19/02/09][11:57:02]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:57:02]         (number) duration = 10
+[19/02/09][11:57:02]         (number) abilityId = 10701
+[19/02/09][11:57:02]         (wstring) name = Clarity
+[19/02/09][11:57:02]         (number) stackCount = 1
+[19/02/09][11:57:02]         (boolean) castByPlayer = true
+[19/02/09][11:57:02]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:02]         end
+[19/02/09][11:57:02]      (number) Index = 2816
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (table) StatusBar = table: 5DFBBA30
+[19/02/09][11:57:02]      (boolean) Visible = false
+[19/02/09][11:57:02]      (number) Type = 0
+[19/02/09][11:57:02]      (number) Height = 0
+[19/02/09][11:57:02]      (number) Value = 0
+[19/02/09][11:57:02]      (number) Max = 10
+[19/02/09][11:57:02]      (number) Width = 0
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (table) Values = table: 604FEDE0
+[19/02/09][11:57:02]      (string) Duration = 9s
+[19/02/09][11:57:02]      (number) Stacks = 0
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (number) Alpha = 1
+[19/02/09][11:57:02]   (string) m_Name = BuffHeadEffectFrame123
+[19/02/09][11:57:02]   (table) Layout = table: 6248FE30
+[19/02/09][11:57:02]      (number) Scale = 1
+[19/02/09][11:57:02]      (boolean) Name = false
+[19/02/09][11:57:02]      (table) Settings = table: 52EED720
+[19/02/09][11:57:02]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:57:02]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:57:02]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:57:02]      (number) SettingsRevision = 0
+[19/02/09][11:57:02]      (boolean) Duration = true
+[19/02/09][11:57:02]      (number) Icon = 5267
+[19/02/09][11:57:02]      (boolean) StackCount = true
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (boolean) m_Showing = false
+[19/02/09][11:57:02]   (number) m_Id = 1925
+[19/02/09][11:57:02]   end
+[19/02/09][11:57:02](table) BuffHeadEffectFrame120 = table: 5870F580
+[19/02/09][11:57:02]   (table) AbilityData = table: 5BFAF2E0
+[19/02/09][11:57:02]      (number) Type = 1
+[19/02/09][11:57:02]      (number) TimeAdded = 540.13321698923
+[19/02/09][11:57:02]      (number) Duration = 0
+[19/02/09][11:57:02]      (table) Data = table: 1F73D3D0
+[19/02/09][11:57:02]         (number) iconNum = 2456
+[19/02/09][11:57:02]         (table) source = table: 50D91160
+[19/02/09][11:57:02]         Preventing cycle on table [table: 50D91160]
+[19/02/09][11:57:02]         (table) color = table: 4FA0F4C0
+[19/02/09][11:57:02]         Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:57:02]         (number) duration = 0
+[19/02/09][11:57:02]         (number) abilityId = 14318
+[19/02/09][11:57:02]         (wstring) name = Field of Glory
+[19/02/09][11:57:02]         (number) stackCount = 1
+[19/02/09][11:57:02]         (boolean) castByPlayer = false
+[19/02/09][11:57:02]         (boolean) permanentUntilDispelled = true
+[19/02/09][11:57:02]         end
+[19/02/09][11:57:02]      (number) Index = 1536
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (table) StatusBar = table: 5C3D27C8
+[19/02/09][11:57:02]      (boolean) Visible = false
+[19/02/09][11:57:02]      (number) Type = 0
+[19/02/09][11:57:02]      (number) Height = 0
+[19/02/09][11:57:02]      (number) Value = 0
+[19/02/09][11:57:02]      (number) Max = 0
+[19/02/09][11:57:02]      (number) Width = 0
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (table) Values = table: 62A30AC0
+[19/02/09][11:57:02]      (number) Stacks = 0
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (number) Alpha = 1
+[19/02/09][11:57:02]   (string) m_Name = BuffHeadEffectFrame120
+[19/02/09][11:57:02]   (table) Layout = table: 213DB8A0
+[19/02/09][11:57:02]      (number) Scale = 1
+[19/02/09][11:57:02]      (boolean) Name = false
+[19/02/09][11:57:02]      (table) Settings = table: 52EED720
+[19/02/09][11:57:02]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:57:02]      (table) BorderColor = table: 4FA0F4C0
+[19/02/09][11:57:02]      Preventing cycle on table [table: 4FA0F4C0]
+[19/02/09][11:57:02]      (number) SettingsRevision = 0
+[19/02/09][11:57:02]      (boolean) Duration = true
+[19/02/09][11:57:02]      (number) Icon = 2456
+[19/02/09][11:57:02]      (boolean) StackCount = true
+[19/02/09][11:57:02]      end
+[19/02/09][11:57:02]   (boolean) m_Showing = false
+[19/02/09][11:57:02]   (number) m_Id = 1922
+[19/02/09][11:57:02]   end
+[19/02/09][11:57:03](table) BuffHeadEffectFrame127 = table: 640A76C8
+[19/02/09][11:57:03]   (table) AbilityData = table: 60E612D0
+[19/02/09][11:57:03]      (number) Type = 1
+[19/02/09][11:57:03]      (number) TimeAdded = 580.88763921242
+[19/02/09][11:57:03]      (number) Duration = 5
+[19/02/09][11:57:03]      (table) Data = table: 2B81CFA8
+[19/02/09][11:57:03]         (number) iconNum = 22702
+[19/02/09][11:57:03]         (table) source = table: 1E72BE50
+[19/02/09][11:57:03]            (wstring) effectText = Absorbing up to 358 damage.
+[19/02/09][11:57:03]            (boolean) isHealing = false
+[19/02/09][11:57:03]            (number) effectIndex = 3072
+[19/02/09][11:57:03]            (boolean) isStatsBuff = false
+[19/02/09][11:57:03]            (boolean) isOffensive = false
+[19/02/09][11:57:03]            (number) _enemyTimeout = 582.21537785791
+[19/02/09][11:57:03]            (number) stackCount = 1
+[19/02/09][11:57:03]            (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:03]            (boolean) isCasterDispellable = false
+[19/02/09][11:57:03]            (number) _enemyDuration = 5
+[19/02/09][11:57:03]            (number) iconNum = 22702
+[19/02/09][11:57:03]            (boolean) _enemy = true
+[19/02/09][11:57:03]            (boolean) isDebuff = false
+[19/02/09][11:57:03]            (boolean) isDefensive = true
+[19/02/09][11:57:03]            (wstring) _enemyName = tapping the dark
+[19/02/09][11:57:03]            (number) duration = 5
+[19/02/09][11:57:03]            (number) trackerPriority = 0
+[19/02/09][11:57:03]            (boolean) isDamaging = false
+[19/02/09][11:57:03]            (number) abilityId = 3425
+[19/02/09][11:57:03]            (wstring) name = Tapping The Dark
+[19/02/09][11:57:03]            (wstring) _enemyEffectText = absorbing up to 358 damage.
+[19/02/09][11:57:03]            (boolean) isBuff = true
+[19/02/09][11:57:03]            (boolean) castByPlayer = true
+[19/02/09][11:57:03]            (boolean) isGranted = false
+[19/02/09][11:57:03]            (boolean) isPassive = false
+[19/02/09][11:57:03]            end
+[19/02/09][11:57:03]         (table) color = table: 4FA105D0
+[19/02/09][11:57:03]         Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:57:03]         (number) duration = 5
+[19/02/09][11:57:03]         (number) abilityId = 3425
+[19/02/09][11:57:03]         (wstring) name = Tapping The Dark
+[19/02/09][11:57:03]         (number) stackCount = 1
+[19/02/09][11:57:03]         (boolean) castByPlayer = true
+[19/02/09][11:57:03]         (boolean) permanentUntilDispelled = false
+[19/02/09][11:57:03]         end
+[19/02/09][11:57:03]      (number) Index = 3072
+[19/02/09][11:57:03]      end
+[19/02/09][11:57:03]   (table) StatusBar = table: 5750A480
+[19/02/09][11:57:03]      (boolean) Visible = false
+[19/02/09][11:57:03]      (number) Type = 0
+[19/02/09][11:57:03]      (number) Height = 0
+[19/02/09][11:57:03]      (number) Value = 0
+[19/02/09][11:57:03]      (number) Max = 5
+[19/02/09][11:57:03]      (number) Width = 0
+[19/02/09][11:57:03]      end
+[19/02/09][11:57:03]   (table) Values = table: 58B761C0
+[19/02/09][11:57:03]      (number) Stacks = 0
+[19/02/09][11:57:03]      (string) Duration = 4s
+[19/02/09][11:57:03]      end
+[19/02/09][11:57:03]   (number) Alpha = 1
+[19/02/09][11:57:03]   (string) m_Name = BuffHeadEffectFrame127
+[19/02/09][11:57:03]   (table) Layout = table: 6019F9C8
+[19/02/09][11:57:03]      (number) Scale = 1
+[19/02/09][11:57:03]      (boolean) Name = false
+[19/02/09][11:57:03]      (table) Settings = table: 52EED720
+[19/02/09][11:57:03]      Preventing cycle on table [table: 52EED720]
+[19/02/09][11:57:03]      (table) BorderColor = table: 4FA105D0
+[19/02/09][11:57:03]      Preventing cycle on table [table: 4FA105D0]
+[19/02/09][11:57:03]      (number) SettingsRevision = 0
+[19/02/09][11:57:03]      (boolean) Duration = true
+[19/02/09][11:57:03]      (number) Icon = 22702
+[19/02/09][11:57:03]      (boolean) StackCount = true
+[19/02/09][11:57:03]      end
+[19/02/09][11:57:03]   (boolean) m_Showing = false
+[19/02/09][11:57:03]   (number) m_Id = 1929
+[19/02/09][11:57:03]   end

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		<Window name="EnemyIntercomConfiguration">
+			<Windows>
+
+				<!-- Content: private -->
+				<Label name="$parentPrivateLabel" font="font_chat_text">
+					<Size>
+						<AbsPoint x="600" y="30" />
+					</Size>
+<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentPrivate">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+
+					<Color r="255" g="255" b="255" a="255" />
+</Label>
+					<Label name="$parentPrivateLabel2" font="font_chat_text">
+					<Size>
+						<AbsPoint x="600" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPrivateLabel">
+							<AbsPoint x="0" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

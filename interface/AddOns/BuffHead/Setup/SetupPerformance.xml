@@ -1,0 +1,363 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="BuffHeadSetupPerformanceWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.Performance.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="620" y="770" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Performance.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentPerformanceLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentGeneralUpdateDelayLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPerformanceLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentGeneralUpdateDelaySlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="120" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGeneralUpdateDelayLabel">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Performance.OnSlideGeneralUpdateDelay" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentGeneralUpdateDelayValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentGeneralUpdateDelaySlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentPriorityUpdateLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentGeneralUpdateDelaySlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentEnablePriorityUpdates" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPriorityUpdateLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Performance.OnEnablePriorityLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentEnablePriorityUpdatesCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEnablePriorityUpdates">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentPriorityUpdateStartLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnablePriorityUpdates">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentPriorityUpdateStartSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="180" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPriorityUpdateStartLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Performance.OnSlidePriorityUpdateStart" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentPriorityUpdateStartValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentPriorityUpdateStartSlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentPriorityUpdateDelayLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPriorityUpdateStartSlider">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentPriorityUpdateDelaySlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="120" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPriorityUpdateDelayLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Performance.OnSlidePriorityUpdateDelay" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentPriorityUpdateDelayValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentPriorityUpdateDelaySlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentFadingLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPriorityUpdateDelaySlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentEnableFading" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFadingLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Performance.OnEnableFadingLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentEnableFadingCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEnableFading">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentSyncLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnableFading">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentEnableSync" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSyncLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Performance.OnEnableSyncLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentEnableSyncCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEnableSync">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentResyncTargetDelayLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="280" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnableSync">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentResyncTargetDelaySlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="120" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentResyncTargetDelayLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Performance.OnSlideResyncTargetDelay" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentResyncTargetDelayValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentResyncTargetDelaySlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentMaximumUpdatesLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentResyncTargetDelaySlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<SliderBar name="$parentMaximumUpdatesSlider" inherits="EA_Default_SliderBar">
+					<Size>
+						<AbsPoint x="120" y="35" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMaximumUpdatesLabel">
+							<AbsPoint x="10" y="10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSlide" function="BuffHead.Setup.Performance.OnSlideMaximumUpdates" />
+					</EventHandlers>
+				</SliderBar>
+				
+				<Label name="$parentMaximumUpdatesValue" font="font_clear_small" textalign="left" maxchars="50">
+					<Size>
+						<AbsPoint x="120" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentMaximumUpdatesSlider">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentEffectAnchoringLabel" font="font_clear_small_bold" textalign="left" maxchars="100">
+					<Size>
+						<AbsPoint x="480" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMaximumUpdatesSlider">
+							<AbsPoint x="-10" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentEffectAnchoringList" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEffectAnchoringLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Performance.OnEffectAnchoringChanged" />
+					</EventHandlers>
+				</ComboBox>
+
+
+
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

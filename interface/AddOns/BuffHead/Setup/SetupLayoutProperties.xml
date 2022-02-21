@@ -1,0 +1,1009 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="BuffHeadSetupLayoutPropertiesWindow" inherits="EA_Window_Default" movable="true" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.Layout.Properties.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="580" y="600" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="BuffHead.Setup.Layout.Properties.OnPropertyTitleMouseOver" />
+						<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Layout.Properties.OnPropertyTitleMouseOut" />
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnPropertyTitleLClick" />
+					</EventHandlers>
+				</Label>
+				
+				<ComboBox name="$parentPropertiesComboBox" inherits="EA_ComboBox_DefaultResizable" layer="secondary">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnPropertiesChanged" />
+					</EventHandlers>
+				</ComboBox>
+						
+				<Label name="$parentElementLabel" font="font_clear_small" textalign="left">
+					<Size>
+						<AbsPoint x="80" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentElementComboBox" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnElementChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentElementCoreSize">
+					<Size>
+						<AbsPoint x="500" y="180" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentSizeLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentSizeWidthLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentSizeWidthEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="5" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentSizeWidthLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.Layout.Properties.OnCoreSizeSizeWidthChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<Label name="$parentSizeHeightLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeWidthLabel">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentSizeHeightEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="5" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentSizeHeightLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.Layout.Properties.OnCoreSizeSizeHeightChanged" />
+							</EventHandlers>
+						</EditBox>
+						
+						<Label name="$parentAutoSizeLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="380" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeHeightLabel">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Button name="$parentAutoSizeButton" inherits="EA_Button_DefaultResizeable">
+							<Size>
+								<AbsPoint x="180" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAutoSizeLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnCoreSizeAutoSizeLClick" />
+							</EventHandlers>
+						</Button>
+						
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementSize">
+					<Size>
+						<AbsPoint x="500" y="180" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentSizeLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentSizeWidthLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentSizeWidthEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="5" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentSizeWidthLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.Layout.Properties.OnSizeSizeWidthChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<Label name="$parentSizeHeightLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeWidthLabel">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentSizeHeightEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="5" input="numbers">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentSizeHeightLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.Layout.Properties.OnSizeSizeHeightChanged" />
+							</EventHandlers>
+						</EditBox>
+						
+						<Label name="$parentScaleLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSizeHeightLabel">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<SliderBar name="$parentScaleSlider" inherits="EA_Default_SliderBar">
+							<Size>
+								<AbsPoint x="180" y="35" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentScaleLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSlide" function="BuffHead.Setup.Layout.Properties.OnSlideSizeScale" />
+							</EventHandlers>
+						</SliderBar>
+								
+						<EditBox name="$parentScaleEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="10">
+							<Size>
+								<AbsPoint x="80" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentScaleSlider">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.Layout.Properties.OnSizeScaleChanged" />
+							</EventHandlers>
+						</EditBox>
+
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementAlpha">
+					<Size>
+						<AbsPoint x="500" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentAlphaLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<SliderBar name="$parentAlphaSlider" inherits="EA_Default_SliderBar">
+							<Size>
+								<AbsPoint x="180" y="35" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSlide" function="BuffHead.Setup.Layout.Properties.OnSlideAlphaAlpha" />
+							</EventHandlers>
+						</SliderBar>
+						
+						<Label name="$parentAlphaValue" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="60" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentAlphaSlider">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementLayer">
+					<Size>
+						<AbsPoint x="500" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentLayerLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentLayerComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentLayerLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnLayerLayerChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementOffset">
+					<Size>
+						<AbsPoint x="500" y="100" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+				
+						<Label name="$parentOffsetLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="200" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorExample">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentOffsetXLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentOffsetXEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="10">
+							<Size>
+								<AbsPoint x="120" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetXLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.Layout.Properties.OnOffsetXChanged" />
+							</EventHandlers>
+						</EditBox>
+				
+						<Label name="$parentOffsetYLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="40" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOffsetXLabel">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+								
+						<EditBox name="$parentOffsetYEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="10">
+							<Size>
+								<AbsPoint x="120" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentOffsetYLabel">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnTextChanged" function="BuffHead.Setup.Layout.Properties.OnOffsetYChanged" />
+							</EventHandlers>
+						</EditBox>
+
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementStatusBar">
+					<Size>
+						<AbsPoint x="500" y="420" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>		
+									
+						<Window name="$parentEnable" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="25" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnStatusBarEnableLUp" />
+							</EventHandlers>
+						</Window>
+						
+						<Label name="$parentEnableCheckboxLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentEnable">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentBackgroundLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentEnable">
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentBackgroundColorLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBackgroundLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Window name="$parentBackgroundColorExample" inherits="BuffHeadColorExample">
+							<Size>
+								<AbsPoint x="32" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBackgroundColorLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOver" />
+								<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOut" />
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnStatusBarBackgroundColorLUp" />
+							</EventHandlers>						
+						</Window>
+						
+						<Label name="$parentBackgroundAlphaLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentBackgroundColorLabel">
+									<AbsPoint x="40" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<SliderBar name="$parentBackgroundAlphaSlider" inherits="EA_Default_SliderBar">
+							<Size>
+								<AbsPoint x="180" y="35" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBackgroundAlphaLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSlide" function="BuffHead.Setup.Layout.Properties.OnSlideStatusBarBackgroundAlpha" />
+							</EventHandlers>
+						</SliderBar>
+						
+						<Label name="$parentBackgroundAlphaValue" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="60" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentBackgroundAlphaSlider">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<Label name="$parentForegroundLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBackgroundColorExample">
+									<AbsPoint x="-40" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentForegroundColorLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentForegroundLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Window name="$parentForegroundColorExample" inherits="BuffHeadColorExample">
+							<Size>
+								<AbsPoint x="32" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentForegroundColorLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOver" />
+								<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOut" />
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnStatusBarForegroundColorLUp" />
+							</EventHandlers>						
+						</Window>
+						
+						<Label name="$parentForegroundAlphaLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentForegroundColorLabel">
+									<AbsPoint x="40" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<SliderBar name="$parentForegroundAlphaSlider" inherits="EA_Default_SliderBar">
+							<Size>
+								<AbsPoint x="180" y="35" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentForegroundAlphaLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSlide" function="BuffHead.Setup.Layout.Properties.OnSlideStatusBarForegroundAlpha" />
+							</EventHandlers>
+						</SliderBar>
+						
+						<Label name="$parentForegroundAlphaValue" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="60" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentForegroundAlphaSlider">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentForegroundColorTypeLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentForegroundColorExample">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentForegroundColorTypeComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentForegroundColorTypeLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnStatusBarForegroundColorTypeChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Label name="$parentForegroundTextureLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentForegroundColorTypeComboBox">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Window name="$parentForegroundTextureButton" inherits="BuffHeadSetupSelectTextureRowTemplate">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentForegroundTextureLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnStatusBarForegroundTextureLUp" />
+								<EventHandler event="OnMouseOver" function="BuffHead.Setup.Layout.Properties.OnTextureButtonMouseOver" />
+								<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Layout.Properties.OnTextureButtonMouseOut" />
+							</EventHandlers>
+						</Window>
+						
+						<Window name="$parentForegroundStretch" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="25" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentForegroundTextureButton">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnStatusBarForegroundStretchLUp" />
+							</EventHandlers>
+						</Window>
+						
+						<Label name="$parentForegroundStretchCheckboxLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="120" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentForegroundStretch">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementStatusBarOrientation">
+					<Size>
+						<AbsPoint x="500" y="100" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentOrientationLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="180" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentOrientationComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOrientationLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnStatusBarOrientationChanged" />
+							</EventHandlers>
+						</ComboBox>
+									
+						<Window name="$parentReverse" inherits="EA_LabelCheckButton">
+							<Size>
+								<AbsPoint x="25" y="25" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOrientationComboBox">
+									<AbsPoint x="0" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnStatusBarOrientationReverseLUp" />
+							</EventHandlers>
+						</Window>
+						
+						<Label name="$parentReverseCheckboxLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="280" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentReverse">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementFont">
+					<Size>
+						<AbsPoint x="500" y="240" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentColorLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Window name="$parentColorExample" inherits="BuffHeadColorExample">
+							<Size>
+								<AbsPoint x="32" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOver" />
+								<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOut" />
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnFontColorLUp" />
+							</EventHandlers>						
+						</Window>
+				
+						<Label name="$parentAlignmentLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorExample">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentAlignmentComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlignmentLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnFontAlignmentChanged" />
+							</EventHandlers>
+						</ComboBox>
+						
+						<Label name="$parentFontLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlignmentComboBox">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentFontExampleLabel" font="font_clear_small" textalign="left" handleinput="true">
+							<Size>
+								<AbsPoint x="480" y="40" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFontLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="BuffHead.Setup.Layout.Properties.OnFontExampleMouseOver" />
+								<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Layout.Properties.OnFontExampleMouseOut" />
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnFontFontLUp" />
+							</EventHandlers>
+						</Label>
+						
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementDurationFormat">
+					<Size>
+						<AbsPoint x="500" y="80" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentFormatLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<ComboBox name="$parentFormatComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFormatLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnDurationFormatChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+				
+				<Window name="$parentElementIconBorder">
+					<Size>
+						<AbsPoint x="500" y="160" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentElementComboBox">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						
+						<Label name="$parentColorLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+									<AbsPoint x="10" y="0"/>
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Window name="$parentColorExample" inherits="BuffHeadColorExample">
+							<Size>
+								<AbsPoint x="32" y="32"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnMouseOver" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOver" />
+								<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Layout.Properties.OnColorExampleMouseOut" />
+								<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Layout.Properties.OnIconBorderColorLUp" />
+							</EventHandlers>						
+						</Window>
+						
+						<Label name="$parentAlphaLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentColorLabel">
+									<AbsPoint x="40" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<SliderBar name="$parentAlphaSlider" inherits="EA_Default_SliderBar">
+							<Size>
+								<AbsPoint x="180" y="35" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentAlphaLabel">
+									<AbsPoint x="20" y="10" />
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSlide" function="BuffHead.Setup.Layout.Properties.OnSlideIconBorderAlpha" />
+							</EventHandlers>
+						</SliderBar>
+						
+						<Label name="$parentAlphaValue" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="60" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="right" relativePoint="left" relativeTo="$parentAlphaSlider">
+									<AbsPoint x="10" y="0" />
+								</Anchor>
+							</Anchors>
+						</Label>
+						
+						<Label name="$parentColorTypeLabel" font="font_clear_small" textalign="left">
+							<Size>
+								<AbsPoint x="80" y="20" />
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorExample">
+									<AbsPoint x="-20" y="20" />
+								</Anchor>
+							</Anchors>
+						</Label>
+				
+						<ComboBox name="$parentColorTypeComboBox" inherits="EA_ComboBox_DefaultResizable">
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentColorTypeLabel">
+									<AbsPoint x="20" y="10"/>
+								</Anchor>
+							</Anchors>
+							<EventHandlers>
+								<EventHandler event="OnSelChanged" function="BuffHead.Setup.Layout.Properties.OnIconBorderColorTypeChanged" />
+							</EventHandlers>
+						</ComboBox>
+
+					</Windows>
+				</Window>
+				
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

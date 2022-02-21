@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Assets>
+		<Texture name="enemy_bar_fill_simple" file="textures\bar_fill_simple.dds" />
+		<Texture name="enemy_bar_rect" file="textures\bar_rect.dds" />
+	</Assets>
+
+	<Windows>
+
+		<Window name="EnemyScenarioInfoDialog_PlayerStatsHeaderTemplate">
+			<Size>
+				<AbsPoint x="470" y="30" />
+			</Size>
+			<Windows>
+				<Button name="$parentSortArchetype2" inherits="EA_Button_DefaultListSort">
+					<Size>
+						<AbsPoint x="30" y="30" />
+					</Size>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SortColumnClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortLevel" inherits="EA_Button_DefaultListSort">
+					<Size>
+						<AbsPoint x="30" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortArchetype2">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SortColumnClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortName" inherits="EA_Button_DefaultListSort">
+					<Size>
+						<AbsPoint x="150" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortLevel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SortColumnClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortValue1" inherits="EA_Button_DefaultListSort">
+					<Size>
+						<AbsPoint x="115" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortName">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SortColumnClick" />
+		                <EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SortColumnRClick" />
+		            </EventHandlers>
+		        </Button>
+		        <Button name="$parentSortValue2" inherits="EA_Button_DefaultListSort">
+					<Size>
+						<AbsPoint x="115" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSortValue1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+		            <EventHandlers>
+		                <EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SortColumnClick" />
+		                <EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SortColumnRClick" />
+		            </EventHandlers>
+		        </Button>
+			</Windows>
+		</Window>
+
+		<Window name="EnemyScenarioInfoDialog_PlayerStatsRowTemplate">
+			<Size>
+				<AbsPoint x="470" y="30" />
+			</Size>
+			<Windows>
+				<DynamicImage name="$parentIcon" handleinput="false">
+					<TexDims x="32" y="32" />
+					<Size>
+						<AbsPoint x="30" y="30" />
+					</Size>
+				</DynamicImage>
+				<Label name="$parentLevel" textalign="center" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="30" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIcon">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentName" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="150" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentLevel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentValue1" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="115" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentName">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentValue2" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="115" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="EnemyScenarioInfoDialog_StatsRowTemplate">
+			<Size>
+				<AbsPoint x="440" y="20" />
+			</Size>
+			<Windows>
+				<Label name="$parentNameLabel" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="110" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+
+				<Label name="$parentValue1Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="75" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentNameLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue2Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="75" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue1Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue3Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="75" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue2Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+
+				<DynamicImage name="$parentBar1" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentValue3Label">
+							<AbsPoint x="5" y="-1" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+				<DynamicImage name="$parentBar2" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBar1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+			</Windows>
+		</Window>
+
+		<Window name="EnemyScenarioInfoDialog_StatsRowTemplateBig">
+			<Size>
+				<AbsPoint x="960" y="20" />
+			</Size>
+			<Windows>
+				<Label name="$parentNameLabel" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+
+				<Label name="$parentValue1Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentNameLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue2Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue1Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue3Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue2Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+
+				<DynamicImage name="$parentBar1" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentValue3Label">
+							<AbsPoint x="5" y="-1" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+				<DynamicImage name="$parentBar2" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBar1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+			</Windows>
+		</Window>
+
+		<Window name="EnemyScenarioInfoDialog_StatsRowTemplateBig2">
+			<Size>
+				<AbsPoint x="960" y="20" />
+			</Size>
+			<Windows>
+				<Label name="$parentNameLabel" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+
+				<Label name="$parentValue2Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentNameLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue1Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue2Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue3Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue1Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+
+				<DynamicImage name="$parentBar1" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentValue3Label">
+							<AbsPoint x="5" y="-1" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+				<DynamicImage name="$parentBar2" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBar1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+			</Windows>
+		</Window>
+
+		<Window name="EnemyScenarioInfoDialog_CareerStatsTemplate">
+			<Size>
+				<AbsPoint x="70" y="30" />
+			</Size>
+			<Windows>
+				<DynamicImage name="$parentIcon" handleinput="true">
+					<TexDims x="32" y="32" />
+					<Size>
+						<AbsPoint x="24" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="3" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</DynamicImage>
+				<Label name="$parentValue" textalign="leftcenter" font="font_clear_medium_bold" warnOnTextCropped="false" handleinput="true">
+					<Size>
+						<AbsPoint x="40" y="28" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentIcon">
+							<AbsPoint x="3" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+		</Window>
+
+		<Window name="EnemyScenarioInfoDialog_StatsRowTemplateBig3">
+			<Size>
+				<AbsPoint x="960" y="20" />
+			</Size>
+			<Windows>
+				<Label name="$parentNameLabel" font="font_chat_text" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+
+				<Label name="$parentValue1Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentNameLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue2Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue1Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentValue3Label" textalign="center" font="font_clear_medium_bold" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="215" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentValue2Label">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueLClick" />
+						<EventHandler event="OnRButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnValueRClick" />
+					</EventHandlers>
+				</Label>
+
+				<DynamicImage name="$parentBar1" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentValue3Label">
+							<AbsPoint x="5" y="-1" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+				<DynamicImage name="$parentBar2" texture="enemy_bar_fill_simple" handleinput="true">
+					<TexDims x="100" y="10" />
+					<Size>
+						<AbsPoint x="100" y="10" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentBar1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</DynamicImage>
+			</Windows>
+		</Window>
+
+		<Window name="EnemyScenarioInfoDialog" inherits="EA_Window_Default" movable="true" savesettings="true" layer="overlay">
+			<Size>
+				<AbsPoint x="1000" y="1000" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+
+			<Windows>
+				<!-- Init -->
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+                </FullResizeImage>
+
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topright">
+							<AbsPoint x="5" y="-5" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_Hide" />
+					</EventHandlers>
+				</Button>
+
+				<!-- Select rectangles -->
+				<FullResizeImage name="$parentSelection1" texture="enemy_bar_rect" handleinput="false" layer="background">
+					<TexDims x="136" y="36" />
+					<Size>
+						<AbsPoint x="65" y="20" />
+					</Size>
+					<Sizes>
+                        <TopLeft x="1" y="1" />
+                        <BottomRight x="1" y="1" />
+                        <Middle x="1" y="1" />
+                    </Sizes>
+                    <TexCoords>
+		                <TopLeft x="0" y="0" />
+		                <TopCenter x="60" y="0" />
+		                <TopRight x="135" y="0" />
+		                <MiddleLeft x="0" y="18" />
+		                <MiddleCenter x="60" y="18" />
+		                <MiddleRight x="135" y="18" />
+		                <BottomLeft x="0" y="35" />
+		                <BottomCenter x="60" y="35" />
+		                <BottomRight x="135" y="35" />
+		            </TexCoords>
+				</FullResizeImage>
+				<FullResizeImage name="$parentSelection2" texture="enemy_bar_rect" handleinput="false" layer="background">
+					<TexDims x="136" y="36" />
+					<Size>
+						<AbsPoint x="65" y="20" />
+					</Size>
+					<Sizes>
+                        <TopLeft x="1" y="1" />
+                        <BottomRight x="1" y="1" />
+                        <Middle x="1" y="1" />
+                    </Sizes>
+                    <TexCoords>
+		                <TopLeft x="0" y="0" />
+		                <TopCenter x="60" y="0" />
+		                <TopRight x="135" y="0" />
+		                <MiddleLeft x="0" y="18" />
+		                <MiddleCenter x="60" y="18" />
+		                <MiddleRight x="135" y="18" />
+		                <BottomLeft x="0" y="35" />
+		                <BottomCenter x="60" y="35" />
+		                <BottomRight x="135" y="35" />
+		            </TexCoords>
+				</FullResizeImage>
+
+				<!-- All -->
+				<Window name="$parentStatsAll" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsHigh" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentStatsAll">
+							<AbsPoint x="80" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- DPS -->
+				<Window name="$parentStatsDps" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsAll">
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- MDPS -->
+				<Window name="$parentStatsMdps" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsDps">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- RDPS -->
+				<Window name="$parentStatsRdps" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsMdps">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- HEALERS -->
+				<Window name="$parentStatsHealers" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsRdps">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- TANKS -->
+				<Window name="$parentStatsTanks" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsHealers">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- Damage/Healing -->
+				<Window name="$parentStatsDamage" inherits="EnemyScenarioInfoDialog_StatsRowTemplateBig">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsTanks">
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsHealing" inherits="EnemyScenarioInfoDialog_StatsRowTemplateBig2">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsDamage">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatssoloKills" inherits="EnemyScenarioInfoDialog_StatsRowTemplateBig3">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsHealing">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- DB/Deaths -->
+				<Window name="$parentStatsDB" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsHealing">
+							<AbsPoint x="0" y="65" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsDeaths" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsDB">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsexp" inherits="EnemyScenarioInfoDialog_StatsRowTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsDeaths">
+							<AbsPoint x="0" y="40" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- Score, time -->
+					<Label name="$parentScoreDestrLabel" textalign="right" font="font_default_text_huge" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentStatsDB">
+							<AbsPoint x="130" y="40" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentScoreOrderLabel" font="font_default_text_huge" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentScoreDestrLabel">
+							<AbsPoint x="40" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentTimerLabel" textalign="center" font="font_default_text_huge" warnOnTextCropped="false">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentScoreOrderLabel">
+							<AbsPoint x="50" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+				<Button name="$parentLeaveButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentScoreOrderLabel">
+							<AbsPoint x="50" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="ScenarioSummaryWindow.OnLeaveNowClicked" />
+					</EventHandlers>
+				</Button>
+
+				<!-- Careers row 1 -->
+				<Window name="$parentStatsCareer1" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentStatsMdps">
+							<AbsPoint x="70" y="-5" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer2" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer1">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer3" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer2">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer4" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer3">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer5" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer4">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer6" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer5">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- Careers row 2 -->
+				<Window name="$parentStatsCareer7" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentStatsRdps">
+							<AbsPoint x="70" y="-5" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer8" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer7">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer9" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer8">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer10" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer9">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer11" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer10">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer12" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer11">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- Careers row 3 -->
+				<Window name="$parentStatsCareer13" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentStatsHealers">
+							<AbsPoint x="70" y="-5" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer14" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer13">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer15" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer14">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer16" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer15">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer17" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer16">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer18" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer17">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- Careers row 4 -->
+				<Window name="$parentStatsCareer19" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentStatsTanks">
+							<AbsPoint x="70" y="-5" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer20" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer19">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer21" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer20">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer22" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer21">
+							<AbsPoint x="30" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer23" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer22">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<Window name="$parentStatsCareer24" inherits="EnemyScenarioInfoDialog_CareerStatsTemplate">
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentStatsCareer23">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Window>
+
+				<!-- List 1 -->
+				<Label name="$parentList1TitleLabel" textalign="center" font="font_default_text_huge" warnOnTextCropped="false" showing="false" handleinput="false" alpha="0">
+					<Size>
+						<AbsPoint x="470" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsDeaths">
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+				<Window name="$parentList1Header" inherits="EnemyScenarioInfoDialog_PlayerStatsHeaderTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentList1TitleLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<ListBox name="$parentList1" rowdef="EnemyScenarioInfoDialog_PlayerStatsRowTemplate" visiblerows="10" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+					<Size>
+						<AbsPoint x="470" y="300" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentList1Header">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="Enemy.scenarioInfoList1Data" populationfunction="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnList1Populate">
+					</ListData>
+				</ListBox>
+
+				<!-- List 2 -->
+				<Label name="$parentList2TitleLabel" textalign="center" font="font_default_text_huge" warnOnTextCropped="false" showing="false" handleinput="false" alpha="0">
+					<Size>
+						<AbsPoint x="470" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentList1TitleLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_ShowTooltip" />
+					</EventHandlers>
+				</Label>
+				<Window name="$parentList2Header" inherits="EnemyScenarioInfoDialog_PlayerStatsHeaderTemplate">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentList2TitleLabel">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				<ListBox name="$parentList2" rowdef="EnemyScenarioInfoDialog_PlayerStatsRowTemplate" visiblerows="10" rowspacing="0" scrollbar="EA_ScrollBar_DefaultVerticalChain">
+					<Size>
+						<AbsPoint x="470" y="300" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentList2Header">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="Enemy.scenarioInfoList2Data" populationfunction="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnList2Populate">
+					</ListData>
+				</ListBox>
+
+				<Button name="$parentCancel2Button" inherits="EA_Button_DefaultText" font="font_chat_text">
+					<Size>
+						<AbsPoint x="100" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright">
+							<AbsPoint x="-5" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentSwitchToStandardButton" inherits="EA_Button_DefaultText" font="font_chat_text">
+					<Size>
+						<AbsPoint x="300" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="right" relativeTo="$parentCancel2Button">
+							<AbsPoint x="-10" y="0" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_SwitchToStandard" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+
+			<EventHandlers>
+				<EventHandler event="OnShown" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnShown" />
+				<EventHandler event="OnHidden" function="Enemy.ScenarioInfoUI_ScenarioInfoDialog_OnHidden" />
+			</EventHandlers>
+		</Window>
+
+		<Button name="EnemyScenarioInfoToggleButtonTemplate" inherits="EA_Button_DefaultText" textalign="center" font="font_chat_text" wordwrap="true">
+			<Size>
+				<AbsPoint x="300" y="30" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnLButtonUp" function="Enemy.ScenarioInfoToggle" />
+			</EventHandlers>
+		</Button>
+
+	</Windows>
+</Interface>

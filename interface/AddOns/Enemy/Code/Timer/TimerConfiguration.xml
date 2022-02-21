@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="EnemyTimerConfiguration">
+			<Windows>
+				<!-- Content -->
+				<ScrollWindow name="$parentContent" childscrollwindow="$parentScrollChild" scrollbar="$parentScrollbar" lineheight="18" autoHideScrollBar="true">
+					<Size>
+						<AbsPoint x="660" y="410" />
+					</Size>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="24" y="410" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+			            </VerticalScrollbar>
+			            
+			            <Window name="$parentScrollChild">
+			            	<Size>
+								<AbsPoint x="624" y="410" />
+							</Size>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+							<Windows>
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

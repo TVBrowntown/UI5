@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Assets>
+		<Texture name="enemy_diamond" file="textures\diamond.dds" />
+	</Assets>
+
+	<Windows>
+		<DynamicImage name="EnemyTalismanAlerterIndicator" savesettings="true" handleinput="true" movable="true" texture="enemy_diamond">
+			<TexCoords x="0" y="0" />
+			<TexDims x="150" y="150" />
+			
+			<Size>
+				<AbsPoint x="100" y="100" />
+			</Size>
+			
+			<Anchors>
+				<Anchor point="bottomright" relativePoint="topleft" relativeTo="PlayerWindowStatusContainer">
+					<AbsPoint x="100" y="30" />
+				</Anchor>
+			</Anchors>
+			
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="Enemy.TalismanAlerter_TalismanAlerterIndicator_OnMouseOver" />
+			</EventHandlers>
+		</DynamicImage>
+	</Windows>
+</Interface>

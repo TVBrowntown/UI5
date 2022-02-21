@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Queue Queuer
+Warhammer Online: Age of Reckoning UI modification that simplifies warband
+scenario queueing with other scenario-oriented features as well.
+    
+Copyright (C) 2008-2010  Dillon "Rhekua" DeLoss
+rhekua@msn.com		    www.rhekua.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="QueueQueuer_GUI_TabTier4.lua" />
+  </Scripts>
+  <Windows>
+    <Window name="BlacklistCheckBox" inherits="EA_LabelCheckButton" id="1">
+	<Size>
+	<!-- Enlarged spacing -->
+        <AbsPoint x="250" y="30" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnLButtonUp" function="QueueQueuer_GUI.BlacklistCheckBox_OnLButtonUp" />
+      </EventHandlers>
+    </Window>
+
+        <Window name="QueueQueuer_GUI_TabTier4Socket" movable="false">
+            <Anchors>
+                <Anchor point="topleft" relativePoint="topleft" relativeTo="QueueQueuer_GUI_Socket">
+                    <AbsPoint x="0" y="0"/>
+                </Anchor>
+                <Anchor point="bottomright" relativePoint="bottomright" relativeTo="QueueQueuer_GUI_Socket">
+                    <AbsPoint x="0" y="0"/>
+                </Anchor>
+            </Anchors>
+            <EventHandlers>
+                <EventHandler event="OnInitialize" function="QueueQueuer_GUI_TabTier4.OnInitialize" />
+                <EventHandler event="OnShutdown" function="QueueQueuer_GUI_TabTier4.OnShutdown" />
+            </EventHandlers>
+		<Windows>
+
+        <Label name="$parent_BlacklistTier4Title" inherits="EA_Settings_SectionTitle" textalign="center">
+          <Size>
+            <AbsPoint x="150" y="20" />
+          </Size>
+          <Anchors>
+            <Anchor point="top" relativePoint="top" relativeTo="$parent">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Window name="$parent_BlacklistCheckBox13" inherits="BlacklistCheckBox" id="13">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+              <AbsPoint x="20" y="55" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox14" inherits="BlacklistCheckBox" id="14">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox13">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox15" inherits="BlacklistCheckBox" id="15">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox14">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox16" inherits="BlacklistCheckBox" id="16">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox15">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox17" inherits="BlacklistCheckBox" id="17">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox16">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox18" inherits="BlacklistCheckBox" id="18">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox17">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox32" inherits="BlacklistCheckBox" id="32">
+          <Size>
+            <AbsPoint x="275" y="25" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox18">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox33" inherits="BlacklistCheckBox" id="33">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox32">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		<Window name="$parent_BlacklistCheckBox34" inherits="BlacklistCheckBox" id="34">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox33">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		<Window name="$parent_BlacklistCheckBox28" inherits="BlacklistCheckBox" id="28">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox34">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		
+	<!-- special scenarios -->
+        <Label name="$parent_BlacklistTier4SpecialTitle" inherits="EA_Settings_SectionTitle" textalign="left">
+          <Size>
+            <AbsPoint x="150" y="20" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox13">
+              <AbsPoint x="20" y="-25" />
+            </Anchor>
+          </Anchors>
+        </Label>
+        <Window name="$parent_BlacklistCheckBox19" inherits="BlacklistCheckBox" id="19">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistTier4SpecialTitle">
+              <AbsPoint x="20" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox20" inherits="BlacklistCheckBox" id="20">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox19">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox21" inherits="BlacklistCheckBox" id="21">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox20">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox22" inherits="BlacklistCheckBox" id="22">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox21">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox23" inherits="BlacklistCheckBox" id="23">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox22">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox24" inherits="BlacklistCheckBox" id="24">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox23">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox25" inherits="BlacklistCheckBox" id="25">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox24">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox26" inherits="BlacklistCheckBox" id="26">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox25">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox37" inherits="BlacklistCheckBox" id="37">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox26">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		<Window name="$parent_BlacklistCheckBox36" inherits="BlacklistCheckBox" id="36">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox37">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox27" inherits="BlacklistCheckBox" id="27">
+          <Anchors>
+            <Anchor point="topright" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox19">
+              <AbsPoint x="20" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        
+        <Window name="$parent_BlacklistCheckBox29" inherits="BlacklistCheckBox" id="29">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox27">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox30" inherits="BlacklistCheckBox" id="30">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox29">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        <Window name="$parent_BlacklistCheckBox31" inherits="BlacklistCheckBox" id="31">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox30">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        
+        <Window name="$parent_BlacklistCheckBox35" inherits="BlacklistCheckBox" id="35">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox31">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+        
+		<Window name="$parent_BlacklistCheckBox38" inherits="BlacklistCheckBox" id="38">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox35">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		<Window name="$parent_BlacklistCheckBox39" inherits="BlacklistCheckBox" id="39">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox38">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		<Window name="$parent_BlacklistCheckBox40" inherits="BlacklistCheckBox" id="40">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox39">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		<Window name="$parent_BlacklistCheckBox41" inherits="BlacklistCheckBox" id="41">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox40">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		<Window name="$parent_BlacklistCheckBox42" inherits="BlacklistCheckBox" id="42">
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parent_BlacklistCheckBox41">
+              <AbsPoint x="0" y="5" />
+            </Anchor>
+          </Anchors>
+        </Window>
+		
+	</Windows>
+	
+	</Window>
+
+  </Windows>
+</Interface>

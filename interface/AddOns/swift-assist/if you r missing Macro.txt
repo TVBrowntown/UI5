@@ -1,0 +1,10 @@
+If you miss some Macroses ("SwiftAssist", "SwiftSetAssist", "SwiftAssistMe", "SwiftSmartAssist"), you should try
+to delete all SwiftAssist's macroses in user/Macros.xml and let addon recreate those properly.
+Make sure you have enough free slots for new macroses.
+
+You can also create Macroses manually, but make sure there exists only 1 copy of each Macro in user/Macros.xml:
+    <Macro id="13" name="SwiftSetAssist" text="/script SwiftAssist.SetAssist()" iconNum="193" />
+    <Macro id="14" name="SwiftAssistMe" text="/script SwiftAssist.AssistMe()" iconNum="51" />
+    <Macro id="17" name="SwiftAssist" text='/script SwiftAssist.Inactive(L&quot;assist&quot;)' iconNum="177" />
+    <Macro id="23" name="SwiftSmartAssist" text='/script SwiftAssist.Inactive(L&quot;smart&quot;)' iconNum="177" />
+make sure that IDs are unique

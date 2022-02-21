@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="EnemyUnitFramesAnchor1" inherits="EA_Window_Default" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="32" y="32" />
+			</Size>
+			<Anchors>
+				<Anchor point="left" relativePoint="left" relativeTo="Root">
+					<AbsPoint x="0" y="-300" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+			</Windows>
+
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="Enemy.UnitFramesUI_Anchor_OnLButtonDown" />
+				<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_Anchor_OnLButtonUp" />
+				<EventHandler event="OnMouseOver" function="Enemy.UnitFramesUI_Anchor_OnMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="Enemy.UnitFramesUI_Anchor_OnMouseOverEnd" />
+			</EventHandlers>
+		</Window>
+		
+		<Window name="EnemyUnitFramesAnchor2" inherits="EA_Window_Default" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="32" y="32" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+			</Windows>
+
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="Enemy.UnitFramesUI_Anchor_OnLButtonDown" />
+				<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_Anchor_OnLButtonUp" />
+				<EventHandler event="OnMouseOver" function="Enemy.UnitFramesUI_Anchor_OnMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="Enemy.UnitFramesUI_Anchor_OnMouseOverEnd" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

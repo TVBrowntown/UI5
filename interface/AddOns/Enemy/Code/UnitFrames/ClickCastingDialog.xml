@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+	
+		<Window name="EnemyClickCastingDialog" movable="true" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="720" y="600" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<!-- Init -->
+				<Window name="$parentBackground" inherits="EA_Window_DefaultFrame">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft">
+							<AbsPoint x="0" y="32" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</Window>
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_Hide" />
+					</EventHandlers>
+				</Button>
+				
+				<!-- Content -->
+				<ScrollWindow name="$parentContent" childscrollwindow="$parentScrollChild" scrollbar="$parentScrollbar" lineheight="18" autoHideScrollBar="false">
+					<Size>
+						<AbsPoint x="712" y="500" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar">
+							<AbsPoint x="0" y="3" />
+						</Anchor>
+					</Anchors>
+					<Windows>
+						<VerticalScrollbar name="$parentScrollbar" inherits="EA_ScrollBar_DefaultVerticalChain" layer="popup">
+							<Size>
+								<AbsPoint x="24" y="500" />
+							</Size>
+							<Anchors>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+									<AbsPoint x="0" y="0" />
+								</Anchor>
+							</Anchors>
+		                </VerticalScrollbar>
+		                
+		                <Window name="$parentScrollChild">
+		                	<Size>
+								<AbsPoint x="670" y="500" />
+							</Size>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+								<AbsPoint x="0" y="0" />
+							</Anchor>
+		                    <Windows>
+								<!-- Content: name -->
+								<Label name="$parentNameLabel" font="font_chat_text">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+											<AbsPoint x="40" y="30" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<EditBox name="$parentName" inherits="EA_EditBox_DefaultFrame" maxchars="100">
+									<Size>
+										<AbsPoint x="300" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentNameLabel">
+											<AbsPoint x="0" y="-5" />
+										</Anchor>
+									</Anchors>
+								</EditBox>
+								
+								<Window name="$parentDivider1" inherits="EA_Window_DefaultSeparator">
+									<Size>
+										<AbsPoint x="710" y="28" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentNameLabel">
+											<AbsPoint x="-40" y="10" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								
+								<!-- Content: player type match -->
+								<ComboBox name="$parentPlayerTypeMatch" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider1">
+											<AbsPoint x="40" y="15" />
+										</Anchor>
+									</Anchors>
+								</ComboBox>
+								<ComboBox name="$parentPlayerType" inherits="EA_ComboBox_DefaultResizable">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentPlayerTypeMatch">
+											<AbsPoint x="200" y="0" />
+										</Anchor>
+									</Anchors>
+								</ComboBox>
+								<Button name="$parentExceptMe" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentPlayerType">
+											<AbsPoint x="20" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnExceptMeChanged" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentExceptMeLabel" font="font_chat_text">
+									<Size>
+										<AbsPoint x="100" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentExceptMe">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<!-- Content: archetype match -->
+								<ComboBox name="$parentArchetypeMatch" inherits="EA_ComboBox_DefaultResizableSmall">
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentPlayerTypeMatch">
+											<AbsPoint x="0" y="15" />
+										</Anchor>
+									</Anchors>
+								</ComboBox>
+								<Button name="$parentArchetype1" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentArchetypeMatch">
+											<AbsPoint x="200" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnArchetype1Changed" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentArchetype1Label" font="font_chat_text">
+									<Size>
+										<AbsPoint x="100" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentArchetype1">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<Button name="$parentArchetype2" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentArchetype1Label">
+											<AbsPoint x="0" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnArchetype2Changed" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentArchetype2Label" font="font_chat_text">
+									<Size>
+										<AbsPoint x="100" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentArchetype2">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<Button name="$parentArchetype3" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentArchetype2Label">
+											<AbsPoint x="0" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnArchetype3Changed" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentArchetype3Label" font="font_chat_text">
+									<Size>
+										<AbsPoint x="100" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentArchetype3">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Window name="$parentDivider2" inherits="EA_Window_DefaultSeparator">
+									<Size>
+										<AbsPoint x="710" y="28" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentArchetypeMatch">
+											<AbsPoint x="-40" y="10" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								
+								<!-- Content: mouse button -->
+								<Label name="$parentMouseButtonLabel" font="font_chat_text">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentDivider2">
+											<AbsPoint x="40" y="40" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<ComboBox name="$parentMouseButton" inherits="EA_ComboBox_DefaultResizable">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentMouseButtonLabel">
+											<AbsPoint x="200" y="0" />
+										</Anchor>
+									</Anchors>
+								</ComboBox>
+								
+								<!-- Content: key modifiers -->
+								<Label name="$parentKeyModifiersLabel" font="font_chat_text">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentMouseButtonLabel">
+											<AbsPoint x="0" y="40" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<Button name="$parentKeyModifier1" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="$parentKeyModifiersLabel">
+											<AbsPoint x="200" y="0" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnKeyModifier1Changed" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentKeyModifier1Label" font="font_chat_text">
+									<Size>
+										<AbsPoint x="100" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentKeyModifier1">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<Button name="$parentKeyModifier2" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentKeyModifier1Label">
+											<AbsPoint x="0" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnKeyModifier2Changed" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentKeyModifier2Label" font="font_chat_text">
+									<Size>
+										<AbsPoint x="100" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentKeyModifier2">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<Button name="$parentKeyModifier3" inherits="EA_Button_DefaultCheckBox">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentKeyModifier2Label">
+											<AbsPoint x="0" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnKeyModifier3Changed" />
+									</EventHandlers>
+								</Button>
+								<Label name="$parentKeyModifier3Label" font="font_chat_text">
+									<Size>
+										<AbsPoint x="100" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentKeyModifier3">
+											<AbsPoint x="10" y="5" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<Window name="$parentDivider3" inherits="EA_Window_DefaultSeparator">
+									<Size>
+										<AbsPoint x="710" y="28" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentKeyModifiersLabel">
+											<AbsPoint x="-40" y="0" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								
+								<!-- Content: action -->
+								<Label name="$parentActionLabel" font="font_chat_text">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentDivider3">
+											<AbsPoint x="40" y="15" />
+										</Anchor>
+									</Anchors>
+								</Label>
+								<ComboBox name="$parentAction" inherits="EA_ComboBox_DefaultResizable">
+									<Anchors>
+										<Anchor point="right" relativePoint="left" relativeTo="$parentActionLabel">
+											<AbsPoint x="0" y="-5" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+				                        <EventHandler event="OnSelChanged" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnActionSelChanged" />
+				                    </EventHandlers>
+								</ComboBox>
+								
+								<!-- Content: actionConfig (ability) -->
+								<Window name="$parentActionConfig1">
+									<Size>
+										<AbsPoint x="710" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActionLabel">
+											<AbsPoint x="-40" y="0" />
+										</Anchor>
+									</Anchors>
+									<Windows>
+										<Label name="$parentLabel" font="font_chat_text">
+											<Size>
+												<AbsPoint x="200" y="30" />
+											</Size>
+											<Anchors>
+												<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+													<AbsPoint x="40" y="40" />
+												</Anchor>
+											</Anchors>
+										</Label>
+										<DynamicImage name="$parentAbility" draganddrop="true" handleinput="true">
+											<Size>
+						                        <AbsPoint x="64" y="64" />
+						                    </Size>
+						                    <Anchors>
+						                        <Anchor point="right" relativePoint="left" relativeTo="$parentLabel">
+							                        <AbsPoint x="0" y="-6" />
+												</Anchor>
+						                    </Anchors>
+						                    <Windows>
+						                    	<DynamicImage name="$parentFrame" texture="EA_SquareFrame" handleinput="false">
+						                            <Size>
+						                                <AbsPoint x="64" y="64" />
+						                            </Size>
+						                            <TexCoords x="0" y="0" />
+		            								<TexDims x="64" y="64" />
+						                        </DynamicImage>
+						                    </Windows>
+						                    <EventHandlers>
+						                        <EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnActionConfig1ActionLButtonUp" />
+						                        <EventHandler event="OnRButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnActionConfig1ActionRButtonUp" />
+						                        <EventHandler event="OnMouseOver" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnActionConfig1ActionMouseOver" />
+						                    </EventHandlers>
+						                </DynamicImage>
+						                <Label name="$parentName" font="font_default_text_large">
+											<Size>
+												<AbsPoint x="300" y="30" />
+											</Size>
+											<Anchors>
+												<Anchor point="right" relativePoint="left" relativeTo="$parentAbility">
+													<AbsPoint x="10" y="6" />
+												</Anchor>
+											</Anchors>
+										</Label>
+									</Windows>
+								</Window>
+
+								<!-- Content: actionConfig (slash command) -->
+								<Window name="$parentActionConfig2">
+									<Size>
+										<AbsPoint x="710" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActionLabel">
+											<AbsPoint x="-40" y="0" />
+										</Anchor>
+									</Anchors>
+									<Windows>
+										<Label name="$parentLabel" font="font_chat_text">
+											<Size>
+												<AbsPoint x="200" y="30" />
+											</Size>
+											<Anchors>
+												<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+													<AbsPoint x="40" y="30" />
+												</Anchor>
+											</Anchors>
+										</Label>
+										<EditBox name="$parentCommand" inherits="EA_EditBox_DefaultFrame">
+											<Size>
+												<AbsPoint x="400" y="30" />
+											</Size>
+											<Anchors>
+												<Anchor point="right" relativePoint="left" relativeTo="$parentLabel">
+													<AbsPoint x="0" y="-5" />
+												</Anchor>
+											</Anchors>
+											<EventHandlers>
+						                        <EventHandler event="OnMouseOver" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_OnActionConfig2CommandMouseOver" />
+						                    </EventHandlers>
+										</EditBox>
+									</Windows>
+								</Window>
+								
+								<!-- Content: actionConfig (assist) -->
+								<Window name="$parentActionConfig3">
+									<Size>
+										<AbsPoint x="710" y="100" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActionLabel">
+											<AbsPoint x="-40" y="0" />
+										</Anchor>
+									</Anchors>
+								</Window>
+								
+								<!-- <Window name="$parentDummy">
+									<Size>
+										<AbsPoint x="200" y="30" />
+									</Size>
+									<Anchors>
+										<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActionLabel">
+											<AbsPoint x="0" y="100" />
+										</Anchor>
+									</Anchors>
+								</Window> -->
+								
+							</Windows>
+						</Window>
+					</Windows>
+				</ScrollWindow>
+				
+				<!-- Bottom panel -->
+				<Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background">
+					<Size>
+						<AbsPoint x="0" y="65" />
+					</Size>
+				</Window>
+				
+				<Button name="$parentOkButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom">
+							<AbsPoint x="-70" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_Ok" />
+					</EventHandlers>
+				</Button>
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom">
+							<AbsPoint x="70" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_Hide" />
+					</EventHandlers>
+				</Button>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnShown" function="WindowUtils.OnShown" />
+				<EventHandler event="OnHidden" function="WindowUtils.OnHidden" />
+				<EventHandler event="OnKeyEscape" function="Enemy.UnitFramesUI_UnitFrameClickCastingDialog_Hide" />
+			</EventHandlers>
+		</Window>
+	</Windows>
+</Interface>

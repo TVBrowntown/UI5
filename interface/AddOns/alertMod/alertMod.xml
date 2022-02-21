@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Scripts>
+		<Script file="Source/alertMod.lua" />
+	</Scripts>
+
+	<Windows>
+		
+		<!-- TEMPLATE-->
+		<Window name="alertModTemplate">
+			<Size>
+				<AbsPoint x="0" y="60"/>
+			</Size>
+			<Windows>
+				<!-- BACKGROUND IMAGE -->
+				<FullResizeImage name="$parentBackgroundName" inherits="EA_FullResizeImage_TintableSolidBackground">
+					<Size>
+						<AbsPoint x="0" y="60"/>
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+						<Anchor point="topright" relativePoint="topright" relativeTo="" />
+					</Anchors>
+				</FullResizeImage>
+				<!-- LABEL-->
+				<Label name="$parentName" maxchars="80" font="font_chat_text" >
+					<Size>
+						<AbsPoint x="260" y="39"/>
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="">
+							<AbsPoint x="10" y="9"/>
+						</Anchor>
+					</Anchors>
+				</Label>								
+				<SliderBar name="$parentSlider" inherits="EA_Default_SliderBar" numticks="9" >
+					<Size>
+						<AbsPoint x="200" y="33" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="right" relativeTo="">
+							<AbsPoint x="-20" y="-7" />
+						</Anchor>
+					</Anchors>
+					
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="alertMod.OnSliderChanged" />
+					</EventHandlers>
+					
+				</SliderBar>
+				<Label name="$parentSliderMinLabel" inherits="EA_Settings_ItemTitle">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSlider" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentSliderMaxLabel" inherits="EA_Settings_ItemTitle" textalign="right">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentSlider" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+				<Label name="$parentSliderMidLabel" inherits="EA_Settings_ItemTitle" textalign="center">
+					<Size>
+						<AbsPoint x="50" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="top" relativeTo="$parentSlider" >
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="255" b="255" a="255" />
+				</Label>
+			</Windows>
+		</Window>
+		
+		<!-- Customize Ui Window -->
+		<Window name="alertMod" movable="true" layer="secondary" inherits="EA_Window_Default">
+			<Size>
+				<AbsPoint x="525" y="600" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" />
+			</Anchors>
+			<EventHandlers>
+				<EventHandler event="OnInitialize" function="alertMod.Initialize" />
+				<EventHandler event="OnShown" function="alertMod.OnShown" />
+			</EventHandlers>
+			
+			<Windows>
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" />
+				
+				<Window name="$parentTitleBar" inherits="EA_TitleBar_Default" />
+				
+				<DynamicImage name="$parentWindowImage" inherits="EA_Default_CustomizeUIImage" />
+				
+				<Button name="$parentClose" inherits="EA_Button_DefaultWindowClose" >
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="alertMod.OnCancelButton" />
+					</EventHandlers>
+				</Button>
+				
+				<Button name="$parentDefaultsButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="bottomleft" relativeTo="">
+							<AbsPoint x="15" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="alertMod.OnSetDefaults" />
+					</EventHandlers>
+				</Button>
+				
+				<!--Buttons-->
+				<Window name="$parentButtonBackground" inherits="EA_Window_DefaultButtonBottomFrame" layer="background" >
+					<Size>
+						<AbsPoint x="0" y="75" />
+					</Size>
+				</Window>
+				
+				<Button name="$parentOkayButton" inherits="EA_Button_DefaultResizeable">
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom" relativeTo="">
+							<AbsPoint x="0" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="alertMod.OnOkayButton" />
+					</EventHandlers>
+				</Button>
+				
+				<Button name="$parentCancelButton" inherits="EA_Button_DefaultResizeable" >
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="">
+							<AbsPoint x="-15" y="-10" />
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="alertMod.OnCancelButton" />
+					</EventHandlers>
+				</Button>
+				
+				<Window name="$parentOptionsTopSeparator" inherits="EA_Window_DefaultSeparator" handleinput="false" >
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleBar" >
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentTitleBar" >
+							<AbsPoint x="0" y="30" />
+						</Anchor>
+					</Anchors>
+				</Window>
+				
+				<!-- Options Window -->
+				<Window name="$parentOptionsWindow" >
+					<Size>
+						<AbsPoint x="500" y="425" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOptionsTopSeparator" >
+							<AbsPoint x="10" y="-10" />
+						</Anchor>
+							<Anchor point="topright" relativePoint="bottomright" relativeTo="$parentButtonBackground" >
+							<AbsPoint x="-10" y="10" />
+						</Anchor>
+					</Anchors>
+						
+					<Windows>
+						<!-- MIN_HEIGHT_SHIFT-->
+						<Window name="alertModHeightShiftRow" inherits="alertModTemplate" >
+							<Anchors>
+								<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" >
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+								<Anchor point="topright" relativePoint="topright" relativeTo="$parent" >
+									<AbsPoint x="0" y="10" />
+								</Anchor>
+							</Anchors>
+						</Window>
+						
+						<!-- FADE_IN_TIME-->
+						<Window name="alertModFadeInRow" inherits="alertModTemplate" >
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="alertModHeightShiftRow" />
+								<Anchor point="bottomright" relativePoint="topright" relativeTo="alertModHeightShiftRow" />
+							</Anchors>
+						</Window>
+						
+						<!-- DISPLAY_TIME-->
+						<Window name="alertModDisplayTimeRow" inherits="alertModTemplate" >
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="alertModFadeInRow" />
+								<Anchor point="bottomright" relativePoint="topright" relativeTo="alertModFadeInRow" />
+							</Anchors>
+						</Window>
+						
+						<!-- FADE_OUT_TIME-->
+						<Window name="alertModFadeOutRow" inherits="alertModTemplate" >
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="alertModDisplayTimeRow" />
+								<Anchor point="bottomright" relativePoint="topright" relativeTo="alertModDisplayTimeRow" />
+							</Anchors>
+						</Window>
+						
+						<!-- TIME_BETWEEN_ALERTS-->
+						<Window name="alertModTimeBetweenRow" inherits="alertModTemplate" >
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="alertModFadeOutRow" />
+								<Anchor point="bottomright" relativePoint="topright" relativeTo="alertModFadeOutRow" />
+							</Anchors>
+						</Window>
+
+						<!-- MESSAGE_HEIGHT_PADDING-->
+						<Window name="alertModPaddingRow" inherits="alertModTemplate" >
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="alertModTimeBetweenRow" />
+								<Anchor point="bottomright" relativePoint="topright" relativeTo="alertModTimeBetweenRow" />
+							</Anchors>
+						</Window>
+						
+						<!-- FONT SCALE-->
+						<Window name="alertModFontScaleRow" >
+							<Size>
+								<AbsPoint x="0" y="60"/>
+							</Size>
+							<Anchors>
+								<Anchor point="bottomleft" relativePoint="topleft" relativeTo="alertModPaddingRow" />
+								<Anchor point="bottomright" relativePoint="topright" relativeTo="alertModPaddingRow" />
+							</Anchors>
+							<Windows>
+								<!-- BACKGROUND IMAGE -->
+								<FullResizeImage name="$parentBackgroundName" inherits="EA_FullResizeImage_TintableSolidBackground">
+									<Size>
+										<AbsPoint x="0" y="60"/>
+									</Size>
+									<Anchors>
+										<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+										<Anchor point="topright" relativePoint="topright" relativeTo="" />
+									</Anchors>
+								</FullResizeImage>
+								<!-- LABEL-->
+								<Label name="$parentName" maxchars="80" font="font_chat_text" >
+									<Size>
+										<AbsPoint x="260" y="39"/>
+									</Size>
+									<Anchors>
+										<Anchor point="left" relativePoint="left" relativeTo="">
+											<AbsPoint x="10" y="9"/>
+										</Anchor>
+									</Anchors>
+								</Label>
+								
+								<ComboBox name="$parentCombo" inherits="EA_ComboBox_DefaultResizable" >
+									<Anchors>
+										<Anchor point="right" relativePoint="right" relativeTo="">
+											<AbsPoint x="-20" y="" />
+										</Anchor>
+									</Anchors>
+									<EventHandlers>
+										<EventHandler event="OnLButtonUp" function="alertMod.OnSliderChanged" />
+									</EventHandlers>
+								</ComboBox>
+								
+							</Windows>
+						</Window>
+						
+					</Windows>
+					
+				</Window>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>
+

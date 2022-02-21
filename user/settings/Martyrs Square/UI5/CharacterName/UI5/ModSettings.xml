@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<UiModuleSettings xmlVersion="1.0" enabled="true" lastLoadedVersion="1" messagingEnabled="false">
+    <VersionSettings xmlVersion="1.0" gameVersion="1.4.8" windowsVersion="1.0" savedVariablesVersion="1.0" />
+    <Windows>
+        <WindowSettings xmlVersion="1.0" name="Player UI5" sizeX="600.000000" sizeY="140.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="0.824830" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="-374.411896" yOffset="341.235016" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="Target Enemy UI5" sizeX="600.000000" sizeY="140.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="210.692764" yOffset="-225.624405" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="TargetUI5_Friendly" sizeX="362.000000" sizeY="88.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="-479.372192" yOffset="-257.201691" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="TargetUI5_Hostile" sizeX="362.000000" sizeY="88.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="353.768982" yOffset="-349.759735" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="TargetUI5_Player" sizeX="362.000000" sizeY="88.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="-366.230988" yOffset="-349.759644" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5 Button" sizeX="64.000000" sizeY="64.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="610.768982" yOffset="-13.759717" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5 Button2" sizeX="64.000000" sizeY="64.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="center" relativePoint="center" relativeTo="Root" xOffset="292.151520" yOffset="114.049927" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5 Settings" sizeX="200.000000" sizeY="46.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="-444.230927" yOffset="-4.759763" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5Btn1" sizeX="320.000000" sizeY="46.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="-383.807526" yOffset="-4.288121" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5Btn2" sizeX="64.000000" sizeY="64.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5Defensives" sizeX="100.000000" sizeY="100.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="-609.230957" yOffset="-336.759674" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5_Mechanics" sizeX="240.000000" sizeY="44.000000" movable="false" alpha="0.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="-20.525013" yOffset="-278.900879" />
+            </Anchors>
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5_O_Friendly" sizeX="1.000000" sizeY="1.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.001429" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5_O_Hostile" sizeX="1.000000" sizeY="1.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="0.001429" showing="false">
+            <Anchors />
+        </WindowSettings>
+        <WindowSettings xmlVersion="1.0" name="UI5_RenownBar" sizeX="190.000000" sizeY="18.000000" movable="false" alpha="1.000000" fontAlpha="1.000000" scale="1.000000" showing="true">
+            <Anchors>
+                <WindowAnchor xmlVersion="1.0" point="bottom" relativePoint="bottom" relativeTo="Root" xOffset="-472.943085" yOffset="-88.759918" />
+            </Anchors>
+        </WindowSettings>
+    </Windows>
+</UiModuleSettings>

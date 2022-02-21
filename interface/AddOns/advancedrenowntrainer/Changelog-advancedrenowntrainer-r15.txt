@@ -1,0 +1,37 @@
+------------------------------------------------------------------------
+r15 | varonth | 2011-04-19 20:30:36 +0000 (Tue, 19 Apr 2011) | 1 line
+Changed paths:
+   M /trunk/AdvancedRenownTraining.mod
+   M /trunk/AdvancedRenownTrainingImportExport.lua
+
+* 1.6.5 fixed a small lua error (thanks at Crestor for the report)
+------------------------------------------------------------------------
+r14 | varonth | 2011-04-13 14:37:20 +0000 (Wed, 13 Apr 2011) | 3 lines
+Changed paths:
+   M /trunk/AdvancedRenownTraining.mod
+   M /trunk/AdvancedRenownTrainingImportExport.lua
+
+v1.6.4a
+
+* Changed some labels to reflect the changes within 1.6.4
+------------------------------------------------------------------------
+r13 | varonth | 2011-04-13 14:33:54 +0000 (Wed, 13 Apr 2011) | 4 lines
+Changed paths:
+   M /trunk/AdvancedRenownTraining.mod
+   M /trunk/AdvancedRenownTrainingImportExport.lua
+
+v1.6.4
+* Import now accepts Arsenal of War builder links
+* Export now generates Arsenal of War builder links
+* Note: Wardrobe links are still importable
+------------------------------------------------------------------------
+r12 | varonth | 2011-03-13 14:47:49 +0000 (Sun, 13 Mar 2011) | 3 lines
+Changed paths:
+   M /trunk/AdvancedRenownTraining.lua
+   M /trunk/AdvancedRenownTraining.mod
+   M /trunk/AdvancedRenownTrainingPresets.xml
+
+v1.6.3
+
+* Upon opening in anywhere mode, the current build gets loaded automatically.
+------------------------------------------------------------------------

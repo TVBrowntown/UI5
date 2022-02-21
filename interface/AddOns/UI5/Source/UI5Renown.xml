@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="UI5_RenownBar" inherits="EA_Window_Default" movable="false" savesettings="true">
+			<Size>
+				<AbsPoint x="218" y="26" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+				</Anchor>
+			</Anchors>
+
+			<Windows>
+				<FullResizeImage name="$parentBackground" layer="background" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" />
+						<Anchor point="bottomright" relativePoint="bottomright" />
+					</Anchors>
+				</FullResizeImage>
+			</Windows>
+
+		</Window>
+	</Windows>
+
+</Interface>

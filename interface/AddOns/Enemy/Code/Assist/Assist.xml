@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="EnemyTarget" movable="false" savesettings="true" layer="overlay" handleinput="false">
+			<Size>
+				<AbsPoint x="300" y="32" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="300" y="-300" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<DynamicImage name="$parentIcon" layer="popup" handleinput="false">
+					<TexCoords x="0" y="0" />
+					<TexDims x="32" y="32" />
+					
+					<Size>
+						<AbsPoint x="32" y="32" />
+					</Size>		
+					
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</DynamicImage>
+				
+				<Label name="$parentText" font="font_clear_large_bold" textalign="leftcenter" layer="popup" warnOnTextCropped="false" handleinput="false">
+					<Size>
+						<AbsPoint x="250" y="32" />
+					</Size>
+					
+					<Anchors>
+						<Anchor relativePoint="topleft" point="topright" relativeTo="$parentIcon">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+
+				<Label name="$parentTextShadow" font="font_clear_large_bold" textalign="leftcenter" layer="background" warnOnTextCropped="false" handleinput="false">
+					<Size>
+						<AbsPoint x="250" y="32" />
+					</Size>
+					
+					<Anchors>
+						<Anchor relativePoint="center" point="center" relativeTo="$parentText">
+							<AbsPoint x="2" y="2" />
+						</Anchor>
+					</Anchors>
+
+					<Color r="0" g="0" b="0" />
+				</Label>
+
+				<AnimatedImage name="$parentGlow" inherits="EA_MoraleButtonAnimation" layer="secondary" texture="anim_morale_glow" textureScale="0.74" handleinput="false">
+					<Size>
+						<AbsPoint x="90" y="90"/>
+					</Size>
+					<Anchors>
+						<Anchor relativePoint="center" point="center" relativeTo="$parentIcon">
+							<AbsPoint x="-2" y="-5" />
+						</Anchor>
+					</Anchors>
+				</AnimatedImage>
+				<AnimatedImage name="$parentFlash" inherits="EA_MoraleButtonAnimation" fps="20" layer="background" texture="anim_morale_flash" textureScale="1.2" handleinput="false">
+					<Size>
+						<AbsPoint x="150" y="150"/>
+					</Size>
+					<Anchors>
+						<Anchor relativePoint="center" point="center" relativeTo="$parentIcon">
+							<AbsPoint x="-2" y="-3" />
+						</Anchor>
+					</Anchors>
+				</AnimatedImage>
+				<AnimatedImage name="$parentSpark" inherits="EA_MoraleButtonAnimation" fps="20" layer="overlay" texture="anim_morale_flash" textureScale="1.2" handleinput="false">
+					<Size>
+						<AbsPoint x="150" y="150"/>
+					</Size>
+					<Anchors>
+						<Anchor relativePoint="center" point="center" relativeTo="$parentIcon">
+							<AbsPoint x="-2" y="-3" />
+						</Anchor>
+					</Anchors>
+				</AnimatedImage>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnLButtonDown" function="Enemy.AssistUI_Target_OnLButtonDown" />
+			</EventHandlers>
+		</Window>
+		
+	</Windows>
+</Interface>

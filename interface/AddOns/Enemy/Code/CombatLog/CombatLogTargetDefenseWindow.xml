@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/1001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="EnemyCombatLogTargetDefeseWindow" layer="popup" inherits="EA_Window_Default" handleinput="true" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="420" y="30" />
+			</Size>
+			
+			<Anchors>
+				<Anchor point="bottom" relativePoint="top" relativeTo="TargetWindow">
+					<AbsPoint x="0" y="50" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</FullResizeImage>
+				
+				<Label name="$parentMitigation" font="font_clear_large_bold" textalign="center">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+					</Anchors>
+					<Color r="255" g="200" b="50" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseWindow_OnMouseOver" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentAbsorb" font="font_clear_large_bold" textalign="center">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+					</Anchors>
+					<Color r="145" g="235" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseWindow_OnMouseOver" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentBlock" font="font_clear_large_bold" textalign="center">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+					</Anchors>
+					<Color r="255" g="100" b="100" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseWindow_OnMouseOver" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentParry" font="font_clear_large_bold" textalign="center">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+					</Anchors>
+					<Color r="120" g="200" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseWindow_OnMouseOver" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentDodge" font="font_clear_large_bold" textalign="center">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+					</Anchors>
+					<Color r="255" g="175" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseWindow_OnMouseOver" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentDisrupt" font="font_clear_large_bold" textalign="center">
+					<Size>
+						<AbsPoint x="70" y="30" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+					</Anchors>
+					<Color r="150" g="150" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseWindow_OnMouseOver" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseWindow_OnMouseOver" />
+				<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseWindow_OnRButtonUp" />
+			</EventHandlers>
+			
+		</Window>
+		
+		
+		
+		<Window name="EnemyCombatLogTargetDefeseTotalWindow" layer="popup" inherits="EA_Window_Default" handleinput="true" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="70" y="30" />
+			</Size>
+			
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="-80" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+				</FullResizeImage>
+				
+				<Label name="$parentText" font="font_clear_large_bold" textalign="center" handleinput="false">
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+						<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent" />
+					</Anchors>
+					<Color r="150" g="255" b="50" />
+				</Label>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_TargetDefenseTotalWindow_OnMouseOver" />
+				<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_TargetDefenseTotalWindow_OnRButtonUp" />
+			</EventHandlers>
+			
+		</Window>
+	</Windows>
+</Interface>

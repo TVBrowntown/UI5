@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Assets>
+    
+    <!-- Add your Textures here -->
+    <Texture name="Ryver_backdrop" file="Textures/Ryver/backdrop.tga" />
+    <Texture name="Ryver_border" file="Textures/Ryver/border.tga" />
+    <Texture name="Ryver_checked" file="Textures/Ryver/checked.tga" />
+    <Texture name="Ryver_flash" file="Textures/Ryver/flash.tga" />
+    <Texture name="Ryver_gloss" file="Textures/Ryver/gloss.tga" />
+    <Texture name="Ryver_hover" file="Textures/Ryver/hover.tga" />
+    <Texture name="Ryver_pushed" file="Textures/Ryver/pushed.tga" />
+
+    <Texture name="TexturedButtons_UI5_Normal" file="Textures/Custom/ActionBar_Slot_Frame.tga" />
+	
+    <Texture name="TexturedButtons_GlossNeo1" file="Textures/gloss_neo1.dds" />
+    <Texture name="TexturedButtons_GlossNeo2" file="Textures/gloss_neo2.dds" />
+    <Texture name="TexturedButtons_GlossNeo3" file="Textures/gloss_neo3.dds" />
+	
+    <Texture name="TexturedButtons_Aion_Normal" file="Textures/aion_normal.tga" />
+    <Texture name="TexturedButtons_Aion_Highlight" file="Textures/aion_highlight.tga" />
+    <Texture name="TexturedButtons_Aion_Pressed" file="Textures/aion_pressed.tga" />
+	
+    <Texture name="TexturedButtons_Entropy_Normal" file="Textures/entropy_normal.tga" />
+    <Texture name="TexturedButtons_Entropy_Highlight" file="Textures/entropy_highlight.tga" />
+    <Texture name="TexturedButtons_Entropy_Gloss" file="Textures/entropy_gloss.tga" />
+	
+    <Texture name="TexturedButtons_Vista_Normal" file="Textures/vista_normal.tga" />
+    <Texture name="TexturedButtons_Vista_Highlight" file="Textures/vista_highlight.tga" />
+    <Texture name="TexturedButtons_Vista_Border" file="Textures/vista_border.tga" />
+	
+		<Texture name="TexturedButtons_FFXIV_Normal" file="Textures/Custom/FFXIV_normal.tga" />
+  	<Texture name="TexturedButtons_FFXIV_Highlight" file="Textures/Custom/FFXIV_highlight.tga" />
+		<Texture name="TexturedButtons_FFXIV_PHighlight" file="Textures/Custom/FFXIV_Phighlight.tga" />
+  	<Texture name="TexturedButtons_FFXIV_Border" file="Textures/Custom/FFXIV_border.tga" />
+	
+		<Texture name="TexturedButtons_LoL_Border" file="Textures/Custom/League_ButtonOverlay.tga" />
+	
+    <Texture name="TexturedButtons_SNT_Buttons" file="Textures/snt_buttons.dds">
+		<Slice id="Skin1_Normal" left="0" top="0" width="64" height="64" />
+		<Slice id="Skin1_Highlighted" left="64" top="0" width="64" height="64" />
+		<Slice id="Skin1_Pressed" left="128" top="0" width="64" height="64" />
+		<Slice id="Skin1_PressedHighlighted" left="192" top="0" width="64" height="64" />
+		
+		<Slice id="Skin2_Normal" left="0" top="64" width="64" height="64" />
+		<Slice id="Skin2_Highlighted" left="64" top="64" width="64" height="64" />
+		<Slice id="Skin2_Pressed" left="128" top="64" width="64" height="64" />
+		<Slice id="Skin2_PressedHighlighted" left="192" top="64" width="64" height="64" />
+		
+		<Slice id="Skin3_Normal" left="0" top="128" width="64" height="64" />
+		<Slice id="Skin3_Highlighted" left="64" top="128" width="64" height="64" />
+		<Slice id="Skin3_Pressed" left="128" top="128" width="64" height="64" />
+		<Slice id="Skin3_PressedHighlighted" left="192" top="128" width="64" height="64" />
+		
+		<Slice id="Skin4_Normal" left="0" top="192" width="64" height="64" />
+		<Slice id="Skin4_Highlighted" left="64" top="192" width="64" height="64" />
+		<Slice id="Skin4_Pressed" left="128" top="192" width="64" height="64" />
+		<Slice id="Skin4_PressedHighlighted" left="192" top="192" width="64" height="64" />
+		
+		<Slice id="Skin5_Normal" left="0" top="256" width="64" height="64" />
+		<Slice id="Skin5_Highlighted" left="64" top="256" width="64" height="64" />
+		<Slice id="Skin5_Pressed" left="128" top="256" width="64" height="64" />
+		<Slice id="Skin5_PressedHighlighted" left="192" top="256" width="64" height="64" />
+		
+		<Slice id="Skin6_Normal" left="0" top="320" width="64" height="64" />
+		<Slice id="Skin6_Highlighted" left="64" top="320" width="64" height="64" />
+		<Slice id="Skin6_Pressed" left="128" top="320" width="64" height="64" />
+		<Slice id="Skin6_PressedHighlighted" left="192" top="320" width="64" height="64" />
+		
+		<Slice id="Skin7_Normal" left="0" top="384" width="64" height="64" />
+		<Slice id="Skin7_Highlighted" left="64" top="384" width="64" height="64" />
+		<Slice id="Skin7_Pressed" left="128" top="384" width="64" height="64" />
+		<Slice id="Skin7_PressedHighlighted" left="192" top="384" width="64" height="64" />
+		
+		<Slice id="Skin8_Normal" left="0" top="448" width="64" height="64" />
+		<Slice id="Skin8_Highlighted" left="64" top="448" width="64" height="64" />
+		<Slice id="Skin8_Pressed" left="128" top="448" width="64" height="64" />
+		<Slice id="Skin8_PressedHighlighted" left="192" top="448" width="64" height="64" />
+		
+		<Slice id="Skin9_Normal" left="0" top="512" width="64" height="64" />
+		<Slice id="Skin9_Highlighted" left="64" top="512" width="64" height="64" />
+		<Slice id="Skin9_Pressed" left="128" top="512" width="64" height="64" />
+		<Slice id="Skin9_PressedHighlighted" left="192" top="512" width="64" height="64" />
+		
+		<Slice id="Skin10_Normal" left="0" top="576" width="64" height="64" />
+		<Slice id="Skin10_Highlighted" left="64" top="576" width="64" height="64" />
+		<Slice id="Skin10_Pressed" left="128" top="576" width="64" height="64" />
+		<Slice id="Skin10_PressedHighlighted" left="192" top="576" width="64" height="64" />
+		
+		<Slice id="Skin11_Normal" left="0" top="640" width="64" height="64" />
+		<Slice id="Skin11_Highlighted" left="64" top="640" width="64" height="64" />
+		<Slice id="Skin11_Pressed" left="128" top="640" width="64" height="64" />
+		<Slice id="Skin11_PressedHighlighted" left="192" top="640" width="64" height="64" />
+		
+		<Slice id="Skin12_Normal" left="0" top="704" width="64" height="64" />
+		<Slice id="Skin12_Highlighted" left="64" top="704" width="64" height="64" />
+		<Slice id="Skin12_Pressed" left="128" top="704" width="64" height="64" />
+		<Slice id="Skin12_PressedHighlighted" left="192" top="704" width="64" height="64" />
+		
+		<Slice id="Skin13_Normal" left="0" top="768" width="64" height="64" />
+		<Slice id="Skin13_Highlighted" left="64" top="768" width="64" height="64" />
+		<Slice id="Skin13_Pressed" left="128" top="768" width="64" height="64" />
+		<Slice id="Skin13_PressedHighlighted" left="192" top="768" width="64" height="64" />
+		
+		<Slice id="Skin14_Normal" left="0" top="832" width="64" height="64" />
+		<Slice id="Skin14_Highlighted" left="64" top="832" width="64" height="64" />
+		<Slice id="Skin14_Pressed" left="128" top="832" width="64" height="64" />
+		<Slice id="Skin14_PressedHighlighted" left="192" top="832" width="64" height="64" />
+		
+		<Slice id="Skin15_Normal" left="0" top="896" width="64" height="64" />
+		<Slice id="Skin15_Highlighted" left="64" top="896" width="64" height="64" />
+		<Slice id="Skin15_Pressed" left="128" top="896" width="64" height="64" />
+		<Slice id="Skin15_PressedHighlighted" left="192" top="896" width="64" height="64" />
+		
+		<Slice id="Skin16_Normal" left="0" top="960" width="64" height="64" />
+		<Slice id="Skin16_Highlighted" left="64" top="960" width="64" height="64" />
+		<Slice id="Skin16_Pressed" left="128" top="960" width="64" height="64" />
+		<Slice id="Skin16_PressedHighlighted" left="192" top="960" width="64" height="64" />
+	</Texture>
+    
+    <Texture name="TexturedButtons_Gloss" file="Textures/gloss.dds" />
+    <Texture name="TexturedButtons_Gloss_Down" file="Textures/gloss_down.dds" />
+	
+  </Assets>
+  
+</Interface>

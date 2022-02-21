@@ -1,0 +1,245 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+		
+		<Window name="TexturedButtonsSetupMiscWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="TexturedButtons.Setup.Misc.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="580" y="440" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Misc.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentTitleLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentHideActive" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentTitleLabel">
+							<AbsPoint x="10" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Misc.OnHideActiveLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentHideActiveCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHideActive">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentHideGlow" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHideActive">
+							<AbsPoint x="0" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Misc.OnHideGlowLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentHideGlowCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHideGlow">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentCustomGlowLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHideGlow">
+							<AbsPoint x="0" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentCustomGlowComboBox" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomGlowLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="TexturedButtons.Setup.Misc.OnCustomGlowChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentSaveQuicklock" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentCustomGlowComboBox">
+							<AbsPoint x="-10" y="20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Misc.OnSaveQuicklockLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentSaveQuicklockCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentSaveQuicklock">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentMovableQuicklock" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentSaveQuicklockCheckboxLabel">
+							<AbsPoint x="0" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Misc.OnMovableQuicklockLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentMovableCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentMovableQuicklock">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Window name="$parentHideQuicklock" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentMovableQuicklock">
+							<AbsPoint x="0" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Misc.OnHideQuicklockLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentHideQuicklockCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentHideQuicklock">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<Label name="$parentActionButtonPickUpModifierLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentHideQuicklock">
+							<AbsPoint x="-35" y="10" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ComboBox name="$parentActionButtonPickUpModifierComboBox" inherits="EA_ComboBox_DefaultResizable">
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActionButtonPickUpModifierLabel">
+							<AbsPoint x="10" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnSelChanged" function="TexturedButtons.Setup.Misc.OnActionButtonPickUpModifierChanged" />
+					</EventHandlers>
+				</ComboBox>
+				
+				<Window name="$parentEnableCooldownPulse" inherits="EA_LabelCheckButton">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentActionButtonPickUpModifierComboBox">
+							<AbsPoint x="-10" y="20"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="TexturedButtons.Setup.Misc.OnEnableCooldownPulseLUp" />
+					</EventHandlers>
+    			</Window>
+				
+				<Label name="$parentEnableCooldownPulseCheckboxLabel" font="font_clear_small" textalign="left" maxchars="200">
+					<Size>
+						<AbsPoint x="400" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentEnableCooldownPulse">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+			</Windows>
+		</Window>
+		
+	</Windows>
+</Interface>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/1001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+
+	<Windows>
+		<Window name="EnemyCombatLogEpsWindow" inherits="EA_Window_Default" handleinput="true" movable="true" savesettings="true">
+			<Size>
+				<AbsPoint x="200" y="140" />
+			</Size>
+			
+			<Anchors>
+				<Anchor point="bottomleft" relativePoint="right" relativeTo="EA_Window_OverheadMap">
+					<AbsPoint x="0" y="50" />
+				</Anchor>
+			</Anchors>
+			
+			<Windows>
+				<Label name="$parentOutDpsLabel" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="75" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="5" y="5" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="200" b="50" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutDpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentOutDps" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="100" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentOutDpsLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="200" b="50" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutDpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Label name="$parentOutDpsAoeLabel" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="75" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOutDpsLabel">
+							<AbsPoint x="0" y="-7" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="200" b="50" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutDpsAoeLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentOutDpsAoe" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="100" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentOutDpsAoeLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="200" b="50" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutDpsAoeLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Label name="$parentInDpsLabel" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="75" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOutDpsAoeLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="100" b="100" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnInDpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentInDps" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="100" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentInDpsLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="255" g="100" b="100" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnInDpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Label name="$parentOutHpsLabel" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="75" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentInDpsLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="120" g="200" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutHpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentOutHps" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="100" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentOutHpsLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="120" g="200" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutHpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Label name="$parentOutHpsAoeLabel" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="75" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOutHpsLabel">
+							<AbsPoint x="0" y="-7" />
+						</Anchor>
+					</Anchors>
+					<Color r="120" g="200" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutHpsAoeLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentOutHpsAoe" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="100" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentOutHpsAoeLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="120" g="200" b="255" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnOutHpsAoeLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				
+				<Label name="$parentInHpsLabel" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="75" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentOutHpsAoeLabel">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="150" g="255" b="50" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnInHpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+				<Label name="$parentInHps" font="font_clear_small_bold" textalign="leftcenter">
+					<Size>
+						<AbsPoint x="100" y="24" />
+					</Size>
+					<Anchors>
+						<Anchor point="topright" relativePoint="topleft" relativeTo="$parentInHpsLabel">
+							<AbsPoint x="10" y="0" />
+						</Anchor>
+					</Anchors>
+					<Color r="150" g="255" b="50" />
+					<EventHandlers>
+						<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+						<EventHandler event="OnLButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnInHpsLButtonUp" />
+						<EventHandler event="OnRButtonUp" function="Enemy.CombatLogUI_EpsWindow_OnRButtonUp" />
+					</EventHandlers>
+				</Label>
+			</Windows>
+			
+			<EventHandlers>
+				<EventHandler event="OnMouseOver" function="Enemy.CombatLogUI_EpsWindow_OnMouseOver" />
+			</EventHandlers>
+			
+		</Window>
+	</Windows>
+</Interface>

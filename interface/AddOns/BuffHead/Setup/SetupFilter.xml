@@ -1,0 +1,166 @@
+<Interface xmlns:xsi="http://wutf-8.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Windows>
+	
+		<Window name="BuffHeadSetupFilterRowTemplate">
+			<Size>
+				<AbsPoint x="335" y="40" />
+			</Size>
+			<Windows>
+				<FullResizeImage name="$parentBackground" inherits="EA_FullResizeImage_TintableSolidBackground" handleinput="false">
+					<Size>
+						<AbsPoint x="335" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<Anchor point="topleft" relativePoint="topleft" relativeTo="" />
+							<Anchor point="bottomright" relativePoint="bottomright" relativeTo="" />
+						</Anchor>
+					</Anchors>
+				</FullResizeImage>				
+				<Window name="$parentEnable" inherits="EA_LabelCheckButton" layer="secondary">
+					<Size>
+						<AbsPoint x="25" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="left" relativePoint="left" relativeTo="$parent">
+							<AbsPoint x="5" y="0"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Filter.OnEnableFilter" />
+					</EventHandlers>
+				</Window>
+				<Label name="$parentName" font="font_clear_small" handleinput="false">
+					<Size>
+						<AbsPoint x="240" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor>
+							<AbsPoint x="40" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				<Label name="$parentDescription" font="font_clear_tiny" handleinput="false">
+					<Color r="90" g="90" b="90" />
+					<Size>
+						<AbsPoint x="240" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentName">
+							<AbsPoint x="0" y="0" />
+						</Anchor>
+					</Anchors>
+				</Label>
+			</Windows>
+			<EventHandlers>
+				<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Filter.OnRowLUp" />
+				<EventHandler event="OnRButtonUp" function="BuffHead.Setup.Filter.OnRowRUp" />
+				<EventHandler event="OnMouseOver" function="BuffHead.Setup.Filter.OnRowMouseOver" />
+				<EventHandler event="OnMouseOverEnd" function="BuffHead.Setup.Filter.OnRowMouseOut" />
+			</EventHandlers>
+		</Window>
+		
+		
+		<Window name="BuffHeadSetupFilterWindow" inherits="EA_Window_Default" movable="false" layer="popup" savesettings="false" scale="1.0">
+			<EventHandlers>
+				<EventHandler event="OnHidden" function="BuffHead.Setup.Filter.OnHidden" />
+			</EventHandlers>
+			<Size>
+				<AbsPoint x="440" y="380" />
+			</Size>
+			<Anchors>
+				<Anchor point="center" relativePoint="center" relativeTo="Root">
+					<AbsPoint x="0" y="0" />
+ 				</Anchor>
+			</Anchors>
+			<Windows>
+			
+                <Button name="$parentClose" inherits="EA_Button_DefaultWindowClose">
+					<Anchors>
+						<Anchor point="topright" relativePoint="center" relativeTo="$parent">
+							<AbsPoint x="-15" y="15" />
+						</Anchor>
+					</Anchors>
+                    <EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Filter.OnCloseLUp" />
+                    </EventHandlers>
+                </Button>
+			
+				<Window name="$parentBackground" inherits="EA_Window_DefaultBackgroundFrame" handleinput="true">
+					<Anchors>
+           				<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent" />
+           				<Anchor point="bottomright" relativePoint="bottomright" relativeTo="$parent"/>
+       				</Anchors>
+				</Window>
+				
+				<Label name="$parentFilterLabel" font="font_default_text" textalign="left" maxchars="35">
+					<Size>
+						<AbsPoint x="480" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+							<AbsPoint x="20" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<ListBox name="$parentList" scrollbar="EA_ScrollBar_DefaultVerticalChain" rowdef="BuffHeadSetupFilterRowTemplate" visiblerows="5" rowspacing="0">
+					<Size>
+						<AbsPoint x="360" y="200" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentFilterLabel">
+							<AbsPoint x="20" y="0" />
+						</Anchor>
+					</Anchors>
+
+					<ListData table="BuffHead.Setup.Filter.Entries" populationfunction="BuffHead.Setup.Filter.OnPopulate">
+						<ListColumns>
+							<ListColumn windowname="Name" variable="Name" format="wstring" />
+							<ListColumn windowname="Description" variable="AbilityId" format="wstring" />
+						</ListColumns>
+					</ListData>
+				</ListBox>
+				
+				<Label name="$parentAbilityNameLabel" font="font_clear_small" textalign="left" maxchars="35" wordwrap="true">
+					<Size>
+						<AbsPoint x="150" y="20" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentList">
+							<AbsPoint x="0" y="20" />
+						</Anchor>
+					</Anchors>
+				</Label>
+				
+				<EditBox name="$parentAbilityNameEditBox" inherits="EA_EditBox_DefaultFrame" layer="default" maxchars="300">
+					<Size>
+						<AbsPoint x="210" y="32"/>
+					</Size>
+					<Anchors>
+						<Anchor point="right" relativePoint="left" relativeTo="$parentAbilityNameLabel">
+							<AbsPoint x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</EditBox>
+				
+				<Button name="$parentAddButton" inherits="EA_Button_DefaultResizeable">
+					<Size>
+						<AbsPoint x="100" y="40" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottomright" relativePoint="topright" relativeTo="$parentAbilityNameEditBox">
+							<AbsPoint x="0" y="10"/>
+						</Anchor>
+					</Anchors>
+					<EventHandlers>
+						<EventHandler event="OnLButtonUp" function="BuffHead.Setup.Filter.OnAddLClick" />
+					</EventHandlers>
+				</Button>
+				
+				
+			</Windows>
+		</Window>
+	
+	</Windows>
+</Interface>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Macros>
+    <Macro id="1" name="Assist a&apos; Git" text="/assist Ruyk" iconNum="208" />
+    <Macro id="2" name="smash" text="/script AoE.SetTarget()" iconNum="210" />
+    <Macro id="3" name="Enemy: toggle scenario info" text="/script Enemy.ScenarioInfoToggle()" iconNum="205" />
+    <Macro id="4" name="Enemy: toggle combat log stats window" text="/script Enemy.CombatLogStatsWindowToggle()" iconNum="208" />
+    <Macro id="5" name="Assist: Unit" text="/assist " iconNum="177" />
+    <Macro id="6" name="Time Left" text="/script d(GameData.ScenarioData.timeLeft)" iconNum="212" />
+    <Macro id="7" name="Target Next Friendly" text="/script NerfedMacro.TargetNextFriendly()" iconNum="90001" />
+    <Macro id="8" name="Target Next Hurt Friendly" text="/script NerfedMacro.TargetNextHurtFriendly(99, true)" iconNum="90002" />
+    <Macro id="9" name="Target Most Hurt Friendly" text="/script NerfedMacro.TargetMostHurtFriendly(true)" iconNum="90003" />
+    <Macro id="10" name="Detaunt Helper - Target Top" text="/script DetauntHelper.TargetTop()" iconNum="90004" />
+    <Macro id="11" name="Bunny Hop - Set Target" text="/script NerfedMacro.BunnyHopTarget()" iconNum="90005" />
+    <Macro id="12" name="Check Scores" text="/script UI5.ExportScores()" iconNum="205" />
+    <Macro id="13" name="SwiftSetAssist" text="/script SwiftAssist.SetAssist()" iconNum="193" />
+    <Macro id="14" name="SwiftAssist" text="/assist Krisiun^F" iconNum="190" />
+    <Macro id="15" name="SwiftAssistMe" text="/script SwiftAssist.AssistMe()" iconNum="51" />
+    <Macro id="16" name="SwiftSmartAssist" text='/script SwiftAssist.Inactive(L&quot;smart&quot;)' iconNum="177" />
+    <Macro id="17" name="AssistUnitframe" text="/assist Condalf" iconNum="177" />
+    <Macro id="18" name="BBars Setup" text="/script BBars.TestSetup()" iconNum="215" />
+    <Macro id="19" name="Enemy: Mark" text="/script Enemy.Mark()" iconNum="210" />
+    <Macro id="20" name="Tactics Set 1" text="/script tactics.set1()" iconNum="149" />
+    <Macro id="21" name="Tactics Set 2" text="/script tactics.set2()" iconNum="148" />
+    <Macro id="22" name="Tactics Set 3" text="/script tactics.set3()" iconNum="144" />
+    <Macro id="23" name="YourScore" text="/script UI5.YourScore()" iconNum="214" />
+    <Macro id="24" name="BBars UP" text="/script BBars.PlayerHPUpdateUP()" iconNum="212" />
+    <Macro id="25" name="Tactics Set 4" text="/script tactics.set4()" iconNum="147" />
+    <Macro id="26" name="Tactics Set 5" text="/script tactics.set5()" iconNum="142" />
+    <Macro id="37" name="yes" text="/script HiddenButtons.Toggle()" iconNum="210" />
+    <Macro id="38" name="no" text="/script HiddenButtons.Toggle()" iconNum="202" />
+    <Macro id="39" name="SwiftAssist" text='/script SwiftAssist.Inactive(L&quot;assist&quot;)' iconNum="201" />
+    <Macro id="40" name="Set SwiftAssist" text="/script SwiftAssist.SetAssist()" iconNum="209" />
+    <Macro id="43" name="cheer" text="/script UI5.UpdateMechanics(math.random(1,5))" iconNum="211" />
+    <Macro id="44" name="QNA+ Tell Target" text='/script TellTarget(&quot;whisper current friendly target with this text&quot;)' iconNum="22250" />
+    <Macro id="45" name="QNA+ Invite Last" text="/script InviteLast()" iconNum="22251" />
+    <Macro id="46" name="QNA+ Reply Last" text='/script ReplyLast(&quot;reply to last whisper with this text&quot;)' iconNum="22252" />
+    <Macro id="47" name="QNA+ Chat Macro" text='/script ChatMacro(&quot;send dynamic target info $ehp $elvl $et to a channel of choice&quot;, &quot;/s&quot;)' iconNum="22253" />
+    <Macro id="48" name="Enemy: Target" text="/script Enemy.Print (&apos;No target was marked yet&apos;)" iconNum="214" />
+</Macros>
